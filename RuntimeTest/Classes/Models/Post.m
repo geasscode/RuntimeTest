@@ -219,7 +219,7 @@
 		//立即释放properties指向的内存
 		free(properties);
 		
-		//(2)根据类型给属性赋值
+		//根据类型给属性赋值
 		for (NSString * key in keys) {
 			if ([dict valueForKey:key] == nil) continue;
 			[self setValue:[dict valueForKey:key] forKey:key];
