@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		078D15482802E605E77C6D5C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1E452DD1BAF6AB92348AF8 /* libPods.a */; };
+		F74676B01CABC7B50001D3A5 /* MJAd.m in Sources */ = {isa = PBXBuildFile; fileRef = F746769D1CABC7B50001D3A5 /* MJAd.m */; };
+		F74676B11CABC7B50001D3A5 /* MJBag.m in Sources */ = {isa = PBXBuildFile; fileRef = F746769F1CABC7B50001D3A5 /* MJBag.m */; };
+		F74676B21CABC7B50001D3A5 /* MJBaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676A11CABC7B50001D3A5 /* MJBaseObject.m */; };
+		F74676B31CABC7B50001D3A5 /* MJBook.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676A31CABC7B50001D3A5 /* MJBook.m */; };
+		F74676B41CABC7B50001D3A5 /* MJBox.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676A51CABC7B50001D3A5 /* MJBox.m */; };
+		F74676B51CABC7B50001D3A5 /* MJDog.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676A71CABC7B50001D3A5 /* MJDog.m */; };
+		F74676B61CABC7B50001D3A5 /* MJStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676A91CABC7B50001D3A5 /* MJStatus.m */; };
+		F74676B71CABC7B50001D3A5 /* MJStatusResult.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676AB1CABC7B50001D3A5 /* MJStatusResult.m */; };
+		F74676B81CABC7B50001D3A5 /* MJStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676AD1CABC7B50001D3A5 /* MJStudent.m */; };
+		F74676B91CABC7B50001D3A5 /* MJUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676AF1CABC7B50001D3A5 /* MJUser.m */; };
 		F7526FF01C9A940A0012FE76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FEF1C9A940A0012FE76 /* main.m */; };
 		F7526FF31C9A940A0012FE76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FF21C9A940A0012FE76 /* AppDelegate.m */; };
 		F7526FF61C9A940A0012FE76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FF51C9A940A0012FE76 /* ViewController.m */; };
@@ -47,6 +57,26 @@
 /* Begin PBXFileReference section */
 		2CA5276C8B2F3D8FCC327D72 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6E1E452DD1BAF6AB92348AF8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F746769C1CABC7B50001D3A5 /* MJAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJAd.h; sourceTree = "<group>"; };
+		F746769D1CABC7B50001D3A5 /* MJAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJAd.m; sourceTree = "<group>"; };
+		F746769E1CABC7B50001D3A5 /* MJBag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJBag.h; sourceTree = "<group>"; };
+		F746769F1CABC7B50001D3A5 /* MJBag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJBag.m; sourceTree = "<group>"; };
+		F74676A01CABC7B50001D3A5 /* MJBaseObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJBaseObject.h; sourceTree = "<group>"; };
+		F74676A11CABC7B50001D3A5 /* MJBaseObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJBaseObject.m; sourceTree = "<group>"; };
+		F74676A21CABC7B50001D3A5 /* MJBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJBook.h; sourceTree = "<group>"; };
+		F74676A31CABC7B50001D3A5 /* MJBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJBook.m; sourceTree = "<group>"; };
+		F74676A41CABC7B50001D3A5 /* MJBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJBox.h; sourceTree = "<group>"; };
+		F74676A51CABC7B50001D3A5 /* MJBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJBox.m; sourceTree = "<group>"; };
+		F74676A61CABC7B50001D3A5 /* MJDog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDog.h; sourceTree = "<group>"; };
+		F74676A71CABC7B50001D3A5 /* MJDog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJDog.m; sourceTree = "<group>"; };
+		F74676A81CABC7B50001D3A5 /* MJStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJStatus.h; sourceTree = "<group>"; };
+		F74676A91CABC7B50001D3A5 /* MJStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJStatus.m; sourceTree = "<group>"; };
+		F74676AA1CABC7B50001D3A5 /* MJStatusResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJStatusResult.h; sourceTree = "<group>"; };
+		F74676AB1CABC7B50001D3A5 /* MJStatusResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJStatusResult.m; sourceTree = "<group>"; };
+		F74676AC1CABC7B50001D3A5 /* MJStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJStudent.h; sourceTree = "<group>"; };
+		F74676AD1CABC7B50001D3A5 /* MJStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJStudent.m; sourceTree = "<group>"; };
+		F74676AE1CABC7B50001D3A5 /* MJUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJUser.h; sourceTree = "<group>"; };
+		F74676AF1CABC7B50001D3A5 /* MJUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJUser.m; sourceTree = "<group>"; };
 		F7526FEB1C9A940A0012FE76 /* RuntimeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7526FEF1C9A940A0012FE76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7526FF11C9A940A0012FE76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -125,6 +155,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F74676BA1CABC83F0001D3A5 /* DESExtension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DESExtension;
+			sourceTree = "<group>";
+		};
 		F7526FE21C9A940A0012FE76 = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +188,7 @@
 		F7526FED1C9A940A0012FE76 /* RuntimeTest */ = {
 			isa = PBXGroup;
 			children = (
+				F74676BA1CABC83F0001D3A5 /* DESExtension */,
 				F76128701CA4E920004136A7 /* Stores */,
 				F76128711CA4E920004136A7 /* Helpers */,
 				F7B412911C9BDA3900E45E22 /* Controllers */,
@@ -226,6 +264,26 @@
 		F7B412861C9BD96C00E45E22 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F746769C1CABC7B50001D3A5 /* MJAd.h */,
+				F746769D1CABC7B50001D3A5 /* MJAd.m */,
+				F746769E1CABC7B50001D3A5 /* MJBag.h */,
+				F746769F1CABC7B50001D3A5 /* MJBag.m */,
+				F74676A01CABC7B50001D3A5 /* MJBaseObject.h */,
+				F74676A11CABC7B50001D3A5 /* MJBaseObject.m */,
+				F74676A21CABC7B50001D3A5 /* MJBook.h */,
+				F74676A31CABC7B50001D3A5 /* MJBook.m */,
+				F74676A41CABC7B50001D3A5 /* MJBox.h */,
+				F74676A51CABC7B50001D3A5 /* MJBox.m */,
+				F74676A61CABC7B50001D3A5 /* MJDog.h */,
+				F74676A71CABC7B50001D3A5 /* MJDog.m */,
+				F74676A81CABC7B50001D3A5 /* MJStatus.h */,
+				F74676A91CABC7B50001D3A5 /* MJStatus.m */,
+				F74676AA1CABC7B50001D3A5 /* MJStatusResult.h */,
+				F74676AB1CABC7B50001D3A5 /* MJStatusResult.m */,
+				F74676AC1CABC7B50001D3A5 /* MJStudent.h */,
+				F74676AD1CABC7B50001D3A5 /* MJStudent.m */,
+				F74676AE1CABC7B50001D3A5 /* MJUser.h */,
+				F74676AF1CABC7B50001D3A5 /* MJUser.m */,
 				F7B412871C9BD96C00E45E22 /* Post.h */,
 				F7B412881C9BD96C00E45E22 /* Post.m */,
 				F7B412891C9BD96C00E45E22 /* User.h */,
@@ -446,10 +504,20 @@
 			files = (
 				F7B4128F1C9BD96C00E45E22 /* User.m in Sources */,
 				F7526FF61C9A940A0012FE76 /* ViewController.m in Sources */,
+				F74676B61CABC7B50001D3A5 /* MJStatus.m in Sources */,
 				F7526FF31C9A940A0012FE76 /* AppDelegate.m in Sources */,
+				F74676B51CABC7B50001D3A5 /* MJDog.m in Sources */,
+				F74676B11CABC7B50001D3A5 /* MJBag.m in Sources */,
+				F74676B21CABC7B50001D3A5 /* MJBaseObject.m in Sources */,
+				F74676B01CABC7B50001D3A5 /* MJAd.m in Sources */,
 				F7526FF01C9A940A0012FE76 /* main.m in Sources */,
+				F74676B91CABC7B50001D3A5 /* MJUser.m in Sources */,
+				F74676B71CABC7B50001D3A5 /* MJStatusResult.m in Sources */,
 				F7B412901C9BD96C00E45E22 /* AFAppDotNetAPIClient.m in Sources */,
 				F7B412971C9BDA3900E45E22 /* GlobalTimelineViewController.m in Sources */,
+				F74676B81CABC7B50001D3A5 /* MJStudent.m in Sources */,
+				F74676B41CABC7B50001D3A5 /* MJBox.m in Sources */,
+				F74676B31CABC7B50001D3A5 /* MJBook.m in Sources */,
 				F7DB40731C9FEAF900E164C7 /* loadXIBFile.m in Sources */,
 				F7DB40771CA0E9F300E164C7 /* CYAlertView.m in Sources */,
 				F7B4128E1C9BD96C00E45E22 /* Post.m in Sources */,

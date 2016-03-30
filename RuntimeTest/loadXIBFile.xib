@@ -18,6 +18,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ml0-Rs-NQc">
                     <rect key="frame" x="276" y="285" width="49" height="30"/>
                     <state key="normal" title="xibTest"/>
+                    <connections>
+                        <action selector="testMJExtension:" destination="-1" eventType="touchUpInside" id="JM7-kc-XQz"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
