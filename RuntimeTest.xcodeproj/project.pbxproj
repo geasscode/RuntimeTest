@@ -151,6 +151,8 @@
 		F7526FED1C9A940A0012FE76 /* RuntimeTest */ = {
 			isa = PBXGroup;
 			children = (
+				F76128701CA4E920004136A7 /* Stores */,
+				F76128711CA4E920004136A7 /* Helpers */,
 				F7B412911C9BDA3900E45E22 /* Controllers */,
 				F7B412941C9BDA3900E45E22 /* Views */,
 				F7B412851C9BD96C00E45E22 /* Classes */,
@@ -196,6 +198,20 @@
 				F75270151C9A940A0012FE76 /* Info.plist */,
 			);
 			path = RuntimeTestUITests;
+			sourceTree = "<group>";
+		};
+		F76128701CA4E920004136A7 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
+		F76128711CA4E920004136A7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		F7B412851C9BD96C00E45E22 /* Classes */ = {

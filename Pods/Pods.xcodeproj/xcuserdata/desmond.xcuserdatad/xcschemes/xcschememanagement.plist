@@ -9,17 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-RuntimeTest.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-RuntimeTestTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-RuntimeTestUITests.xcscheme</key>
+		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,12 +22,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2CFA644F117156354775340D5EB9974D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8D6E05682AB36CE8566922A87D5E3A26</key>
+		<key>6A987F2141A41DDAB622971CAA181B51</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -47,12 +32,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A2459C0D5F523846616D8FE4B8088BCB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C6D66FE7D3AD8963382F17E79643E1B8</key>
+		<key>9EAB3E42EF957541E6C3C76D35FD008E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

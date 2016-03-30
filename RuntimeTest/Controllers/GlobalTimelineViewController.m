@@ -118,39 +118,52 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 	SecondViewController *SVC = [[SecondViewController ] init ];
 	SVC.tabBarItem.title = @"控制器2" ;
 	SVC. tabBarItem.image = [UIImage imageNamed : @"new.png" ];
-	// 添加子控制器（这些子控制器会自动添加到UITabBarController的 viewControllers 数组中）
-	[tabbarVC addChildViewController :FVC];
-	[tabbarVC addChildViewController :SVC];
+	 // 添加子控制器（这些子控制器会自动添加到UITabBarController的 viewControllers 数组中）
+	 [tabbarVC addChildViewController :FVC];
+	 [tabbarVC addChildViewController :SVC];
+	 
+	 第二种：通过navigationController跳转：
+	 [self.navigationController pushViewController:newC animated:YES]; //跳转到下一页面
+	 [self.navigationController popViewControllerAnimated:YES]; //返回上一页面
+	 [ self .navigationController popToRootViewControllerAnimated: YES ];  //返回根控制器,即最开始的页面
+	 
+	 第三种：利用modal跳转
+	 [ self presentViewController:SVC animated: YES completion:nil];
+	 [ self dismissViewControllerAnimated: YES completion: nil ];
+	 ***/
 	
-	第二种：通过navigationController跳转：
-	[self.navigationController pushViewController:newC animated:YES]; //跳转到下一页面
-	[self.navigationController popViewControllerAnimated:YES]; //返回上一页面
-	[ self .navigationController popToRootViewControllerAnimated: YES ];  //返回根控制器,即最开始的页面
 	
-	第三种：利用modal跳转
-	[ self presentViewController:SVC animated: YES completion:nil];
-	[ self dismissViewControllerAnimated: YES completion: nil ];
-	***/
-	
-	
-//	ViewController *vcB = [self.storyboard instantiateViewControllerWithIdentifier:@"TestUIViewController"];
-//	
-//	[vcB setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-//	[viewControllerA presentModalViewController:(UIViewController *)vcB animated:YES];
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+	//	ViewController *vcB = [self.storyboard instantiateViewControllerWithIdentifier:@"TestUIViewController"];
+	//
+	//	[vcB setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+	//	[viewControllerA presentModalViewController:(UIViewController *)vcB animated:YES];
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	//第四种：storyboard跳转。
 	
 	NSLog(@"function %s line=%d",__FUNCTION__,__LINE__);
-
-//	UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+	
+	//	UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 	
 	
 	//导航方式
-//	ViewController *viewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"TestUIViewController"];
-//	[self.navigationController pushViewController:viewController animated:YES];
+	//	ViewController *viewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"TestUIViewController"];
+	//	[self.navigationController pushViewController:viewController animated:YES];
+	
+	
+	//另一种初始化storyboard方式：
+	//	-(instancetype)init{
+	//
+	//		if (self = [super init]) {
+	//
+	//			UIStoryboard *story = [UIStoryboard storyboardWithName:@"YLWUserLoginController" bundle:nil];
+	//			self = [story instantiateInitialViewController];
+	//		}
+	//		return self;
+	//
+	//	}
 	
 	//present方式适合弹出modal
-//	[self presentViewController:[mainStoryBoard instantiateInitialViewController] animated:YES completion:nil];
+	//	[self presentViewController:[mainStoryBoard instantiateInitialViewController] animated:YES completion:nil];
 	
 	//跳转到xib
 	UIViewController *xibTest= [[UIViewController alloc]initWithNibName:@"loadXIBFile" bundle:[NSBundle mainBundle]];
