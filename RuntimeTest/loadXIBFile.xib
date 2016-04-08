@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="loadXIBFile">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="gTP-e6-jfm"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -19,13 +19,22 @@
                     <rect key="frame" x="276" y="285" width="49" height="30"/>
                     <state key="normal" title="xibTest"/>
                     <connections>
-                        <action selector="testMJExtension:" destination="-1" eventType="touchUpInside" id="JM7-kc-XQz"/>
+                        <action selector="testMJExtension:" destination="-1" eventType="touchUpInside" id="SGT-Lg-lra"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NC-UU-6Li">
+                    <rect key="frame" x="277" y="549" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="XIBTest:" destination="-1" eventType="touchUpInside" id="1b4-bz-LZO"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="2NC-UU-6Li" secondAttribute="bottom" constant="21" id="Yny-kA-tTO"/>
                 <constraint firstItem="Ml0-Rs-NQc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cqO-qx-Chw"/>
+                <constraint firstItem="2NC-UU-6Li" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="d6l-Qv-Irx"/>
                 <constraint firstItem="Ml0-Rs-NQc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uYm-m4-lQF"/>
             </constraints>
         </view>

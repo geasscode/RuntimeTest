@@ -18,17 +18,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7M-J0-rNW">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="258" y="285" width="84" height="30"/>
+                                <state key="normal" title="runTimeTest"/>
                                 <connections>
-                                    <action selector="dismissVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ikf-fY-5Dq"/>
+                                    <action selector="runTimeTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YIm-Te-HEq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jaz-ul-ICf">
+                                <rect key="frame" x="270" y="550" width="61" height="30"/>
+                                <state key="normal" title="GCDTest"/>
+                                <connections>
+                                    <action selector="GCDTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ryc-CG-1j7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="n7M-J0-rNW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jkx-2d-Ldf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Jaz-ul-ICf" secondAttribute="bottom" constant="20" id="XyK-HN-pFy"/>
                             <constraint firstItem="n7M-J0-rNW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fTt-r9-ZMH"/>
+                            <constraint firstItem="Jaz-ul-ICf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uXi-TG-mwn"/>
                         </constraints>
                     </view>
                 </viewController>

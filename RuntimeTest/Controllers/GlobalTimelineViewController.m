@@ -1,17 +1,17 @@
 // GlobalTimelineViewController.m
 //
 // Copyright (c) 2011–2016 Alamofire Software Foundation ( http://alamofire.org/ )
-// 
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in
 // all copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -37,35 +37,40 @@
 @implementation GlobalTimelineViewController
 
 - (void)reload:(__unused id)sender {
-    self.navigationItem.rightBarButtonItem.enabled = NO;
-
-    NSURLSessionTask *task = [Post globalTimelinePostsWithBlock:^(NSArray *posts, NSError *error) {
+	self.navigationItem.rightBarButtonItem.enabled = NO;
+	
+	NSURLSessionTask *task = [Post globalTimelinePostsWithBlock:^(NSArray *posts, NSError *error) {
 		NSLog(@"call block return here");
-        if (!error) {
-            self.posts = posts;
-            [self.tableView reloadData];
-        }
-    }];
-
-    [self.refreshControl setRefreshingWithStateOfTask:task];
+		if (!error) {
+			self.posts = posts;
+			[self.tableView reloadData];
+		}
+	}];
+	
+	[self.refreshControl setRefreshingWithStateOfTask:task];
 }
 
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    self.title = NSLocalizedString(@"AFNetworking", nil);
+	[super viewDidLoad];
 	
-//	self.vc = [ViewController new];
+	self.title = NSLocalizedString(@"AFNetworking", nil);
 	
-    self.refreshControl = [[UIRefreshControl alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableView.frame.size.width, 100.0f)];
-    [self.refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
-    [self.tableView.tableHeaderView addSubview:self.refreshControl];
+	//	self.vc = [ViewController new];
+	
+	self.refreshControl = [[UIRefreshControl alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.tableView.frame.size.width, 100.0f)];
+	[self.refreshControl addTarget:self action:@selector(reload:) forControlEvents:UIControlEventValueChanged];
+	[self.tableView.tableHeaderView addSubview:self.refreshControl];
+	
+	self.tableView.rowHeight = 70.0f;
+	
+	[self reload:nil];
+}
 
-    self.tableView.rowHeight = 70.0f;
-    
-    [self reload:nil];
+- (void)viewWillAppear:(BOOL)animated{
+	[super viewWillAppear:animated];
+	NSLog(@"viewWillAppear");
 }
 
 
@@ -76,25 +81,59 @@
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)tableView:(__unused UITableView *)tableView
- numberOfRowsInSection:(__unused NSInteger)section
+
+
+/** 顶头分割线。
+ *  分割线补上开头空15像素点的，即一条直线从0开始到结束，用到viewDidLayoutSubviews以及willDisplayCell方法。
+ */
+-(void)viewDidLayoutSubviews
 {
-    return (NSInteger)[self.posts count];
+	if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+		[self.tableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)];
+	}
+	
+	if ([self.tableView respondsToSelector:@selector(setLayoutMargins:)]) {
+		[self.tableView setLayoutMargins:UIEdgeInsetsMake(0,0,0,0)];
+	}
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+	
+	if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+		[cell setSeparatorInset:UIEdgeInsetsZero];
+	}
+	if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+		[cell setLayoutMargins:UIEdgeInsetsZero];
+	}
+}
+
+//self.tableView.estimatedRowHeight = 68.0;
+//self.tableView.rowHeight = UITableViewAutomaticDimension;
+//配合约束可以动态的计算cell的高度
+//然后在cell上放上一个label，讲label的numberOfLines属性设置为0，
+//然后设置好label的上下左右约束，然后再对label的内容进行赋值，再次运行你的程序，
+//这个时候你的cell就会动态的显示高度了，label的高度取决于你的内容的多少，同时按照你的约束进行显示。
+
+//很多地方都可以用[tableView beginUpdates]来代替[tableView reloadData]来达到更好的效果.
+
+- (NSInteger)tableView:(__unused UITableView *)tableView
+ numberOfRowsInSection:(__unused NSInteger)section{
+	
+	return (NSInteger)[self.posts count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+		 cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    
-    PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (!cell) {
-        cell = [[PostTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-    
-    cell.post = self.posts[(NSUInteger)indexPath.row];
-    
-    return cell;
+	static NSString *CellIdentifier = @"Cell";
+	
+	PostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (!cell) {
+		cell = [[PostTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+	}
+	
+	cell.post = self.posts[(NSUInteger)indexPath.row];
+	
+	return cell;
 }
 
 #pragma mark - UITableViewDelegate
@@ -102,7 +141,7 @@
 - (CGFloat)tableView:(__unused UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [PostTableViewCell heightForCellWithPost:self.posts[(NSUInteger)indexPath.row]];
+	return [PostTableViewCell heightForCellWithPost:self.posts[(NSUInteger)indexPath.row]];
 }
 
 - (void)tableView:(UITableView *)tableView
@@ -110,14 +149,14 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	
 	/*** 常用跳转方法总结
-	第一种：通过tabBar跳转：
-	UITabBarController *tabbarVC = [[ UITabBarController alloc ] init ];
-	FirstViewController *FVC = [[FirstViewController ] init ];
-	FVC.tabBarItem.title = @"控制器1" ;
-	FVC.tabBarItem.image = [ UIImage imageNamed : @"first.png" ];
-	SecondViewController *SVC = [[SecondViewController ] init ];
-	SVC.tabBarItem.title = @"控制器2" ;
-	SVC. tabBarItem.image = [UIImage imageNamed : @"new.png" ];
+	 第一种：通过tabBar跳转：
+	 UITabBarController *tabbarVC = [[ UITabBarController alloc ] init ];
+	 FirstViewController *FVC = [[FirstViewController ] init ];
+	 FVC.tabBarItem.title = @"控制器1" ;
+	 FVC.tabBarItem.image = [ UIImage imageNamed : @"first.png" ];
+	 SecondViewController *SVC = [[SecondViewController ] init ];
+	 SVC.tabBarItem.title = @"控制器2" ;
+	 SVC. tabBarItem.image = [UIImage imageNamed : @"new.png" ];
 	 // 添加子控制器（这些子控制器会自动添加到UITabBarController的 viewControllers 数组中）
 	 [tabbarVC addChildViewController :FVC];
 	 [tabbarVC addChildViewController :SVC];
@@ -142,12 +181,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 	
 	NSLog(@"function %s line=%d",__FUNCTION__,__LINE__);
 	
-	//	UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+	UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 	
-	
-	//导航方式
-	//	ViewController *viewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"TestUIViewController"];
-	//	[self.navigationController pushViewController:viewController animated:YES];
+	ViewController *viewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"TestUIViewController"];
+	[self.navigationController pushViewController:viewController animated:YES];
 	
 	
 	//另一种初始化storyboard方式：
@@ -165,11 +202,11 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 	//present方式适合弹出modal
 	//	[self presentViewController:[mainStoryBoard instantiateInitialViewController] animated:YES completion:nil];
 	
-	//跳转到xib
-	UIViewController *xibTest= [[UIViewController alloc]initWithNibName:@"loadXIBFile" bundle:[NSBundle mainBundle]];
-	[self.navigationController pushViewController:xibTest animated:YES];
+	//	//跳转到xib
+	//	UIViewController *xibTest= [[UIViewController alloc]initWithNibName:@"loadXIBFile" bundle:[NSBundle mainBundle]];
+	//	[self.navigationController pushViewController:xibTest animated:YES];
 	
-
+	
 	
 }
 

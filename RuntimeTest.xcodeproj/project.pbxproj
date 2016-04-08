@@ -18,6 +18,10 @@
 		F74676B71CABC7B50001D3A5 /* MJStatusResult.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676AB1CABC7B50001D3A5 /* MJStatusResult.m */; };
 		F74676B81CABC7B50001D3A5 /* MJStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676AD1CABC7B50001D3A5 /* MJStudent.m */; };
 		F74676B91CABC7B50001D3A5 /* MJUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676AF1CABC7B50001D3A5 /* MJUser.m */; };
+		F74676C51CB6077C0001D3A5 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676C41CB6077C0001D3A5 /* Person.m */; };
+		F74676CB1CB63A320001D3A5 /* UIViewController+swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676CA1CB63A320001D3A5 /* UIViewController+swizzling.m */; };
+		F74676CE1CB6415C0001D3A5 /* NSObject+PropertyAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676CD1CB6415C0001D3A5 /* NSObject+PropertyAdd.m */; };
+		F74676D21CB647490001D3A5 /* NSMutableArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676D11CB647490001D3A5 /* NSMutableArray+Extension.m */; };
 		F7526FF01C9A940A0012FE76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FEF1C9A940A0012FE76 /* main.m */; };
 		F7526FF31C9A940A0012FE76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FF21C9A940A0012FE76 /* AppDelegate.m */; };
 		F7526FF61C9A940A0012FE76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FF51C9A940A0012FE76 /* ViewController.m */; };
@@ -77,6 +81,14 @@
 		F74676AD1CABC7B50001D3A5 /* MJStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJStudent.m; sourceTree = "<group>"; };
 		F74676AE1CABC7B50001D3A5 /* MJUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJUser.h; sourceTree = "<group>"; };
 		F74676AF1CABC7B50001D3A5 /* MJUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJUser.m; sourceTree = "<group>"; };
+		F74676C31CB6077C0001D3A5 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		F74676C41CB6077C0001D3A5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		F74676C91CB63A320001D3A5 /* UIViewController+swizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+swizzling.h"; path = "../UIViewController+swizzling.h"; sourceTree = "<group>"; };
+		F74676CA1CB63A320001D3A5 /* UIViewController+swizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+swizzling.m"; path = "../UIViewController+swizzling.m"; sourceTree = "<group>"; };
+		F74676CC1CB6415C0001D3A5 /* NSObject+PropertyAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PropertyAdd.h"; sourceTree = "<group>"; };
+		F74676CD1CB6415C0001D3A5 /* NSObject+PropertyAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyAdd.m"; sourceTree = "<group>"; };
+		F74676D01CB647490001D3A5 /* NSMutableArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Extension.h"; sourceTree = "<group>"; };
+		F74676D11CB647490001D3A5 /* NSMutableArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Extension.m"; sourceTree = "<group>"; };
 		F7526FEB1C9A940A0012FE76 /* RuntimeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7526FEF1C9A940A0012FE76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7526FF11C9A940A0012FE76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -158,6 +170,12 @@
 		F74676BA1CABC83F0001D3A5 /* DESExtension */ = {
 			isa = PBXGroup;
 			children = (
+				F74676C91CB63A320001D3A5 /* UIViewController+swizzling.h */,
+				F74676CA1CB63A320001D3A5 /* UIViewController+swizzling.m */,
+				F74676CC1CB6415C0001D3A5 /* NSObject+PropertyAdd.h */,
+				F74676CD1CB6415C0001D3A5 /* NSObject+PropertyAdd.m */,
+				F74676D01CB647490001D3A5 /* NSMutableArray+Extension.h */,
+				F74676D11CB647490001D3A5 /* NSMutableArray+Extension.m */,
 			);
 			path = DESExtension;
 			sourceTree = "<group>";
@@ -264,6 +282,8 @@
 		F7B412861C9BD96C00E45E22 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F74676C31CB6077C0001D3A5 /* Person.h */,
+				F74676C41CB6077C0001D3A5 /* Person.m */,
 				F746769C1CABC7B50001D3A5 /* MJAd.h */,
 				F746769D1CABC7B50001D3A5 /* MJAd.m */,
 				F746769E1CABC7B50001D3A5 /* MJBag.h */,
@@ -509,8 +529,11 @@
 				F74676B51CABC7B50001D3A5 /* MJDog.m in Sources */,
 				F74676B11CABC7B50001D3A5 /* MJBag.m in Sources */,
 				F74676B21CABC7B50001D3A5 /* MJBaseObject.m in Sources */,
+				F74676D21CB647490001D3A5 /* NSMutableArray+Extension.m in Sources */,
 				F74676B01CABC7B50001D3A5 /* MJAd.m in Sources */,
 				F7526FF01C9A940A0012FE76 /* main.m in Sources */,
+				F74676C51CB6077C0001D3A5 /* Person.m in Sources */,
+				F74676CB1CB63A320001D3A5 /* UIViewController+swizzling.m in Sources */,
 				F74676B91CABC7B50001D3A5 /* MJUser.m in Sources */,
 				F74676B71CABC7B50001D3A5 /* MJStatusResult.m in Sources */,
 				F7B412901C9BD96C00E45E22 /* AFAppDotNetAPIClient.m in Sources */,
@@ -518,6 +541,7 @@
 				F74676B81CABC7B50001D3A5 /* MJStudent.m in Sources */,
 				F74676B41CABC7B50001D3A5 /* MJBox.m in Sources */,
 				F74676B31CABC7B50001D3A5 /* MJBook.m in Sources */,
+				F74676CE1CB6415C0001D3A5 /* NSObject+PropertyAdd.m in Sources */,
 				F7DB40731C9FEAF900E164C7 /* loadXIBFile.m in Sources */,
 				F7DB40771CA0E9F300E164C7 /* CYAlertView.m in Sources */,
 				F7B4128E1C9BD96C00E45E22 /* Post.m in Sources */,

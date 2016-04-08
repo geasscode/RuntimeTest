@@ -30,6 +30,19 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)XIBTest:(id)sender {
+	NSLog(@"what");
+}
+
+- (IBAction)testMJExtension:(UIButton *)sender {
+	MJExtensionLog(@"hello");
+	execute(keyValues2object2, @"复杂的字典 -> 模型 (模型里面包含了模型)");
+	execute(keyValues2object3, @"复杂的字典 -> 模型 (模型的数组属性里面又装着模型)");
+	execute(keyValues2object4, @"简单的字典 -> 模型（key替换，比如ID和id，支持多级映射）");
+	execute(keyValuesArray2objectArray, @"字典数组 -> 模型数组");
+	execute(object2keyValues, @"模型转字典");
+	execute(objectArray2keyValuesArray, @"模型数组 -> 字典数组");
+}
 
 /*
 #pragma mark - Navigation
@@ -40,14 +53,7 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)testMJExtension:(id)sender {
-	execute(keyValues2object2, @"复杂的字典 -> 模型 (模型里面包含了模型)");
-	execute(keyValues2object3, @"复杂的字典 -> 模型 (模型的数组属性里面又装着模型)");
-	execute(keyValues2object4, @"简单的字典 -> 模型（key替换，比如ID和id，支持多级映射）");
-	execute(keyValuesArray2objectArray, @"字典数组 -> 模型数组");
-	execute(object2keyValues, @"模型转字典");
-	execute(objectArray2keyValuesArray, @"模型数组 -> 字典数组");
-}
+
 
 
 void execute(void (*fn)(), NSString *comment)
