@@ -27,6 +27,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import <UIRefreshControl+AFNetworking.h>
 #import "ViewController.h"
+#import "loadXIBFile.h"
 
 @interface GlobalTimelineViewController ()
 @property (readwrite, nonatomic, strong) NSArray *posts;
@@ -35,6 +36,10 @@
 @end
 
 @implementation GlobalTimelineViewController
+
+
+//当我们用到控制器view时，就会调用控制器view的get方法，在get方法内部，首先判断view是否已经创建，
+//如果已存在，则直接返回存在的view，如果不存在，则调用控制器的loadView方法，在控制器没有被销毁的情况下，loadView也可能会被执行多次
 
 - (void)reload:(__unused id)sender {
 	self.navigationItem.rightBarButtonItem.enabled = NO;
@@ -52,6 +57,16 @@
 
 #pragma mark - UIViewController
 
+
+//1.控制器view的生命周期：viewDidLoad -> viewWillAppear -> viewWillLayoutSubviews -> viewDidLayoutSubviews
+//-> viewDidAppear -> viewWillDisappear -> viewDidDisappear
+//
+//2.内存警告传递过程:手机内存不足产生事件->通知应用程序->调用应用程序代理方法->把事件传递给窗口->窗口传给控制器->调用控制器的内存警告方法
+
+
+//当控制器的loadView方法执行完毕，view被创建成功后，就会执行viewDidLoad方法，该方法与loadView方法一样，
+//也有可能被执行多次。
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
@@ -66,6 +81,10 @@
 	self.tableView.rowHeight = 70.0f;
 	
 	[self reload:nil];
+}
+
+
+- (void)loadView {
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -83,20 +102,31 @@
 
 
 
-/** 顶头分割线。
+/** 全屏分割线
  *  分割线补上开头空15像素点的，即一条直线从0开始到结束，用到viewDidLayoutSubviews以及willDisplayCell方法。
  */
 -(void)viewDidLayoutSubviews
 {
+	//调整(iOS7以上)表格分隔线边距
+	//在iOS7之前系统默认就是全屏的,iOS7时UITableView多了separatorInset属性,
 	if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
-		[self.tableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)];
+		self.tableView.separatorInset = UIEdgeInsetsZero;
+		//		[self.tableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)];
 	}
 	
+	//调整(iOS8以上)view边距(或者在cell中设置preservesSuperviewLayoutMargins,二者等效)
 	if ([self.tableView respondsToSelector:@selector(setLayoutMargins:)]) {
-		[self.tableView setLayoutMargins:UIEdgeInsetsMake(0,0,0,0)];
+		//[self.tableView setLayoutMargins:UIEdgeInsetsMake(0,0,0,0)];
+		self.tableView.layoutMargins = UIEdgeInsetsZero;
+		
 	}
 }
+//也可以写在cellForRowAtIndexPath里。
 -(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+	
+	//	懒得写if可以直接
+	//	cell.layoutMargins = UIEdgeInsetsZero;
+	//	cell.separatorInset = UIEdgeInsetsZero;
 	
 	if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
 		[cell setSeparatorInset:UIEdgeInsetsZero];
@@ -138,6 +168,18 @@
 
 #pragma mark - UITableViewDelegate
 
+#pragma mark -UIScrollView delegate
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
+				  willDecelerate:(BOOL)decelerate {
+	//	NSSet *visiblecells = [NSSet setWithArray:[self.contextView indexPathsForVisibleRows]];
+	//	[_set minusSet:visiblecells];
+	//
+	//	for (NSIndexPath *anIndexPath in _set) {
+	//		UITableViewCell *cell = [self.contextView dequeueReusableCellWithIdentifier:@"CELL" forIndexPath:anIndexPath];
+	//		NSLog(@"%@不在唱歌", cell.textLabel.text);
+	//	}
+}
+
 - (CGFloat)tableView:(__unused UITableView *)tableView
 heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -177,15 +219,21 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 	//	[vcB setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
 	//	[viewControllerA presentModalViewController:(UIViewController *)vcB animated:YES];
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
 	//第四种：storyboard跳转。
 	
-	NSLog(@"function %s line=%d",__FUNCTION__,__LINE__);
+	//	NSLog(@"function %s line=%d",__FUNCTION__,__LINE__);
+	//
+	//	UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+	//
+	//	//以下两种方法都行。
+	//	ViewController *viewController = [mainStoryBoard instantiateInitialViewController];
+	////	ViewController *viewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"TestUIViewController"];
+	//	[self.navigationController pushViewController:viewController animated:YES];
 	
-	UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 	
-	ViewController *viewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"TestUIViewController"];
-	[self.navigationController pushViewController:viewController animated:YES];
-	
+	//	storyboard加载的是控制器及控制器view，而xib加载的仅仅只是控制器的view，storyboard会调用控制器的awakeFromNib方法
+	//而xib不会。
 	
 	//另一种初始化storyboard方式：
 	//	-(instancetype)init{
@@ -203,8 +251,16 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 	//	[self presentViewController:[mainStoryBoard instantiateInitialViewController] animated:YES completion:nil];
 	
 	//	//跳转到xib
-	//	UIViewController *xibTest= [[UIViewController alloc]initWithNibName:@"loadXIBFile" bundle:[NSBundle mainBundle]];
-	//	[self.navigationController pushViewController:xibTest animated:YES];
+	
+	//	iOS button press causes "unrecognized selector sent to instance" 线连对了，Controller 写错了，Controller是loadXIB
+	//		UIViewController *xibTest= [[UIViewController alloc]initWithNibName:@"loadXIBFile" bundle:nil];
+	
+	//不指定xib名字方式。loadView就会加载与控制器同名的xib（loadXIBFile.xib）
+	//	当没有指定xib名称，且没有与控制器同名的xib时，会加载前缀与控制器名相同而不带controller的xib（loadXIB.xib）
+	//	如果loadXIB 也删掉就会加载不到显示黑屏，则创建一个空白的xib
+	loadXIBFile *xibTest = [[loadXIBFile alloc] init];
+	
+	[self.navigationController pushViewController:xibTest animated:YES];
 	
 	
 	

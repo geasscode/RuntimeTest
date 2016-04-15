@@ -22,6 +22,7 @@
 		F74676CB1CB63A320001D3A5 /* UIViewController+swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676CA1CB63A320001D3A5 /* UIViewController+swizzling.m */; };
 		F74676CE1CB6415C0001D3A5 /* NSObject+PropertyAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676CD1CB6415C0001D3A5 /* NSObject+PropertyAdd.m */; };
 		F74676D21CB647490001D3A5 /* NSMutableArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676D11CB647490001D3A5 /* NSMutableArray+Extension.m */; };
+		F74676D71CB7B38F0001D3A5 /* RunLoopTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676D61CB7B38F0001D3A5 /* RunLoopTest.m */; };
 		F7526FF01C9A940A0012FE76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FEF1C9A940A0012FE76 /* main.m */; };
 		F7526FF31C9A940A0012FE76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FF21C9A940A0012FE76 /* AppDelegate.m */; };
 		F7526FF61C9A940A0012FE76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FF51C9A940A0012FE76 /* ViewController.m */; };
@@ -30,6 +31,7 @@
 		F7526FFE1C9A940A0012FE76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7526FFC1C9A940A0012FE76 /* LaunchScreen.storyboard */; };
 		F75270091C9A940A0012FE76 /* RuntimeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75270081C9A940A0012FE76 /* RuntimeTestTests.m */; };
 		F75270141C9A940A0012FE76 /* RuntimeTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75270131C9A940A0012FE76 /* RuntimeTestUITests.m */; };
+		F7650A791CBE2E7F0065AA41 /* SocketTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7650A781CBE2E7F0065AA41 /* SocketTest.m */; };
 		F7B4128E1C9BD96C00E45E22 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B412881C9BD96C00E45E22 /* Post.m */; };
 		F7B4128F1C9BD96C00E45E22 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B4128A1C9BD96C00E45E22 /* User.m */; };
 		F7B412901C9BD96C00E45E22 /* AFAppDotNetAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B4128D1C9BD96C00E45E22 /* AFAppDotNetAPIClient.m */; };
@@ -89,6 +91,8 @@
 		F74676CD1CB6415C0001D3A5 /* NSObject+PropertyAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PropertyAdd.m"; sourceTree = "<group>"; };
 		F74676D01CB647490001D3A5 /* NSMutableArray+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Extension.h"; sourceTree = "<group>"; };
 		F74676D11CB647490001D3A5 /* NSMutableArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Extension.m"; sourceTree = "<group>"; };
+		F74676D51CB7B38F0001D3A5 /* RunLoopTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunLoopTest.h; sourceTree = "<group>"; };
+		F74676D61CB7B38F0001D3A5 /* RunLoopTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopTest.m; sourceTree = "<group>"; };
 		F7526FEB1C9A940A0012FE76 /* RuntimeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7526FEF1C9A940A0012FE76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7526FF11C9A940A0012FE76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 		F752700F1C9A940A0012FE76 /* RuntimeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F75270131C9A940A0012FE76 /* RuntimeTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTestUITests.m; sourceTree = "<group>"; };
 		F75270151C9A940A0012FE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F7650A771CBE2E7F0065AA41 /* SocketTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketTest.h; sourceTree = "<group>"; };
+		F7650A781CBE2E7F0065AA41 /* SocketTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketTest.m; sourceTree = "<group>"; };
 		F7B412871C9BD96C00E45E22 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
 		F7B412881C9BD96C00E45E22 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		F7B412891C9BD96C00E45E22 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -275,6 +281,8 @@
 			children = (
 				F7B412861C9BD96C00E45E22 /* Models */,
 				F7B4128B1C9BD96C00E45E22 /* Networking Extensions */,
+				F74676D51CB7B38F0001D3A5 /* RunLoopTest.h */,
+				F74676D61CB7B38F0001D3A5 /* RunLoopTest.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -317,6 +325,8 @@
 			children = (
 				F7B4128C1C9BD96C00E45E22 /* AFAppDotNetAPIClient.h */,
 				F7B4128D1C9BD96C00E45E22 /* AFAppDotNetAPIClient.m */,
+				F7650A771CBE2E7F0065AA41 /* SocketTest.h */,
+				F7650A781CBE2E7F0065AA41 /* SocketTest.m */,
 			);
 			path = "Networking Extensions";
 			sourceTree = "<group>";
@@ -522,9 +532,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F74676D71CB7B38F0001D3A5 /* RunLoopTest.m in Sources */,
 				F7B4128F1C9BD96C00E45E22 /* User.m in Sources */,
 				F7526FF61C9A940A0012FE76 /* ViewController.m in Sources */,
 				F74676B61CABC7B50001D3A5 /* MJStatus.m in Sources */,
+				F7650A791CBE2E7F0065AA41 /* SocketTest.m in Sources */,
 				F7526FF31C9A940A0012FE76 /* AppDelegate.m in Sources */,
 				F74676B51CABC7B50001D3A5 /* MJDog.m in Sources */,
 				F74676B11CABC7B50001D3A5 /* MJBag.m in Sources */,

@@ -10,6 +10,9 @@
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[]) {
+	
+	
+//	这个方法会为main thread 设置一个NSRunLoop 对象，这就解释了本文开始说的为什么我们的应用可以在无人操作的时候休息，需要让它干活的时候又能立马响应。
 	@autoreleasepool {
 	    return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
 	}

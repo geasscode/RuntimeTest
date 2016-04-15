@@ -19,14 +19,14 @@
                     <rect key="frame" x="276" y="285" width="49" height="30"/>
                     <state key="normal" title="xibTest"/>
                     <connections>
-                        <action selector="testMJExtension:" destination="-1" eventType="touchUpInside" id="SGT-Lg-lra"/>
+                        <action selector="xibTest:" destination="-1" eventType="touchUpInside" id="rPZ-MD-Gcg"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NC-UU-6Li">
                     <rect key="frame" x="277" y="549" width="46" height="30"/>
                     <state key="normal" title="Button"/>
                     <connections>
-                        <action selector="XIBTest:" destination="-1" eventType="touchUpInside" id="1b4-bz-LZO"/>
+                        <action selector="testMJExtension:" destination="-1" eventType="touchUpInside" id="bV4-T4-36N"/>
                     </connections>
                 </button>
             </subviews>

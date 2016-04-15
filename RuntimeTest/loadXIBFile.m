@@ -30,8 +30,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)XIBTest:(id)sender {
+- (IBAction)xibTest:(UIButton *)sender {
 	NSLog(@"what");
+
 }
 
 - (IBAction)testMJExtension:(UIButton *)sender {
