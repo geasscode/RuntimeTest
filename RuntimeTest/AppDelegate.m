@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "GlobalTimelineViewController.h"
 #import <AFNetworking/AFNetworking.h>
+
 #import "AFNetworkActivityIndicatorManager.h"
 
 
@@ -18,7 +19,8 @@
 
 @implementation AppDelegate
 
-
+//设置LaunchScreen url 如果不生效需要将app删除重新装。
+//http://blog.csdn.net/riven_wn/article/details/49275157
 //1、application didFinishLaunchingWithOptions：当应用程序启动时执行，应用程序启动入口，只在应用程序启动时执行一次。若用户直接启动，lauchOptions内无数据,若通过其他方式启动应用，lauchOptions包含对应方式的内容。
 //2、applicationWillResignActive：在应用程序将要由活动状态切换到非活动状态时候，要执行的委托调用，如 按下 home 按钮，返回主屏幕，或全屏之间切换应用程序等。
 //3、applicationDidEnterBackground：在应用程序已进入后台程序时，要执行的委托调用。
@@ -43,6 +45,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
+//	屏蔽掉除电池电量的各种状态，需要再info.plist 指定 View controller-based status bar appearance  BOOL值设为NO
+//	就是把控制器控制状态栏的权限给禁了，用UIApplication来控制。但是这种做法在iOS9不建议使用了，
+//	建议我们使用吧那个BOOL值设为YES，然后用控制器的方法来管理状态栏
+	[application setStatusBarStyle:UIStatusBarStyleLightContent];
+//	[NSThread sleepForTimeInterval:3.0];//设置启动页面时间
+
 	NSLog(@"execute didFinishLaunchingWithOptions");
 	// Override point for customization after application launch.
 	NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
@@ -50,17 +58,28 @@
 	
 	[[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
 	
-	UITableViewController *viewController = [[GlobalTimelineViewController alloc] initWithStyle:UITableViewStylePlain];
-	self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
-	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
-	
-	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	self.window.backgroundColor = [UIColor whiteColor];
-	self.window.rootViewController = self.navigationController;
-	[self.window makeKeyAndVisible];
+//	UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero];
+//	UITableViewController *viewController = [[GlobalTimelineViewController alloc] initWithStyle:UITableViewStylePlain];
+//	viewController.tableView = tableView;
+//	self.navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+//	self.navigationController.navigationBar.tintColor = [UIColor darkGrayColor];
+//	
+//	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//	self.window.backgroundColor = [UIColor whiteColor];
+//	self.window.rootViewController = self.navigationController;
+//	[self.window makeKeyAndVisible];
 
 	return YES;
 }
+
+
+//- (UIStatusBarStyle)preferredStatusBarStyle {
+//
+//	//ios 9 使用此方法。后将View controller-based status bar appearance  BOOL值设为YES
+//	
+//	return UIStatusBarStyleLightContent;
+//	
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -14,18 +14,18 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7M-J0-rNW">
-                                <rect key="frame" x="258" y="285" width="84" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7M-J0-rNW">
+                                <rect key="frame" x="119" y="270" width="84" height="30"/>
                                 <state key="normal" title="runTimeTest"/>
                                 <connections>
                                     <action selector="runTimeTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YIm-Te-HEq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jaz-ul-ICf">
-                                <rect key="frame" x="270" y="550" width="61" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jaz-ul-ICf">
+                                <rect key="frame" x="158" y="518" width="61" height="30"/>
                                 <state key="normal" title="GCDTest"/>
                                 <connections>
                                     <action selector="GCDTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ryc-CG-1j7"/>
@@ -40,9 +40,11 @@
                             <constraint firstItem="Jaz-ul-ICf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uXi-TG-mwn"/>
                         </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="270.5" y="397.5"/>
         </scene>
     </scenes>
 </document>

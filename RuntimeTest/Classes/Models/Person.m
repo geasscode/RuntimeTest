@@ -74,6 +74,15 @@ void eat(id self,SEL sel)
     
 }
 
+- (NSString *)sayName{
+	return @"my name is desmond";
+}
+
+
+- (NSString *)saySex{
+	return @"i am a boy";
+}
+
 // 当一个对象调用未实现的方法，会调用这个方法处理,并且会把对应的方法列表传过来.
 // 刚好可以用来判断，未实现的方法是不是我们想要动态添加的方法
 + (BOOL)resolveInstanceMethod:(SEL)sel

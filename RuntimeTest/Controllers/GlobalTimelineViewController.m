@@ -24,7 +24,8 @@
 
 #import "Post.h"
 #import "PostTableViewCell.h"
-#import <AFNetworking/AFNetworking.h>
+#import "AFNetworking.h"
+////#import <AFNetworking/AFNetworking.h>
 #import <UIRefreshControl+AFNetworking.h>
 #import "ViewController.h"
 #import "loadXIBFile.h"

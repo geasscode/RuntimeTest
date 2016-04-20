@@ -44,4 +44,7 @@
  */
 - (void)work;
 
+-(NSString*)sayName;
+-(NSString*)saySex;
+
 @end

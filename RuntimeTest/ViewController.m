@@ -84,25 +84,64 @@
 //GCD是apple提出的为提高多核效率的多线程实现方案，它在系统层级帮助开发者维护线程的生命周期，包括线程的创建、休眠、销毁等，开发者只需要关心需要实现的功能，将需要做的操作放到调度队列（dispatch queue）中，系统会根据线程的情况自动分配资源。
 - (IBAction)runTimeTest:(id)sender {
 	
+//	常见作用
+//	
+//	动态的添加对象的成员变量和方法
+//	动态交换两个方法的实现
+//	拦截并替换方法
+//	在方法上增加额外功能
+//	实现NSCoding的自动归档和解档
+//	实现字典转模型的自动转换
+//	
 //	RunTime简称运行时。就是系统在运行的时候的一些机制，其中最主要的是消息机制。OC的函数调用成为消息发送。属于动态调用过程。在编译的时候并不能决定真正调用哪个函数（事实证明，在编 译阶段，OC可以调用任何函数，即使这个函数并未实现，只要申明过就不会报错。而C语言在编译阶段就会报错）。只有在真正运行的时候才会根据函数的名称找 到对应的函数来调用。
 	
 //	[obj makeText];
 //	编译器转化后
 //	objc_msgSend(obj,@selector(makeText));
+//
+//	[tableView cellForRowAtIndexPath:indexPath];
+//	在编译时RunTime会将上述代码转化成[发送消息]
+//	objc_msgSend(tableView, @selector(cellForRowAtIndexPath:),indexPath);
 	
 //	在objc_msgSend函数中。首先通过obj的isa指针找到obj对应的class。在Class中先去cache中
 // 通过SEL查找对应函数method（猜测cache中method列表是以SEL为key通过hash表来存储的，这样能提高函数查找速度），
 //	若 cache中未找到。再去methodList中查找，若methodlist中未找到，则取superClass中查找。
 //	若能找到，则将method加 入到cache中，以方便下次查找，并通过method中的函数指针跳转到对应的函数中去执行。
 	
+	
+//	现在有一个Person类，和person创建的xiaoming对象,有test1和test2两个方法
+//	获得类方法
+//
+//	Class PersonClass = object_getClass([Person class]);
+//	SEL oriSEL = @selector(test1);
+//	Method oriMethod = class_getInstanceMethod(xiaomingClass, oriSEL);
+//	获得实例方法
+//	
+//
+//	Class PersonClass = object_getClass([xiaoming class]);
+//	SEL oriSEL = @selector(test2);
+//	Method cusMethod = class_getInstanceMethod(xiaomingClass, oriSEL);
+//	添加方法
+//	
+//
+//	BOOL addSucc = class_addMethod(xiaomingClass, oriSEL, method_getImplementation(cusMethod), method_getTypeEncoding(cusMethod));
+//	替换原方法实现
+//	
+//
+//	class_replaceMethod(toolClass, cusSEL, method_getImplementation(oriMethod), method_getTypeEncoding(oriMethod));
+//	交换两个方法
+//	
+//
+//	method_exchangeImplementations(oriMethod, cusMethod);
+	
 
 	
 	
-	[self test1];
-	[self test2];
-	[self test3];
-	[self test4];
-	[self test5];
+	[self getIvarList];
+	[self getPropertyList];
+	[self getMethodList];
+	[self getProtocolList];
+	[self archiverTest];
 	[ self dismissViewControllerAnimated: YES completion: nil ];
 }
 
@@ -151,7 +190,7 @@
 /**
  *  获取一个类的全部成员变量名
  */
-- (void)test1 {
+- (void)getIvarList {
 	NSLog(@"使用class_copyIvarList获取一个类的全部成员变量名");
 
 	unsigned int count;
@@ -167,6 +206,11 @@
 		NSString *key = [NSString stringWithUTF8String:name];
 
 		NSLog(@"%d == %@",i,key);
+		
+		//set up value
+//		object_setIvar(Person, ivar, @"20");
+		
+
 	}
 	//根据Apple官方runtime.h文档所示，上面两个方法返回的指针，在使用完毕之后必须free()。
 	free(ivars);
@@ -175,7 +219,7 @@
 /**
  *  获取一个类的全部属性名
  */
-- (void)test2 {
+- (void)getPropertyList {
 	
 	NSLog(@"使用class_copyPropertyList获取一个类的全部属性名");
 	unsigned int count;
@@ -200,7 +244,7 @@
 /**
  *  获取一个类的全部方法
  */
-- (void)test3 {
+- (void)getMethodList {
 	
 	NSLog(@"使用class_copyMethodList获取一个类的全部方法");
 
@@ -231,7 +275,7 @@
 /**
  *  获取一个类遵循的全部协议
  */
-- (void)test4 {
+- (void)getProtocolList {
 	
 	NSLog(@"使用class_copyProtocolList获取一个类遵循的全部协议");
 
@@ -256,7 +300,7 @@
 /**
  *  归档/解档
  */
-- (void)test5 {
+- (void)archiverTest {
 	
 	NSLog(@"归档/解档");
 	Person *person = [[Person alloc] init];
