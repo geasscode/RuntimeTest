@@ -36,6 +36,9 @@
 {
   //Build Settings 中有一项 Undeclared Selector 设置为 NO。则下面的guess不会显示警告。debug的设为NO就行了。
 
+//	(IMP)guessAnswer 意思是guessAnswer的地址指针;
+//	“v@:” 意思是，v代表无返回值void，如果是i则代表int；@代表 id sel; : 代表 SEL _cmd;
+//	“v@:@@” 意思是，两个参数的没有返回值。
 	class_addMethod([self.person class], @selector(guess), (IMP)guessAnswer, "v@:");
 	
 	if ([self.person respondsToSelector:@selector(guess)]) {

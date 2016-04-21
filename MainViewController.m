@@ -49,6 +49,11 @@
 	[self.navigationController pushViewController:rumtimeVC animated:YES];
 	
 }
+- (IBAction)gotoContactView:(id)sender {
+	
+//	[self.navigationController pushViewController:rumtimeVC animated:YES];
+
+}
 
 /*
 #pragma mark - Navigation

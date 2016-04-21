@@ -110,6 +110,11 @@ static NSString *cellIdentifier = @"runtimeID";
 			DynamicExchangeMethodViewController * exchangeMethod = (DynamicExchangeMethodViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"exchangeMethod"];
 			[self.navigationController pushViewController:exchangeMethod animated:YES];
 		}
+			
+		case 3:{
+			ReplaceMethodViewController * replaceMethod = (ReplaceMethodViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"replaceMethod"];
+			[self.navigationController pushViewController:replaceMethod animated:YES];
+		}
 		default:
 				break;
 	}
@@ -151,14 +156,28 @@ static NSString *cellIdentifier = @"runtimeID";
  }
  */
 
-/*
+
  #pragma mark - Navigation
  
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+	 
+//	 UIViewController *destination = segue.destinationViewController;
+//	 if ([destination respondsToSelector:@selector(setDelegate:)]) {
+//		 [destination setValue:self forKey:@"delegate"];
+//	 }
+//	 if ([destination respondsToSelector:@selector(setSelection:)]) {
+//		 // prepare selection info
+//		 NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+//		 
+//		 id object = _runtimeData[indexPath.row];
+//		 NSDictionary *selection = @{@"indexPath" : indexPath,
+//									 @"object" : object};
+//		 [destination setValue:selection forKey:@"selection"];
+//	 }
  // Get the new view controller using [segue destinationViewController].
  // Pass the selected object to the new view controller.
  }
- */
+
 
 @end
