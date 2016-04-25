@@ -104,11 +104,13 @@ static NSString *cellIdentifier = @"runtimeID";
 		case 1:{
 			DynamicAddMethodViewController * addMethod = (DynamicAddMethodViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"addMethod"];
 			[self.navigationController pushViewController:addMethod animated:YES];
+			break;
 		}
 			
 		case 2:{
 			DynamicExchangeMethodViewController * exchangeMethod = (DynamicExchangeMethodViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"exchangeMethod"];
 			[self.navigationController pushViewController:exchangeMethod animated:YES];
+			break;
 		}
 			
 		case 3:{

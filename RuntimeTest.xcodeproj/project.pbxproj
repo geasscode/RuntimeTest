@@ -94,6 +94,39 @@
 		F7BAC76A1CC8DCBF000D9795 /* ContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAC7691CC8DCBF000D9795 /* ContactModel.m */; };
 		F7BAC7701CC8DD33000D9795 /* ContactDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAC76D1CC8DD33000D9795 /* ContactDataHelper.m */; };
 		F7BAC7711CC8DD33000D9795 /* NSString+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BAC76F1CC8DD33000D9795 /* NSString+Utils.m */; };
+		F7BCC53B1CCDBCF400704878 /* TableViewSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC53A1CCDBCF400704878 /* TableViewSampleViewController.m */; };
+		F7BCC5541CCDBD1000704878 /* NSObject+TCIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC53E1CCDBD1000704878 /* NSObject+TCIdentifier.m */; };
+		F7BCC5551CCDBD1000704878 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC53F1CCDBD1000704878 /* README.md */; };
+		F7BCC5561CCDBD1000704878 /* ResuableView+TCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5411CCDBD1000704878 /* ResuableView+TCExtension.m */; };
+		F7BCC5571CCDBD1000704878 /* TCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5441CCDBD1000704878 /* TCDataSource.m */; };
+		F7BCC5581CCDBD1000704878 /* TCDefaultSupplementaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5471CCDBD1000704878 /* TCDefaultSupplementaryView.m */; };
+		F7BCC5591CCDBD1000704878 /* TCDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC54A1CCDBD1000704878 /* TCDelegate.m */; };
+		F7BCC55A1CCDBD1000704878 /* TCGlobalDataMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC54D1CCDBD1000704878 /* TCGlobalDataMetric.m */; };
+		F7BCC55B1CCDBD1000704878 /* TCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC54F1CCDBD1000704878 /* TCHelper.m */; };
+		F7BCC55C1CCDBD1000704878 /* TCSectionDataMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5521CCDBD1000704878 /* TCSectionDataMetric.m */; };
+		F7BCC55F1CCDBD3700704878 /* TableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC55E1CCDBD3700704878 /* TableViewDataSource.m */; };
+		F7BCC5621CCDBD7900704878 /* TableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5611CCDBD7900704878 /* TableViewDelegate.m */; };
+		F7BCC5651CCDBDAC00704878 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5641CCDBDAC00704878 /* TableViewCell.m */; };
+		F7BCC5681CCDBDE800704878 /* TableViewHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5671CCDBDE800704878 /* TableViewHeaderFooterView.m */; };
+		F7BCC56B1CCDC54200704878 /* Text.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC56A1CCDC54200704878 /* Text.m */; };
+		F7BCC5751CCDF0D500704878 /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5731CCDF0D500704878 /* PhotosViewController.m */; };
+		F7BCC5761CCDF0D500704878 /* PhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BCC5741CCDF0D500704878 /* PhotosViewController.xib */; };
+		F7BCC5791CCDF1A100704878 /* ArrayDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5781CCDF1A100704878 /* ArrayDataSource.m */; };
+		F7BCC5821CCDF33200704878 /* PhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5801CCDF33200704878 /* PhotoCell.m */; };
+		F7BCC5831CCDF33200704878 /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BCC5811CCDF33200704878 /* PhotoCell.xib */; };
+		F7BCC58A1CCDF50600704878 /* Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5861CCDF50600704878 /* Photo.m */; };
+		F7BCC58B1CCDF50600704878 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5881CCDF50600704878 /* Store.m */; };
+		F7BCC58E1CCDF64B00704878 /* MyUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC58D1CCDF64B00704878 /* MyUser.m */; };
+		F7BCC5911CCDF81300704878 /* PhotoCell+ConfigureForPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5901CCDF81300704878 /* PhotoCell+ConfigureForPhoto.m */; };
+		F7BCC5951CCDFA2D00704878 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5931CCDFA2D00704878 /* PhotoViewController.m */; };
+		F7BCC5961CCDFA2D00704878 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BCC5941CCDFA2D00704878 /* PhotoViewController.xib */; };
+		F7BCC5991CCDFAB800704878 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5981CCDFAB800704878 /* DetailViewController.m */; };
+		F7BCC5A21CCDFBF000704878 /* RatingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5A01CCDFBF000704878 /* RatingCell.m */; };
+		F7BCC5A31CCDFBF000704878 /* RatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BCC5A11CCDFBF000704878 /* RatingCell.xib */; };
+		F7BCC5A71CCDFCB700704878 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5A51CCDFCB700704878 /* DetailsViewController.m */; };
+		F7BCC5A81CCDFCB700704878 /* DetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BCC5A61CCDFCB700704878 /* DetailsViewController.xib */; };
+		F7BCC5AC1CCE058A00704878 /* photodata.bin in Resources */ = {isa = PBXBuildFile; fileRef = F7BCC5AB1CCE058A00704878 /* photodata.bin */; };
+		F7BCC5B01CCE17A000704878 /* photodata.bin in Resources */ = {isa = PBXBuildFile; fileRef = F7BCC5AF1CCE17A000704878 /* photodata.bin */; };
 		F7DB40731C9FEAF900E164C7 /* loadXIBFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40711C9FEAF900E164C7 /* loadXIBFile.m */; };
 		F7DB40741C9FEAF900E164C7 /* loadXIBFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */; };
 		F7DB40771CA0E9F300E164C7 /* CYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40761CA0E9F300E164C7 /* CYAlertView.m */; };
@@ -268,6 +301,70 @@
 		F7BAC76D1CC8DD33000D9795 /* ContactDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDataHelper.m; sourceTree = "<group>"; };
 		F7BAC76E1CC8DD33000D9795 /* NSString+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Utils.h"; sourceTree = "<group>"; };
 		F7BAC76F1CC8DD33000D9795 /* NSString+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utils.m"; sourceTree = "<group>"; };
+		F7BCC5391CCDBCF400704878 /* TableViewSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSampleViewController.h; sourceTree = "<group>"; };
+		F7BCC53A1CCDBCF400704878 /* TableViewSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewSampleViewController.m; sourceTree = "<group>"; };
+		F7BCC53D1CCDBD1000704878 /* NSObject+TCIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TCIdentifier.h"; sourceTree = "<group>"; };
+		F7BCC53E1CCDBD1000704878 /* NSObject+TCIdentifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TCIdentifier.m"; sourceTree = "<group>"; };
+		F7BCC53F1CCDBD1000704878 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F7BCC5401CCDBD1000704878 /* ResuableView+TCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ResuableView+TCExtension.h"; sourceTree = "<group>"; };
+		F7BCC5411CCDBD1000704878 /* ResuableView+TCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ResuableView+TCExtension.m"; sourceTree = "<group>"; };
+		F7BCC5421CCDBD1000704878 /* TCDataSource+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TCDataSource+Private.h"; sourceTree = "<group>"; };
+		F7BCC5431CCDBD1000704878 /* TCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDataSource.h; sourceTree = "<group>"; };
+		F7BCC5441CCDBD1000704878 /* TCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDataSource.m; sourceTree = "<group>"; };
+		F7BCC5451CCDBD1000704878 /* TCDataSourceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDataSourceProtocol.h; sourceTree = "<group>"; };
+		F7BCC5461CCDBD1000704878 /* TCDefaultSupplementaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDefaultSupplementaryView.h; sourceTree = "<group>"; };
+		F7BCC5471CCDBD1000704878 /* TCDefaultSupplementaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDefaultSupplementaryView.m; sourceTree = "<group>"; };
+		F7BCC5481CCDBD1000704878 /* TCDelegate+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TCDelegate+Private.h"; sourceTree = "<group>"; };
+		F7BCC5491CCDBD1000704878 /* TCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCDelegate.h; sourceTree = "<group>"; };
+		F7BCC54A1CCDBD1000704878 /* TCDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCDelegate.m; sourceTree = "<group>"; };
+		F7BCC54B1CCDBD1000704878 /* TCGlobalDataMetric+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TCGlobalDataMetric+Private.h"; sourceTree = "<group>"; };
+		F7BCC54C1CCDBD1000704878 /* TCGlobalDataMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCGlobalDataMetric.h; sourceTree = "<group>"; };
+		F7BCC54D1CCDBD1000704878 /* TCGlobalDataMetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCGlobalDataMetric.m; sourceTree = "<group>"; };
+		F7BCC54E1CCDBD1000704878 /* TCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCHelper.h; sourceTree = "<group>"; };
+		F7BCC54F1CCDBD1000704878 /* TCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCHelper.m; sourceTree = "<group>"; };
+		F7BCC5501CCDBD1000704878 /* TCSectionDataMetric+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TCSectionDataMetric+Private.h"; sourceTree = "<group>"; };
+		F7BCC5511CCDBD1000704878 /* TCSectionDataMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCSectionDataMetric.h; sourceTree = "<group>"; };
+		F7BCC5521CCDBD1000704878 /* TCSectionDataMetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCSectionDataMetric.m; sourceTree = "<group>"; };
+		F7BCC5531CCDBD1000704878 /* ThinningCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThinningCoordinator.h; sourceTree = "<group>"; };
+		F7BCC55D1CCDBD3700704878 /* TableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDataSource.h; sourceTree = "<group>"; };
+		F7BCC55E1CCDBD3700704878 /* TableViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSource.m; sourceTree = "<group>"; };
+		F7BCC5601CCDBD7900704878 /* TableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewDelegate.h; sourceTree = "<group>"; };
+		F7BCC5611CCDBD7900704878 /* TableViewDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewDelegate.m; sourceTree = "<group>"; };
+		F7BCC5631CCDBDAC00704878 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		F7BCC5641CCDBDAC00704878 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		F7BCC5661CCDBDE800704878 /* TableViewHeaderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewHeaderFooterView.h; sourceTree = "<group>"; };
+		F7BCC5671CCDBDE800704878 /* TableViewHeaderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewHeaderFooterView.m; sourceTree = "<group>"; };
+		F7BCC5691CCDC54200704878 /* Text.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Text.h; sourceTree = "<group>"; };
+		F7BCC56A1CCDC54200704878 /* Text.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Text.m; sourceTree = "<group>"; };
+		F7BCC5721CCDF0D500704878 /* PhotosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
+		F7BCC5731CCDF0D500704878 /* PhotosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
+		F7BCC5741CCDF0D500704878 /* PhotosViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotosViewController.xib; sourceTree = "<group>"; };
+		F7BCC5771CCDF1A100704878 /* ArrayDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDataSource.h; sourceTree = "<group>"; };
+		F7BCC5781CCDF1A100704878 /* ArrayDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayDataSource.m; sourceTree = "<group>"; };
+		F7BCC57F1CCDF33200704878 /* PhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCell.h; sourceTree = "<group>"; };
+		F7BCC5801CCDF33200704878 /* PhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCell.m; sourceTree = "<group>"; };
+		F7BCC5811CCDF33200704878 /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
+		F7BCC5851CCDF50600704878 /* Photo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Photo.h; sourceTree = "<group>"; };
+		F7BCC5861CCDF50600704878 /* Photo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Photo.m; sourceTree = "<group>"; };
+		F7BCC5871CCDF50600704878 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		F7BCC5881CCDF50600704878 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
+		F7BCC58C1CCDF64B00704878 /* MyUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUser.h; sourceTree = "<group>"; };
+		F7BCC58D1CCDF64B00704878 /* MyUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyUser.m; sourceTree = "<group>"; };
+		F7BCC58F1CCDF81300704878 /* PhotoCell+ConfigureForPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PhotoCell+ConfigureForPhoto.h"; sourceTree = "<group>"; };
+		F7BCC5901CCDF81300704878 /* PhotoCell+ConfigureForPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PhotoCell+ConfigureForPhoto.m"; sourceTree = "<group>"; };
+		F7BCC5921CCDFA2D00704878 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		F7BCC5931CCDFA2D00704878 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		F7BCC5941CCDFA2D00704878 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		F7BCC5971CCDFAB800704878 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		F7BCC5981CCDFAB800704878 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		F7BCC59F1CCDFBF000704878 /* RatingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatingCell.h; sourceTree = "<group>"; };
+		F7BCC5A01CCDFBF000704878 /* RatingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatingCell.m; sourceTree = "<group>"; };
+		F7BCC5A11CCDFBF000704878 /* RatingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RatingCell.xib; sourceTree = "<group>"; };
+		F7BCC5A41CCDFCB700704878 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		F7BCC5A51CCDFCB700704878 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		F7BCC5A61CCDFCB700704878 /* DetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsViewController.xib; sourceTree = "<group>"; };
+		F7BCC5AB1CCE058A00704878 /* photodata.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = photodata.bin; sourceTree = "<group>"; };
+		F7BCC5AF1CCE17A000704878 /* photodata.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = photodata.bin; sourceTree = "<group>"; };
 		F7DB40701C9FEAF900E164C7 /* loadXIBFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadXIBFile.h; sourceTree = "<group>"; };
 		F7DB40711C9FEAF900E164C7 /* loadXIBFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadXIBFile.m; sourceTree = "<group>"; };
 		F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loadXIBFile.xib; sourceTree = "<group>"; };
@@ -330,6 +427,8 @@
 				F74676D11CB647490001D3A5 /* NSMutableArray+Extension.m */,
 				F7BAC7011CC78E9C000D9795 /* UIButton+Hook.h */,
 				F7BAC7021CC78E9C000D9795 /* UIButton+Hook.m */,
+				F7BCC58F1CCDF81300704878 /* PhotoCell+ConfigureForPhoto.h */,
+				F7BCC5901CCDF81300704878 /* PhotoCell+ConfigureForPhoto.m */,
 			);
 			path = DESExtension;
 			sourceTree = "<group>";
@@ -408,6 +507,7 @@
 		F7526FEE1C9A940A0012FE76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F7BCC5AF1CCE17A000704878 /* photodata.bin */,
 				F7526FEF1C9A940A0012FE76 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -465,6 +565,7 @@
 		F7B1EAB21CC633E000307F41 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F7BCC53C1CCDBD1000704878 /* Sources */,
 				F7BAC76B1CC8DD33000D9795 /* libs */,
 				F7BAC7071CC8D40E000D9795 /* 3rd */,
 				F7BAC7221CC8D40E000D9795 /* Images */,
@@ -503,6 +604,11 @@
 		F7B412861C9BD96C00E45E22 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F7BCC5AB1CCE058A00704878 /* photodata.bin */,
+				F7BCC5851CCDF50600704878 /* Photo.h */,
+				F7BCC5861CCDF50600704878 /* Photo.m */,
+				F7BCC5871CCDF50600704878 /* Store.h */,
+				F7BCC5881CCDF50600704878 /* Store.m */,
 				F74676C31CB6077C0001D3A5 /* Person.h */,
 				F74676C41CB6077C0001D3A5 /* Person.m */,
 				F746769C1CABC7B50001D3A5 /* MJAd.h */,
@@ -531,6 +637,8 @@
 				F7B4128A1C9BD96C00E45E22 /* User.m */,
 				F7BAC6FE1CC786A6000D9795 /* Tool.h */,
 				F7BAC6FF1CC786A6000D9795 /* Tool.m */,
+				F7BCC58C1CCDF64B00704878 /* MyUser.h */,
+				F7BCC58D1CCDF64B00704878 /* MyUser.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -551,6 +659,35 @@
 			children = (
 				F7B412921C9BDA3900E45E22 /* GlobalTimelineViewController.h */,
 				F7B412931C9BDA3900E45E22 /* GlobalTimelineViewController.m */,
+				F7BCC5391CCDBCF400704878 /* TableViewSampleViewController.h */,
+				F7BCC53A1CCDBCF400704878 /* TableViewSampleViewController.m */,
+				F7BCC55D1CCDBD3700704878 /* TableViewDataSource.h */,
+				F7BCC55E1CCDBD3700704878 /* TableViewDataSource.m */,
+				F7BCC5601CCDBD7900704878 /* TableViewDelegate.h */,
+				F7BCC5611CCDBD7900704878 /* TableViewDelegate.m */,
+				F7BCC5631CCDBDAC00704878 /* TableViewCell.h */,
+				F7BCC5641CCDBDAC00704878 /* TableViewCell.m */,
+				F7BCC5661CCDBDE800704878 /* TableViewHeaderFooterView.h */,
+				F7BCC5671CCDBDE800704878 /* TableViewHeaderFooterView.m */,
+				F7BCC5721CCDF0D500704878 /* PhotosViewController.h */,
+				F7BCC5731CCDF0D500704878 /* PhotosViewController.m */,
+				F7BCC5741CCDF0D500704878 /* PhotosViewController.xib */,
+				F7BCC5771CCDF1A100704878 /* ArrayDataSource.h */,
+				F7BCC5781CCDF1A100704878 /* ArrayDataSource.m */,
+				F7BCC57F1CCDF33200704878 /* PhotoCell.h */,
+				F7BCC5801CCDF33200704878 /* PhotoCell.m */,
+				F7BCC5811CCDF33200704878 /* PhotoCell.xib */,
+				F7BCC5921CCDFA2D00704878 /* PhotoViewController.h */,
+				F7BCC5931CCDFA2D00704878 /* PhotoViewController.m */,
+				F7BCC5941CCDFA2D00704878 /* PhotoViewController.xib */,
+				F7BCC5971CCDFAB800704878 /* DetailViewController.h */,
+				F7BCC5981CCDFAB800704878 /* DetailViewController.m */,
+				F7BCC59F1CCDFBF000704878 /* RatingCell.h */,
+				F7BCC5A01CCDFBF000704878 /* RatingCell.m */,
+				F7BCC5A11CCDFBF000704878 /* RatingCell.xib */,
+				F7BCC5A41CCDFCB700704878 /* DetailsViewController.h */,
+				F7BCC5A51CCDFCB700704878 /* DetailsViewController.m */,
+				F7BCC5A61CCDFCB700704878 /* DetailsViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -681,6 +818,38 @@
 			path = libs;
 			sourceTree = "<group>";
 		};
+		F7BCC53C1CCDBD1000704878 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F7BCC5691CCDC54200704878 /* Text.h */,
+				F7BCC56A1CCDC54200704878 /* Text.m */,
+				F7BCC53D1CCDBD1000704878 /* NSObject+TCIdentifier.h */,
+				F7BCC53E1CCDBD1000704878 /* NSObject+TCIdentifier.m */,
+				F7BCC53F1CCDBD1000704878 /* README.md */,
+				F7BCC5401CCDBD1000704878 /* ResuableView+TCExtension.h */,
+				F7BCC5411CCDBD1000704878 /* ResuableView+TCExtension.m */,
+				F7BCC5421CCDBD1000704878 /* TCDataSource+Private.h */,
+				F7BCC5431CCDBD1000704878 /* TCDataSource.h */,
+				F7BCC5441CCDBD1000704878 /* TCDataSource.m */,
+				F7BCC5451CCDBD1000704878 /* TCDataSourceProtocol.h */,
+				F7BCC5461CCDBD1000704878 /* TCDefaultSupplementaryView.h */,
+				F7BCC5471CCDBD1000704878 /* TCDefaultSupplementaryView.m */,
+				F7BCC5481CCDBD1000704878 /* TCDelegate+Private.h */,
+				F7BCC5491CCDBD1000704878 /* TCDelegate.h */,
+				F7BCC54A1CCDBD1000704878 /* TCDelegate.m */,
+				F7BCC54B1CCDBD1000704878 /* TCGlobalDataMetric+Private.h */,
+				F7BCC54C1CCDBD1000704878 /* TCGlobalDataMetric.h */,
+				F7BCC54D1CCDBD1000704878 /* TCGlobalDataMetric.m */,
+				F7BCC54E1CCDBD1000704878 /* TCHelper.h */,
+				F7BCC54F1CCDBD1000704878 /* TCHelper.m */,
+				F7BCC5501CCDBD1000704878 /* TCSectionDataMetric+Private.h */,
+				F7BCC5511CCDBD1000704878 /* TCSectionDataMetric.h */,
+				F7BCC5521CCDBD1000704878 /* TCSectionDataMetric.m */,
+				F7BCC5531CCDBD1000704878 /* ThinningCoordinator.h */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -790,7 +959,11 @@
 				F7BAC7591CC8D40F000D9795 /* 7.png in Resources */,
 				F7BAC7541CC8D40F000D9795 /* 2.png in Resources */,
 				F7BAC74D1CC8D40F000D9795 /* 12.png in Resources */,
+				F7BCC5761CCDF0D500704878 /* PhotosViewController.xib in Resources */,
+				F7BCC5831CCDF33200704878 /* PhotoCell.xib in Resources */,
 				F7BAC7511CC8D40F000D9795 /* 16.png in Resources */,
+				F7BCC5A31CCDFBF000704878 /* RatingCell.xib in Resources */,
+				F7BCC5A81CCDFCB700704878 /* DetailsViewController.xib in Resources */,
 				F7BAC74B1CC8D40F000D9795 /* 10.png in Resources */,
 				F7B1EA611CC5D5AF00307F41 /* LoadData.storyboard in Resources */,
 				F7BAC7451CC8D40F000D9795 /* contacts_add_friend@2x.png in Resources */,
@@ -799,12 +972,15 @@
 				F7BAC7521CC8D40F000D9795 /* 17.png in Resources */,
 				F7B4129A1C9BFCE800E45E22 /* ImageSet.xcassets in Resources */,
 				F7526FFE1C9A940A0012FE76 /* LaunchScreen.storyboard in Resources */,
+				F7BCC5961CCDFA2D00704878 /* PhotoViewController.xib in Resources */,
 				F7BAC74C1CC8D40F000D9795 /* 11.png in Resources */,
 				F7526FFB1C9A940A0012FE76 /* Assets.xcassets in Resources */,
 				F7BAC7571CC8D40F000D9795 /* 5.png in Resources */,
 				F7BAC7551CC8D40F000D9795 /* 3.png in Resources */,
 				F7BAC7561CC8D40F000D9795 /* 4.png in Resources */,
 				F7526FF91C9A940A0012FE76 /* Main.storyboard in Resources */,
+				F7BCC5AC1CCE058A00704878 /* photodata.bin in Resources */,
+				F7BCC5B01CCE17A000704878 /* photodata.bin in Resources */,
 				F7BAC7501CC8D40F000D9795 /* 15.png in Resources */,
 				F7BAC7531CC8D40F000D9795 /* 18.png in Resources */,
 				F7BAC7461CC8D40F000D9795 /* contacts_add_friend@3x.png in Resources */,
@@ -894,26 +1070,44 @@
 				F74676D71CB7B38F0001D3A5 /* RunLoopTest.m in Sources */,
 				F7B4128F1C9BD96C00E45E22 /* User.m in Sources */,
 				F7BAC73F1CC8D40F000D9795 /* NSArray+JSONModel.m in Sources */,
+				F7BCC5651CCDBDAC00704878 /* TableViewCell.m in Sources */,
 				F7526FF61C9A940A0012FE76 /* ViewController.m in Sources */,
 				F7BAC7711CC8DD33000D9795 /* NSString+Utils.m in Sources */,
+				F7BCC5A21CCDFBF000704878 /* RatingCell.m in Sources */,
 				F74676B61CABC7B50001D3A5 /* MJStatus.m in Sources */,
 				F7650A791CBE2E7F0065AA41 /* SocketTest.m in Sources */,
 				F7BAC7641CC8D7B9000D9795 /* ContactInfoTableViewController.m in Sources */,
+				F7BCC5681CCDBDE800704878 /* TableViewHeaderFooterView.m in Sources */,
+				F7BCC5571CCDBD1000704878 /* TCDataSource.m in Sources */,
 				F7526FF31C9A940A0012FE76 /* AppDelegate.m in Sources */,
+				F7BCC58B1CCDF50600704878 /* Store.m in Sources */,
 				F7BAC7701CC8DD33000D9795 /* ContactDataHelper.m in Sources */,
 				F7B1EAAA1CC6112000307F41 /* HomeViewController.m in Sources */,
 				F7754BDD1CC7536B00F989DA /* IvarListViewController.m in Sources */,
+				F7BCC5991CCDFAB800704878 /* DetailViewController.m in Sources */,
+				F7BCC5541CCDBD1000704878 /* NSObject+TCIdentifier.m in Sources */,
+				F7BCC55A1CCDBD1000704878 /* TCGlobalDataMetric.m in Sources */,
 				F74676B51CABC7B50001D3A5 /* MJDog.m in Sources */,
+				F7BCC55B1CCDBD1000704878 /* TCHelper.m in Sources */,
 				F74676B11CABC7B50001D3A5 /* MJBag.m in Sources */,
 				F74676B21CABC7B50001D3A5 /* MJBaseObject.m in Sources */,
+				F7BCC58E1CCDF64B00704878 /* MyUser.m in Sources */,
 				F7BAC7001CC786A6000D9795 /* Tool.m in Sources */,
 				F74676D21CB647490001D3A5 /* NSMutableArray+Extension.m in Sources */,
 				F74676B01CABC7B50001D3A5 /* MJAd.m in Sources */,
+				F7BCC5551CCDBD1000704878 /* README.md in Sources */,
+				F7BCC55C1CCDBD1000704878 /* TCSectionDataMetric.m in Sources */,
 				F7526FF01C9A940A0012FE76 /* main.m in Sources */,
+				F7BCC5911CCDF81300704878 /* PhotoCell+ConfigureForPhoto.m in Sources */,
+				F7BCC5951CCDFA2D00704878 /* PhotoViewController.m in Sources */,
 				F7BAC7431CC8D40F000D9795 /* JSONKeyMapper.m in Sources */,
 				F7B1EAA71CC610B800307F41 /* DESNavigationController.m in Sources */,
+				F7BCC55F1CCDBD3700704878 /* TableViewDataSource.m in Sources */,
+				F7BCC5A71CCDFCB700704878 /* DetailsViewController.m in Sources */,
+				F7BCC5791CCDF1A100704878 /* ArrayDataSource.m in Sources */,
 				F7BAC7421CC8D40F000D9795 /* JSONModel+networking.m in Sources */,
 				F74676C51CB6077C0001D3A5 /* Person.m in Sources */,
+				F7BCC5591CCDBD1000704878 /* TCDelegate.m in Sources */,
 				F7BAC7411CC8D40F000D9795 /* JSONHTTPClient.m in Sources */,
 				F7BAC73E1CC8D40F000D9795 /* JSONModelError.m in Sources */,
 				F7BAC7401CC8D40F000D9795 /* JSONAPI.m in Sources */,
@@ -922,17 +1116,25 @@
 				F7B1EABC1CC633E000307F41 /* UIImage+Size.m in Sources */,
 				F7BAC76A1CC8DCBF000D9795 /* ContactModel.m in Sources */,
 				F74676CB1CB63A320001D3A5 /* UIViewController+swizzling.m in Sources */,
+				F7BCC5621CCDBD7900704878 /* TableViewDelegate.m in Sources */,
 				F74676B91CABC7B50001D3A5 /* MJUser.m in Sources */,
 				F7754BE91CC7548A00F989DA /* OtherFunctionViewController.m in Sources */,
+				F7BCC5581CCDBD1000704878 /* TCDefaultSupplementaryView.m in Sources */,
+				F7BCC5561CCDBD1000704878 /* ResuableView+TCExtension.m in Sources */,
+				F7BCC56B1CCDC54200704878 /* Text.m in Sources */,
 				F74676B71CABC7B50001D3A5 /* MJStatusResult.m in Sources */,
 				F7B412901C9BD96C00E45E22 /* AFAppDotNetAPIClient.m in Sources */,
 				F7B1EAB01CC618CE00307F41 /* FoundViewController.m in Sources */,
+				F7BCC5751CCDF0D500704878 /* PhotosViewController.m in Sources */,
+				F7BCC53B1CCDBCF400704878 /* TableViewSampleViewController.m in Sources */,
+				F7BCC5821CCDF33200704878 /* PhotoCell.m in Sources */,
 				F7B412971C9BDA3900E45E22 /* GlobalTimelineViewController.m in Sources */,
 				F7BAC73B1CC8D40F000D9795 /* JSONModel.m in Sources */,
 				F7BAC73C1CC8D40F000D9795 /* JSONModelArray.m in Sources */,
 				F74676B81CABC7B50001D3A5 /* MJStudent.m in Sources */,
 				F7754BE01CC753BC00F989DA /* DynamicAddMethodViewController.m in Sources */,
 				F7754BE61CC7541A00F989DA /* ReplaceMethodViewController.m in Sources */,
+				F7BCC58A1CCDF50600704878 /* Photo.m in Sources */,
 				F7754BD91CC72D8500F989DA /* RuntimeTableViewController.m in Sources */,
 				F7BAC7061CC88441000D9795 /* GWWPICLabel.m in Sources */,
 				F74676B41CABC7B50001D3A5 /* MJBox.m in Sources */,

@@ -38,7 +38,12 @@
 //判断系统版本号是否是iOS8以上
 #define iOS8 [[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0
 
-
+//全局打印
+#ifdef DEBUG
+#define DMLog(...)NSLog(@"%s%@",__PRETTY_FUNCTION__,[NSString stringWithFormat:__VA_ARGS__])
+#else
+#define DMLog(...) do { } while (0)
+#endif
 
 #pragma clang diagnostic ignored "-W#warnings"
 
@@ -52,3 +57,4 @@
 #define WNXLog(...)
 
 #endif
+

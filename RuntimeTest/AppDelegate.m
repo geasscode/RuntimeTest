@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "GlobalTimelineViewController.h"
+#import "Store.h"
 #import <AFNetworking/AFNetworking.h>
 
 #import "AFNetworkActivityIndicatorManager.h"
@@ -39,9 +40,20 @@
 //点击程序图标进入：
 //iOS_applicationWillEnterForeground
 //iOS_applicationDidBecomeActive
+@synthesize store = _store;
 
+- (Store *)store
+{
+	if (_store == nil) {
+		_store = [Store store];
+	}
+	return _store;
+}
 
-
++ (instancetype)sharedDelegate
+{
+	return [UIApplication sharedApplication].delegate;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	

@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -30,16 +31,34 @@
                                 <state key="normal" title="进入通讯录"/>
                                 <connections>
                                     <action selector="gotoContactView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="iYc-Yp-ZeJ"/>
-                                    <segue destination="CN8-8g-b95" kind="show" id="phh-iZ-GeD"/>
+                                    <segue destination="CN8-8g-b95" kind="show" id="Z5X-by-GqB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvB-DQ-pbI">
+                                <rect key="frame" x="112" y="91" width="97" height="30"/>
+                                <state key="normal" title="tableView解耦"/>
+                                <connections>
+                                    <segue destination="7Go-h5-w47" kind="show" id="ljO-DA-w5P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyU-t1-x4N">
+                                <rect key="frame" x="96" y="400" width="130" height="30"/>
+                                <state key="normal" title="进入photo视图页面"/>
+                                <connections>
+                                    <action selector="gotoPhotoView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="3nn-mb-Kyb"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="IvB-DQ-pbI" firstAttribute="top" secondItem="iz4-T4-hSQ" secondAttribute="bottom" constant="27" id="692-Ea-e9z"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="8Br-b1-VC7"/>
                             <constraint firstItem="4bZ-sG-w8n" firstAttribute="top" secondItem="egL-FV-Am0" secondAttribute="bottom" constant="20" id="D39-6q-iFn"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="PGf-3Y-g0w"/>
+                            <constraint firstItem="CyU-t1-x4N" firstAttribute="leading" secondItem="Suv-2o-87e" secondAttribute="leading" id="RE1-DK-UF4"/>
+                            <constraint firstItem="IvB-DQ-pbI" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="b5W-N4-CCP"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerY" secondItem="YRg-5f-7nD" secondAttribute="centerY" id="bYz-p9-MMv"/>
+                            <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="88" id="frj-gl-aq4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9mR-5H-Lie"/>
@@ -109,7 +128,31 @@
             </objects>
             <point key="canvasLocation" x="1268" y="-247"/>
         </scene>
-        <!--Contact Info Table View Controller-->
+        <!--TableViewSample-->
+        <scene sceneID="S64-ln-ta1">
+            <objects>
+                <viewController id="7Go-h5-w47" customClass="TableViewSampleViewController" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="TableViewSample" id="I24-Dh-sHu">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="edit" id="WTi-I2-Y69">
+                                <connections>
+                                    <action selector="handleEdit:" destination="7Go-h5-w47" id="YqP-k0-gYf"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Insert" id="acU-Nz-N2b">
+                                <connections>
+                                    <action selector="handleInsert:" destination="7Go-h5-w47" id="f4L-U7-8eE"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0O-FS-7eF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402.5" y="658.5"/>
+        </scene>
+        <!--TableViewSample-->
         <scene sceneID="VmI-y1-haG">
             <objects>
                 <tableViewController id="CN8-8g-b95" customClass="ContactInfoTableViewController" sceneMemberID="viewController">
@@ -132,6 +175,7 @@
                             <outlet property="delegate" destination="CN8-8g-b95" id="9gL-xq-PHw"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="TableViewSample" id="iBm-r2-2ng"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyD-Bq-qCk" userLabel="First Responder" sceneMemberID="firstResponder"/>

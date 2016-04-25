@@ -11,6 +11,7 @@
 #import "FoundViewController.h"
 #import "DESNavigationController.h"
 #import "RuntimeTableViewController.h"
+#import "PhotosViewController.h"
 
 @interface MainViewController ()
 
@@ -52,6 +53,12 @@
 - (IBAction)gotoContactView:(id)sender {
 	
 //	[self.navigationController pushViewController:rumtimeVC animated:YES];
+
+}
+- (IBAction)gotoPhotoView:(id)sender {
+	PhotosViewController *photosViewController = [[PhotosViewController alloc] initWithNibName:@"PhotosViewController"  bundle:nil];
+	
+	[self.navigationController pushViewController:photosViewController animated:YES];
 
 }
 
