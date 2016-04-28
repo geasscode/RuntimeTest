@@ -48,17 +48,47 @@
                                     <action selector="gotoPhotoView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="3nn-mb-Kyb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXw-dm-Xdy">
+                                <rect key="frame" x="123" y="180" width="75" height="30"/>
+                                <state key="normal" title="二维码扫描"/>
+                                <connections>
+                                    <action selector="gotoBarcodeView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="iff-vf-sP9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WJ-If-kbH">
+                                <rect key="frame" x="120" y="339" width="80" height="30"/>
+                                <state key="normal" title="进入ios头条"/>
+                                <connections>
+                                    <action selector="gotoNewsView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="Yxc-KJ-679"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejy-7l-1zX">
+                                <rect key="frame" x="106" y="137" width="108" height="27"/>
+                                <state key="normal" title="进入weekly页面"/>
+                                <connections>
+                                    <action selector="gotoWeeklyView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="Vt2-3I-J8Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="6WJ-If-kbH" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="5v3-pq-84r"/>
                             <constraint firstItem="IvB-DQ-pbI" firstAttribute="top" secondItem="iz4-T4-hSQ" secondAttribute="bottom" constant="27" id="692-Ea-e9z"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="8Br-b1-VC7"/>
+                            <constraint firstItem="CyU-t1-x4N" firstAttribute="top" secondItem="6WJ-If-kbH" secondAttribute="bottom" constant="31" id="Atd-PK-3g0"/>
+                            <constraint firstItem="PXw-dm-Xdy" firstAttribute="top" secondItem="IvB-DQ-pbI" secondAttribute="bottom" constant="59" id="D1a-JN-lIN"/>
                             <constraint firstItem="4bZ-sG-w8n" firstAttribute="top" secondItem="egL-FV-Am0" secondAttribute="bottom" constant="20" id="D39-6q-iFn"/>
+                            <constraint firstItem="PXw-dm-Xdy" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="DF5-xk-JLB"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="PGf-3Y-g0w"/>
                             <constraint firstItem="CyU-t1-x4N" firstAttribute="leading" secondItem="Suv-2o-87e" secondAttribute="leading" id="RE1-DK-UF4"/>
+                            <constraint firstItem="ejy-7l-1zX" firstAttribute="top" secondItem="IvB-DQ-pbI" secondAttribute="bottom" constant="16" id="VcM-Bz-foX"/>
+                            <constraint firstItem="ejy-7l-1zX" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="Zq7-Dt-XHa"/>
                             <constraint firstItem="IvB-DQ-pbI" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="b5W-N4-CCP"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerY" secondItem="YRg-5f-7nD" secondAttribute="centerY" id="bYz-p9-MMv"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="88" id="frj-gl-aq4"/>
+                            <constraint firstItem="PXw-dm-Xdy" firstAttribute="top" secondItem="ejy-7l-1zX" secondAttribute="bottom" constant="16" id="hQ9-Hu-iWd"/>
+                            <constraint firstItem="Suv-2o-87e" firstAttribute="top" secondItem="PXw-dm-Xdy" secondAttribute="bottom" constant="59" id="wGX-Vh-vSn"/>
+                            <constraint firstItem="6WJ-If-kbH" firstAttribute="top" secondItem="Suv-2o-87e" secondAttribute="bottom" constant="40" id="wru-U9-6dZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9mR-5H-Lie"/>
@@ -82,13 +112,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="my name is yongjie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D78-28-KR1">
                                 <rect key="frame" x="87" y="59" width="146" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="my name is " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5d-mW-3cS">
                                 <rect key="frame" x="31" y="196" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IMv-1W-zO8">
@@ -209,7 +239,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你的姓名是：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdD-mR-pBg">
                                 <rect key="frame" x="109" y="110" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -256,13 +286,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="where are you from?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ox4-FL-fL5">
                                 <rect key="frame" x="31" y="55" width="157" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i do not know" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQe-gf-6tz">
                                 <rect key="frame" x="31" y="95" width="103" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9O-ip-jUH">
@@ -283,7 +313,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="i am form" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpX-Fb-dY9">
                                 <rect key="frame" x="27" y="231" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -325,7 +355,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name:my name is yongjie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrT-4t-gdG">
                                 <rect key="frame" x="16" y="69" width="193" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0B2-xx-JTz">
@@ -350,7 +380,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sex: i am a boy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHl-aR-Vyt">
                                 <rect key="frame" x="16" y="105" width="113" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

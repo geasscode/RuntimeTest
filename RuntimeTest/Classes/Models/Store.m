@@ -25,16 +25,16 @@
 
 - (void)readArchive
 {
-	NSBundle* myBundle = [NSBundle mainBundle];
-	NSString* myImage = [myBundle pathForResource:@"photodata" ofType:@"bin"];
+//	NSBundle* myBundle = [NSBundle mainBundle];
+//	NSString* myImage = [myBundle pathForResource:@"photodata" ofType:@"bin"];
 	
-    NSURL *archiveURL = [[NSBundle bundleForClass:[self class]] URLForResource:@"photodata" withExtension:@"bin"];
-    NSAssert(archiveURL != nil, @"Unable to find archive in bundle.");
-    NSData *data = [NSData dataWithContentsOfURL:archiveURL options:0 error:NULL];
-    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
-    _users = [unarchiver decodeObjectOfClass:[NSArray class] forKey:@"users"];
-    _photos = [unarchiver decodeObjectOfClass:[NSArray class] forKey:@"photos"];
-    [unarchiver finishDecoding];
+//    NSURL *archiveURL = [[NSBundle bundleForClass:[self class]] URLForResource:@"photodata" withExtension:@"bin"];
+//    NSAssert(archiveURL != nil, @"Unable to find archive in bundle.");
+//    NSData *data = [NSData dataWithContentsOfURL:archiveURL options:0 error:NULL];
+//    NSKeyedUnarchiver *unarchiver = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
+//    _users = [unarchiver decodeObjectOfClass:[NSArray class] forKey:@"users"];
+//    _photos = [unarchiver decodeObjectOfClass:[NSArray class] forKey:@"photos"];
+//    [unarchiver finishDecoding];
 }
 
 - (NSArray *)sortedPhotos

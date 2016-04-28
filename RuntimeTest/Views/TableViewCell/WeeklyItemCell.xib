@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemCell" rowHeight="44" id="m9x-NH-c4R" customClass="WeeklyItemCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m9x-NH-c4R" id="Io2-aE-DNz">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJ0-g5-ulZ">
+                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="owc-2U-TIR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="owc-2U-TIR"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="owc-2U-TIR"/>
+                            </mask>
+                        </variation>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJe-wS-sDP">
+                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="BUy-PZ-8lk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BUy-PZ-8lk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="BUy-PZ-8lk"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DJ0-g5-ulZ" firstAttribute="top" secondItem="Io2-aE-DNz" secondAttribute="top" constant="5" id="DJf-gE-ti1"/>
+                    <constraint firstAttribute="bottom" secondItem="DJ0-g5-ulZ" secondAttribute="bottom" constant="5" id="KcJ-9f-etA"/>
+                    <constraint firstAttribute="trailing" secondItem="rJe-wS-sDP" secondAttribute="trailing" constant="5" id="O1X-be-dZd"/>
+                    <constraint firstAttribute="bottom" secondItem="rJe-wS-sDP" secondAttribute="bottom" constant="10" id="RAz-zh-SiX"/>
+                    <constraint firstItem="rJe-wS-sDP" firstAttribute="top" secondItem="Io2-aE-DNz" secondAttribute="top" constant="10" id="YZw-7L-Zjc"/>
+                    <constraint firstItem="DJ0-g5-ulZ" firstAttribute="leading" secondItem="Io2-aE-DNz" secondAttribute="leading" constant="5" id="ae9-Of-Yog"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="DJ0-g5-ulZ"/>
+                        <exclude reference="rJe-wS-sDP"/>
+                    </mask>
+                    <mask key="constraints">
+                        <exclude reference="DJf-gE-ti1"/>
+                        <exclude reference="ae9-Of-Yog"/>
+                        <exclude reference="KcJ-9f-etA"/>
+                        <exclude reference="O1X-be-dZd"/>
+                        <exclude reference="RAz-zh-SiX"/>
+                        <exclude reference="YZw-7L-Zjc"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=compact">
+                    <mask key="subviews">
+                        <include reference="DJ0-g5-ulZ"/>
+                        <include reference="rJe-wS-sDP"/>
+                    </mask>
+                    <mask key="constraints">
+                        <include reference="DJf-gE-ti1"/>
+                        <include reference="ae9-Of-Yog"/>
+                        <include reference="KcJ-9f-etA"/>
+                        <include reference="O1X-be-dZd"/>
+                        <include reference="RAz-zh-SiX"/>
+                        <include reference="YZw-7L-Zjc"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="stageView" destination="DJ0-g5-ulZ" id="mqC-6c-Jns"/>
+                <outlet property="timeView" destination="rJe-wS-sDP" id="Ogs-2B-coS"/>
+            </connections>
+            <point key="canvasLocation" x="456" y="402"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -8,10 +8,13 @@
 
 #import "MainViewController.h"
 #import "HomeViewController.h"
+#import "MyHomeViewController.h"
 #import "FoundViewController.h"
 #import "DESNavigationController.h"
 #import "RuntimeTableViewController.h"
 #import "PhotosViewController.h"
+#import "scanViewController.h"
+#import "WeeklyTableViewController.h"
 
 @interface MainViewController ()
 
@@ -45,22 +48,44 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)gotoWeeklyView:(id)sender {
+	WeeklyTableViewController * weeklyVC = [WeeklyTableViewController new];
+	[self.navigationController pushViewController:weeklyVC animated:YES];
+	
+}
+
 - (IBAction)gotoRuntimeTableView:(id)sender {
 	RuntimeTableViewController * rumtimeVC = [RuntimeTableViewController new];
 	[self.navigationController pushViewController:rumtimeVC animated:YES];
 	
 }
+
 - (IBAction)gotoContactView:(id)sender {
 	
 //	[self.navigationController pushViewController:rumtimeVC animated:YES];
 
 }
+
 - (IBAction)gotoPhotoView:(id)sender {
 	PhotosViewController *photosViewController = [[PhotosViewController alloc] initWithNibName:@"PhotosViewController"  bundle:nil];
 	
 	[self.navigationController pushViewController:photosViewController animated:YES];
 
 }
+
+- (IBAction)gotoBarcodeView:(id)sender {
+	scanViewController * scan = [scanViewController new];
+	[self.navigationController pushViewController:scan animated:YES];
+}
+
+- (IBAction)gotoNewsView:(id)sender {
+	
+	MyHomeViewController * newsHome = [MyHomeViewController new];
+	[self.navigationController pushViewController:newsHome animated:YES];
+}
+
+
 
 /*
 #pragma mark - Navigation

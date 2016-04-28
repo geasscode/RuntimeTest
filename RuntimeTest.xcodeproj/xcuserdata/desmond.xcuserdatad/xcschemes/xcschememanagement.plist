@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ReaderList.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>RuntimeTest.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>F7275CE11CD08E38002F0F68</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F7526FEA1C9A940A0012FE76</key>
 		<dict>
 			<key>primary</key>
