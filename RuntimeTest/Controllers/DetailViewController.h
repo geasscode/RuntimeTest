@@ -11,5 +11,7 @@
 @interface DetailViewController : UIViewController
 
 @property (nonatomic, strong) NSString *key;
+@property (nonatomic,copy) NSString *detailTextId;
+
 
 @end

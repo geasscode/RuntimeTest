@@ -69,6 +69,13 @@
                                     <action selector="gotoWeeklyView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="Vt2-3I-J8Q"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2h-CO-RIa">
+                                <rect key="frame" x="105" y="465" width="111" height="30"/>
+                                <state key="normal" title="SigmaTableView"/>
+                                <connections>
+                                    <segue destination="Yge-bv-Avd" kind="show" id="pqv-kt-pNj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -79,6 +86,8 @@
                             <constraint firstItem="PXw-dm-Xdy" firstAttribute="top" secondItem="IvB-DQ-pbI" secondAttribute="bottom" constant="59" id="D1a-JN-lIN"/>
                             <constraint firstItem="4bZ-sG-w8n" firstAttribute="top" secondItem="egL-FV-Am0" secondAttribute="bottom" constant="20" id="D39-6q-iFn"/>
                             <constraint firstItem="PXw-dm-Xdy" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="DF5-xk-JLB"/>
+                            <constraint firstItem="l2h-CO-RIa" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="EAB-iy-Zsh"/>
+                            <constraint firstItem="l2h-CO-RIa" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="35" id="IQ1-T3-tJO"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="PGf-3Y-g0w"/>
                             <constraint firstItem="CyU-t1-x4N" firstAttribute="leading" secondItem="Suv-2o-87e" secondAttribute="leading" id="RE1-DK-UF4"/>
                             <constraint firstItem="ejy-7l-1zX" firstAttribute="top" secondItem="IvB-DQ-pbI" secondAttribute="bottom" constant="16" id="VcM-Bz-foX"/>
@@ -87,6 +96,7 @@
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerY" secondItem="YRg-5f-7nD" secondAttribute="centerY" id="bYz-p9-MMv"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="88" id="frj-gl-aq4"/>
                             <constraint firstItem="PXw-dm-Xdy" firstAttribute="top" secondItem="ejy-7l-1zX" secondAttribute="bottom" constant="16" id="hQ9-Hu-iWd"/>
+                            <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="l2h-CO-RIa" secondAttribute="bottom" constant="23" id="wBX-oB-EmF"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="top" secondItem="PXw-dm-Xdy" secondAttribute="bottom" constant="59" id="wGX-Vh-vSn"/>
                             <constraint firstItem="6WJ-If-kbH" firstAttribute="top" secondItem="Suv-2o-87e" secondAttribute="bottom" constant="40" id="wru-U9-6dZ"/>
                         </constraints>
@@ -157,6 +167,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUF-mm-YbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1268" y="-247"/>
+        </scene>
+        <!--Sigma Table View Controller-->
+        <scene sceneID="weV-Ea-hXf">
+            <objects>
+                <tableViewController id="Yge-bv-Avd" customClass="SigmaTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2IR-V9-YM7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hJF-2X-Nal">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hJF-2X-Nal" id="dZ5-g7-Yfs">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Yge-bv-Avd" id="bPa-bH-NHa"/>
+                            <outlet property="delegate" destination="Yge-bv-Avd" id="g4w-bX-bEd"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eM9-kc-C6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12.5" y="610.5"/>
         </scene>
         <!--TableViewSample-->
         <scene sceneID="S64-ln-ta1">

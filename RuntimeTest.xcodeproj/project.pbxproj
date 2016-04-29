@@ -172,6 +172,19 @@
 		F7DB40731C9FEAF900E164C7 /* loadXIBFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40711C9FEAF900E164C7 /* loadXIBFile.m */; };
 		F7DB40741C9FEAF900E164C7 /* loadXIBFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */; };
 		F7DB40771CA0E9F300E164C7 /* CYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40761CA0E9F300E164C7 /* CYAlertView.m */; };
+		F7F772ED1CD33B250060861B /* YZSTableViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F772E81CD33B250060861B /* YZSTableViewCellModel.m */; };
+		F7F772EE1CD33B250060861B /* YZSTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F772EA1CD33B250060861B /* YZSTableViewModel.m */; };
+		F7F772EF1CD33B250060861B /* YZSTableViewSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F772EC1CD33B250060861B /* YZSTableViewSectionModel.m */; };
+		F7F772F21CD33BCD0060861B /* SigmaTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F772F11CD33BCD0060861B /* SigmaTableViewController.m */; };
+		F7F772F51CD33ECE0060861B /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F772F41CD33ECE0060861B /* BaseTableViewController.m */; };
+		F7F772F81CD347BF0060861B /* WeeklyItemStageDetatilController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F772F71CD347BF0060861B /* WeeklyItemStageDetatilController.m */; };
+		F7F772FB1CD349830060861B /* StageCategoryDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F772FA1CD349830060861B /* StageCategoryDetailCell.m */; };
+		F7F772FE1CD34A2D0060861B /* CategoryDetailFrameModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F772FD1CD34A2D0060861B /* CategoryDetailFrameModel.m */; };
+		F7F773011CD34AB80060861B /* WeeklyItemStageCategoryDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F773001CD34AB80060861B /* WeeklyItemStageCategoryDetail.m */; };
+		F7F773041CD34B5A0060861B /* WeeklyItemStageDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F773031CD34B5A0060861B /* WeeklyItemStageDetailModel.m */; };
+		F7F773071CD356400060861B /* StageCategoryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F773061CD356400060861B /* StageCategoryHeaderView.m */; };
+		F7F7730A1CD3593F0060861B /* DetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F773091CD3593F0060861B /* DetailModel.m */; };
+		F7F7730D1CD359F80060861B /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F7730C1CD359F80060861B /* ImageModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -515,6 +528,32 @@
 		F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loadXIBFile.xib; sourceTree = "<group>"; };
 		F7DB40751CA0E9F300E164C7 /* CYAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CYAlertView.h; path = ../CYAlertView.h; sourceTree = "<group>"; };
 		F7DB40761CA0E9F300E164C7 /* CYAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CYAlertView.m; path = ../CYAlertView.m; sourceTree = "<group>"; };
+		F7F772E71CD33B250060861B /* YZSTableViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZSTableViewCellModel.h; sourceTree = "<group>"; };
+		F7F772E81CD33B250060861B /* YZSTableViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZSTableViewCellModel.m; sourceTree = "<group>"; };
+		F7F772E91CD33B250060861B /* YZSTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZSTableViewModel.h; sourceTree = "<group>"; };
+		F7F772EA1CD33B250060861B /* YZSTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZSTableViewModel.m; sourceTree = "<group>"; };
+		F7F772EB1CD33B250060861B /* YZSTableViewSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZSTableViewSectionModel.h; sourceTree = "<group>"; };
+		F7F772EC1CD33B250060861B /* YZSTableViewSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZSTableViewSectionModel.m; sourceTree = "<group>"; };
+		F7F772F01CD33BCD0060861B /* SigmaTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SigmaTableViewController.h; sourceTree = "<group>"; };
+		F7F772F11CD33BCD0060861B /* SigmaTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SigmaTableViewController.m; sourceTree = "<group>"; };
+		F7F772F31CD33ECE0060861B /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		F7F772F41CD33ECE0060861B /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		F7F772F61CD347BF0060861B /* WeeklyItemStageDetatilController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeeklyItemStageDetatilController.h; sourceTree = "<group>"; };
+		F7F772F71CD347BF0060861B /* WeeklyItemStageDetatilController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeeklyItemStageDetatilController.m; sourceTree = "<group>"; };
+		F7F772F91CD349830060861B /* StageCategoryDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageCategoryDetailCell.h; sourceTree = "<group>"; };
+		F7F772FA1CD349830060861B /* StageCategoryDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageCategoryDetailCell.m; sourceTree = "<group>"; };
+		F7F772FC1CD34A2D0060861B /* CategoryDetailFrameModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDetailFrameModel.h; sourceTree = "<group>"; };
+		F7F772FD1CD34A2D0060861B /* CategoryDetailFrameModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryDetailFrameModel.m; sourceTree = "<group>"; };
+		F7F772FF1CD34AB80060861B /* WeeklyItemStageCategoryDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeeklyItemStageCategoryDetail.h; sourceTree = "<group>"; };
+		F7F773001CD34AB80060861B /* WeeklyItemStageCategoryDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeeklyItemStageCategoryDetail.m; sourceTree = "<group>"; };
+		F7F773021CD34B5A0060861B /* WeeklyItemStageDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeeklyItemStageDetailModel.h; sourceTree = "<group>"; };
+		F7F773031CD34B5A0060861B /* WeeklyItemStageDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeeklyItemStageDetailModel.m; sourceTree = "<group>"; };
+		F7F773051CD356400060861B /* StageCategoryHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageCategoryHeaderView.h; sourceTree = "<group>"; };
+		F7F773061CD356400060861B /* StageCategoryHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageCategoryHeaderView.m; sourceTree = "<group>"; };
+		F7F773081CD3593F0060861B /* DetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailModel.h; sourceTree = "<group>"; };
+		F7F773091CD3593F0060861B /* DetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailModel.m; sourceTree = "<group>"; };
+		F7F7730B1CD359F80060861B /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
+		F7F7730C1CD359F80060861B /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
 		FA61B4E808F54EC6643CA1A3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -586,6 +625,8 @@
 			children = (
 				F7275CF91CD0C42F002F0F68 /* WeeklyItemHeaderView.h */,
 				F7275CFA1CD0C42F002F0F68 /* WeeklyItemHeaderView.m */,
+				F7F773051CD356400060861B /* StageCategoryHeaderView.h */,
+				F7F773061CD356400060861B /* StageCategoryHeaderView.m */,
 			);
 			path = Weekly;
 			sourceTree = "<group>";
@@ -597,6 +638,16 @@
 				F7275CFE1CD0C6D4002F0F68 /* WeeklyItemModel.m */,
 				F7275D031CD1A801002F0F68 /* WeeklyItemStageModel.h */,
 				F7275D041CD1A801002F0F68 /* WeeklyItemStageModel.m */,
+				F7F772FC1CD34A2D0060861B /* CategoryDetailFrameModel.h */,
+				F7F772FD1CD34A2D0060861B /* CategoryDetailFrameModel.m */,
+				F7F772FF1CD34AB80060861B /* WeeklyItemStageCategoryDetail.h */,
+				F7F773001CD34AB80060861B /* WeeklyItemStageCategoryDetail.m */,
+				F7F773021CD34B5A0060861B /* WeeklyItemStageDetailModel.h */,
+				F7F773031CD34B5A0060861B /* WeeklyItemStageDetailModel.m */,
+				F7F773081CD3593F0060861B /* DetailModel.h */,
+				F7F773091CD3593F0060861B /* DetailModel.m */,
+				F7F7730B1CD359F80060861B /* ImageModel.h */,
+				F7F7730C1CD359F80060861B /* ImageModel.m */,
 			);
 			path = WeeklyModel;
 			sourceTree = "<group>";
@@ -888,6 +939,10 @@
 				F7BCC5A41CCDFCB700704878 /* DetailsViewController.h */,
 				F7BCC5A51CCDFCB700704878 /* DetailsViewController.m */,
 				F7BCC5A61CCDFCB700704878 /* DetailsViewController.xib */,
+				F7F772F01CD33BCD0060861B /* SigmaTableViewController.h */,
+				F7F772F11CD33BCD0060861B /* SigmaTableViewController.m */,
+				F7F772F31CD33ECE0060861B /* BaseTableViewController.h */,
+				F7F772F41CD33ECE0060861B /* BaseTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1017,6 +1072,12 @@
 		F7BAC76B1CC8DD33000D9795 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				F7F772E71CD33B250060861B /* YZSTableViewCellModel.h */,
+				F7F772E81CD33B250060861B /* YZSTableViewCellModel.m */,
+				F7F772E91CD33B250060861B /* YZSTableViewModel.h */,
+				F7F772EA1CD33B250060861B /* YZSTableViewModel.m */,
+				F7F772EB1CD33B250060861B /* YZSTableViewSectionModel.h */,
+				F7F772EC1CD33B250060861B /* YZSTableViewSectionModel.m */,
 				F7BAC76C1CC8DD33000D9795 /* ContactDataHelper.h */,
 				F7BAC76D1CC8DD33000D9795 /* ContactDataHelper.m */,
 				F7BAC76E1CC8DD33000D9795 /* NSString+Utils.h */,
@@ -1101,6 +1162,8 @@
 				F7BCC6171CCF6F2A00704878 /* HomeDetailViewController.m */,
 				F7275CF51CD0C011002F0F68 /* WeeklyTableViewController.h */,
 				F7275CF61CD0C011002F0F68 /* WeeklyTableViewController.m */,
+				F7F772F61CD347BF0060861B /* WeeklyItemStageDetatilController.h */,
+				F7F772F71CD347BF0060861B /* WeeklyItemStageDetatilController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1113,6 +1176,8 @@
 				F7275D001CD1A76B002F0F68 /* WeeklyItemCell.h */,
 				F7275D011CD1A76B002F0F68 /* WeeklyItemCell.m */,
 				F7275D061CD1AFE0002F0F68 /* WeeklyItemCell.xib */,
+				F7F772F91CD349830060861B /* StageCategoryDetailCell.h */,
+				F7F772FA1CD349830060861B /* StageCategoryDetailCell.m */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -1416,6 +1481,7 @@
 				F7275CF41CD094C8002F0F68 /* CustomerItem.m in Sources */,
 				F7BCC5B81CCE20FD00704878 /* scanViewController.m in Sources */,
 				F7BCC60C1CCF6E2000704878 /* SDWebImageDownloaderOperation.m in Sources */,
+				F7F772ED1CD33B250060861B /* YZSTableViewCellModel.m in Sources */,
 				F7BCC5E01CCF6CDA00704878 /* HomeDetailView.m in Sources */,
 				F7B1EABB1CC633E000307F41 /* UIColor+WNXColor.m in Sources */,
 				F7BAC7671CC8DC30000D9795 /* ContactTableViewCell.m in Sources */,
@@ -1442,9 +1508,11 @@
 				F7754BDD1CC7536B00F989DA /* IvarListViewController.m in Sources */,
 				F7BCC5991CCDFAB800704878 /* DetailViewController.m in Sources */,
 				F7BCC5541CCDBD1000704878 /* NSObject+TCIdentifier.m in Sources */,
+				F7F773071CD356400060861B /* StageCategoryHeaderView.m in Sources */,
 				F7BCC55A1CCDBD1000704878 /* TCGlobalDataMetric.m in Sources */,
 				F7BCC5C01CCF629500704878 /* UIView+Utils.m in Sources */,
 				F74676B51CABC7B50001D3A5 /* MJDog.m in Sources */,
+				F7F772FE1CD34A2D0060861B /* CategoryDetailFrameModel.m in Sources */,
 				F7BCC6091CCF6E2000704878 /* SDWebImageCompat.m in Sources */,
 				F7BCC55B1CCDBD1000704878 /* TCHelper.m in Sources */,
 				F74676B11CABC7B50001D3A5 /* MJBag.m in Sources */,
@@ -1458,12 +1526,16 @@
 				F74676B01CABC7B50001D3A5 /* MJAd.m in Sources */,
 				F7BCC5551CCDBD1000704878 /* README.md in Sources */,
 				F7BCC55C1CCDBD1000704878 /* TCSectionDataMetric.m in Sources */,
+				F7F773011CD34AB80060861B /* WeeklyItemStageCategoryDetail.m in Sources */,
 				F7526FF01C9A940A0012FE76 /* main.m in Sources */,
 				F7BCC5911CCDF81300704878 /* PhotoCell+ConfigureForPhoto.m in Sources */,
 				F7BCC5951CCDFA2D00704878 /* PhotoViewController.m in Sources */,
+				F7F772EE1CD33B250060861B /* YZSTableViewModel.m in Sources */,
 				F7BAC7431CC8D40F000D9795 /* JSONKeyMapper.m in Sources */,
 				F7BCC5CD1CCF649100704878 /* APIClient.m in Sources */,
 				F7B1EAA71CC610B800307F41 /* DESNavigationController.m in Sources */,
+				F7F772EF1CD33B250060861B /* YZSTableViewSectionModel.m in Sources */,
+				F7F773041CD34B5A0060861B /* WeeklyItemStageDetailModel.m in Sources */,
 				F7BCC55F1CCDBD3700704878 /* TableViewDataSource.m in Sources */,
 				F7BCC5A71CCDFCB700704878 /* DetailsViewController.m in Sources */,
 				F7BCC5791CCDF1A100704878 /* ArrayDataSource.m in Sources */,
@@ -1473,6 +1545,8 @@
 				F7BCC5591CCDBD1000704878 /* TCDelegate.m in Sources */,
 				F7BAC7411CC8D40F000D9795 /* JSONHTTPClient.m in Sources */,
 				F7BCC6101CCF6E2000704878 /* UIImage+GIF.m in Sources */,
+				F7F7730A1CD3593F0060861B /* DetailModel.m in Sources */,
+				F7F772F81CD347BF0060861B /* WeeklyItemStageDetatilController.m in Sources */,
 				F7BAC73E1CC8D40F000D9795 /* JSONModelError.m in Sources */,
 				F7BAC7401CC8D40F000D9795 /* JSONAPI.m in Sources */,
 				F7BCC6061CCF6E2000704878 /* MKAnnotationView+WebCache.m in Sources */,
@@ -1488,6 +1562,8 @@
 				F74676B91CABC7B50001D3A5 /* MJUser.m in Sources */,
 				F7754BE91CC7548A00F989DA /* OtherFunctionViewController.m in Sources */,
 				F7BCC5581CCDBD1000704878 /* TCDefaultSupplementaryView.m in Sources */,
+				F7F772F51CD33ECE0060861B /* BaseTableViewController.m in Sources */,
+				F7F7730D1CD359F80060861B /* ImageModel.m in Sources */,
 				F7BCC5561CCDBD1000704878 /* ResuableView+TCExtension.m in Sources */,
 				F7BCC56B1CCDC54200704878 /* Text.m in Sources */,
 				F7275D051CD1A801002F0F68 /* WeeklyItemStageModel.m in Sources */,
@@ -1502,6 +1578,7 @@
 				F7BCC53B1CCDBCF400704878 /* TableViewSampleViewController.m in Sources */,
 				F7BCC5821CCDF33200704878 /* PhotoCell.m in Sources */,
 				F7B412971C9BDA3900E45E22 /* GlobalTimelineViewController.m in Sources */,
+				F7F772F21CD33BCD0060861B /* SigmaTableViewController.m in Sources */,
 				F7BCC60E1CCF6E2000704878 /* SDWebImagePrefetcher.m in Sources */,
 				F7BAC73B1CC8D40F000D9795 /* JSONModel.m in Sources */,
 				F7BAC73C1CC8D40F000D9795 /* JSONModelArray.m in Sources */,
@@ -1519,6 +1596,7 @@
 				F74676B31CABC7B50001D3A5 /* MJBook.m in Sources */,
 				F7BCC5CF1CCF649100704878 /* Response.m in Sources */,
 				F74676CE1CB6415C0001D3A5 /* NSObject+PropertyAdd.m in Sources */,
+				F7F772FB1CD349830060861B /* StageCategoryDetailCell.m in Sources */,
 				F7BAC7441CC8D40F000D9795 /* JSONValueTransformer.m in Sources */,
 				F7BCC5D91CCF6B6B00704878 /* MyHomeViewController.m in Sources */,
 				F7BCC5C41CCF63EF00704878 /* HomeViewModel.m in Sources */,
@@ -1694,6 +1772,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -1750,7 +1829,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = RuntimeTest/PrefixHeader.pch;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

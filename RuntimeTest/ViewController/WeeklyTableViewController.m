@@ -10,6 +10,8 @@
 #import "WeeklyItemHeaderView.h"
 #import "WeeklyItemCell.h"
 #import "WeeklyItemModel.h"
+#import "WeeklyItemStageModel.h"
+#import "WeeklyItemStageDetatilController.h"
 
 @interface WeeklyTableViewController ()<HeaderViewDelegate>
 @property(nonatomic,strong) NSArray * weeklyItemArray;
@@ -110,19 +112,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	
-//	WeeklyItemStageDetatilController *detail = [[WeeklyItemStageDetatilController alloc] init];
-//	
-//	WeeklyItemModel *itemModel = self.weeklyItemArray[indexPath.section];
-//	
-//	WeeklyItemStageModel *stageModel = itemModel.weeklyItemStage[indexPath.row];
-//	
-//	detail.type = itemModel.type;
-//	
-//	detail.text = [NSString stringWithFormat:@"%@-%@",itemModel.name,stageModel.title];
-//	
-//	detail.stageId = stageModel.stageId;
-//	
-//	[self.navigationController pushViewController:detail animated:YES];
+	WeeklyItemStageDetatilController *detail = [[WeeklyItemStageDetatilController alloc] init];
+	
+	WeeklyItemModel *itemModel = self.weeklyItemArray[indexPath.section];
+	
+	WeeklyItemStageModel *stageModel = itemModel.weeklyItemStage[indexPath.row];
+	
+	detail.type = itemModel.type;
+	
+	detail.text = [NSString stringWithFormat:@"%@-%@",itemModel.name,stageModel.title];
+	
+	detail.stageId = stageModel.stageId;
+	
+	[self.navigationController pushViewController:detail animated:YES];
 }
 
 
