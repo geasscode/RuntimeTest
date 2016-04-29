@@ -185,6 +185,10 @@
 		F7F773071CD356400060861B /* StageCategoryHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F773061CD356400060861B /* StageCategoryHeaderView.m */; };
 		F7F7730A1CD3593F0060861B /* DetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F773091CD3593F0060861B /* DetailModel.m */; };
 		F7F7730D1CD359F80060861B /* ImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F7730C1CD359F80060861B /* ImageModel.m */; };
+		F7F7730F1CD36B0D0060861B /* article_detail.html in Resources */ = {isa = PBXBuildFile; fileRef = F7F7730E1CD36B0D0060861B /* article_detail.html */; };
+		F7F773131CD36C6F0060861B /* article_image.png in Resources */ = {isa = PBXBuildFile; fileRef = F7F773101CD36C6E0060861B /* article_image.png */; };
+		F7F773141CD36C6F0060861B /* search.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7F773111CD36C6E0060861B /* search.plist */; };
+		F7F773151CD36C6F0060861B /* titleArray.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7F773121CD36C6F0060861B /* titleArray.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -554,6 +558,10 @@
 		F7F773091CD3593F0060861B /* DetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailModel.m; sourceTree = "<group>"; };
 		F7F7730B1CD359F80060861B /* ImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageModel.h; sourceTree = "<group>"; };
 		F7F7730C1CD359F80060861B /* ImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageModel.m; sourceTree = "<group>"; };
+		F7F7730E1CD36B0D0060861B /* article_detail.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = article_detail.html; sourceTree = "<group>"; };
+		F7F773101CD36C6E0060861B /* article_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = article_image.png; sourceTree = "<group>"; };
+		F7F773111CD36C6E0060861B /* search.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = search.plist; sourceTree = "<group>"; };
+		F7F773121CD36C6F0060861B /* titleArray.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = titleArray.plist; sourceTree = "<group>"; };
 		FA61B4E808F54EC6643CA1A3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -749,6 +757,10 @@
 		F7526FEE1C9A940A0012FE76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F7F773101CD36C6E0060861B /* article_image.png */,
+				F7F773111CD36C6E0060861B /* search.plist */,
+				F7F773121CD36C6F0060861B /* titleArray.plist */,
+				F7F7730E1CD36B0D0060861B /* article_detail.html */,
 				F7BCC5AF1CCE17A000704878 /* photodata.bin */,
 				F7526FEF1C9A940A0012FE76 /* main.m */,
 			);
@@ -1361,8 +1373,11 @@
 			files = (
 				F7BCC5B91CCE20FD00704878 /* 滴-2.mp3 in Resources */,
 				F7BAC7591CC8D40F000D9795 /* 7.png in Resources */,
+				F7F773141CD36C6F0060861B /* search.plist in Resources */,
+				F7F773131CD36C6F0060861B /* article_image.png in Resources */,
 				F7BAC7541CC8D40F000D9795 /* 2.png in Resources */,
 				F7BAC74D1CC8D40F000D9795 /* 12.png in Resources */,
+				F7F7730F1CD36B0D0060861B /* article_detail.html in Resources */,
 				F7BCC5761CCDF0D500704878 /* PhotosViewController.xib in Resources */,
 				F7BCC5831CCDF33200704878 /* PhotoCell.xib in Resources */,
 				F7BAC7511CC8D40F000D9795 /* 16.png in Resources */,
@@ -1395,6 +1410,7 @@
 				F7BAC74A1CC8D40F000D9795 /* 1.png in Resources */,
 				F7BAC74E1CC8D40F000D9795 /* 13.png in Resources */,
 				F7BAC7481CC8D40F000D9795 /* ic_searchBar_bgImage@2x.png in Resources */,
+				F7F773151CD36C6F0060861B /* titleArray.plist in Resources */,
 				F7BAC7491CC8D40F000D9795 /* navBar_bg.png in Resources */,
 				F7BAC74F1CC8D40F000D9795 /* 14.png in Resources */,
 			);

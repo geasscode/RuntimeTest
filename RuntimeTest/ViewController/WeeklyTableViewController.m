@@ -88,11 +88,9 @@
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
 	
-	NSLog(@"当前tableView为%@但xcode7调试时显示为nil，xcode傻了？",tableView);
 	WeeklyItemHeaderView * headerView =  [WeeklyItemHeaderView headerViewWithTableView:tableView];
 	headerView.delegate  = self;
 	headerView.itemModel = _weeklyItemArray[section];
-	NSLog(@"存在泄露值为%@",headerView);
 	return headerView;
 	
 }

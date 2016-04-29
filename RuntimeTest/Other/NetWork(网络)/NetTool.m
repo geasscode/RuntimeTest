@@ -110,7 +110,7 @@
 //		[manager.requestSerializer setAuthorizationHeaderFieldWithUsername:loginModel.name password:loginModel.token];
 //	}else{
 //		
-//		[manager.requestSerializer setAuthorizationHeaderFieldWithUsername:@"0.0.0.0" password:@"tuicool"];
+		[manager.requestSerializer setAuthorizationHeaderFieldWithUsername:@"0.0.0.0" password:@"tuicool"];
 //	}
 	
 	[manager GET:URLString parameters:para progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
