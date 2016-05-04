@@ -189,6 +189,8 @@
 		F7F773131CD36C6F0060861B /* article_image.png in Resources */ = {isa = PBXBuildFile; fileRef = F7F773101CD36C6E0060861B /* article_image.png */; };
 		F7F773141CD36C6F0060861B /* search.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7F773111CD36C6E0060861B /* search.plist */; };
 		F7F773151CD36C6F0060861B /* titleArray.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7F773121CD36C6F0060861B /* titleArray.plist */; };
+		F7F773191CD8AFD00060861B /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F773181CD8AFD00060861B /* iCarousel.m */; };
+		F7F7731D1CD8B55F0060861B /* FocusImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7F7731C1CD8B55F0060861B /* FocusImageScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -562,6 +564,10 @@
 		F7F773101CD36C6E0060861B /* article_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = article_image.png; sourceTree = "<group>"; };
 		F7F773111CD36C6E0060861B /* search.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = search.plist; sourceTree = "<group>"; };
 		F7F773121CD36C6F0060861B /* titleArray.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = titleArray.plist; sourceTree = "<group>"; };
+		F7F773171CD8AFD00060861B /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		F7F773181CD8AFD00060861B /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
+		F7F7731B1CD8B55F0060861B /* FocusImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FocusImageScrollView.h; sourceTree = "<group>"; };
+		F7F7731C1CD8B55F0060861B /* FocusImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FocusImageScrollView.m; sourceTree = "<group>"; };
 		FA61B4E808F54EC6643CA1A3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -707,6 +713,7 @@
 		F7526FED1C9A940A0012FE76 /* RuntimeTest */ = {
 			isa = PBXGroup;
 			children = (
+				F7F7731E1CD997E70060861B /* Manager */,
 				F7BCC5D61CCF6B4600704878 /* ViewController */,
 				F7BCC5C11CCF631C00704878 /* ViewModel */,
 				F7B1EAB21CC633E000307F41 /* Other */,
@@ -845,6 +852,7 @@
 		F7B412851C9BD96C00E45E22 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F7F7731A1CD8B55F0060861B /* FocusImage */,
 				F7BCC5B11CCE20FD00704878 /* BarCode */,
 				F7BAC7041CC88441000D9795 /* GWWPICLabel.h */,
 				F7BAC7051CC88441000D9795 /* GWWPICLabel.m */,
@@ -977,6 +985,7 @@
 		F7BAC7071CC8D40E000D9795 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				F7F773161CD8AFD00060861B /* iCarousel */,
 				F7BCC5E41CCF6E2000704878 /* SDWebImage */,
 				F7BAC7081CC8D40E000D9795 /* JSONModel */,
 			);
@@ -1232,6 +1241,31 @@
 				F7BCC6051CCF6E2000704878 /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		F7F773161CD8AFD00060861B /* iCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				F7F773171CD8AFD00060861B /* iCarousel.h */,
+				F7F773181CD8AFD00060861B /* iCarousel.m */,
+			);
+			path = iCarousel;
+			sourceTree = "<group>";
+		};
+		F7F7731A1CD8B55F0060861B /* FocusImage */ = {
+			isa = PBXGroup;
+			children = (
+				F7F7731B1CD8B55F0060861B /* FocusImageScrollView.h */,
+				F7F7731C1CD8B55F0060861B /* FocusImageScrollView.m */,
+			);
+			path = FocusImage;
+			sourceTree = "<group>";
+		};
+		F7F7731E1CD997E70060861B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1558,6 +1592,7 @@
 				F7BAC7421CC8D40F000D9795 /* JSONModel+networking.m in Sources */,
 				F74676C51CB6077C0001D3A5 /* Person.m in Sources */,
 				F7275CF71CD0C011002F0F68 /* WeeklyTableViewController.m in Sources */,
+				F7F773191CD8AFD00060861B /* iCarousel.m in Sources */,
 				F7BCC5591CCDBD1000704878 /* TCDelegate.m in Sources */,
 				F7BAC7411CC8D40F000D9795 /* JSONHTTPClient.m in Sources */,
 				F7BCC6101CCF6E2000704878 /* UIImage+GIF.m in Sources */,
@@ -1589,6 +1624,7 @@
 				F7BCC6141CCF6E2000704878 /* UIImageView+WebCache.m in Sources */,
 				F7B412901C9BD96C00E45E22 /* AFAppDotNetAPIClient.m in Sources */,
 				F7B1EAB01CC618CE00307F41 /* FoundViewController.m in Sources */,
+				F7F7731D1CD8B55F0060861B /* FocusImageScrollView.m in Sources */,
 				F7BCC6111CCF6E2000704878 /* UIImage+MultiFormat.m in Sources */,
 				F7BCC5751CCDF0D500704878 /* PhotosViewController.m in Sources */,
 				F7BCC53B1CCDBCF400704878 /* TableViewSampleViewController.m in Sources */,

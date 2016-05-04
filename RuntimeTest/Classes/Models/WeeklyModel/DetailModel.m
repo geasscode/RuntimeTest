@@ -40,8 +40,8 @@
 			
 			//HZYDetailModel images属性里面要装的模型类
 			[DetailModel mj_setupObjectClassInArray:^NSDictionary *{
-				
-				return @{@"images":@"HZYImageModel"};
+				//找你找的好苦，还不到碗里来。
+				return @{@"images":@"ImageModel"};
 				//[HZYImageModel class]
 				
 			}];

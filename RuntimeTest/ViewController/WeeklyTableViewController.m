@@ -12,15 +12,21 @@
 #import "WeeklyItemModel.h"
 #import "WeeklyItemStageModel.h"
 #import "WeeklyItemStageDetatilController.h"
+#import "FocusImageScrollView.h"
+#import "masonry.h"
+#import "HomeViewModel.h"
+#import "UIImageView+AFNetworking.h"
 
-@interface WeeklyTableViewController ()<HeaderViewDelegate>
+@interface WeeklyTableViewController ()<HeaderViewDelegate,iCarouselDataSource,iCarouselDelegate>
 @property(nonatomic,strong) NSArray * weeklyItemArray;
+@property (nonatomic,strong) HomeViewModel *homeVM;
 
 @end
 
 @implementation WeeklyTableViewController
 
 
+UIPageControl *_pageControl;
 
 -(NSArray*)weeklyItemArray{
 	
@@ -30,12 +36,20 @@
 	return _weeklyItemArray;
 }
 
+- (HomeViewModel *)homeVM {
+	if (!_homeVM) {
+		_homeVM = [HomeViewModel new];
+	}
+	return _homeVM;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.edgesForExtendedLayout = UIRectEdgeBottom;
 
 	[self setupNav];
 	[self getData];
+	[self setupUI];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -55,6 +69,8 @@
 	
 	self.navigationItem.leftBarButtonItem = nil;
 	self.navigationItem.rightBarButtonItem = rightButton;
+	
+
 }
 
 
@@ -69,10 +85,59 @@
 	}];
 }
 
+-(void)setupUI{
+	//初始化多少张图片。
+	FocusImageScrollView *scrollView = [[FocusImageScrollView alloc] initWithFocusImgNumber:self.homeVM.imageList.count];
+	scrollView.ic.delegate = self;
+	scrollView.ic.dataSource = self;
+	_pageControl = scrollView.pageControl;
+	self.tableView.tableHeaderView = scrollView;
+}
+
 
 -(void)settingBtn {
 	
 }
+
+
+#pragma mark - iCarousel代理方法
+// @require
+- (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel {
+	return self.homeVM.imageList.count;
+}
+- (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(nullable UIView *)view {
+	UIImageView *imgView = nil;
+	if (!view) {
+		view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenWidth/660*310)];
+		imgView = [UIImageView new];
+		[view addSubview:imgView];
+		imgView.tag = 100;
+		imgView.contentMode = UIViewContentModeScaleAspectFit;
+		view.clipsToBounds = YES;
+		[imgView mas_makeConstraints:^(MASConstraintMaker *make) {
+			make.edges.mas_equalTo(0);
+		}];
+	}
+	
+	imgView = (UIImageView *)[view viewWithTag:100];
+	[imgView setImageWithURL:[self.homeVM focusImgURLForIndex:index] placeholderImage:[UIImage imageNamed:@"cell_bg_noData_2"]];
+	return view;
+}
+
+// @option
+/** 允许循环滚动 */
+- (CGFloat)carousel:(iCarousel *)carousel valueForOption:(iCarouselOption)option withDefault:(CGFloat)value {
+	if (option == iCarouselOptionWrap) {
+		return YES;
+	}
+	return value;
+}
+
+/**  监控滚到第几个 */
+- (void)carouselCurrentItemIndexDidChange:(iCarousel *)carousel {
+	_pageControl.currentPage = carousel.currentItemIndex;
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

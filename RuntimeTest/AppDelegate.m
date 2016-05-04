@@ -56,7 +56,7 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	
+	//RuntimeTableViewController 有关于tableView的用法。
 //	屏蔽掉除电池电量的各种状态，需要再info.plist 指定 View controller-based status bar appearance  BOOL值设为NO
 //	就是把控制器控制状态栏的权限给禁了，用UIApplication来控制。但是这种做法在iOS9不建议使用了，
 //	建议我们使用吧那个BOOL值设为YES，然后用控制器的方法来管理状态栏

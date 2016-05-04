@@ -9,5 +9,10 @@ pod 'MJExtension'
 pod 'FMDB'
 pod 'Masonry'
 pod 'AFNetworking', '~> 3.0'
+pod 'WMPageController'
+pod 'MJRefresh'
+pod 'BlocksKit'
+pod 'MBProgressHUD'
+
 
 
