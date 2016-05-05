@@ -34,7 +34,7 @@
                                     <segue destination="CN8-8g-b95" kind="show" id="Z5X-by-GqB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvB-DQ-pbI">
+                            <button opaque="NO" tag="10086" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvB-DQ-pbI">
                                 <rect key="frame" x="112" y="91" width="97" height="30"/>
                                 <state key="normal" title="tableView解耦"/>
                                 <connections>
@@ -48,7 +48,7 @@
                                     <action selector="gotoPhotoView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="3nn-mb-Kyb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXw-dm-Xdy">
+                            <button opaque="NO" tag="10086" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXw-dm-Xdy">
                                 <rect key="frame" x="123" y="180" width="75" height="30"/>
                                 <state key="normal" title="二维码扫描"/>
                                 <connections>
@@ -62,7 +62,7 @@
                                     <action selector="gotoNewsView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="Yxc-KJ-679"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejy-7l-1zX">
+                            <button opaque="NO" tag="10086" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejy-7l-1zX">
                                 <rect key="frame" x="106" y="137" width="108" height="27"/>
                                 <state key="normal" title="进入weekly页面"/>
                                 <connections>

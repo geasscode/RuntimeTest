@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		078D15482802E605E77C6D5C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1E452DD1BAF6AB92348AF8 /* libPods.a */; };
+		F707FE851CD9F1B2008E4F7C /* HWPopTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE841CD9F1B2008E4F7C /* HWPopTool.m */; };
+		F707FE871CDA0113008E4F7C /* loveway.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F707FE861CDA0113008E4F7C /* loveway.ttf */; };
+		F707FE8A1CDA021C008E4F7C /* UILabel+FontChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE891CDA021C008E4F7C /* UILabel+FontChange.m */; };
 		F7275CE61CD08E38002F0F68 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7275CE51CD08E38002F0F68 /* ShareViewController.m */; };
 		F7275CE91CD08E38002F0F68 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7275CE71CD08E38002F0F68 /* MainInterface.storyboard */; };
 		F7275CED1CD08E38002F0F68 /* ReaderList.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F7275CE21CD08E38002F0F68 /* ReaderList.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -234,6 +237,11 @@
 /* Begin PBXFileReference section */
 		2CA5276C8B2F3D8FCC327D72 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6E1E452DD1BAF6AB92348AF8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F707FE831CD9F1B2008E4F7C /* HWPopTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWPopTool.h; sourceTree = "<group>"; };
+		F707FE841CD9F1B2008E4F7C /* HWPopTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWPopTool.m; sourceTree = "<group>"; };
+		F707FE861CDA0113008E4F7C /* loveway.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = loveway.ttf; sourceTree = "<group>"; };
+		F707FE881CDA021C008E4F7C /* UILabel+FontChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+FontChange.h"; sourceTree = "<group>"; };
+		F707FE891CDA021C008E4F7C /* UILabel+FontChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FontChange.m"; sourceTree = "<group>"; };
 		F7275CE21CD08E38002F0F68 /* ReaderList.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ReaderList.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7275CE41CD08E38002F0F68 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		F7275CE51CD08E38002F0F68 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
@@ -623,6 +631,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F707FE821CD9F1B2008E4F7C /* HWPoTools */ = {
+			isa = PBXGroup;
+			children = (
+				F707FE831CD9F1B2008E4F7C /* HWPopTool.h */,
+				F707FE841CD9F1B2008E4F7C /* HWPopTool.m */,
+			);
+			path = HWPoTools;
+			sourceTree = "<group>";
+		};
 		F7275CE31CD08E38002F0F68 /* ReaderList */ = {
 			isa = PBXGroup;
 			children = (
@@ -681,6 +698,8 @@
 				F7BCC5901CCDF81300704878 /* PhotoCell+ConfigureForPhoto.m */,
 				F7BCC5BE1CCF629500704878 /* UIView+Utils.h */,
 				F7BCC5BF1CCF629500704878 /* UIView+Utils.m */,
+				F707FE881CDA021C008E4F7C /* UILabel+FontChange.h */,
+				F707FE891CDA021C008E4F7C /* UILabel+FontChange.m */,
 			);
 			path = DESExtension;
 			sourceTree = "<group>";
@@ -764,6 +783,7 @@
 		F7526FEE1C9A940A0012FE76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F707FE861CDA0113008E4F7C /* loveway.ttf */,
 				F7F773101CD36C6E0060861B /* article_image.png */,
 				F7F773111CD36C6E0060861B /* search.plist */,
 				F7F773121CD36C6F0060861B /* titleArray.plist */,
@@ -1093,6 +1113,7 @@
 		F7BAC76B1CC8DD33000D9795 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				F707FE821CD9F1B2008E4F7C /* HWPoTools */,
 				F7F772E71CD33B250060861B /* YZSTableViewCellModel.h */,
 				F7F772E81CD33B250060861B /* YZSTableViewCellModel.m */,
 				F7F772E91CD33B250060861B /* YZSTableViewModel.h */,
@@ -1409,6 +1430,7 @@
 				F7BAC7591CC8D40F000D9795 /* 7.png in Resources */,
 				F7F773141CD36C6F0060861B /* search.plist in Resources */,
 				F7F773131CD36C6F0060861B /* article_image.png in Resources */,
+				F707FE871CDA0113008E4F7C /* loveway.ttf in Resources */,
 				F7BAC7541CC8D40F000D9795 /* 2.png in Resources */,
 				F7BAC74D1CC8D40F000D9795 /* 12.png in Resources */,
 				F7F7730F1CD36B0D0060861B /* article_detail.html in Resources */,
@@ -1529,6 +1551,7 @@
 			files = (
 				F7754BE31CC753F600F989DA /* DynamicExchangeMethodViewController.m in Sources */,
 				F7275CF41CD094C8002F0F68 /* CustomerItem.m in Sources */,
+				F707FE851CD9F1B2008E4F7C /* HWPopTool.m in Sources */,
 				F7BCC5B81CCE20FD00704878 /* scanViewController.m in Sources */,
 				F7BCC60C1CCF6E2000704878 /* SDWebImageDownloaderOperation.m in Sources */,
 				F7F772ED1CD33B250060861B /* YZSTableViewCellModel.m in Sources */,
@@ -1654,6 +1677,7 @@
 				F7BCC5C41CCF63EF00704878 /* HomeViewModel.m in Sources */,
 				F7BCC5B71CCE20FD00704878 /* resultViewController.m in Sources */,
 				F7BAC73D1CC8D40F000D9795 /* JSONModelClassProperty.m in Sources */,
+				F707FE8A1CDA021C008E4F7C /* UILabel+FontChange.m in Sources */,
 				F7DB40731C9FEAF900E164C7 /* loadXIBFile.m in Sources */,
 				F7DB40771CA0E9F300E164C7 /* CYAlertView.m in Sources */,
 				F7B4128E1C9BD96C00E45E22 /* Post.m in Sources */,

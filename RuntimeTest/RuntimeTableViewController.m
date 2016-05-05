@@ -12,11 +12,14 @@
 #import "DynamicExchangeMethodViewController.h"
 #import "ReplaceMethodViewController.h"
 #import "OtherFunctionViewController.h"
+#import "HWPopTool.h"
 
 @interface RuntimeTableViewController ()
 
 @property(nonatomic,strong) NSArray *runtimeData;
 
+@property (strong, nonatomic) UIView *contentView;
+@property (strong, nonatomic) UIButton *popBtn;
 
 @end
 
@@ -24,14 +27,24 @@
 
 static NSString *cellIdentifier = @"runtimeID";
 
+
+
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	_contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 300)];
+	_contentView.backgroundColor = [UIColor clearColor];
+	_popBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+	_popBtn.frame = CGRectMake(0, 250, 200, 50);
+	_popBtn.backgroundColor = [UIColor greenColor];
+	[_popBtn addTarget:self action:@selector(closeAndBack) forControlEvents:UIControlEventTouchUpInside];
+	
 	self.title = @"rumtime";
 	_runtimeData = @[@"动态变量控制",
 					 @"动态添加方法",
 					 @"动态交换两个方法的实现",
 					 @"拦截并替换方法",
-					 @"在方法上增加额外功能",
+					 @"在方法上增加额外功能(自定义popView)",
 					 @"实现NSCoding的自动归档和解档",
 					 @"实现字典转模型的自动转换"
 					 ];
@@ -51,6 +64,14 @@ static NSString *cellIdentifier = @"runtimeID";
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
+}
+
+
+- (void)closeAndBack {
+	[[HWPopTool sharedInstance] closeWithBlcok:^{
+		[self.navigationController popViewControllerAnimated:YES];
+		
+	}];
 }
 
 #pragma mark - Table view data source
@@ -117,6 +138,21 @@ static NSString *cellIdentifier = @"runtimeID";
 			ReplaceMethodViewController * replaceMethod = (ReplaceMethodViewController *)[storyBoard instantiateViewControllerWithIdentifier:@"replaceMethod"];
 			[self.navigationController pushViewController:replaceMethod animated:YES];
 		}
+			
+		case 4:{
+			
+			UIImageView *imageV = [[UIImageView alloc]initWithFrame:_contentView.bounds];
+			imageV.image = [UIImage imageNamed:@"girl"];
+			[_contentView addSubview:imageV];
+			
+			[HWPopTool sharedInstance].shadeBackgroundType = ShadeBackgroundTypeSolid;
+			[HWPopTool sharedInstance].closeButtonType = ButtonPositionTypeRight;
+			[[HWPopTool sharedInstance] showWithPresentView:_contentView animated:YES];
+			
+		
+
+		}
+			
 		default:
 				break;
 	}

@@ -50,8 +50,15 @@
 
 
 - (IBAction)gotoWeeklyView:(id)sender {
-	WeeklyTableViewController * weeklyVC = [WeeklyTableViewController new];
-	[self.navigationController pushViewController:weeklyVC animated:YES];
+	
+	//换一种方式push vc。
+	Class class = NSClassFromString(@"WeeklyTableViewController");
+	if (class) {
+		UIViewController *vc = [class new];
+		[self.navigationController pushViewController:vc animated:YES];
+	}
+//	WeeklyTableViewController * weeklyVC = [WeeklyTableViewController new];
+//	[self.navigationController pushViewController:weeklyVC animated:YES];
 	
 }
 
