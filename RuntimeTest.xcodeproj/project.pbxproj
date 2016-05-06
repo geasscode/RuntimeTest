@@ -11,6 +11,9 @@
 		F707FE851CD9F1B2008E4F7C /* HWPopTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE841CD9F1B2008E4F7C /* HWPopTool.m */; };
 		F707FE871CDA0113008E4F7C /* loveway.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F707FE861CDA0113008E4F7C /* loveway.ttf */; };
 		F707FE8A1CDA021C008E4F7C /* UILabel+FontChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE891CDA021C008E4F7C /* UILabel+FontChange.m */; };
+		F707FE8E1CDC725B008E4F7C /* DESShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE8D1CDC725B008E4F7C /* DESShareView.m */; };
+		F707FE911CDC7425008E4F7C /* UIControl+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE901CDC7425008E4F7C /* UIControl+Blocks.m */; };
+		F707FE941CDC7F89008E4F7C /* JMCollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE931CDC7F89008E4F7C /* JMCollectionItem.m */; };
 		F7275CE61CD08E38002F0F68 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7275CE51CD08E38002F0F68 /* ShareViewController.m */; };
 		F7275CE91CD08E38002F0F68 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7275CE71CD08E38002F0F68 /* MainInterface.storyboard */; };
 		F7275CED1CD08E38002F0F68 /* ReaderList.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F7275CE21CD08E38002F0F68 /* ReaderList.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -242,6 +245,12 @@
 		F707FE861CDA0113008E4F7C /* loveway.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = loveway.ttf; sourceTree = "<group>"; };
 		F707FE881CDA021C008E4F7C /* UILabel+FontChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+FontChange.h"; sourceTree = "<group>"; };
 		F707FE891CDA021C008E4F7C /* UILabel+FontChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FontChange.m"; sourceTree = "<group>"; };
+		F707FE8C1CDC725B008E4F7C /* DESShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESShareView.h; sourceTree = "<group>"; };
+		F707FE8D1CDC725B008E4F7C /* DESShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESShareView.m; sourceTree = "<group>"; };
+		F707FE8F1CDC7425008E4F7C /* UIControl+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+Blocks.h"; sourceTree = "<group>"; };
+		F707FE901CDC7425008E4F7C /* UIControl+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Blocks.m"; sourceTree = "<group>"; };
+		F707FE921CDC7F89008E4F7C /* JMCollectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCollectionItem.h; sourceTree = "<group>"; };
+		F707FE931CDC7F89008E4F7C /* JMCollectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCollectionItem.m; sourceTree = "<group>"; };
 		F7275CE21CD08E38002F0F68 /* ReaderList.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ReaderList.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7275CE41CD08E38002F0F68 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		F7275CE51CD08E38002F0F68 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
@@ -640,6 +649,15 @@
 			path = HWPoTools;
 			sourceTree = "<group>";
 		};
+		F707FE8B1CDC722A008E4F7C /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				F707FE8C1CDC725B008E4F7C /* DESShareView.h */,
+				F707FE8D1CDC725B008E4F7C /* DESShareView.m */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
 		F7275CE31CD08E38002F0F68 /* ReaderList */ = {
 			isa = PBXGroup;
 			children = (
@@ -700,6 +718,8 @@
 				F7BCC5BF1CCF629500704878 /* UIView+Utils.m */,
 				F707FE881CDA021C008E4F7C /* UILabel+FontChange.h */,
 				F707FE891CDA021C008E4F7C /* UILabel+FontChange.m */,
+				F707FE8F1CDC7425008E4F7C /* UIControl+Blocks.h */,
+				F707FE901CDC7425008E4F7C /* UIControl+Blocks.m */,
 			);
 			path = DESExtension;
 			sourceTree = "<group>";
@@ -930,6 +950,8 @@
 				F7BCC5D41CCF672800704878 /* HomeModel.m */,
 				F7275CF21CD094C8002F0F68 /* CustomerItem.h */,
 				F7275CF31CD094C8002F0F68 /* CustomerItem.m */,
+				F707FE921CDC7F89008E4F7C /* JMCollectionItem.h */,
+				F707FE931CDC7F89008E4F7C /* JMCollectionItem.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -990,6 +1012,7 @@
 		F7B412941C9BDA3900E45E22 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F707FE8B1CDC722A008E4F7C /* Share */,
 				F7275CF81CD0C3FD002F0F68 /* Weekly */,
 				F7BCC5DA1CCF6C5700704878 /* TableViewCell */,
 				F7B412951C9BDA3900E45E22 /* PostTableViewCell.h */,
@@ -1592,6 +1615,7 @@
 				F74676B21CABC7B50001D3A5 /* MJBaseObject.m in Sources */,
 				F7BCC58E1CCDF64B00704878 /* MyUser.m in Sources */,
 				F7BAC7001CC786A6000D9795 /* Tool.m in Sources */,
+				F707FE941CDC7F89008E4F7C /* JMCollectionItem.m in Sources */,
 				F74676D21CB647490001D3A5 /* NSMutableArray+Extension.m in Sources */,
 				F7275CFB1CD0C42F002F0F68 /* WeeklyItemHeaderView.m in Sources */,
 				F7BCC5D51CCF672800704878 /* HomeModel.m in Sources */,
@@ -1652,7 +1676,9 @@
 				F7BCC5751CCDF0D500704878 /* PhotosViewController.m in Sources */,
 				F7BCC53B1CCDBCF400704878 /* TableViewSampleViewController.m in Sources */,
 				F7BCC5821CCDF33200704878 /* PhotoCell.m in Sources */,
+				F707FE8E1CDC725B008E4F7C /* DESShareView.m in Sources */,
 				F7B412971C9BDA3900E45E22 /* GlobalTimelineViewController.m in Sources */,
+				F707FE911CDC7425008E4F7C /* UIControl+Blocks.m in Sources */,
 				F7F772F21CD33BCD0060861B /* SigmaTableViewController.m in Sources */,
 				F7BCC60E1CCF6E2000704878 /* SDWebImagePrefetcher.m in Sources */,
 				F7BAC73B1CC8D40F000D9795 /* JSONModel.m in Sources */,

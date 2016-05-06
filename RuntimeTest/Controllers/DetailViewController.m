@@ -5,6 +5,16 @@
 #import "ImageModel.h"
 #import "SDWebImageManager.h"
 #import <Masonry.h>
+#import "DESShareView.h"
+#import "OpenShareHeader.h"
+#import <MessageUI/MessageUI.h>
+#import "JMActionSheet.h"
+#import "JMPickerActionSheet.h"
+#import "JMImagesActionSheet.h"
+
+#import "JMCollectionItem.h"
+
+#import "IonIcons.h"
 
 #define kToolBarHeight 38
 
@@ -70,7 +80,7 @@
 	
 	UIBarButtonItem *save = [UIBarButtonItem barButtonItemByCustomButtonWithImage:@"star1" highlightedImage:@"star-on" target:self action:@selector(saveItemClick:)];
 	
-	UIBarButtonItem *share = [UIBarButtonItem barButtonItemByCustomButtonWithImage:@"upload" highlightedImage:@"upload" target:self action:@selector(shareItemClick)];
+	UIBarButtonItem *share = [UIBarButtonItem barButtonItemByCustomButtonWithImage:@"upload" highlightedImage:@"upload" target:self action:@selector(shareItemClick:)];
 	
 	UIBarButtonItem *comment = [UIBarButtonItem barButtonItemByCustomButtonWithImage:@"bottom_bar_comment" highlightedImage:@"bottom_bar_comment" target:self action:@selector(commentItemClick)];
 	
@@ -119,8 +129,95 @@
 /**
  *  分享按钮点击事件
  */
--(void)shareItemClick{
+-(void)shareItemClick:(id)sender{
 	
+	JMActionSheetCollectionItem *collectionItem = [[JMActionSheetCollectionItem alloc] init];
+	NSMutableArray *collectionItems = [NSMutableArray new];
+	JMCollectionItem *item = [[JMCollectionItem alloc] init];
+	item.actionName = @"微信朋友圈";
+	item.actionImage = [UIImage imageNamed:@"share_pyquan"];
+	[collectionItems addObject:item];
+	
+	item = [[JMCollectionItem alloc] init];
+	item.actionName = @"微信好友";
+	item.actionImage = [UIImage imageNamed:@"share_weixin"];
+	[collectionItems addObject:item];
+	
+	item = [[JMCollectionItem alloc] init];
+	item.actionName = @"短信";
+	item.actionImage = [UIImage imageNamed:@"share_msg"];
+	[collectionItems addObject:item];
+	
+	item = [[JMCollectionItem alloc] init];
+	item.actionName = @"新浪微博";
+	item.actionImage = [UIImage imageNamed:@"share_sina"];
+	[collectionItems addObject:item];
+	
+	item = [[JMCollectionItem alloc] init];
+	item.actionName = @"QQ";
+	item.actionImage = [UIImage imageNamed:@"share_qq"];
+	[collectionItems addObject:item];
+	
+	item = [[JMCollectionItem alloc] init];
+	item.actionName = @"QQ空间";
+	item.actionImage = [UIImage imageNamed:@"share_qzone"];
+	[collectionItems addObject:item];
+	
+	collectionItem.elements = (NSArray <JMActionSheetCollectionItem> *)collectionItems;
+	collectionItem.collectionActionBlock = ^(JMCollectionItem *selectedValue){
+		NSString *theString = selectedValue.actionName;
+		NSArray *items = @[@"微信朋友圈", @"微信好友", @"短信", @"新浪微博", @"QQ",@"QQ空间"];
+		NSUInteger shareBtnType = [items indexOfObject:theString];
+		
+		switch (shareBtnType) {
+			case SharePyQuan:{
+				// 分享到朋友圈
+				[self pyqClick];
+				break;
+			}
+			case ShareWeix:{
+				[self wxFriendClick];
+				// 发给微信好友
+				break;
+			}case ShareMsg:{
+				// 点击了短信
+				[self sendMessage];
+				break;
+			}case ShareSina:{
+				// 分享到微博
+				[self sinaWBClick];
+				break;
+			}case ShareQQ:{
+				// 发给QQ好友
+				[self qqFriend];
+				break;
+			}case ShareQzone:{
+				// 分享到QQ空间
+				[self qzone];
+				break;
+			}default:{
+				NSLog(@"默认");
+				break;
+			}
+		}
+
+		
+		NSLog(@"collectionItem selectedValue %@",selectedValue.actionName);
+	};
+	
+	JMActionSheetDescription *desc = [[JMActionSheetDescription alloc] init];
+	desc.actionSheetTintColor = [UIColor grayColor];
+	desc.actionSheetCancelButtonFont = [UIFont boldSystemFontOfSize:17.0f];
+	desc.actionSheetOtherButtonFont = [UIFont systemFontOfSize:16.0f];
+	desc.title = @"分享方式";
+	JMActionSheetItem *cancelItem = [[JMActionSheetItem alloc] init];
+	cancelItem.title = @"取消";
+	desc.cancelItem = cancelItem;
+	
+
+	
+	desc.items = @[collectionItem];
+	[JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
 }
 /**
  *
@@ -128,6 +225,148 @@
 -(void)commentItemClick{
 	
 }
+
+#pragma mark -- ShareViewDelegate
+-(void)didClickShareBtn:(ShareBtn)type {
+	
+	switch (type) {
+		case SharePyQuan:{
+			// 分享到朋友圈
+			[self pyqClick];
+			break;
+		}
+		case ShareWeix:{
+			[self wxFriendClick];
+			// 发给微信好友
+			break;
+		}case ShareMsg:{
+			// 点击了短信
+			[self sendMessage];
+			break;
+		}case ShareSina:{
+			// 分享到微博
+			[self sinaWBClick];
+			break;
+		}case ShareQQ:{
+			// 发给QQ好友
+			[self qqFriend];
+			break;
+		}case ShareQzone:{
+			// 分享到QQ空间
+			[self qzone];
+			break;
+		}default:{
+			NSLog(@"默认");
+			break;
+		}
+	}
+}
+
+#pragma mark - 配置分享信息
+- (OSMessage *)shareMessage {
+	OSMessage *message = [[OSMessage alloc] init];
+	NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
+	fmt.dateFormat = @"yyyy年MM月dd日HH时mm分ss秒";
+	NSString *now = [fmt stringFromDate:[NSDate date]];
+	message.title = [NSString stringWithFormat:@"大鸟的分享，分享时间%@",now];
+	
+	UIImage *img = [UIImage imageNamed:@"icon"];
+	message.image = UIImageJPEGRepresentation(img, 1.0);
+//	message.image = [UIImage imageNamed:@"icon"]; 不科学竟然是NSData类型。
+	// 缩略图
+	UIImage *psdIcon = [UIImage imageNamed:@"psb"];
+	message.thumbnail = UIImageJPEGRepresentation(psdIcon, 1.0);
+//	message.thumbnail = [UIImage imageNamed:@"psb"];
+	message.desc = [NSString stringWithFormat:@"大鸟的分享，分享时间%@",now];
+	message.link=@"http://www.jianshu.com/users/e944bed06906/latest_articles";
+	return message;
+}
+
+#pragma mark - 分享到微博
+- (void)sinaWBClick {
+	OSMessage *message = [self shareMessage];
+	[OpenShare shareToWeibo:message Success:^(OSMessage *message) {
+		NSLog(@"分享到sina微博成功:\%@",message);
+	} Fail:^(OSMessage *message, NSError *error) {
+		NSLog(@"分享到sina微博失败:\%@\n%@",message,error);
+	}];
+}
+
+#pragma mark - 分享给QQ好友
+- (void)qqFriend {
+	OSMessage *message = [self shareMessage];
+	[OpenShare shareToQQFriends:message Success:^(OSMessage *message) {
+		NSLog(@"分享到QQ好友成功:%@",message);
+	} Fail:^(OSMessage *message, NSError *error) {
+		NSLog(@"分享到QQ好友失败:%@\n%@",message,error);
+	}];
+	
+}
+
+#pragma mark - 分享到QQ空间
+- (void)qzone{
+	OSMessage *message = [self shareMessage];
+	[OpenShare shareToQQZone:message Success:^(OSMessage *message) {
+		NSLog(@"分享到QQ空间成功:%@",message);
+	} Fail:^(OSMessage *message, NSError *error) {
+		NSLog(@"分享到QQ空间失败:%@\n%@",message,error);
+	}];
+}
+
+#pragma mark - 分享给微信好友
+- (void)wxFriendClick{
+	OSMessage *message = [self shareMessage];
+	[OpenShare shareToWeixinSession:message Success:^(OSMessage *message) {
+		NSLog(@"微信分享到会话成功：\n%@",message);
+	} Fail:^(OSMessage *message, NSError *error) {
+		NSLog(@"微信分享到会话失败：\n%@\n%@",error,message);
+	}];
+}
+
+#pragma mark - 分享到朋友圈
+- (void)pyqClick{
+	OSMessage *message = [self shareMessage];
+	[OpenShare shareToWeixinTimeline:message Success:^(OSMessage *message) {
+		NSLog(@"微信分享到朋友圈成功：\n%@",message);
+	} Fail:^(OSMessage *message, NSError *error) {
+		NSLog(@"微信分享到朋友圈失败：\n%@\n%@",error,message);
+	}];
+}
+
+#pragma mark - 发送短信
+- (void)sendMessage{
+	if( [MFMessageComposeViewController canSendText] ){
+		MFMessageComposeViewController * controller = [[MFMessageComposeViewController alloc]init]; //autorelease];
+		// 短信的接收人
+		controller.recipients = nil;//[NSArray arrayWithObject:@""]
+		controller.body = @"XHShareDemo 给您发送了一条短信，XHShareDemo 给您发送了一条短信，XHShareDemo 给您发送了一条短信，XHShareDemo 给您发送了一条短信。";
+		controller.messageComposeDelegate = self;
+		[self presentViewController:controller animated:YES completion:nil];
+	}else{
+		NSLog(@"您的设备没有发送短信功能");
+	}
+}
+
+#pragma mark -- MFMessageComposeViewControllerDelegate
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result{
+	[controller dismissViewControllerAnimated:NO completion:nil];
+	
+	switch (result) {
+		case MessageComposeResultCancelled:
+			NSLog(@"发送取消");
+			break;
+		case MessageComposeResultFailed:// send failed
+			NSLog(@"发送失败");
+			break;
+		case MessageComposeResultSent:
+			NSLog(@"发送成功");
+			break;
+		default:
+			break;
+	}
+}
+
 
 #pragma mark 获取数据
 //赋值之后加载获取数据模型 拼接html webview加载html

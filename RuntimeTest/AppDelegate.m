@@ -10,7 +10,7 @@
 #import "GlobalTimelineViewController.h"
 #import "Store.h"
 #import <AFNetworking/AFNetworking.h>
-
+#import "OpenShareHeader.h"
 #import "AFNetworkActivityIndicatorManager.h"
 
 
@@ -56,6 +56,13 @@
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	
+	//第一步：注册key
+	[OpenShare connectQQWithAppId:@"1103194207"];
+	[OpenShare connectWeiboWithAppKey:@"402180334"];
+	[OpenShare connectWeixinWithAppId:@"wxd930ea5d5a258f4f"];
+	
+	
 	//RuntimeTableViewController 有关于tableView的用法。
 //	屏蔽掉除电池电量的各种状态，需要再info.plist 指定 View controller-based status bar appearance  BOOL值设为NO
 //	就是把控制器控制状态栏的权限给禁了，用UIApplication来控制。但是这种做法在iOS9不建议使用了，
@@ -69,6 +76,8 @@
 	[NSURLCache setSharedURLCache:URLCache];
 	
 	[[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+	
+	
 	
 //	UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero];
 //	UITableViewController *viewController = [[GlobalTimelineViewController alloc] initWithStyle:UITableViewStylePlain];
@@ -133,6 +142,14 @@
 	NSLog(@"execute applicationWillTerminate");
 
 	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+-(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+	if ([OpenShare handleOpenURL:url]) {
+		return YES;
+	}
+	//这里可以写上其他OpenShare不支持的客户端的回调，比如支付宝等。
+	return YES;
 }
 
 @end

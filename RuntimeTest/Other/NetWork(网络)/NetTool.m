@@ -24,6 +24,26 @@
     return manager;
 }
 
+/** 单例一个AFHTTPSessionManager */
++ (AFHTTPSessionManager *)defaultManager {
+	static AFHTTPSessionManager *manager = nil;
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		manager = [AFHTTPSessionManager manager];
+		// 设置接受解析的内容类型
+		manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/json",@"text/plain",@"text/javascript",@"application/json", nil];
+		
+		//下面这两句不是必须的。
+		NSString *userAgent = [NSString stringWithFormat:@"iOS/%@/3.19",[UIDevice currentDevice].name];
+		[manager.requestSerializer setValue:userAgent forHTTPHeaderField:@"User-Agent"];
+		
+		[manager.requestSerializer setAuthorizationHeaderFieldWithUsername:@"0.0.0.0" password:@"tuicool"];
+
+
+	});
+	return manager;
+}
+
 - (void)httpGetRequest:(NSString *)url withParameter:(NSDictionary *)parameter success:(void (^)(Response *response))success failure:(void (^)(NSError *error))failure{
     
     NSLog(@"........get request url:%@",url);
@@ -97,23 +117,23 @@
 + (void)GET:(NSString *)URLString parameters:(NSDictionary *)para complete:(CompleteBlock)complete{
 	
 	
-	AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//	AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//	
+//	// manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"", nil];
+//	
+//	NSString *userAgent = [NSString stringWithFormat:@"iOS/%@/3.19",[UIDevice currentDevice].name];
+//	[manager.requestSerializer setValue:userAgent forHTTPHeaderField:@"User-Agent"];
+//	
+////	HZYUserLoginModel *loginModel = [HZYUserLoginModel sharedUserLoginModel];
+////	if (loginModel.isLogin) {
+////		
+////		[manager.requestSerializer setAuthorizationHeaderFieldWithUsername:loginModel.name password:loginModel.token];
+////	}else{
+////		
+//		[manager.requestSerializer setAuthorizationHeaderFieldWithUsername:@"0.0.0.0" password:@"tuicool"];
+////	}
 	
-	// manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"", nil];
-	
-	NSString *userAgent = [NSString stringWithFormat:@"iOS/%@/3.19",[UIDevice currentDevice].name];
-	[manager.requestSerializer setValue:userAgent forHTTPHeaderField:@"User-Agent"];
-	
-//	HZYUserLoginModel *loginModel = [HZYUserLoginModel sharedUserLoginModel];
-//	if (loginModel.isLogin) {
-//		
-//		[manager.requestSerializer setAuthorizationHeaderFieldWithUsername:loginModel.name password:loginModel.token];
-//	}else{
-//		
-		[manager.requestSerializer setAuthorizationHeaderFieldWithUsername:@"0.0.0.0" password:@"tuicool"];
-//	}
-	
-	[manager GET:URLString parameters:para progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+	[[self defaultManager] GET:URLString parameters:para progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 		complete(task,responseObject,nil);
 	} failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
 		complete(task,nil,error);
