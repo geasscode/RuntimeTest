@@ -13,7 +13,6 @@ pod 'WMPageController'
 pod 'MJRefresh'
 pod 'BlocksKit'
 pod 'MBProgressHUD'
-pod 'OpenShare', '~> 0.0'
 pod 'JMActionSheetDescription'
 pod 'ionicons'
 

@@ -16,6 +16,7 @@
 #import "masonry.h"
 #import "HomeViewModel.h"
 #import "UIImageView+AFNetworking.h"
+#import "MBProgressHUD.h"
 
 @interface WeeklyTableViewController ()<HeaderViewDelegate,iCarouselDataSource,iCarouselDelegate>
 @property(nonatomic,strong) NSArray * weeklyItemArray;
@@ -58,6 +59,9 @@ UIPageControl *_pageControl;
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -79,8 +83,11 @@ UIPageControl *_pageControl;
 	[WeeklyItemModel weeklyItemRequestURL:kWeeklyItemUrl success:^(NSArray *itemArray) {
 		
 		weakSelf.weeklyItemArray = itemArray;
-		
+
 		[weakSelf.tableView reloadData];
+		
+		[MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+
 		
 	}];
 }
@@ -92,6 +99,8 @@ UIPageControl *_pageControl;
 	scrollView.ic.dataSource = self;
 	_pageControl = scrollView.pageControl;
 	self.tableView.tableHeaderView = scrollView;
+	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+	hud.labelText = NSLocalizedString(@"正在帮你找数据...", @"HUD loading title");
 }
 
 

@@ -16,6 +16,14 @@
 		F707FE941CDC7F89008E4F7C /* JMCollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE931CDC7F89008E4F7C /* JMCollectionItem.m */; };
 		F707FE971CE034C9008E4F7C /* DESTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE961CE034C9008E4F7C /* DESTabBarController.m */; };
 		F707FE9A1CE0395F008E4F7C /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE991CE0395F008E4F7C /* UIBarButtonItem+Extension.m */; };
+		F707FEA91CE06C85008E4F7C /* OpenShare+Alipay.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE9D1CE06C85008E4F7C /* OpenShare+Alipay.m */; };
+		F707FEAA1CE06C85008E4F7C /* OpenShare+QQ.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE9F1CE06C85008E4F7C /* OpenShare+QQ.m */; };
+		F707FEAB1CE06C85008E4F7C /* OpenShare+Renren.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FEA11CE06C85008E4F7C /* OpenShare+Renren.m */; };
+		F707FEAC1CE06C85008E4F7C /* OpenShare+Weibo.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FEA31CE06C85008E4F7C /* OpenShare+Weibo.m */; };
+		F707FEAD1CE06C85008E4F7C /* OpenShare+Weixin.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FEA51CE06C85008E4F7C /* OpenShare+Weixin.m */; };
+		F707FEAE1CE06C85008E4F7C /* OpenShare.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FEA71CE06C85008E4F7C /* OpenShare.m */; };
+		F707FEB01CE06E8E008E4F7C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F707FEAF1CE06E8E008E4F7C /* MessageUI.framework */; };
+		F707FEB21CE08555008E4F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F707FEB11CE08555008E4F7C /* Assets.xcassets */; };
 		F7275CE61CD08E38002F0F68 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7275CE51CD08E38002F0F68 /* ShareViewController.m */; };
 		F7275CE91CD08E38002F0F68 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7275CE71CD08E38002F0F68 /* MainInterface.storyboard */; };
 		F7275CED1CD08E38002F0F68 /* ReaderList.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F7275CE21CD08E38002F0F68 /* ReaderList.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -45,7 +53,6 @@
 		F7526FF31C9A940A0012FE76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FF21C9A940A0012FE76 /* AppDelegate.m */; };
 		F7526FF61C9A940A0012FE76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FF51C9A940A0012FE76 /* ViewController.m */; };
 		F7526FF91C9A940A0012FE76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7526FF71C9A940A0012FE76 /* Main.storyboard */; };
-		F7526FFB1C9A940A0012FE76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7526FFA1C9A940A0012FE76 /* Assets.xcassets */; };
 		F7526FFE1C9A940A0012FE76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7526FFC1C9A940A0012FE76 /* LaunchScreen.storyboard */; };
 		F75270091C9A940A0012FE76 /* RuntimeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75270081C9A940A0012FE76 /* RuntimeTestTests.m */; };
 		F75270141C9A940A0012FE76 /* RuntimeTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75270131C9A940A0012FE76 /* RuntimeTestUITests.m */; };
@@ -257,6 +264,21 @@
 		F707FE961CE034C9008E4F7C /* DESTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESTabBarController.m; sourceTree = "<group>"; };
 		F707FE981CE0395F008E4F7C /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		F707FE991CE0395F008E4F7C /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		F707FE9C1CE06C85008E4F7C /* OpenShare+Alipay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+Alipay.h"; sourceTree = "<group>"; };
+		F707FE9D1CE06C85008E4F7C /* OpenShare+Alipay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+Alipay.m"; sourceTree = "<group>"; };
+		F707FE9E1CE06C85008E4F7C /* OpenShare+QQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+QQ.h"; sourceTree = "<group>"; };
+		F707FE9F1CE06C85008E4F7C /* OpenShare+QQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+QQ.m"; sourceTree = "<group>"; };
+		F707FEA01CE06C85008E4F7C /* OpenShare+Renren.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+Renren.h"; sourceTree = "<group>"; };
+		F707FEA11CE06C85008E4F7C /* OpenShare+Renren.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+Renren.m"; sourceTree = "<group>"; };
+		F707FEA21CE06C85008E4F7C /* OpenShare+Weibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+Weibo.h"; sourceTree = "<group>"; };
+		F707FEA31CE06C85008E4F7C /* OpenShare+Weibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+Weibo.m"; sourceTree = "<group>"; };
+		F707FEA41CE06C85008E4F7C /* OpenShare+Weixin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OpenShare+Weixin.h"; sourceTree = "<group>"; };
+		F707FEA51CE06C85008E4F7C /* OpenShare+Weixin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OpenShare+Weixin.m"; sourceTree = "<group>"; };
+		F707FEA61CE06C85008E4F7C /* OpenShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenShare.h; sourceTree = "<group>"; };
+		F707FEA71CE06C85008E4F7C /* OpenShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenShare.m; sourceTree = "<group>"; };
+		F707FEA81CE06C85008E4F7C /* OpenShareHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenShareHeader.h; sourceTree = "<group>"; };
+		F707FEAF1CE06E8E008E4F7C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		F707FEB11CE08555008E4F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7275CE21CD08E38002F0F68 /* ReaderList.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ReaderList.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7275CE41CD08E38002F0F68 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		F7275CE51CD08E38002F0F68 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
@@ -312,7 +334,6 @@
 		F7526FF41C9A940A0012FE76 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F7526FF51C9A940A0012FE76 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F7526FF81C9A940A0012FE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F7526FFA1C9A940A0012FE76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7526FFD1C9A940A0012FE76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7526FFF1C9A940A0012FE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F75270041C9A940A0012FE76 /* RuntimeTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -606,6 +627,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F707FEB01CE06E8E008E4F7C /* MessageUI.framework in Frameworks */,
 				F7BCC5BB1CCE261A00704878 /* AVFoundation.framework in Frameworks */,
 				078D15482802E605E77C6D5C /* libPods.a in Frameworks */,
 			);
@@ -640,6 +662,7 @@
 		E06492DA06779C2A54DCC373 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F707FEAF1CE06E8E008E4F7C /* MessageUI.framework */,
 				F7BCC5BA1CCE261A00704878 /* AVFoundation.framework */,
 				6E1E452DD1BAF6AB92348AF8 /* libPods.a */,
 			);
@@ -662,6 +685,26 @@
 				F707FE8D1CDC725B008E4F7C /* DESShareView.m */,
 			);
 			path = Share;
+			sourceTree = "<group>";
+		};
+		F707FE9B1CE06C85008E4F7C /* openshare */ = {
+			isa = PBXGroup;
+			children = (
+				F707FE9C1CE06C85008E4F7C /* OpenShare+Alipay.h */,
+				F707FE9D1CE06C85008E4F7C /* OpenShare+Alipay.m */,
+				F707FE9E1CE06C85008E4F7C /* OpenShare+QQ.h */,
+				F707FE9F1CE06C85008E4F7C /* OpenShare+QQ.m */,
+				F707FEA01CE06C85008E4F7C /* OpenShare+Renren.h */,
+				F707FEA11CE06C85008E4F7C /* OpenShare+Renren.m */,
+				F707FEA21CE06C85008E4F7C /* OpenShare+Weibo.h */,
+				F707FEA31CE06C85008E4F7C /* OpenShare+Weibo.m */,
+				F707FEA41CE06C85008E4F7C /* OpenShare+Weixin.h */,
+				F707FEA51CE06C85008E4F7C /* OpenShare+Weixin.m */,
+				F707FEA61CE06C85008E4F7C /* OpenShare.h */,
+				F707FEA71CE06C85008E4F7C /* OpenShare.m */,
+				F707FEA81CE06C85008E4F7C /* OpenShareHeader.h */,
+			);
+			path = openshare;
 			sourceTree = "<group>";
 		};
 		F7275CE31CD08E38002F0F68 /* ReaderList */ = {
@@ -760,6 +803,7 @@
 		F7526FED1C9A940A0012FE76 /* RuntimeTest */ = {
 			isa = PBXGroup;
 			children = (
+				F707FEB11CE08555008E4F7C /* Assets.xcassets */,
 				F7F7731E1CD997E70060861B /* Manager */,
 				F7BCC5D61CCF6B4600704878 /* ViewController */,
 				F7BCC5C11CCF631C00704878 /* ViewModel */,
@@ -777,7 +821,6 @@
 				F7DB40751CA0E9F300E164C7 /* CYAlertView.h */,
 				F7DB40761CA0E9F300E164C7 /* CYAlertView.m */,
 				F7526FF71C9A940A0012FE76 /* Main.storyboard */,
-				F7526FFA1C9A940A0012FE76 /* Assets.xcassets */,
 				F7526FFC1C9A940A0012FE76 /* LaunchScreen.storyboard */,
 				F7526FFF1C9A940A0012FE76 /* Info.plist */,
 				F7526FEE1C9A940A0012FE76 /* Supporting Files */,
@@ -1038,6 +1081,7 @@
 		F7BAC7071CC8D40E000D9795 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				F707FE9B1CE06C85008E4F7C /* openshare */,
 				F7F773161CD8AFD00060861B /* iCarousel */,
 				F7BCC5E41CCF6E2000704878 /* SDWebImage */,
 				F7BAC7081CC8D40E000D9795 /* JSONModel */,
@@ -1475,6 +1519,7 @@
 				F7275D071CD1AFE0002F0F68 /* WeeklyItemCell.xib in Resources */,
 				F7BAC74B1CC8D40F000D9795 /* 10.png in Resources */,
 				F7B1EA611CC5D5AF00307F41 /* LoadData.storyboard in Resources */,
+				F707FEB21CE08555008E4F7C /* Assets.xcassets in Resources */,
 				F7BAC7451CC8D40F000D9795 /* contacts_add_friend@2x.png in Resources */,
 				F7BAC75B1CC8D40F000D9795 /* 9.png in Resources */,
 				F7BAC7581CC8D40F000D9795 /* 6.png in Resources */,
@@ -1483,7 +1528,6 @@
 				F7526FFE1C9A940A0012FE76 /* LaunchScreen.storyboard in Resources */,
 				F7BCC5961CCDFA2D00704878 /* PhotoViewController.xib in Resources */,
 				F7BAC74C1CC8D40F000D9795 /* 11.png in Resources */,
-				F7526FFB1C9A940A0012FE76 /* Assets.xcassets in Resources */,
 				F7BAC7571CC8D40F000D9795 /* 5.png in Resources */,
 				F7BAC7551CC8D40F000D9795 /* 3.png in Resources */,
 				F7BAC7561CC8D40F000D9795 /* 4.png in Resources */,
@@ -1588,6 +1632,8 @@
 				F7BCC5B81CCE20FD00704878 /* scanViewController.m in Sources */,
 				F7BCC60C1CCF6E2000704878 /* SDWebImageDownloaderOperation.m in Sources */,
 				F7F772ED1CD33B250060861B /* YZSTableViewCellModel.m in Sources */,
+				F707FEAC1CE06C85008E4F7C /* OpenShare+Weibo.m in Sources */,
+				F707FEAB1CE06C85008E4F7C /* OpenShare+Renren.m in Sources */,
 				F7BCC5E01CCF6CDA00704878 /* HomeDetailView.m in Sources */,
 				F7B1EABB1CC633E000307F41 /* UIColor+WNXColor.m in Sources */,
 				F7BAC7671CC8DC30000D9795 /* ContactTableViewCell.m in Sources */,
@@ -1614,6 +1660,7 @@
 				F7B1EAAA1CC6112000307F41 /* HomeViewController.m in Sources */,
 				F7754BDD1CC7536B00F989DA /* IvarListViewController.m in Sources */,
 				F7BCC5991CCDFAB800704878 /* DetailViewController.m in Sources */,
+				F707FEAD1CE06C85008E4F7C /* OpenShare+Weixin.m in Sources */,
 				F7BCC5541CCDBD1000704878 /* NSObject+TCIdentifier.m in Sources */,
 				F7F773071CD356400060861B /* StageCategoryHeaderView.m in Sources */,
 				F7BCC55A1CCDBD1000704878 /* TCGlobalDataMetric.m in Sources */,
@@ -1657,6 +1704,7 @@
 				F7F7730A1CD3593F0060861B /* DetailModel.m in Sources */,
 				F7F772F81CD347BF0060861B /* WeeklyItemStageDetatilController.m in Sources */,
 				F7BAC73E1CC8D40F000D9795 /* JSONModelError.m in Sources */,
+				F707FEAA1CE06C85008E4F7C /* OpenShare+QQ.m in Sources */,
 				F7BAC7401CC8D40F000D9795 /* JSONAPI.m in Sources */,
 				F7BCC6061CCF6E2000704878 /* MKAnnotationView+WebCache.m in Sources */,
 				F7BCC60D1CCF6E2000704878 /* SDWebImageManager.m in Sources */,
@@ -1684,6 +1732,7 @@
 				F7B412901C9BD96C00E45E22 /* AFAppDotNetAPIClient.m in Sources */,
 				F7B1EAB01CC618CE00307F41 /* FoundViewController.m in Sources */,
 				F7F7731D1CD8B55F0060861B /* FocusImageScrollView.m in Sources */,
+				F707FEA91CE06C85008E4F7C /* OpenShare+Alipay.m in Sources */,
 				F7BCC6111CCF6E2000704878 /* UIImage+MultiFormat.m in Sources */,
 				F7BCC5751CCDF0D500704878 /* PhotosViewController.m in Sources */,
 				F7BCC53B1CCDBCF400704878 /* TableViewSampleViewController.m in Sources */,
@@ -1692,6 +1741,7 @@
 				F7B412971C9BDA3900E45E22 /* GlobalTimelineViewController.m in Sources */,
 				F707FE911CDC7425008E4F7C /* UIControl+Blocks.m in Sources */,
 				F7F772F21CD33BCD0060861B /* SigmaTableViewController.m in Sources */,
+				F707FEAE1CE06C85008E4F7C /* OpenShare.m in Sources */,
 				F7BCC60E1CCF6E2000704878 /* SDWebImagePrefetcher.m in Sources */,
 				F7BAC73B1CC8D40F000D9795 /* JSONModel.m in Sources */,
 				F7BAC73C1CC8D40F000D9795 /* JSONModelArray.m in Sources */,

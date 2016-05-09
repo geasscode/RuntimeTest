@@ -15,6 +15,7 @@
 #import "JMCollectionItem.h"
 
 #import "IonIcons.h"
+#import "MBProgressHUD.h"
 
 #define kToolBarHeight 38
 
@@ -37,7 +38,9 @@
 	[super viewDidLoad];
 	
 	self.title = @"正文";
-	
+	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+	hud.labelText = NSLocalizedString(@"正在加载请稍后...", @"HUD loading title");
+
 	[self creatWebview];
 	
 	[self creatToolBar];
@@ -270,13 +273,15 @@
 	NSString *now = [fmt stringFromDate:[NSDate date]];
 	message.title = [NSString stringWithFormat:@"大鸟的分享，分享时间%@",now];
 	
-	UIImage *img = [UIImage imageNamed:@"icon"];
-	message.image = UIImageJPEGRepresentation(img, 1.0);
-//	message.image = [UIImage imageNamed:@"icon"]; 不科学竟然是NSData类型。
+//	UIImage *img = [UIImage imageNamed:@"icon"];
+//	message.image = UIImageJPEGRepresentation(img, 1.0);
+	message.image = [UIImage imageNamed:@"icon"];
 	// 缩略图
-	UIImage *psdIcon = [UIImage imageNamed:@"psb"];
-	message.thumbnail = UIImageJPEGRepresentation(psdIcon, 1.0);
+//	UIImage *psdIcon = [UIImage imageNamed:@"psb"];
+//	message.thumbnail = UIImageJPEGRepresentation(psdIcon, 1.0);
 //	message.thumbnail = [UIImage imageNamed:@"psb"];
+	//一直找不到原因，直到比较dic 中的 thumbData 发现字节大的通不过，于是尝试注释 thumbnail。结果通过。
+//	只是提示应用数据出错。没有其他有帮助的信息，估计NSData大小有限制。
 	message.desc = [NSString stringWithFormat:@"大鸟的分享，分享时间%@",now];
 	message.link=@"http://www.jianshu.com/users/e944bed06906/latest_articles";
 	return message;
@@ -397,7 +402,10 @@
 		
 		[self.webView loadHTMLString:htmlstring baseURL:file];
 		
+		[MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+
 	}];
+
 }
 /**
  *  获得HTML中的image 重新设置image的CSS样式以适应屏幕的大小

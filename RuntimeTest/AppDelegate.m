@@ -61,7 +61,11 @@
 	//第一步：注册key
 	[OpenShare connectQQWithAppId:@"1103194207"];
 	[OpenShare connectWeiboWithAppKey:@"402180334"];
-	[OpenShare connectWeixinWithAppId:@"wxd930ea5d5a258f4f"];
+//	[OpenShare connectWeixinWithAppId:@"wxd930ea5d5a258f4f"];
+	[OpenShare connectWeixinWithAppId:@"wx9ad490e6428d5a7f"];
+
+	
+	
 	
 	
 	//RuntimeTableViewController 有关于tableView的用法。
