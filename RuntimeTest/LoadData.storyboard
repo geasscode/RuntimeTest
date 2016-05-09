@@ -10,7 +10,7 @@
         <!--Main View Controller-->
         <scene sceneID="mYK-cK-aQz">
             <objects>
-                <viewController id="aFy-QA-WhR" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainVC" id="aFy-QA-WhR" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iz4-T4-hSQ"/>
                         <viewControllerLayoutGuide type="bottom" id="4bZ-sG-w8n"/>

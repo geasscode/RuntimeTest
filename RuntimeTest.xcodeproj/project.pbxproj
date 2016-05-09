@@ -14,6 +14,8 @@
 		F707FE8E1CDC725B008E4F7C /* DESShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE8D1CDC725B008E4F7C /* DESShareView.m */; };
 		F707FE911CDC7425008E4F7C /* UIControl+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE901CDC7425008E4F7C /* UIControl+Blocks.m */; };
 		F707FE941CDC7F89008E4F7C /* JMCollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE931CDC7F89008E4F7C /* JMCollectionItem.m */; };
+		F707FE971CE034C9008E4F7C /* DESTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE961CE034C9008E4F7C /* DESTabBarController.m */; };
+		F707FE9A1CE0395F008E4F7C /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE991CE0395F008E4F7C /* UIBarButtonItem+Extension.m */; };
 		F7275CE61CD08E38002F0F68 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7275CE51CD08E38002F0F68 /* ShareViewController.m */; };
 		F7275CE91CD08E38002F0F68 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7275CE71CD08E38002F0F68 /* MainInterface.storyboard */; };
 		F7275CED1CD08E38002F0F68 /* ReaderList.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F7275CE21CD08E38002F0F68 /* ReaderList.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -251,6 +253,10 @@
 		F707FE901CDC7425008E4F7C /* UIControl+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+Blocks.m"; sourceTree = "<group>"; };
 		F707FE921CDC7F89008E4F7C /* JMCollectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCollectionItem.h; sourceTree = "<group>"; };
 		F707FE931CDC7F89008E4F7C /* JMCollectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCollectionItem.m; sourceTree = "<group>"; };
+		F707FE951CE034C9008E4F7C /* DESTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESTabBarController.h; sourceTree = "<group>"; };
+		F707FE961CE034C9008E4F7C /* DESTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESTabBarController.m; sourceTree = "<group>"; };
+		F707FE981CE0395F008E4F7C /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		F707FE991CE0395F008E4F7C /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		F7275CE21CD08E38002F0F68 /* ReaderList.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ReaderList.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7275CE41CD08E38002F0F68 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		F7275CE51CD08E38002F0F68 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
@@ -720,6 +726,8 @@
 				F707FE891CDA021C008E4F7C /* UILabel+FontChange.m */,
 				F707FE8F1CDC7425008E4F7C /* UIControl+Blocks.h */,
 				F707FE901CDC7425008E4F7C /* UIControl+Blocks.m */,
+				F707FE981CE0395F008E4F7C /* UIBarButtonItem+Extension.h */,
+				F707FE991CE0395F008E4F7C /* UIBarButtonItem+Extension.m */,
 			);
 			path = DESExtension;
 			sourceTree = "<group>";
@@ -1005,6 +1013,8 @@
 				F7F772F11CD33BCD0060861B /* SigmaTableViewController.m */,
 				F7F772F31CD33ECE0060861B /* BaseTableViewController.h */,
 				F7F772F41CD33ECE0060861B /* BaseTableViewController.m */,
+				F707FE951CE034C9008E4F7C /* DESTabBarController.h */,
+				F707FE961CE034C9008E4F7C /* DESTabBarController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1590,6 +1600,7 @@
 				F7BAC7711CC8DD33000D9795 /* NSString+Utils.m in Sources */,
 				F7BCC5A21CCDFBF000704878 /* RatingCell.m in Sources */,
 				F74676B61CABC7B50001D3A5 /* MJStatus.m in Sources */,
+				F707FE9A1CE0395F008E4F7C /* UIBarButtonItem+Extension.m in Sources */,
 				F7650A791CBE2E7F0065AA41 /* SocketTest.m in Sources */,
 				F7BAC7641CC8D7B9000D9795 /* ContactInfoTableViewController.m in Sources */,
 				F7BCC5681CCDBDE800704878 /* TableViewHeaderFooterView.m in Sources */,
@@ -1656,6 +1667,7 @@
 				F7BAC76A1CC8DCBF000D9795 /* ContactModel.m in Sources */,
 				F74676CB1CB63A320001D3A5 /* UIViewController+swizzling.m in Sources */,
 				F7BCC6181CCF6F2A00704878 /* HomeDetailViewController.m in Sources */,
+				F707FE971CE034C9008E4F7C /* DESTabBarController.m in Sources */,
 				F7BCC5621CCDBD7900704878 /* TableViewDelegate.m in Sources */,
 				F74676B91CABC7B50001D3A5 /* MJUser.m in Sources */,
 				F7754BE91CC7548A00F989DA /* OtherFunctionViewController.m in Sources */,

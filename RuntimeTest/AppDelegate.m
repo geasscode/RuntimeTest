@@ -12,6 +12,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "OpenShareHeader.h"
 #import "AFNetworkActivityIndicatorManager.h"
+#import "DESTabBarController.h"
 
 
 @interface AppDelegate ()
@@ -76,6 +77,11 @@
 	[NSURLCache setSharedURLCache:URLCache];
 	
 	[[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+	
+	self.window = [[UIWindow alloc] init];
+	self.window.frame = [UIScreen mainScreen].bounds;
+	self.window.rootViewController = [[DESTabBarController alloc] init];
+	[self.window makeKeyAndVisible];
 	
 	
 	
