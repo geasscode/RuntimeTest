@@ -48,13 +48,6 @@
                                     <action selector="gotoPhotoView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="3nn-mb-Kyb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="10086" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXw-dm-Xdy">
-                                <rect key="frame" x="123" y="180" width="75" height="30"/>
-                                <state key="normal" title="二维码扫描"/>
-                                <connections>
-                                    <action selector="gotoBarcodeView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="iff-vf-sP9"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WJ-If-kbH">
                                 <rect key="frame" x="120" y="339" width="80" height="30"/>
                                 <state key="normal" title="进入ios头条"/>
@@ -62,7 +55,7 @@
                                     <action selector="gotoNewsView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="Yxc-KJ-679"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="10086" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejy-7l-1zX">
+                            <button opaque="NO" tag="10086" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejy-7l-1zX">
                                 <rect key="frame" x="106" y="137" width="108" height="27"/>
                                 <state key="normal" title="进入weekly页面"/>
                                 <connections>
@@ -83,9 +76,7 @@
                             <constraint firstItem="IvB-DQ-pbI" firstAttribute="top" secondItem="iz4-T4-hSQ" secondAttribute="bottom" constant="27" id="692-Ea-e9z"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="8Br-b1-VC7"/>
                             <constraint firstItem="CyU-t1-x4N" firstAttribute="top" secondItem="6WJ-If-kbH" secondAttribute="bottom" constant="31" id="Atd-PK-3g0"/>
-                            <constraint firstItem="PXw-dm-Xdy" firstAttribute="top" secondItem="IvB-DQ-pbI" secondAttribute="bottom" constant="59" id="D1a-JN-lIN"/>
                             <constraint firstItem="4bZ-sG-w8n" firstAttribute="top" secondItem="egL-FV-Am0" secondAttribute="bottom" constant="20" id="D39-6q-iFn"/>
-                            <constraint firstItem="PXw-dm-Xdy" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="DF5-xk-JLB"/>
                             <constraint firstItem="l2h-CO-RIa" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="EAB-iy-Zsh"/>
                             <constraint firstItem="l2h-CO-RIa" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="35" id="IQ1-T3-tJO"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="PGf-3Y-g0w"/>
@@ -95,9 +86,7 @@
                             <constraint firstItem="IvB-DQ-pbI" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="b5W-N4-CCP"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerY" secondItem="YRg-5f-7nD" secondAttribute="centerY" id="bYz-p9-MMv"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="88" id="frj-gl-aq4"/>
-                            <constraint firstItem="PXw-dm-Xdy" firstAttribute="top" secondItem="ejy-7l-1zX" secondAttribute="bottom" constant="16" id="hQ9-Hu-iWd"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="l2h-CO-RIa" secondAttribute="bottom" constant="23" id="wBX-oB-EmF"/>
-                            <constraint firstItem="Suv-2o-87e" firstAttribute="top" secondItem="PXw-dm-Xdy" secondAttribute="bottom" constant="59" id="wGX-Vh-vSn"/>
                             <constraint firstItem="6WJ-If-kbH" firstAttribute="top" secondItem="Suv-2o-87e" secondAttribute="bottom" constant="40" id="wru-U9-6dZ"/>
                         </constraints>
                     </view>

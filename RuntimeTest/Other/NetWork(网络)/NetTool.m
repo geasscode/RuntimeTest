@@ -54,7 +54,7 @@
 	// 不加上这句话，会报“Request failed: unacceptable content-type: text/plain”错误，因为我们要获取text/plain类型数据
 //	sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
 	
-	sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
+//	sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
 	sessionManager.securityPolicy.allowInvalidCertificates = YES;
 	
 	
@@ -73,20 +73,23 @@
 	[requestArray addObject:url];
 	
 	
-	[sessionManager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+	[sessionManager GET:url parameters:parameter progress:^(NSProgress * _Nonnull downloadProgress) {
 		NSLog(@"%lld", downloadProgress.totalUnitCount);
 	} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
 		
 		//NSString *responseString=[operation responseString];
 		//NSData *data=[responseString dataUsingEncoding:NSUTF8StringEncoding];
 		
-		//		NSDictionary *jsonDic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
-		    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
+//				NSDictionary *jsonDic=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+//
+		//由于之前用的是AFNetworking2.0 现改用3.0.4，找不到无痛的处理方法，分分钟要重写，现在使用最简单粗暴无痛的方法暂时代替。
 		
+		NSArray *data = responseObject[@"data"];
+		NSString *msg = responseObject[@"msg"];
+		NSInteger status=[responseObject[@"status"] integerValue];
+		NSDictionary *jsonDic  = @{@"data":data,@"msg":msg,@"status":@(status)};
 	
-		
 		Response *responseObj=[[Response alloc]initWithDictionary:jsonDic];
-		
 		success(responseObj);
 		[requestArray removeObject:url];
 		NSLog(@"%@", responseObject);
