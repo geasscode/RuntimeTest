@@ -54,6 +54,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>WMPageController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,7 +77,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>14869A64E65DE3C0FAC58173206D2554</key>
+		<key>3BB12F26A25FD250AB53C85003C712BD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +87,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>658B4F0C4E102E091F1ADBF240364B0A</key>
+		<key>5D34BAE3DCDF0CFCBFE043A8F3B0AD5F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -98,6 +103,11 @@
 			<true/>
 		</dict>
 		<key>9EAB3E42EF957541E6C3C76D35FD008E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9ECBA25DDB14759F82D454CD1B57DD2B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

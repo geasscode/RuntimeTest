@@ -59,6 +59,7 @@
 		F7650A791CBE2E7F0065AA41 /* SocketTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7650A781CBE2E7F0065AA41 /* SocketTest.m */; };
 		F76CB7DB1CE33E6600D8474F /* FeThreeDotGlow.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DA1CE33E6600D8474F /* FeThreeDotGlow.m */; };
 		F76CB7DE1CE33F5700D8474F /* UIColor+flat.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DD1CE33F5700D8474F /* UIColor+flat.m */; };
+		F76CB7EB1CE423C100D8474F /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7EA1CE423C100D8474F /* DBHelper.m */; };
 		F7754BD91CC72D8500F989DA /* RuntimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BD81CC72D8500F989DA /* RuntimeTableViewController.m */; };
 		F7754BDD1CC7536B00F989DA /* IvarListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BDC1CC7536B00F989DA /* IvarListViewController.m */; };
 		F7754BE01CC753BC00F989DA /* DynamicAddMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BDF1CC753BC00F989DA /* DynamicAddMethodViewController.m */; };
@@ -350,6 +351,8 @@
 		F76CB7DA1CE33E6600D8474F /* FeThreeDotGlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeThreeDotGlow.m; sourceTree = "<group>"; };
 		F76CB7DC1CE33F5700D8474F /* UIColor+flat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+flat.h"; sourceTree = "<group>"; };
 		F76CB7DD1CE33F5700D8474F /* UIColor+flat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+flat.m"; sourceTree = "<group>"; };
+		F76CB7E91CE423C100D8474F /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
+		F76CB7EA1CE423C100D8474F /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
 		F7754BD71CC72D8500F989DA /* RuntimeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeTableViewController.h; sourceTree = "<group>"; };
 		F7754BD81CC72D8500F989DA /* RuntimeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTableViewController.m; sourceTree = "<group>"; };
 		F7754BDB1CC7536B00F989DA /* IvarListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IvarListViewController.h; sourceTree = "<group>"; };
@@ -914,6 +917,15 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
+		F76CB7E81CE423A100D8474F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F76CB7E91CE423C100D8474F /* DBHelper.h */,
+				F76CB7EA1CE423C100D8474F /* DBHelper.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		F7754BDA1CC7360C00F989DA /* RumTimeVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -934,6 +946,7 @@
 		F7B1EAB21CC633E000307F41 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F76CB7E81CE423A100D8474F /* Helpers */,
 				F7BCC5C51CCF649100704878 /* NetWork(网络) */,
 				F7BCC53C1CCDBD1000704878 /* Sources */,
 				F7BAC76B1CC8DD33000D9795 /* libs */,
@@ -1700,6 +1713,7 @@
 				F74676B01CABC7B50001D3A5 /* MJAd.m in Sources */,
 				F7BCC5551CCDBD1000704878 /* README.md in Sources */,
 				F76CB7DB1CE33E6600D8474F /* FeThreeDotGlow.m in Sources */,
+				F76CB7EB1CE423C100D8474F /* DBHelper.m in Sources */,
 				F7BCC55C1CCDBD1000704878 /* TCSectionDataMetric.m in Sources */,
 				F7F773011CD34AB80060861B /* WeeklyItemStageCategoryDetail.m in Sources */,
 				F7526FF01C9A940A0012FE76 /* main.m in Sources */,

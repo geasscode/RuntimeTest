@@ -4,7 +4,6 @@
 #import "UIBarButtonItem+WNXBarButtonItem.h"
 #import "ImageModel.h"
 #import "SDWebImageManager.h"
-#import <Masonry.h>
 #import "DESShareView.h"
 #import "OpenShareHeader.h"
 #import <MessageUI/MessageUI.h>
@@ -13,9 +12,8 @@
 #import "JMImagesActionSheet.h"
 
 #import "JMCollectionItem.h"
-
 #import "IonIcons.h"
-#import "MBProgressHUD.h"
+#import "DBHelper.h"
 
 #define kToolBarHeight 38
 
@@ -40,6 +38,8 @@
 	self.title = @"正文";
 	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
 	hud.labelText = NSLocalizedString(@"正在加载请稍后...", @"HUD loading title");
+	
+
 
 	[self creatWebview];
 	
@@ -117,14 +117,36 @@
 -(void)saveItemClick:(UIButton *)item{
 	
 	if(item.selected){
-		
+		DetailModel *model = [DetailModel new];
+		model.title = _webModel.title;
+		model.url = _webModel.url;
+		model.detatilArticleId = _webModel.detatilArticleId;
+		model.feed_title = _webModel.feed_title;
 		item.selected = NO;
+		
+		MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+		
+		if([DBHelper insertData:model]){
+			hud.labelText = NSLocalizedString(@"收藏成功", @"HUD loading title");
+
+		}
+		else{
+			
+			hud.labelText =  [model.title isEqualToString:@""] || !model.title ? @"加载完成才能收藏哦？" : @"已经收藏";
+		}
+		
+		hud.mode = MBProgressHUDModeText;
+		[hud showAnimated:YES whileExecutingBlock:^{
+			sleep(1);
+		} completionBlock:^{
+			[hud removeFromSuperViewOnHide];
+		}];
 		[item setImage:[UIImage imageNamed:@"star1"] forState:UIControlStateNormal];
 		
 	}else{
 		
 		item.selected = YES;
-		[item setImage:[UIImage imageNamed:@"star-on"] forState:UIControlStateNormal];
+		[item setImage:[UIImage imageNamed:@"star-night"] forState:UIControlStateNormal];
 	}
 	
 }

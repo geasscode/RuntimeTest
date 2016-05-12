@@ -11,10 +11,15 @@
 #import "NetTool.h"
 
 
+
 @implementation WeeklyItemModel
 
 
 + (void)weeklyItemRequestURL:(NSString *)urlString success:(successBlock)success{
+	
+//	[SVProgressHUD show];
+	[SVProgressHUD showWithStatus:@"正在为你加载，请稍候。"];
+
 	
 	[NetTool GET:urlString parameters:nil complete:^( NSURLSessionTask *operation, id responseObject, NSError *error) {
 		
@@ -40,8 +45,11 @@
 			
 			success(array);
 			
+			[SVProgressHUD dismiss];
+
 		}else{
 			
+			[SVProgressHUD showImage:[UIImage imageNamed:@"fail_result"] status:@"加载失败"];
 			NSLog(@"error");
 		}
 		

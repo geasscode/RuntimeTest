@@ -13,10 +13,8 @@
 #import "WeeklyItemStageModel.h"
 #import "WeeklyItemStageDetatilController.h"
 #import "FocusImageScrollView.h"
-#import "masonry.h"
 #import "HomeViewModel.h"
 #import "UIImageView+AFNetworking.h"
-#import "MBProgressHUD.h"
 #import "FeThreeDotGlow.h"
 
 @interface WeeklyTableViewController ()<HeaderViewDelegate,iCarouselDataSource,iCarouselDelegate>
@@ -50,6 +48,21 @@ UIPageControl *_pageControl;
 - (void)viewDidLoad {
     [super viewDidLoad];
 	self.edgesForExtendedLayout = UIRectEdgeBottom;
+	
+		self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+	
+	
+			[self getData];
+			[self.tableView.mj_header endRefreshing];
+	
+		}];
+	
+		self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
+	
+			[self footGetData];
+			[self.tableView.mj_footer endRefreshing];
+			
+		}];
 
 	[self setupNav];
 	[self getData];
@@ -89,10 +102,42 @@ UIPageControl *_pageControl;
 
 		[weakSelf.tableView reloadData];
 		
-		[MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+//		[MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
 
 		
 	}];
+}
+
+
+-(void)footGetData{
+//	
+//	HZYArticleModel *lastModel = [self.articleModelArray lastObject];
+//	
+//	NSDictionary *par = [[NSDictionary alloc]init];
+//	if (lastModel) {
+//		
+//		par = @{
+//				@"last_id":lastModel.articleId,
+//				@"last_time":lastModel.uts
+//				};
+//		
+//	}
+//	
+//	if (!self.urlstring) {
+//		return;
+//	}
+//	
+//	__weak typeof(self) weakself = self;
+//	[HZYArticleModel articleModelGetDataWithURLString:self.urlstring title:self.titlename parameters:nil successblack:^(NSArray *modelArray) {
+//		
+//		[weakself.articleModelArray  addObjectsFromArray:modelArray];
+//		
+//		[weakself.tableView reloadData];
+//		
+//	}];
+	
+	
+	
 }
 
 -(void)setupUI{
@@ -112,8 +157,9 @@ UIPageControl *_pageControl;
 //	} completion:^{
 //		[self.navigationController popToRootViewControllerAnimated:YES];
 //	}];
-	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-	hud.labelText = NSLocalizedString(@"正在帮你找数据...", @"HUD loading title");
+	
+//	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+//	hud.labelText = NSLocalizedString(@"正在帮你找数据...", @"HUD loading title");
 }
 
 - (void)myTask

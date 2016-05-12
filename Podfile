@@ -15,7 +15,7 @@ pod 'BlocksKit'
 pod 'MBProgressHUD'
 pod 'JMActionSheetDescription'
 pod 'ionicons'
-
+pod 'SVProgressHUD'
 
 
 
