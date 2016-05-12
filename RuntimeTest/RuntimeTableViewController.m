@@ -196,7 +196,10 @@ static NSString *cellIdentifier = @"runtimeID";
 
 
  #pragma mark - Navigation
- 
+//利用performSegueWithIdentifier:sender:来进行任何形式的转场。Segue为我们的转场提供了不同的Action，囊括了常见的UINavigationViewController的push，或者所有ViewController都可以执行的Modelly Presentation。
+//self performSegueWithIdentifier:[PSViewControllerB description] sender:parameter]
+//采用Storyboard进行Scene转场的好处在于，一个ViewController的所有转场代码，都集中到了prepareForSegue:sender: 方法中，debug或者添加新功能时，可以很容易顺藤摸瓜。但缺点同样明显。每次转场的修改/删除需要同时修改Storyboard和代码文件。同时，随着项目的进行，越来越多的Scene和业务逻辑，导致Storyboard中Segue的数量剧增，难以维护。
+
  // In a storyboard-based application, you will often want to do a little preparation before navigation
  - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 	 

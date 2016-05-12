@@ -271,7 +271,7 @@
 	NSDateFormatter *fmt = [[NSDateFormatter alloc] init];
 	fmt.dateFormat = @"yyyy年MM月dd日HH时mm分ss秒";
 	NSString *now = [fmt stringFromDate:[NSDate date]];
-	message.title = [NSString stringWithFormat:@"大鸟的分享，分享时间%@",now];
+	message.title = [NSString stringWithFormat:@"%@",_webModel.title];
 	
 //	UIImage *img = [UIImage imageNamed:@"icon"];
 //	message.image = UIImageJPEGRepresentation(img, 1.0);
@@ -282,8 +282,9 @@
 //	message.thumbnail = [UIImage imageNamed:@"psb"];
 	//一直找不到原因，直到比较dic 中的 thumbData 发现字节大的通不过，于是尝试注释 thumbnail。结果通过。
 //	只是提示应用数据出错。没有其他有帮助的信息，估计NSData大小有限制。
-	message.desc = [NSString stringWithFormat:@"大鸟的分享，分享时间%@",now];
-	message.link=@"http://www.jianshu.com/users/e944bed06906/latest_articles";
+	
+	message.desc = [NSString stringWithFormat:@"%@",_webModel.title];
+	message.link= _webModel.url;
 	return message;
 }
 
@@ -303,7 +304,7 @@
 	[OpenShare shareToQQFriends:message Success:^(OSMessage *message) {
 		NSLog(@"分享到QQ好友成功:%@",message);
 	} Fail:^(OSMessage *message, NSError *error) {
-		NSLog(@"分享到QQ好友失败:%@\n%@",message,error);
+		NSLog(@"分享到QQ好友失败: %@\n%@",message,error);
 	}];
 	
 }
@@ -340,11 +341,13 @@
 
 #pragma mark - 发送短信
 - (void)sendMessage{
+	
+
 	if( [MFMessageComposeViewController canSendText] ){
 		MFMessageComposeViewController * controller = [[MFMessageComposeViewController alloc]init]; //autorelease];
 		// 短信的接收人
 		controller.recipients = nil;//[NSArray arrayWithObject:@""]
-		controller.body = @"XHShareDemo 给您发送了一条短信，XHShareDemo 给您发送了一条短信，XHShareDemo 给您发送了一条短信，XHShareDemo 给您发送了一条短信。";
+		controller.body = _webModel.content;
 		controller.messageComposeDelegate = self;
 		[self presentViewController:controller animated:YES completion:nil];
 	}else{

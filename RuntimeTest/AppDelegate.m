@@ -60,8 +60,15 @@
 	
 	//第一步：注册key
 	[OpenShare connectQQWithAppId:@"1103194207"];
-	[OpenShare connectWeiboWithAppKey:@"402180334"];
 //	[OpenShare connectWeixinWithAppId:@"wxd930ea5d5a258f4f"];
+
+//	[OpenShare connectQQWithAppId:@"101128744"];
+//	[OpenShare connectWeiboWithAppKey:@"402180334"];
+	
+	[OpenShare connectWeiboWithAppKey:@"4003638958"];
+
+	
+	
 	[OpenShare connectWeixinWithAppId:@"wx9ad490e6428d5a7f"];
 
 	

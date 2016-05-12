@@ -57,6 +57,8 @@
 		F75270091C9A940A0012FE76 /* RuntimeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75270081C9A940A0012FE76 /* RuntimeTestTests.m */; };
 		F75270141C9A940A0012FE76 /* RuntimeTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75270131C9A940A0012FE76 /* RuntimeTestUITests.m */; };
 		F7650A791CBE2E7F0065AA41 /* SocketTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7650A781CBE2E7F0065AA41 /* SocketTest.m */; };
+		F76CB7DB1CE33E6600D8474F /* FeThreeDotGlow.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DA1CE33E6600D8474F /* FeThreeDotGlow.m */; };
+		F76CB7DE1CE33F5700D8474F /* UIColor+flat.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DD1CE33F5700D8474F /* UIColor+flat.m */; };
 		F7754BD91CC72D8500F989DA /* RuntimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BD81CC72D8500F989DA /* RuntimeTableViewController.m */; };
 		F7754BDD1CC7536B00F989DA /* IvarListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BDC1CC7536B00F989DA /* IvarListViewController.m */; };
 		F7754BE01CC753BC00F989DA /* DynamicAddMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BDF1CC753BC00F989DA /* DynamicAddMethodViewController.m */; };
@@ -344,6 +346,10 @@
 		F75270151C9A940A0012FE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7650A771CBE2E7F0065AA41 /* SocketTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketTest.h; sourceTree = "<group>"; };
 		F7650A781CBE2E7F0065AA41 /* SocketTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketTest.m; sourceTree = "<group>"; };
+		F76CB7D91CE33E6600D8474F /* FeThreeDotGlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeThreeDotGlow.h; sourceTree = "<group>"; };
+		F76CB7DA1CE33E6600D8474F /* FeThreeDotGlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeThreeDotGlow.m; sourceTree = "<group>"; };
+		F76CB7DC1CE33F5700D8474F /* UIColor+flat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+flat.h"; sourceTree = "<group>"; };
+		F76CB7DD1CE33F5700D8474F /* UIColor+flat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+flat.m"; sourceTree = "<group>"; };
 		F7754BD71CC72D8500F989DA /* RuntimeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeTableViewController.h; sourceTree = "<group>"; };
 		F7754BD81CC72D8500F989DA /* RuntimeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTableViewController.m; sourceTree = "<group>"; };
 		F7754BDB1CC7536B00F989DA /* IvarListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IvarListViewController.h; sourceTree = "<group>"; };
@@ -771,6 +777,8 @@
 				F707FE901CDC7425008E4F7C /* UIControl+Blocks.m */,
 				F707FE981CE0395F008E4F7C /* UIBarButtonItem+Extension.h */,
 				F707FE991CE0395F008E4F7C /* UIBarButtonItem+Extension.m */,
+				F76CB7DC1CE33F5700D8474F /* UIColor+flat.h */,
+				F76CB7DD1CE33F5700D8474F /* UIColor+flat.m */,
 			);
 			path = DESExtension;
 			sourceTree = "<group>";
@@ -895,6 +903,15 @@
 			children = (
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F76CB7D81CE33E6500D8474F /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				F76CB7D91CE33E6600D8474F /* FeThreeDotGlow.h */,
+				F76CB7DA1CE33E6600D8474F /* FeThreeDotGlow.m */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		F7754BDA1CC7360C00F989DA /* RumTimeVC */ = {
@@ -1190,6 +1207,7 @@
 		F7BAC76B1CC8DD33000D9795 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				F76CB7D81CE33E6500D8474F /* Animation */,
 				F707FE821CD9F1B2008E4F7C /* HWPoTools */,
 				F7F772E71CD33B250060861B /* YZSTableViewCellModel.h */,
 				F7F772E81CD33B250060861B /* YZSTableViewCellModel.m */,
@@ -1630,6 +1648,7 @@
 				F7275CF41CD094C8002F0F68 /* CustomerItem.m in Sources */,
 				F707FE851CD9F1B2008E4F7C /* HWPopTool.m in Sources */,
 				F7BCC5B81CCE20FD00704878 /* scanViewController.m in Sources */,
+				F76CB7DE1CE33F5700D8474F /* UIColor+flat.m in Sources */,
 				F7BCC60C1CCF6E2000704878 /* SDWebImageDownloaderOperation.m in Sources */,
 				F7F772ED1CD33B250060861B /* YZSTableViewCellModel.m in Sources */,
 				F707FEAC1CE06C85008E4F7C /* OpenShare+Weibo.m in Sources */,
@@ -1680,6 +1699,7 @@
 				F7275CFF1CD0C6D4002F0F68 /* WeeklyItemModel.m in Sources */,
 				F74676B01CABC7B50001D3A5 /* MJAd.m in Sources */,
 				F7BCC5551CCDBD1000704878 /* README.md in Sources */,
+				F76CB7DB1CE33E6600D8474F /* FeThreeDotGlow.m in Sources */,
 				F7BCC55C1CCDBD1000704878 /* TCSectionDataMetric.m in Sources */,
 				F7F773011CD34AB80060861B /* WeeklyItemStageCategoryDetail.m in Sources */,
 				F7526FF01C9A940A0012FE76 /* main.m in Sources */,

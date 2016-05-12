@@ -17,10 +17,13 @@
 #import "HomeViewModel.h"
 #import "UIImageView+AFNetworking.h"
 #import "MBProgressHUD.h"
+#import "FeThreeDotGlow.h"
 
 @interface WeeklyTableViewController ()<HeaderViewDelegate,iCarouselDataSource,iCarouselDelegate>
 @property(nonatomic,strong) NSArray * weeklyItemArray;
 @property (nonatomic,strong) HomeViewModel *homeVM;
+@property (strong, nonatomic) FeThreeDotGlow *threeDot;
+
 
 @end
 
@@ -99,10 +102,25 @@ UIPageControl *_pageControl;
 	scrollView.ic.dataSource = self;
 	_pageControl = scrollView.pageControl;
 	self.tableView.tableHeaderView = scrollView;
+	
+//	_threeDot = [[FeThreeDotGlow alloc] initWithView:self.view blur:NO];
+//	[self.view addSubview:_threeDot];
+	
+	// Start
+//	[_threeDot showWhileExecutingBlock:^{
+//		[self myTask];
+//	} completion:^{
+//		[self.navigationController popToRootViewControllerAnimated:YES];
+//	}];
 	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
 	hud.labelText = NSLocalizedString(@"正在帮你找数据...", @"HUD loading title");
 }
 
+- (void)myTask
+{
+	// Do something usefull in here instead of sleeping ...
+	sleep(3);
+}
 
 -(void)settingBtn {
 	
