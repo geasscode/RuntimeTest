@@ -60,6 +60,17 @@
 		F76CB7DB1CE33E6600D8474F /* FeThreeDotGlow.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DA1CE33E6600D8474F /* FeThreeDotGlow.m */; };
 		F76CB7DE1CE33F5700D8474F /* UIColor+flat.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DD1CE33F5700D8474F /* UIColor+flat.m */; };
 		F76CB7EB1CE423C100D8474F /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7EA1CE423C100D8474F /* DBHelper.m */; };
+		F76CB7EE1CE46E3000D8474F /* TitleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7ED1CE46E3000D8474F /* TitleModel.m */; };
+		F76CB7F11CE47A8C00D8474F /* TitleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7F01CE47A8C00D8474F /* TitleScrollView.m */; };
+		F76CB7F41CE47DF300D8474F /* BaseHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7F31CE47DF300D8474F /* BaseHomeViewController.m */; };
+		F76CB7F71CE47E7200D8474F /* DESCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7F61CE47E7200D8474F /* DESCollectionView.m */; };
+		F76CB7FA1CE47FA700D8474F /* DESCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7F91CE47FA700D8474F /* DESCollectionViewCell.m */; };
+		F76CB7FD1CE4803C00D8474F /* ContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7FC1CE4803C00D8474F /* ContentTableViewController.m */; };
+		F76CB8001CE480F600D8474F /* ArticleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7FF1CE480F600D8474F /* ArticleModel.m */; };
+		F76CB8031CE4857C00D8474F /* ArticleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB8021CE4857C00D8474F /* ArticleTool.m */; };
+		F76CB8061CE488FB00D8474F /* NewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB8051CE488FB00D8474F /* NewsTableViewCell.m */; };
+		F76CB8081CE4891700D8474F /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F76CB8071CE4891700D8474F /* NewsTableViewCell.xib */; };
+		F76CB80B1CE48C6B00D8474F /* ArticleHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB80A1CE48C6B00D8474F /* ArticleHomeViewController.m */; };
 		F7754BD91CC72D8500F989DA /* RuntimeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BD81CC72D8500F989DA /* RuntimeTableViewController.m */; };
 		F7754BDD1CC7536B00F989DA /* IvarListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BDC1CC7536B00F989DA /* IvarListViewController.m */; };
 		F7754BE01CC753BC00F989DA /* DynamicAddMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BDF1CC753BC00F989DA /* DynamicAddMethodViewController.m */; };
@@ -353,6 +364,27 @@
 		F76CB7DD1CE33F5700D8474F /* UIColor+flat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+flat.m"; sourceTree = "<group>"; };
 		F76CB7E91CE423C100D8474F /* DBHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBHelper.h; sourceTree = "<group>"; };
 		F76CB7EA1CE423C100D8474F /* DBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBHelper.m; sourceTree = "<group>"; };
+		F76CB7EC1CE46E3000D8474F /* TitleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleModel.h; sourceTree = "<group>"; };
+		F76CB7ED1CE46E3000D8474F /* TitleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleModel.m; sourceTree = "<group>"; };
+		F76CB7EF1CE47A8C00D8474F /* TitleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScrollView.h; sourceTree = "<group>"; };
+		F76CB7F01CE47A8C00D8474F /* TitleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScrollView.m; sourceTree = "<group>"; };
+		F76CB7F21CE47DF300D8474F /* BaseHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseHomeViewController.h; sourceTree = "<group>"; };
+		F76CB7F31CE47DF300D8474F /* BaseHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHomeViewController.m; sourceTree = "<group>"; };
+		F76CB7F51CE47E7200D8474F /* DESCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESCollectionView.h; sourceTree = "<group>"; };
+		F76CB7F61CE47E7200D8474F /* DESCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESCollectionView.m; sourceTree = "<group>"; };
+		F76CB7F81CE47FA700D8474F /* DESCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESCollectionViewCell.h; sourceTree = "<group>"; };
+		F76CB7F91CE47FA700D8474F /* DESCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESCollectionViewCell.m; sourceTree = "<group>"; };
+		F76CB7FB1CE4803C00D8474F /* ContentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentTableViewController.h; sourceTree = "<group>"; };
+		F76CB7FC1CE4803C00D8474F /* ContentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentTableViewController.m; sourceTree = "<group>"; };
+		F76CB7FE1CE480F600D8474F /* ArticleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleModel.h; sourceTree = "<group>"; };
+		F76CB7FF1CE480F600D8474F /* ArticleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleModel.m; sourceTree = "<group>"; };
+		F76CB8011CE4857C00D8474F /* ArticleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleTool.h; sourceTree = "<group>"; };
+		F76CB8021CE4857C00D8474F /* ArticleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleTool.m; sourceTree = "<group>"; };
+		F76CB8041CE488FB00D8474F /* NewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewCell.h; sourceTree = "<group>"; };
+		F76CB8051CE488FB00D8474F /* NewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewCell.m; sourceTree = "<group>"; };
+		F76CB8071CE4891700D8474F /* NewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		F76CB8091CE48C6B00D8474F /* ArticleHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleHomeViewController.h; sourceTree = "<group>"; };
+		F76CB80A1CE48C6B00D8474F /* ArticleHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleHomeViewController.m; sourceTree = "<group>"; };
 		F7754BD71CC72D8500F989DA /* RuntimeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeTableViewController.h; sourceTree = "<group>"; };
 		F7754BD81CC72D8500F989DA /* RuntimeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeTableViewController.m; sourceTree = "<group>"; };
 		F7754BDB1CC7536B00F989DA /* IvarListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IvarListViewController.h; sourceTree = "<group>"; };
@@ -734,6 +766,14 @@
 				F7275CFA1CD0C42F002F0F68 /* WeeklyItemHeaderView.m */,
 				F7F773051CD356400060861B /* StageCategoryHeaderView.h */,
 				F7F773061CD356400060861B /* StageCategoryHeaderView.m */,
+				F76CB7EF1CE47A8C00D8474F /* TitleScrollView.h */,
+				F76CB7F01CE47A8C00D8474F /* TitleScrollView.m */,
+				F76CB7F51CE47E7200D8474F /* DESCollectionView.h */,
+				F76CB7F61CE47E7200D8474F /* DESCollectionView.m */,
+				F76CB7F81CE47FA700D8474F /* DESCollectionViewCell.h */,
+				F76CB7F91CE47FA700D8474F /* DESCollectionViewCell.m */,
+				F76CB8091CE48C6B00D8474F /* ArticleHomeViewController.h */,
+				F76CB80A1CE48C6B00D8474F /* ArticleHomeViewController.m */,
 			);
 			path = Weekly;
 			sourceTree = "<group>";
@@ -755,6 +795,10 @@
 				F7F773091CD3593F0060861B /* DetailModel.m */,
 				F7F7730B1CD359F80060861B /* ImageModel.h */,
 				F7F7730C1CD359F80060861B /* ImageModel.m */,
+				F76CB7EC1CE46E3000D8474F /* TitleModel.h */,
+				F76CB7ED1CE46E3000D8474F /* TitleModel.m */,
+				F76CB7FE1CE480F600D8474F /* ArticleModel.h */,
+				F76CB7FF1CE480F600D8474F /* ArticleModel.m */,
 			);
 			path = WeeklyModel;
 			sourceTree = "<group>";
@@ -922,6 +966,8 @@
 			children = (
 				F76CB7E91CE423C100D8474F /* DBHelper.h */,
 				F76CB7EA1CE423C100D8474F /* DBHelper.m */,
+				F76CB8011CE4857C00D8474F /* ArticleTool.h */,
+				F76CB8021CE4857C00D8474F /* ArticleTool.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1314,6 +1360,10 @@
 				F7275CF61CD0C011002F0F68 /* WeeklyTableViewController.m */,
 				F7F772F61CD347BF0060861B /* WeeklyItemStageDetatilController.h */,
 				F7F772F71CD347BF0060861B /* WeeklyItemStageDetatilController.m */,
+				F76CB7F21CE47DF300D8474F /* BaseHomeViewController.h */,
+				F76CB7F31CE47DF300D8474F /* BaseHomeViewController.m */,
+				F76CB7FB1CE4803C00D8474F /* ContentTableViewController.h */,
+				F76CB7FC1CE4803C00D8474F /* ContentTableViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1328,6 +1378,9 @@
 				F7275D061CD1AFE0002F0F68 /* WeeklyItemCell.xib */,
 				F7F772F91CD349830060861B /* StageCategoryDetailCell.h */,
 				F7F772FA1CD349830060861B /* StageCategoryDetailCell.m */,
+				F76CB8041CE488FB00D8474F /* NewsTableViewCell.h */,
+				F76CB8051CE488FB00D8474F /* NewsTableViewCell.m */,
+				F76CB8071CE4891700D8474F /* NewsTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -1552,6 +1605,7 @@
 				F7B1EA611CC5D5AF00307F41 /* LoadData.storyboard in Resources */,
 				F707FEB21CE08555008E4F7C /* Assets.xcassets in Resources */,
 				F7BAC7451CC8D40F000D9795 /* contacts_add_friend@2x.png in Resources */,
+				F76CB8081CE4891700D8474F /* NewsTableViewCell.xib in Resources */,
 				F7BAC75B1CC8D40F000D9795 /* 9.png in Resources */,
 				F7BAC7581CC8D40F000D9795 /* 6.png in Resources */,
 				F7BAC7521CC8D40F000D9795 /* 17.png in Resources */,
@@ -1664,6 +1718,7 @@
 				F76CB7DE1CE33F5700D8474F /* UIColor+flat.m in Sources */,
 				F7BCC60C1CCF6E2000704878 /* SDWebImageDownloaderOperation.m in Sources */,
 				F7F772ED1CD33B250060861B /* YZSTableViewCellModel.m in Sources */,
+				F76CB80B1CE48C6B00D8474F /* ArticleHomeViewController.m in Sources */,
 				F707FEAC1CE06C85008E4F7C /* OpenShare+Weibo.m in Sources */,
 				F707FEAB1CE06C85008E4F7C /* OpenShare+Renren.m in Sources */,
 				F7BCC5E01CCF6CDA00704878 /* HomeDetailView.m in Sources */,
@@ -1691,6 +1746,7 @@
 				F7275D021CD1A76B002F0F68 /* WeeklyItemCell.m in Sources */,
 				F7B1EAAA1CC6112000307F41 /* HomeViewController.m in Sources */,
 				F7754BDD1CC7536B00F989DA /* IvarListViewController.m in Sources */,
+				F76CB7EE1CE46E3000D8474F /* TitleModel.m in Sources */,
 				F7BCC5991CCDFAB800704878 /* DetailViewController.m in Sources */,
 				F707FEAD1CE06C85008E4F7C /* OpenShare+Weixin.m in Sources */,
 				F7BCC5541CCDBD1000704878 /* NSObject+TCIdentifier.m in Sources */,
@@ -1702,6 +1758,7 @@
 				F7BCC6091CCF6E2000704878 /* SDWebImageCompat.m in Sources */,
 				F7BCC55B1CCDBD1000704878 /* TCHelper.m in Sources */,
 				F74676B11CABC7B50001D3A5 /* MJBag.m in Sources */,
+				F76CB8061CE488FB00D8474F /* NewsTableViewCell.m in Sources */,
 				F74676B21CABC7B50001D3A5 /* MJBaseObject.m in Sources */,
 				F7BCC58E1CCDF64B00704878 /* MyUser.m in Sources */,
 				F7BAC7001CC786A6000D9795 /* Tool.m in Sources */,
@@ -1714,14 +1771,18 @@
 				F7BCC5551CCDBD1000704878 /* README.md in Sources */,
 				F76CB7DB1CE33E6600D8474F /* FeThreeDotGlow.m in Sources */,
 				F76CB7EB1CE423C100D8474F /* DBHelper.m in Sources */,
+				F76CB7F41CE47DF300D8474F /* BaseHomeViewController.m in Sources */,
+				F76CB8031CE4857C00D8474F /* ArticleTool.m in Sources */,
 				F7BCC55C1CCDBD1000704878 /* TCSectionDataMetric.m in Sources */,
 				F7F773011CD34AB80060861B /* WeeklyItemStageCategoryDetail.m in Sources */,
 				F7526FF01C9A940A0012FE76 /* main.m in Sources */,
 				F7BCC5911CCDF81300704878 /* PhotoCell+ConfigureForPhoto.m in Sources */,
 				F7BCC5951CCDFA2D00704878 /* PhotoViewController.m in Sources */,
 				F7F772EE1CD33B250060861B /* YZSTableViewModel.m in Sources */,
+				F76CB7FA1CE47FA700D8474F /* DESCollectionViewCell.m in Sources */,
 				F7BAC7431CC8D40F000D9795 /* JSONKeyMapper.m in Sources */,
 				F7BCC5CD1CCF649100704878 /* APIClient.m in Sources */,
+				F76CB7F71CE47E7200D8474F /* DESCollectionView.m in Sources */,
 				F7B1EAA71CC610B800307F41 /* DESNavigationController.m in Sources */,
 				F7F772EF1CD33B250060861B /* YZSTableViewSectionModel.m in Sources */,
 				F7F773041CD34B5A0060861B /* WeeklyItemStageDetailModel.m in Sources */,
@@ -1749,6 +1810,7 @@
 				F7BAC76A1CC8DCBF000D9795 /* ContactModel.m in Sources */,
 				F74676CB1CB63A320001D3A5 /* UIViewController+swizzling.m in Sources */,
 				F7BCC6181CCF6F2A00704878 /* HomeDetailViewController.m in Sources */,
+				F76CB7F11CE47A8C00D8474F /* TitleScrollView.m in Sources */,
 				F707FE971CE034C9008E4F7C /* DESTabBarController.m in Sources */,
 				F7BCC5621CCDBD7900704878 /* TableViewDelegate.m in Sources */,
 				F74676B91CABC7B50001D3A5 /* MJUser.m in Sources */,
@@ -1766,6 +1828,7 @@
 				F7B412901C9BD96C00E45E22 /* AFAppDotNetAPIClient.m in Sources */,
 				F7B1EAB01CC618CE00307F41 /* FoundViewController.m in Sources */,
 				F7F7731D1CD8B55F0060861B /* FocusImageScrollView.m in Sources */,
+				F76CB7FD1CE4803C00D8474F /* ContentTableViewController.m in Sources */,
 				F707FEA91CE06C85008E4F7C /* OpenShare+Alipay.m in Sources */,
 				F7BCC6111CCF6E2000704878 /* UIImage+MultiFormat.m in Sources */,
 				F7BCC5751CCDF0D500704878 /* PhotosViewController.m in Sources */,
@@ -1803,6 +1866,7 @@
 				F7DB40731C9FEAF900E164C7 /* loadXIBFile.m in Sources */,
 				F7DB40771CA0E9F300E164C7 /* CYAlertView.m in Sources */,
 				F7B4128E1C9BD96C00E45E22 /* Post.m in Sources */,
+				F76CB8001CE480F600D8474F /* ArticleModel.m in Sources */,
 				F7B1EAAD1CC611B300307F41 /* NavigationItem.m in Sources */,
 				F7BAC7031CC78E9C000D9795 /* UIButton+Hook.m in Sources */,
 				F7BCC5D21CCF66AE00704878 /* BaseModel.m in Sources */,

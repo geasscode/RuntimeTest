@@ -15,7 +15,7 @@
 #endif /* PrefixHeader_pch */
 #import "UIBarButtonItem+WNXBarButtonItem.h"
 #import "UIColor+WNXColor.h"
-
+#import "UIView+Utils.h"
 
 #import <MJRefresh.h>
 #import <SVProgressHUD.h>
@@ -24,6 +24,7 @@
 #import <MJExtension.h>
 #import "MBProgressHUD.h"
 #import <Masonry.h>
+#import "NetTool.h"
 
 
 //全局的绿色主题
@@ -91,6 +92,7 @@
 #define kAddressCellColor RGB(215, 228, 225)          // 收货地址选中颜色
 
 
+#define kColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 //弱引用
 #define __WeakSelf__ __weak typeof (self)

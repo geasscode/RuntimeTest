@@ -13,6 +13,7 @@
 #import "MainViewController.h"
 #import "DESNavigationController.h"
 #import "SigmaTableViewController.h"
+#import "ArticleHomeViewController.h"
 
 @implementation DESTabBarController
 + (void)initialize {
@@ -43,10 +44,11 @@
 							 image:@"tabCDeselected"
 					 selectedImage:@"tabDSelected"];
 	
-	[self setupChildViewController:[[SigmaTableViewController alloc] init]
-							 title:@"Sigma"
+	[self setupChildViewController:[[ArticleHomeViewController alloc] init]
+							 title:@"文章"
 							 image:@"tabADeselected"
 					 selectedImage:@"tabASelected"];
+	
 	[self setupChildViewController:[[WeeklyTableViewController alloc] init]
 							 title:@"周刊"
 							 image:@"tabBDeselected"
