@@ -55,7 +55,7 @@
                                     <action selector="gotoNewsView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="Yxc-KJ-679"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="10086" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejy-7l-1zX">
+                            <button opaque="NO" tag="10086" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejy-7l-1zX">
                                 <rect key="frame" x="106" y="137" width="108" height="27"/>
                                 <state key="normal" title="进入weekly页面"/>
                                 <connections>
@@ -69,13 +69,22 @@
                                     <segue destination="Yge-bv-Avd" kind="show" id="pqv-kt-pNj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCF-YC-O0v">
+                                <rect key="frame" x="131" y="208" width="60" height="30"/>
+                                <state key="normal" title="我的收藏"/>
+                                <connections>
+                                    <segue destination="xuh-HP-6eL" kind="show" id="Czn-Kv-mfW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="vCF-YC-O0v" firstAttribute="top" secondItem="ejy-7l-1zX" secondAttribute="bottom" constant="44" id="1ES-wx-yCp"/>
                             <constraint firstItem="6WJ-If-kbH" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="5v3-pq-84r"/>
                             <constraint firstItem="IvB-DQ-pbI" firstAttribute="top" secondItem="iz4-T4-hSQ" secondAttribute="bottom" constant="27" id="692-Ea-e9z"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="8Br-b1-VC7"/>
                             <constraint firstItem="CyU-t1-x4N" firstAttribute="top" secondItem="6WJ-If-kbH" secondAttribute="bottom" constant="31" id="Atd-PK-3g0"/>
+                            <constraint firstItem="Suv-2o-87e" firstAttribute="top" secondItem="vCF-YC-O0v" secondAttribute="bottom" constant="31" id="BRS-h6-exl"/>
                             <constraint firstItem="4bZ-sG-w8n" firstAttribute="top" secondItem="egL-FV-Am0" secondAttribute="bottom" constant="20" id="D39-6q-iFn"/>
                             <constraint firstItem="l2h-CO-RIa" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="EAB-iy-Zsh"/>
                             <constraint firstItem="l2h-CO-RIa" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="35" id="IQ1-T3-tJO"/>
@@ -86,6 +95,7 @@
                             <constraint firstItem="IvB-DQ-pbI" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="b5W-N4-CCP"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerY" secondItem="YRg-5f-7nD" secondAttribute="centerY" id="bYz-p9-MMv"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="88" id="frj-gl-aq4"/>
+                            <constraint firstItem="vCF-YC-O0v" firstAttribute="centerX" secondItem="IvB-DQ-pbI" secondAttribute="centerX" id="lGw-vT-dq7"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="l2h-CO-RIa" secondAttribute="bottom" constant="23" id="wBX-oB-EmF"/>
                             <constraint firstItem="6WJ-If-kbH" firstAttribute="top" secondItem="Suv-2o-87e" secondAttribute="bottom" constant="40" id="wru-U9-6dZ"/>
                         </constraints>
@@ -94,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rKu-vp-8zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="-134"/>
+            <point key="canvasLocation" x="812" y="-118"/>
         </scene>
         <!--Ivar List View Controller-->
         <scene sceneID="gYX-JI-QYm">
@@ -155,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hUF-mm-YbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1268" y="-247"/>
+            <point key="canvasLocation" x="2004" y="389"/>
         </scene>
         <!--Sigma Table View Controller-->
         <scene sceneID="weV-Ea-hXf">
@@ -184,7 +194,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eM9-kc-C6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12.5" y="610.5"/>
+            <point key="canvasLocation" x="-71.5" y="894.5"/>
         </scene>
         <!--TableViewSample-->
         <scene sceneID="S64-ln-ta1">
@@ -208,7 +218,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b0O-FS-7eF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="402.5" y="658.5"/>
+            <point key="canvasLocation" x="494.5" y="930.5"/>
         </scene>
         <!--TableViewSample-->
         <scene sceneID="VmI-y1-haG">
@@ -238,7 +248,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyD-Bq-qCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817.5" y="658.5"/>
+            <point key="canvasLocation" x="997.5" y="942.5"/>
         </scene>
         <!--Replace Method View Controller-->
         <scene sceneID="v2d-qb-4qh">
@@ -297,7 +307,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQh-2C-J2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1273" y="382"/>
+            <point key="canvasLocation" x="1655" y="400"/>
+        </scene>
+        <!--Favorite Table View Controller-->
+        <scene sceneID="8dY-PK-A6Z">
+            <objects>
+                <tableViewController id="xuh-HP-6eL" customClass="FavoriteTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="favorite" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="7vO-1F-KdA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Eb8-yc-W2p">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eb8-yc-W2p" id="mTY-r6-mz4">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xuh-HP-6eL" id="gX3-dd-OCk"/>
+                            <outlet property="delegate" destination="xuh-HP-6eL" id="NGH-M5-iai"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U4E-mO-RTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472.5" y="1152.5"/>
         </scene>
         <!--Dynamic Add Method View Controller-->
         <scene sceneID="6fZ-Zh-b9j">

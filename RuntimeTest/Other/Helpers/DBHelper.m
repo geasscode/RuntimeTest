@@ -75,9 +75,9 @@ FMDatabase *db = nil;
 	
 }
 //删除一条收藏信息
-+ (void)deleteData:(NSInteger)fid {
++ (void)deleteData:(NSInteger)id {
 	[self openDataBase];
-	[db executeUpdate:@"delete from t_favorite where fid=?",[NSString stringWithFormat:@"%ld", (long)fid]];
+	[db executeUpdate:@"delete from t_favorite where id=?",[NSString stringWithFormat:@"%ld", (long)id]];
 	[db close];
 }
 //返回查询数据结果
@@ -89,7 +89,8 @@ FMDatabase *db = nil;
 	while ([rs next]) {
 		DetailModel *model = [[DetailModel alloc] init];
 //		插入int id
-//		model.detatilArticleId = [rs intForColumn:@"detatilArticleId"];
+		model.id = [rs intForColumn:@"id"];
+
 		model.title = [rs stringForColumn:@"title"];
 		model.url = [rs stringForColumn:@"url"];
 		model.detatilArticleId =  [rs stringForColumn:@"detatilArticleId"];

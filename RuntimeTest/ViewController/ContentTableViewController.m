@@ -204,7 +204,7 @@
 	}else{
 		
 		//在其他界面进入详情使用通知
-//		[[NSNotificationCenter defaultCenter]postNotificationName:HZYPushToDetailTextVCNotification object:nil userInfo:@{HZYDetailTextIdKeyd:model.articleId}];
+		[[NSNotificationCenter defaultCenter]postNotificationName:@"ContentcellPushToDetailTextVCNotification" object:nil userInfo:@{@"DetailTextIdKeyd":model.articleId}];
 		
 	}
 	

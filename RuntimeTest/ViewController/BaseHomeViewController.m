@@ -7,9 +7,7 @@
 //
 
 #import "BaseHomeViewController.h"
-#import "DESCollectionView.h"
-#import "DESCollectionViewCell.h"
-#import "TitleModel.h"
+
 
 #define contentIdentifier @"contentCollectionViewIdentifier"
 

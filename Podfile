@@ -16,6 +16,8 @@ pod 'MBProgressHUD'
 pod 'JMActionSheetDescription'
 pod 'ionicons'
 pod 'SVProgressHUD'
+pod 'MWPhotoBrowser'
+
 
 
 

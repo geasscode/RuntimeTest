@@ -38,6 +38,7 @@
 		//设置滚动的listTabBar
 		UIScrollView *listTabBar = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth ,kTitleScrollViewHeight)];
 		listTabBar.showsHorizontalScrollIndicator = NO;
+//		listTabBar.scrollEnabled = NO;
 		self.listTabBar = listTabBar;
 		[self addSubview:self.listTabBar];
 	}

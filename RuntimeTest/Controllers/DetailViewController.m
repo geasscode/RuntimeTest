@@ -39,8 +39,8 @@
 	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
 	hud.labelText = NSLocalizedString(@"正在加载请稍后...", @"HUD loading title");
 	
-
-
+	
+	
 	[self creatWebview];
 	
 	[self creatToolBar];
@@ -117,18 +117,24 @@
 -(void)saveItemClick:(UIButton *)item{
 	
 	if(item.selected){
+		
+		item.selected = NO;
+		[DBHelper deleteData:_webModel.id];
+		[item setImage:[UIImage imageNamed:@"star1"] forState:UIControlStateNormal];
+		
+	}else{
+		
 		DetailModel *model = [DetailModel new];
 		model.title = _webModel.title;
 		model.url = _webModel.url;
 		model.detatilArticleId = _webModel.detatilArticleId;
 		model.feed_title = _webModel.feed_title;
-		item.selected = NO;
 		
 		MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
 		
 		if([DBHelper insertData:model]){
 			hud.labelText = NSLocalizedString(@"收藏成功", @"HUD loading title");
-
+			
 		}
 		else{
 			
@@ -136,14 +142,13 @@
 		}
 		
 		hud.mode = MBProgressHUDModeText;
+		hud.dimBackground = YES;
+		
 		[hud showAnimated:YES whileExecutingBlock:^{
 			sleep(1);
 		} completionBlock:^{
 			[hud removeFromSuperViewOnHide];
 		}];
-		[item setImage:[UIImage imageNamed:@"star1"] forState:UIControlStateNormal];
-		
-	}else{
 		
 		item.selected = YES;
 		[item setImage:[UIImage imageNamed:@"star-night"] forState:UIControlStateNormal];
@@ -225,7 +230,7 @@
 				break;
 			}
 		}
-
+		
 		
 		NSLog(@"collectionItem selectedValue %@",selectedValue.actionName);
 	};
@@ -239,7 +244,7 @@
 	cancelItem.title = @"取消";
 	desc.cancelItem = cancelItem;
 	
-
+	
 	
 	desc.items = @[collectionItem];
 	[JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
@@ -295,15 +300,15 @@
 	NSString *now = [fmt stringFromDate:[NSDate date]];
 	message.title = [NSString stringWithFormat:@"%@",_webModel.title];
 	
-//	UIImage *img = [UIImage imageNamed:@"icon"];
-//	message.image = UIImageJPEGRepresentation(img, 1.0);
+	//	UIImage *img = [UIImage imageNamed:@"icon"];
+	//	message.image = UIImageJPEGRepresentation(img, 1.0);
 	message.image = [UIImage imageNamed:@"icon"];
 	// 缩略图
-//	UIImage *psdIcon = [UIImage imageNamed:@"psb"];
-//	message.thumbnail = UIImageJPEGRepresentation(psdIcon, 1.0);
-//	message.thumbnail = [UIImage imageNamed:@"psb"];
+	//	UIImage *psdIcon = [UIImage imageNamed:@"psb"];
+	//	message.thumbnail = UIImageJPEGRepresentation(psdIcon, 1.0);
+	//	message.thumbnail = [UIImage imageNamed:@"psb"];
 	//一直找不到原因，直到比较dic 中的 thumbData 发现字节大的通不过，于是尝试注释 thumbnail。结果通过。
-//	只是提示应用数据出错。没有其他有帮助的信息，估计NSData大小有限制。
+	//	只是提示应用数据出错。没有其他有帮助的信息，估计NSData大小有限制。
 	
 	message.desc = [NSString stringWithFormat:@"%@",_webModel.title];
 	message.link= _webModel.url;
@@ -364,7 +369,7 @@
 #pragma mark - 发送短信
 - (void)sendMessage{
 	
-
+	
 	if( [MFMessageComposeViewController canSendText] ){
 		MFMessageComposeViewController * controller = [[MFMessageComposeViewController alloc]init]; //autorelease];
 		// 短信的接收人
@@ -428,9 +433,9 @@
 		[self.webView loadHTMLString:htmlstring baseURL:file];
 		
 		[MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
-
+		
 	}];
-
+	
 }
 /**
  *  获得HTML中的image 重新设置image的CSS样式以适应屏幕的大小

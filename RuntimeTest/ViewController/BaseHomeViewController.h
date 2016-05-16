@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "TitleScrollView.h"
 #import "DESCollectionView.h"
+#import "DESCollectionViewCell.h"
+#import "TitleModel.h"
 
 @interface BaseHomeViewController : UIViewController
 

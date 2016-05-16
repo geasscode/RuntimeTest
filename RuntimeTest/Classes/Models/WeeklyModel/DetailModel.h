@@ -12,6 +12,9 @@
 
 typedef void (^successBlock) (DetailModel *);
 
+
+@property (nonatomic, assign) NSInteger id;
+
 /**
  *  文章的id
  */

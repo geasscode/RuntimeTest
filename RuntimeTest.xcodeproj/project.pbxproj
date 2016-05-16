@@ -77,6 +77,8 @@
 		F7754BE31CC753F600F989DA /* DynamicExchangeMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BE21CC753F600F989DA /* DynamicExchangeMethodViewController.m */; };
 		F7754BE61CC7541A00F989DA /* ReplaceMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BE51CC7541A00F989DA /* ReplaceMethodViewController.m */; };
 		F7754BE91CC7548A00F989DA /* OtherFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BE81CC7548A00F989DA /* OtherFunctionViewController.m */; };
+		F78E020F1CE9AF64003CD195 /* FavoriteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F78E020E1CE9AF63003CD195 /* FavoriteTableViewController.m */; };
+		F78E02121CE9B26A003CD195 /* FavoriteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F78E02111CE9B26A003CD195 /* FavoriteCell.m */; };
 		F7B1EA611CC5D5AF00307F41 /* LoadData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B1EA601CC5D5AF00307F41 /* LoadData.storyboard */; };
 		F7B1EAA41CC6104200307F41 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EAA31CC6104200307F41 /* MainViewController.m */; };
 		F7B1EAA71CC610B800307F41 /* DESNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EAA61CC610B800307F41 /* DESNavigationController.m */; };
@@ -397,6 +399,10 @@
 		F7754BE51CC7541A00F989DA /* ReplaceMethodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceMethodViewController.m; sourceTree = "<group>"; };
 		F7754BE71CC7548A00F989DA /* OtherFunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherFunctionViewController.h; sourceTree = "<group>"; };
 		F7754BE81CC7548A00F989DA /* OtherFunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherFunctionViewController.m; sourceTree = "<group>"; };
+		F78E020D1CE9AF63003CD195 /* FavoriteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteTableViewController.h; sourceTree = "<group>"; };
+		F78E020E1CE9AF63003CD195 /* FavoriteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteTableViewController.m; sourceTree = "<group>"; };
+		F78E02101CE9B26A003CD195 /* FavoriteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteCell.h; sourceTree = "<group>"; };
+		F78E02111CE9B26A003CD195 /* FavoriteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteCell.m; sourceTree = "<group>"; };
 		F7B1EA601CC5D5AF00307F41 /* LoadData.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoadData.storyboard; sourceTree = "<group>"; };
 		F7B1EAA21CC6104200307F41 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../MainViewController.h; sourceTree = "<group>"; };
 		F7B1EAA31CC6104200307F41 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
@@ -774,6 +780,10 @@
 				F76CB7F91CE47FA700D8474F /* DESCollectionViewCell.m */,
 				F76CB8091CE48C6B00D8474F /* ArticleHomeViewController.h */,
 				F76CB80A1CE48C6B00D8474F /* ArticleHomeViewController.m */,
+				F78E020D1CE9AF63003CD195 /* FavoriteTableViewController.h */,
+				F78E020E1CE9AF63003CD195 /* FavoriteTableViewController.m */,
+				F78E02101CE9B26A003CD195 /* FavoriteCell.h */,
+				F78E02111CE9B26A003CD195 /* FavoriteCell.m */,
 			);
 			path = Weekly;
 			sourceTree = "<group>";
@@ -1718,6 +1728,7 @@
 				F76CB7DE1CE33F5700D8474F /* UIColor+flat.m in Sources */,
 				F7BCC60C1CCF6E2000704878 /* SDWebImageDownloaderOperation.m in Sources */,
 				F7F772ED1CD33B250060861B /* YZSTableViewCellModel.m in Sources */,
+				F78E020F1CE9AF64003CD195 /* FavoriteTableViewController.m in Sources */,
 				F76CB80B1CE48C6B00D8474F /* ArticleHomeViewController.m in Sources */,
 				F707FEAC1CE06C85008E4F7C /* OpenShare+Weibo.m in Sources */,
 				F707FEAB1CE06C85008E4F7C /* OpenShare+Renren.m in Sources */,
@@ -1740,6 +1751,7 @@
 				F7BCC5571CCDBD1000704878 /* TCDataSource.m in Sources */,
 				F7526FF31C9A940A0012FE76 /* AppDelegate.m in Sources */,
 				F7BCC5DD1CCF6CA100704878 /* HomeTableView.m in Sources */,
+				F78E02121CE9B26A003CD195 /* FavoriteCell.m in Sources */,
 				F7BCC58B1CCDF50600704878 /* Store.m in Sources */,
 				F7BCC6151CCF6E2000704878 /* UIView+WebCacheOperation.m in Sources */,
 				F7BAC7701CC8DD33000D9795 /* ContactDataHelper.m in Sources */,

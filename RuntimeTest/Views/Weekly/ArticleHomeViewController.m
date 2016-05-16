@@ -9,7 +9,7 @@
 #import "ArticleHomeViewController.h"
 #import "TitleModel.h"
 
-//#import "DetailViewController.h"
+#import "DetailViewController.h"
 //#import "SearchViewController.h"
 
 @interface ArticleHomeViewController ()
@@ -26,7 +26,7 @@
 	
 	[self setNav];
 	
-//	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToDetailText:) name:HZYPushToDetailTextVCNotification object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToDetailText:) name:@"ContentcellPushToDetailTextVCNotification" object:nil];
 	
 	self.titleModelArray = [TitleModel titleModelGetModelArrayWith:@"titleArray.plist"];
 	
@@ -77,11 +77,11 @@
 #pragma mark - push到详细页面的通知方法
 -(void)pushToDetailText:(NSNotification *)notification{
 	
-//	DetailViewController *detail = [[DetailViewController alloc]init];
-//	
-//	detail.detailTextId = notification.userInfo[HZYDetailTextIdKeyd];
-//	
-//	[self.navigationController pushViewController:detail animated:YES];
+	DetailViewController *detail = [[DetailViewController alloc]init];
+	
+	detail.detailTextId = notification.userInfo[@"DetailTextIdKeyd"];
+	
+	[self.navigationController pushViewController:detail animated:YES];
 	
 	
 }
