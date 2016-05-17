@@ -15,6 +15,7 @@
 #import "PhotosViewController.h"
 #import "scanViewController.h"
 #import "WeeklyTableViewController.h"
+#import "LBToAppStore.h"
 
 @interface MainViewController ()
 
@@ -24,6 +25,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	//用户好评系统
+	LBToAppStore *toAppStore = [[LBToAppStore alloc]init];
+	toAppStore.myAppID = @"1067787090";
+	[toAppStore showGotoAppStore:self];
+
     // Do any additional setup after loading the view.
 //	NSArray * array  = @[@"hoem"];
 //	NSLog(@"hello");
@@ -40,6 +47,35 @@
 //		nc.view.layer.shadowOpacity = 0.2;
 //		[self addChildViewController:nc];
 //	}
+	
+	
+	//AES ＋ BASE64 加密及解密调用。
+	//字符串加密
+//	NSString *key = @"12345678";
+//	
+//	NSString *secret = @"aes Bison base64";
+//	
+//	
+//	NSLog(@"字符串加密---%@",[secret AES256_Encrypt:key]);
+//	
+//	//字符串解密
+//	NSLog(@"字符串解密---%@",[[secret AES256_Encrypt:key] AES256_Decrypt:key]);
+//	
+//	
+//	//NSData加密+base64
+//	
+//	NSData *plain = [secret dataUsingEncoding:NSUTF8StringEncoding];
+//	
+//	NSData *cipher = [plain AES256_Encrypt:key];
+//	
+//	NSLog(@"NSData加密+base64++++%@",[cipher newStringInBase64FromData]);
+//	
+//	
+//	//解密
+//	
+//	plain = [cipher AES256_Decrypt:key];
+//	
+//	NSLog(@"NSData解密+base64++++%@", [[NSString alloc] initWithData:plain encoding:NSUTF8StringEncoding]);
 	
 }
 
