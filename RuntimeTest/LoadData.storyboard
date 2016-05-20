@@ -41,13 +41,6 @@
                                     <segue destination="7Go-h5-w47" kind="show" id="ljO-DA-w5P"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyU-t1-x4N">
-                                <rect key="frame" x="96" y="400" width="130" height="30"/>
-                                <state key="normal" title="进入photo视图页面"/>
-                                <connections>
-                                    <action selector="gotoPhotoView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="3nn-mb-Kyb"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WJ-If-kbH">
                                 <rect key="frame" x="120" y="339" width="80" height="30"/>
                                 <state key="normal" title="进入ios头条"/>
@@ -76,6 +69,13 @@
                                     <segue destination="xuh-HP-6eL" kind="show" id="Czn-Kv-mfW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyU-t1-x4N">
+                                <rect key="frame" x="130" y="401" width="60" height="30"/>
+                                <state key="normal" title="短信验证"/>
+                                <connections>
+                                    <action selector="gotoMessagePage:" destination="aFy-QA-WhR" eventType="touchUpInside" id="xhl-cU-8cV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -83,18 +83,18 @@
                             <constraint firstItem="6WJ-If-kbH" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="5v3-pq-84r"/>
                             <constraint firstItem="IvB-DQ-pbI" firstAttribute="top" secondItem="iz4-T4-hSQ" secondAttribute="bottom" constant="27" id="692-Ea-e9z"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="8Br-b1-VC7"/>
-                            <constraint firstItem="CyU-t1-x4N" firstAttribute="top" secondItem="6WJ-If-kbH" secondAttribute="bottom" constant="31" id="Atd-PK-3g0"/>
+                            <constraint firstItem="CyU-t1-x4N" firstAttribute="top" secondItem="6WJ-If-kbH" secondAttribute="bottom" constant="32" id="Atd-PK-3g0"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="top" secondItem="vCF-YC-O0v" secondAttribute="bottom" constant="31" id="BRS-h6-exl"/>
                             <constraint firstItem="4bZ-sG-w8n" firstAttribute="top" secondItem="egL-FV-Am0" secondAttribute="bottom" constant="20" id="D39-6q-iFn"/>
                             <constraint firstItem="l2h-CO-RIa" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="EAB-iy-Zsh"/>
-                            <constraint firstItem="l2h-CO-RIa" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="35" id="IQ1-T3-tJO"/>
+                            <constraint firstItem="l2h-CO-RIa" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="34" id="IQ1-T3-tJO"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="PGf-3Y-g0w"/>
-                            <constraint firstItem="CyU-t1-x4N" firstAttribute="leading" secondItem="Suv-2o-87e" secondAttribute="leading" id="RE1-DK-UF4"/>
+                            <constraint firstItem="CyU-t1-x4N" firstAttribute="leading" secondItem="Suv-2o-87e" secondAttribute="leading" constant="34" id="RE1-DK-UF4"/>
                             <constraint firstItem="ejy-7l-1zX" firstAttribute="top" secondItem="IvB-DQ-pbI" secondAttribute="bottom" constant="16" id="VcM-Bz-foX"/>
                             <constraint firstItem="ejy-7l-1zX" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="Zq7-Dt-XHa"/>
                             <constraint firstItem="IvB-DQ-pbI" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="b5W-N4-CCP"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerY" secondItem="YRg-5f-7nD" secondAttribute="centerY" id="bYz-p9-MMv"/>
-                            <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="88" id="frj-gl-aq4"/>
+                            <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="87" id="frj-gl-aq4"/>
                             <constraint firstItem="vCF-YC-O0v" firstAttribute="centerX" secondItem="IvB-DQ-pbI" secondAttribute="centerX" id="lGw-vT-dq7"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="l2h-CO-RIa" secondAttribute="bottom" constant="23" id="wBX-oB-EmF"/>
                             <constraint firstItem="6WJ-If-kbH" firstAttribute="top" secondItem="Suv-2o-87e" secondAttribute="bottom" constant="40" id="wru-U9-6dZ"/>

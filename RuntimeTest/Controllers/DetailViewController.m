@@ -14,6 +14,8 @@
 #import "JMCollectionItem.h"
 #import "IonIcons.h"
 #import "DBHelper.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDK+SSUI.h>
 
 #define kToolBarHeight 38
 
@@ -156,11 +158,95 @@
 	
 }
 
-/**
- *  分享按钮点击事件
- */
--(void)shareItemClick:(id)sender{
+
+-(void)sdkShareMethod{
+	//1、创建分享参数
+	NSArray* imageArray = @[[UIImage imageNamed:@"icon.jpg"]];
 	
+	
+	NSMutableDictionary *shareParams = [NSMutableDictionary dictionary];
+	[shareParams SSDKSetupShareParamsByText:[NSString stringWithFormat:@"%@",_webModel.title]
+									 images:imageArray
+										url:[NSURL URLWithString:_webModel.url]
+									  title:[NSString stringWithFormat:@"%@",_webModel.title]
+									   type:SSDKContentTypeAuto];
+	//2、分享（可以弹出我们的分享菜单和编辑界面）
+	//要显示菜单的视图, iPad版中此参数作为弹出菜单的参照视图，只有传这个才可以弹出我们的分享菜单，可以传分享的按钮对象或者自己创建小的view 对象，iPhone可以传nil不会影响
+	
+	
+	[ShareSDK showShareActionSheet:nil
+							 items:nil
+					   shareParams:shareParams
+			   onShareStateChanged:^(SSDKResponseState state, SSDKPlatformType platformType, NSDictionary *userData, SSDKContentEntity *contentEntity, NSError *error, BOOL end) {
+				   
+				   switch (state) {
+					   case SSDKResponseStateSuccess:
+					   {
+						   UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"分享成功"
+																			   message:nil
+																			  delegate:nil
+																	 cancelButtonTitle:@"确定"
+																	 otherButtonTitles:nil];
+						   [alertView show];
+						   break;
+					   }
+					   case SSDKResponseStateFail:
+					   {
+						   if (platformType == SSDKPlatformTypeSMS && [error code] == 201)
+						   {
+							   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"分享失败"
+																			   message:@"失败原因可能是：1、短信应用没有设置帐号；2、设备不支持短信应用；3、短信应用在iOS 7以上才能发送带附件的短信。"
+																			  delegate:nil
+																	 cancelButtonTitle:@"OK"
+																	 otherButtonTitles:nil, nil];
+							   [alert show];
+							   break;
+						   }
+						   else if(platformType == SSDKPlatformTypeMail && [error code] == 201)
+						   {
+							   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"分享失败"
+																			   message:@"失败原因可能是：1、邮件应用没有设置帐号；2、设备不支持邮件应用；"
+																			  delegate:nil
+																	 cancelButtonTitle:@"OK"
+																	 otherButtonTitles:nil, nil];
+							   [alert show];
+							   break;
+						   }
+						   else
+						   {
+							   UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"分享失败"
+																			   message:[NSString stringWithFormat:@"%@",error]
+																			  delegate:nil
+																	 cancelButtonTitle:@"OK"
+																	 otherButtonTitles:nil, nil];
+							   [alert show];
+							   break;
+						   }
+						   break;
+					   }
+						   
+					   case SSDKResponseStateCancel:
+					   {
+						   UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"分享已取消"
+																			   message:nil
+																			  delegate:nil
+																	 cancelButtonTitle:@"确定"
+																	 otherButtonTitles:nil];
+						   [alertView show];
+						   break;
+					   }
+
+					   default:
+						   break;
+				   }
+				   
+			
+			   }
+	 ];
+}
+
+//不使用第三方的如ShareSDK方式，这种方式比较安全，但是功能单一。没法统计只能分享。好处是安全，体积小。适合需求不多的情况。
+-(void)shareMethod:(id)sender{
 	JMActionSheetCollectionItem *collectionItem = [[JMActionSheetCollectionItem alloc] init];
 	NSMutableArray *collectionItems = [NSMutableArray new];
 	JMCollectionItem *item = [[JMCollectionItem alloc] init];
@@ -248,6 +334,14 @@
 	
 	desc.items = @[collectionItem];
 	[JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
+}
+/**
+ *  分享按钮点击事件
+ */
+-(void)shareItemClick:(id)sender{
+	
+//	[self shareMethod:sender];
+	[self sdkShareMethod];
 }
 /**
  *

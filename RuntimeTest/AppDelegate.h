@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+
+static NSString *appKey = @"e0418a16e57dc8de664b6d64";
+static NSString *channel = @"Publish channel";
+static BOOL isProduction = FALSE;
+
 @class Store;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

@@ -209,6 +209,18 @@
 }
 
 
+- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section {
+	//	view.tintColor = [UIColor clearColor];
+	
+	view.tintColor = [UIColor redColor];
+	
+	
+	//	改变文字的颜色：
+	UITableViewHeaderFooterView *footer = (UITableViewHeaderFooterView *)view;
+	[footer.textLabel setTextColor:[UIColor redColor]];
+}
+
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

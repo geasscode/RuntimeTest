@@ -17,6 +17,8 @@
 
 @implementation DESTabBarController
 + (void)initialize {
+	
+	//修改Tabbar Item的属性
 	NSMutableDictionary *normalAttrs = [NSMutableDictionary dictionary];
 	normalAttrs[NSFontAttributeName] = [UIFont systemFontOfSize:11];
 	normalAttrs[NSForegroundColorAttributeName] = kTabBarNormalColor;

@@ -16,6 +16,8 @@
 #import "scanViewController.h"
 #import "WeeklyTableViewController.h"
 #import "LBToAppStore.h"
+#import <SMS_SDK/SMSSDK.h>
+
 
 @interface MainViewController ()
 
@@ -25,6 +27,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	//查看源码
+//	clang -rewrite-objc MyClass.m
 	
 	//用户好评系统
 	LBToAppStore *toAppStore = [[LBToAppStore alloc]init];
@@ -77,6 +82,11 @@
 //	
 //	NSLog(@"NSData解密+base64++++%@", [[NSString alloc] initWithData:plain encoding:NSUTF8StringEncoding]);
 	
+	
+	
+	// 获取时间间隔
+#define TICK   CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
+#define TOCK   NSLog(@"Time: %f", CFAbsoluteTimeGetCurrent() - start)
 }
 
 - (void)didReceiveMemoryWarning {
@@ -111,9 +121,60 @@
 }
 
 - (IBAction)gotoPhotoView:(id)sender {
+	
 	PhotosViewController *photosViewController = [[PhotosViewController alloc] initWithNibName:@"PhotosViewController"  bundle:nil];
 	
 	[self.navigationController pushViewController:photosViewController animated:YES];
+
+}
+- (IBAction)gotoMessagePage:(id)sender {
+	
+	/**
+	 *  @from                    v1.1.1
+	 *  @brief                   获取验证码(Get verification code)
+	 *
+	 *  @param method            获取验证码的方法(The method of getting verificationCode)
+	 *  @param phoneNumber       电话号码(The phone number)
+	 *  @param zone              区域号，不要加"+"号(Area code)
+	 *  @param customIdentifier  自定义短信模板标识 该标识需从官网http://www.mob.com上申请，审核通过后获得。(Custom model of SMS.  The identifier can get it  from http://www.mob.com  when the application had approved)
+	 *  @param result            请求结果回调(Results of the request)
+	 */
+ 
+	[SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:@"18588826294"
+								   zone:@"86"
+					   customIdentifier:nil
+								 result:^(NSError *error){
+	 if (!error) {
+		 NSLog(@"获取验证码成功");
+	 } else {
+		 NSLog(@"错误信息：%@",error);
+	 }
+								 }];
+	
+
+	/**
+	 * @from               v1.1.1
+	 * @brief              提交验证码(Commit the verification code)
+	 *
+	 * @param code         验证码(Verification code)
+	 * @param phoneNumber  电话号码(The phone number)
+	 * @param zone         区域号，不要加"+"号(Area code)
+	 * @param result       请求结果回调(Results of the request)
+	 */
+//	[SMSSDK commitVerificationCode:self.verifyCodeField.text phoneNumber:_phone zone:_areaCode result:^(NSError *error) {
+//		
+//		if (!error) {
+//			
+//			NSLog(@"验证成功");
+//			
+//		}
+//		else
+//		{
+//			NSLog(@"错误信息：%@",error);
+//			
+//		}
+//	}];
+	
 
 }
 

@@ -23,6 +23,12 @@
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor whiteColor];
 	self.navigationItem.title = @"我的收藏";
+
+	//设置允许tableView编辑状态下允许多选
+	self.tableView.allowsMultipleSelectionDuringEditing = YES;
+	
+	//将cell设置为可选择的风格
+
 	[self configureLeftButton];
 	[self readDataByDB];
 
@@ -37,6 +43,14 @@
 		
 	}];
 
+	
+//	* nil是OC的，空对象，地址指向空（0）的对象。对象的字面零值
+//	
+//	* Nil是Objective-C类的字面零值
+//	
+//	* NULL是C的，空地址，地址的数值是0，是个长整数
+//	
+//	* NSNull用于解决向NSArray和NSDictionary等集合中添加空值的问题
 //	[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"favorite"];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -105,6 +119,19 @@
 	return 60;
 }
 
+//改变UITableView的header、footer背景颜色，这是个很常见的问题。之前知道的一般做法是，通过实现tableView: viewForHeaderInSection:返回一个自定义的View，里面什么都不填，只设背景颜色。但是今天发现一个更简洁的做法。
+
+- (void)tableView:(UITableView *)tableView willDisplayFooterView:(UIView *)view forSection:(NSInteger)section {
+//	view.tintColor = [UIColor clearColor];
+	
+	view.tintColor = [UIColor redColor];
+
+	
+//	改变文字的颜色：
+	UITableViewHeaderFooterView *footer = (UITableViewHeaderFooterView *)view;
+	[footer.textLabel setTextColor:[UIColor whiteColor]];
+}
+
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
 	//删除对应的单元格的数据
 	DetailModel *model = self.dataSource[indexPath.row];
@@ -119,6 +146,9 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//	UIView *view = [[UIView alloc] init];
+// view.backgroundColor = UIColorFromRGB(0xF6F6F6);
+// self.tableView.selectedBackgroundView = view;
 	DetailModel *model = self.dataSource[indexPath.row];
 	DetailViewController *detail = [[DetailViewController alloc] init];
 	detail.detailTextId = model.detatilArticleId;

@@ -12,11 +12,11 @@
 static NSString* schema=@"QQ";
 enum
 {
-    kQQAPICtrlFlagQZoneShareOnStart = 0x01,
-    kQQAPICtrlFlagQZoneShareForbid = 0x02,
-    kQQAPICtrlFlagQQShare = 0x04,
-    kQQAPICtrlFlagQQShareFavorites = 0x08, //收藏
-    kQQAPICtrlFlagQQShareDataline = 0x10,  //数据线
+    kkQQAPICtrlFlagQZoneShareOnStart = 0x01,
+    kkQQAPICtrlFlagQZoneShareForbid = 0x02,
+    kkQQAPICtrlFlagQQShare = 0x04,
+    kkQQAPICtrlFlagQQShareFavorites = 0x08, //收藏
+    kkQQAPICtrlFlagQQShareDataline = 0x10,  //数据线
 };
 
 +(void)connectQQWithAppId:(NSString *)appId{
@@ -32,17 +32,17 @@ enum
 }
 +(void)shareToQQZone:(OSMessage*)msg Success:(shareSuccess)success Fail:(shareFail)fail{
     if ([self beginShare:schema Message:msg Success:success Fail:fail]) {
-        [self openURL:[self genShareUrl:msg to:kQQAPICtrlFlagQZoneShareOnStart]];
+        [self openURL:[self genShareUrl:msg to:kkQQAPICtrlFlagQZoneShareOnStart]];
     }
 }
 +(void)shareToQQFavorites:(OSMessage*)msg Success:(shareSuccess)success Fail:(shareFail)fail{
     if ([self beginShare:schema Message:msg Success:success Fail:fail]) {
-        [self openURL:[self genShareUrl:msg to:kQQAPICtrlFlagQQShareFavorites]];
+        [self openURL:[self genShareUrl:msg to:kkQQAPICtrlFlagQQShareFavorites]];
     }
 }
 +(void)shareToQQDataline:(OSMessage*)msg Success:(shareSuccess)success Fail:(shareFail)fail{
     if ([self beginShare:schema Message:msg Success:success Fail:fail]) {
-        [self openURL:[self genShareUrl:msg to:kQQAPICtrlFlagQQShareDataline]];
+        [self openURL:[self genShareUrl:msg to:kkQQAPICtrlFlagQQShareDataline]];
     }
 }
 

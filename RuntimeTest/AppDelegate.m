@@ -13,7 +13,10 @@
 #import "OpenShareHeader.h"
 #import "AFNetworkActivityIndicatorManager.h"
 #import "DESTabBarController.h"
+#import "APOpenAPI.h"
 
+#define appkey @"12f1847875e26"
+#define app_secrect @"69471e44e59a7d4bcf068d7b7329d9c8"
 
 @interface AppDelegate ()
 
@@ -41,6 +44,12 @@
 //点击程序图标进入：
 //iOS_applicationWillEnterForeground
 //iOS_applicationDidBecomeActive
+
+
+
+//多语言设置
+//当某些库做了多语言，你显示的是只有英文的时候,你需要手动添加中文简体：
+//选中Project 然后 选中Info 栏 ，在Locallizations 里添加中文即可。
 @synthesize store = _store;
 
 - (Store *)store
@@ -56,24 +65,155 @@
 	return [UIApplication sharedApplication].delegate;
 }
 
+//启动但还没进入状态保存
+
+-(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+	return YES;
+}
+
+//基本完成程序准备开始运行
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
 	//第一步：注册key
-	[OpenShare connectQQWithAppId:@"1103194207"];
 //	[OpenShare connectWeixinWithAppId:@"wxd930ea5d5a258f4f"];
-
 //	[OpenShare connectQQWithAppId:@"101128744"];
 //	[OpenShare connectWeiboWithAppKey:@"402180334"];
 	
+	[OpenShare connectQQWithAppId:@"1103194207"];
 	[OpenShare connectWeiboWithAppKey:@"4003638958"];
-
-	
-	
 	[OpenShare connectWeixinWithAppId:@"wx9ad490e6428d5a7f"];
+	
+	
+	
+	//Mob  记住这里有个大坑就是plist白名单一定要设置LSApplicationQueriesSchemes，直接从demo里面的source 复制。
+	//不然会出现qq或者微信icon显示不了。
+	
+	//当提示 Can't share because platform QQ did not set URL Scheme:QQ06071A28， Please try again after set
+	//URL Scheme 时 ,果断在Target －》 info －》URL Types 添加一行QQ06071A28。
+	
+	
+//	支持QQ所需的相关配置及代码 登录QQ互联（http://connect.qq.com/ ）注册成为开发者并登记应用取得AppId，然后打开下图位置，在URL Types中添加QQ的AppID，其格式为：”QQ” ＋ AppId的16进制（如果appId转换的16进制数不够8位则在前面补0，如转换的是：5FB8B52，则最终填入为：QQ05FB8B52 注意：转换后的字母要大写） 转换16进制的方法：echo ‘ibase=10;obase=16;801312852′|bc，其中801312852为QQ的AppID
+	
+//	[SMSSDK registerApp:appkey withSecret:app_secrect];
+	//shareSDK
+	
+	[ShareSDK registerApp:@"2160fe96d444"
+	 
+		  activePlatforms:@[
+							@(SSDKPlatformTypeSinaWeibo),
+							@(SSDKPlatformTypeTencentWeibo),
+							@(SSDKPlatformTypeMail),
+							@(SSDKPlatformTypeSMS),
+							@(SSDKPlatformTypeCopy),
+							@(SSDKPlatformTypeWechat),
+							@(SSDKPlatformTypeQQ),
+							@(SSDKPlatformTypeYinXiang),
+							@(SSDKPlatformTypeEvernote),
+							@(SSDKPlatformTypeAliPaySocial),
+
+							]
+				 onImport:^(SSDKPlatformType platformType)
+	 {
+		 switch (platformType)
+		 {
+			 case SSDKPlatformTypeWechat:
+				 [ShareSDKConnector connectWeChat:[WXApi class]];
+
+				 break;
+			 case SSDKPlatformTypeQQ:
+				 [ShareSDKConnector connectQQ:[QQApiInterface class]
+							tencentOAuthClass:[TencentOAuth class]];
+				 break;
+			 case SSDKPlatformTypeSinaWeibo:
+				 [ShareSDKConnector connectWeibo:[WeiboSDK class]];
+				 break;
+		
+			 case SSDKPlatformTypeAliPaySocial:
+				 [ShareSDKConnector connectAliPaySocial:[APOpenAPI class]];
+				 break;
+
+			 default:
+				 break;
+		 }
+	 }
+		  onConfiguration:^(SSDKPlatformType platformType, NSMutableDictionary *appInfo)
+	 {
+		 
+		 switch (platformType)
+		 {
+			 case SSDKPlatformTypeSinaWeibo:
+				 //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
+				 [appInfo SSDKSetupSinaWeiboByAppKey:@"4003638958"
+										   appSecret:@"648b387fda4b6e1c62c0f9febf84c7cc"
+										 redirectUri:@"http://www.sharesdk.cn"
+											authType:SSDKAuthTypeBoth];
+				 break;
+			 case SSDKPlatformTypeTencentWeibo:
+				 //设置腾讯微博应用信息，其中authType设置为只用Web形式授权
+				 [appInfo SSDKSetupTencentWeiboByAppKey:@"801307650"
+											  appSecret:@"ae36f4ee3946e1cbb98d6965b0b2ff5c"
+											redirectUri:@"http://www.sharesdk.cn"];
+				 break;
+			
+			
+			 case SSDKPlatformTypeWechat:
+				 [appInfo SSDKSetupWeChatByAppId:@"wx9ad490e6428d5a7f"
+									   appSecret:@"23eb8a329249afff95d00d8b3aa13f85"];
+				 break;
+			 case SSDKPlatformTypeQQ:
+				 [appInfo SSDKSetupQQByAppId:@"101128744"
+									  appKey:@"cc893ef392e383df22142a474d4abea6"
+									authType:SSDKAuthTypeBoth];
+				 break;
+			
+		
+				 //印象笔记分为国内版和国际版，注意区分平台
+				 //设置印象笔记（中国版）应用信息
+			 case SSDKPlatformTypeYinXiang:
+				 
+				 //设置印象笔记（国际版）应用信息
+			 case SSDKPlatformTypeEvernote:
+				 [appInfo SSDKSetupEvernoteByConsumerKey:@"sharesdk-7807"
+										  consumerSecret:@"d05bf86993836004"
+												 sandbox:YES];
+				 break;
+				 
+			 case SSDKPlatformTypeAliPaySocial:
+				 [appInfo SSDKSetupAliPaySocialByAppId:@"2015072400185895"];
+				 break;
+				 
+			 default:
+				 break;
+
+		 }
+	 }];
+
 
 	
+	//JPush
+	NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
 	
+	if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+		//可以添加自定义categories
+		[JPUSHService registerForRemoteNotificationTypes:(UIUserNotificationTypeBadge |
+														  UIUserNotificationTypeSound |
+														  UIUserNotificationTypeAlert)
+											  categories:nil];
+	} else {
+		//categories 必须为nil
+		[JPUSHService registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+														  UIRemoteNotificationTypeSound |
+														  UIRemoteNotificationTypeAlert)
+											  categories:nil];
+	}
 	
+	//如不需要使用IDFA，advertisingIdentifier 可为nil
+	[JPUSHService setupWithOption:launchOptions appKey:appKey
+						  channel:channel
+				 apsForProduction:isProduction
+			advertisingIdentifier:advertisingId];
+	
+
 	
 	//RuntimeTableViewController 有关于tableView的用法。
 //	屏蔽掉除电池电量的各种状态，需要再info.plist 指定 View controller-based status bar appearance  BOOL值设为NO
@@ -94,6 +234,10 @@
 	self.window.rootViewController = [[DESTabBarController alloc] init];
 	[self.window makeKeyAndVisible];
 	
+	
+	// 获取时间间隔
+#define TICK   CFAbsoluteTime start = CFAbsoluteTimeGetCurrent();
+#define TOCK   NSLog(@"Time: %f", CFAbsoluteTimeGetCurrent() - start)
 	
 	
 //	UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectZero];
@@ -119,12 +263,15 @@
 //	
 //}
 
+//当应用程序将要入非活动状态执行，应用程序不接收消息或事件，比如来电话了
 - (void)applicationWillResignActive:(UIApplication *)application {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
 	// Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 	NSLog(@"execute applicationWillResignActive");
 
 }
+
+//当程序被推送到后台的时候调用。所以要设置后台继续运行，则在这个函数里面设置即可：
 
 //当应用程序进入后台时,应该保存用户数据或状态信息，所有没写到磁盘的文件或信息，
 //在进入后台时，最后都写到磁盘去，因为程序可能在后台被杀死。释放尽可能释放的内存。
@@ -144,16 +291,22 @@
 
 }
 
+//当程序从后台将要重新回到前台时候调用，这个刚好跟上面的那个方法相反：
+
 - (void)applicationWillEnterForeground:(UIApplication *)application {
 	// Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+	[application setApplicationIconBadgeNumber:0];
+	[application cancelAllLocalNotifications];
 	NSLog(@"execute applicationWillEnterForeground");
 
 }
-
+//当应用程序入活动状态执行，这个刚好跟上面那个方法相反
 - (void)applicationDidBecomeActive:(UIApplication *)application {
 	NSLog(@"execute applicationDidBecomeActive");
 	// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
+
+//当程序将要退出是被调用，通常是用来保存数据和一些退出前的清理工作：
 
 - (void)applicationWillTerminate:(UIApplication *)application {
 	NSLog(@"execute applicationWillTerminate");
@@ -168,5 +321,102 @@
 	//这里可以写上其他OpenShare不支持的客户端的回调，比如支付宝等。
 	return YES;
 }
+
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+	
+	NSLog(@"%@", [NSString stringWithFormat:@"Device Token: %@", deviceToken]);
+	[JPUSHService registerDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application
+didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+	NSLog(@"did Fail To Register For Remote Notifications With Error: %@", error);
+}
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > __IPHONE_7_1
+- (void)application:(UIApplication *)application
+didRegisterUserNotificationSettings:
+(UIUserNotificationSettings *)notificationSettings {
+}
+
+// Called when your app has been activated by the user selecting an action from
+// a local notification.
+// A nil action identifier indicates the default action.
+// You should call the completion handler as soon as you've finished handling
+// the action.
+- (void)application:(UIApplication *)application
+handleActionWithIdentifier:(NSString *)identifier
+forLocalNotification:(UILocalNotification *)notification
+  completionHandler:(void (^)())completionHandler {
+}
+
+// Called when your app has been activated by the user selecting an action from
+// a remote notification.
+// A nil action identifier indicates the default action.
+// You should call the completion handler as soon as you've finished handling
+// the action.
+- (void)application:(UIApplication *)application
+handleActionWithIdentifier:(NSString *)identifier
+forRemoteNotification:(NSDictionary *)userInfo
+  completionHandler:(void (^)())completionHandler {
+}
+#endif
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+	[JPUSHService handleRemoteNotification:userInfo];
+	NSLog(@"收到通知:%@", [self logDic:userInfo]);
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:
+(void (^)(UIBackgroundFetchResult))completionHandler {
+	[JPUSHService handleRemoteNotification:userInfo];
+	NSLog(@"收到通知:%@", [self logDic:userInfo]);
+	completionHandler(UIBackgroundFetchResultNewData);
+}
+
+- (void)application:(UIApplication *)application
+didReceiveLocalNotification:(UILocalNotification *)notification {
+	[JPUSHService showLocalNotificationAtFront:notification identifierKey:nil];
+}
+
+// log NSSet with UTF8
+// if not ,log will be \Uxxx
+- (NSString *)logDic:(NSDictionary *)dic {
+	if (![dic count]) {
+		return nil;
+	}
+	NSString *tempStr1 =
+	[[dic description] stringByReplacingOccurrencesOfString:@"\\u"
+												 withString:@"\\U"];
+	NSString *tempStr2 =
+	[tempStr1 stringByReplacingOccurrencesOfString:@"\"" withString:@"\\\""];
+	NSString *tempStr3 =
+	[[@"\"" stringByAppendingString:tempStr2] stringByAppendingString:@"\""];
+	NSData *tempData = [tempStr3 dataUsingEncoding:NSUTF8StringEncoding];
+	NSString *str =
+	[NSPropertyListSerialization propertyListFromData:tempData
+									 mutabilityOption:NSPropertyListImmutable
+											   format:NULL
+									 errorDescription:NULL];
+	return str;
+}
+
+
+////直接退出app
+//- (void)exitApplication {
+//	AppDelegate *app = [UIApplication sharedApplication].delegate;
+//	UIWindow *window = app.window;
+//
+//	[UIView animateWithDuration:1.0f animations:^{
+//		window.alpha = 0;
+//	} completion:^(BOOL finished) {
+//		exit(0);
+//	}];
+//}
 
 @end
