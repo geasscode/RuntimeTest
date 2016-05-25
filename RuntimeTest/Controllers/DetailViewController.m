@@ -29,6 +29,7 @@
 
 @property (nonatomic,strong) DetailModel *webModel;
 
+
 @end
 
 @implementation DetailViewController
@@ -335,13 +336,108 @@
 	desc.items = @[collectionItem];
 	[JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
 }
+
+//最简单的方式。
+-(void)activityItems{
+	//Bookmark, Add To Reading List, and Add To Homescreen are only available in safari, unless you define them yourself. To add those buttons, you need to create an applicationActivities NSArray, populated with UIActivity objects for various services. You can pass this array into the initWithActivityItems:applicationActivities:
+	
+//	UIActivityViewController中的服务分为了两种，UIActivityCategoryAction和UIActivityCategoryShare,UIActivityCategoryAction表示在最下面一栏的操作型服务,比如Copy、Print;UIActivityCategoryShare表示在中间一栏的分享型服务，比如一些社交软件。
+	
+
+	//用系统自带的方法增加qq收藏，微信收藏，分享到朋友圈。新浪微博。待实现。
+//	NSArray* imageArray = @[[UIImage imageNamed:@"icon.jpg"]];
+	
+	NSString *title = _webModel.title;
+	
+	NSString *description = _webModel.title;;
+	
+
+	//要显示存储图像icon首先要有图片。
+	UIImage *imageIcon = [UIImage imageNamed:@"icon.jpg"];
+	//当有URL 时才能显示添加到阅读列表。
+	NSURL *URL = [NSURL URLWithString:_webModel.url];
+	
+//	UISimpleTextPrintFormatter *printData = [[UISimpleTextPrintFormatter alloc] initWithText:self.title];								
+	NSArray *activityItems = @[title, description,imageIcon,URL];
+	UIActivityViewController *activityViewController = [[UIActivityViewController alloc]
+														initWithActivityItems:activityItems applicationActivities:nil];
+	
+	
+	activityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+
+	//排除不需要的功能如AirDrop
+	activityViewController.excludedActivityTypes = @[UIActivityTypeAirDrop,UIActivityTypePostToFacebook,UIActivityTypePostToTwitter,UIActivityTypeAssignToContact];
+	
+	//	NSURL *URL = [NSURL URLWithString:@"http://nshipster.com/uiactivityviewcontroller"];
+	//	[[SSReadingList defaultReadingList] addReadingListItemWithURL:URL
+	//															title:@"NSHipster"
+	//													  previewText:@"..."
+	//															error:nil];
+	
+	activityViewController.popoverPresentationController.sourceView = self.view;
+	
+	
+	
+	
+//	UIPopoverPresentationController *popover = activityViewController.popoverPresentationController;
+//	if (popover) {
+//		popover.sourceView = self.view;
+//		popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
+//	}
+
+	
+	// 写一个bolck，用于completionHandler的初始化
+//	UIActivityViewControllerCompletionHandler myBlock = ^(NSString *activityType,BOOL completed) {
+//		NSLog(@"%@", activityType);
+//		
+//		if(completed) {
+//			NSLog(@"completed");
+//		} else
+//		{
+//			NSLog(@"cancled");
+//		}
+//		[activityViewController dismissViewControllerAnimated:YES completion:Nil];
+//	};
+//	
+	
+	activityViewController.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
+		NSLog(@"Finished with activity %@", activityType);
+		
+		if(completed) {
+			NSLog(@"completed");
+		} else
+		{
+			NSLog(@"cancled");
+		}
+//		[activityViewController dismissViewControllerAnimated:YES completion:Nil];
+	};
+	
+	// 初始化completionHandler，当post结束之后（无论是done还是cancell）该blog都会被调用
+//	activityViewController.completionHandler = myBlock;
+	
+	
+	//if iPhone
+	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+		[self presentViewController:activityViewController animated:YES completion:nil];
+	}
+	//if iPad
+	else {
+		// Change Rect to position Popover
+		UIBarButtonItem *shareBarButtonItem = self.navigationItem.leftBarButtonItem;
+		UIPopoverController *popup = [[UIPopoverController alloc] initWithContentViewController:activityViewController];
+		[popup presentPopoverFromBarButtonItem:shareBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+	}
+	
+//	[self presentViewController:activityViewController animated:YES completion:nil];
+}
 /**
  *  分享按钮点击事件
  */
 -(void)shareItemClick:(id)sender{
 	
 //	[self shareMethod:sender];
-	[self sdkShareMethod];
+//	[self sdkShareMethod];
+	[self activityItems];
 }
 /**
  *

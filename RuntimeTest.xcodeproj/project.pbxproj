@@ -58,6 +58,7 @@
 		F75270141C9A940A0012FE76 /* RuntimeTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75270131C9A940A0012FE76 /* RuntimeTestUITests.m */; };
 		F762B8571CEC13DB00E5DDAD /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8561CEC13DB00E5DDAD /* UILabel+Utils.m */; };
 		F762B85A1CEC144400E5DDAD /* UITextView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8591CEC144400E5DDAD /* UITextView+Utils.m */; };
+		F7644F5C1CF5A0B000FD9DAF /* ActivityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7644F5B1CF5A0B000FD9DAF /* ActivityItem.m */; };
 		F7650A791CBE2E7F0065AA41 /* SocketTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7650A781CBE2E7F0065AA41 /* SocketTest.m */; };
 		F76CB7DB1CE33E6600D8474F /* FeThreeDotGlow.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DA1CE33E6600D8474F /* FeThreeDotGlow.m */; };
 		F76CB7DE1CE33F5700D8474F /* UIColor+flat.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DD1CE33F5700D8474F /* UIColor+flat.m */; };
@@ -388,6 +389,8 @@
 		F762B8561CEC13DB00E5DDAD /* UILabel+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Utils.m"; sourceTree = "<group>"; };
 		F762B8581CEC144400E5DDAD /* UITextView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Utils.h"; sourceTree = "<group>"; };
 		F762B8591CEC144400E5DDAD /* UITextView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Utils.m"; sourceTree = "<group>"; };
+		F7644F5A1CF5A0B000FD9DAF /* ActivityItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityItem.h; sourceTree = "<group>"; };
+		F7644F5B1CF5A0B000FD9DAF /* ActivityItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityItem.m; sourceTree = "<group>"; };
 		F7650A771CBE2E7F0065AA41 /* SocketTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketTest.h; sourceTree = "<group>"; };
 		F7650A781CBE2E7F0065AA41 /* SocketTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketTest.m; sourceTree = "<group>"; };
 		F76CB7D91CE33E6600D8474F /* FeThreeDotGlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeThreeDotGlow.h; sourceTree = "<group>"; };
@@ -835,6 +838,8 @@
 			children = (
 				F707FE8C1CDC725B008E4F7C /* DESShareView.h */,
 				F707FE8D1CDC725B008E4F7C /* DESShareView.m */,
+				F7644F5A1CF5A0B000FD9DAF /* ActivityItem.h */,
+				F7644F5B1CF5A0B000FD9DAF /* ActivityItem.m */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -2020,6 +2025,7 @@
 				F74676C51CB6077C0001D3A5 /* Person.m in Sources */,
 				F7275CF71CD0C011002F0F68 /* WeeklyTableViewController.m in Sources */,
 				F7F773191CD8AFD00060861B /* iCarousel.m in Sources */,
+				F7644F5C1CF5A0B000FD9DAF /* ActivityItem.m in Sources */,
 				F7BCC5591CCDBD1000704878 /* TCDelegate.m in Sources */,
 				F7BAC7411CC8D40F000D9795 /* JSONHTTPClient.m in Sources */,
 				F7F7730A1CD3593F0060861B /* DetailModel.m in Sources */,

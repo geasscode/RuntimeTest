@@ -48,21 +48,21 @@
 //	        return;
 //	    }
 	
-	if (self) {
-		
-		//由于是测试一小部分，设置当tag 等于10086时候才改变字体。
-		if (self.tag == 10086) {
-//			self.font = [UIFont systemFontOfSize:self.font.pointSize];
-			if ([UIFont fontNamesForFamilyName:CustomFontName])
-				self.font  = [UIFont fontWithName:CustomFontName size:self.font.pointSize];
-		} else {
-			
-			self.font = [UIFont systemFontOfSize:self.font.pointSize];
-
+//	if (self) {
+//		
+//		//由于是测试一小部分，设置当tag 等于10086时候才改变字体。
+//		if (self.tag == 10086) {
+////			self.font = [UIFont systemFontOfSize:self.font.pointSize];
 //			if ([UIFont fontNamesForFamilyName:CustomFontName])
 //				self.font  = [UIFont fontWithName:CustomFontName size:self.font.pointSize];
-		}
-	}
+//		} else {
+//			
+//			self.font = [UIFont systemFontOfSize:self.font.pointSize];
+//
+////			if ([UIFont fontNamesForFamilyName:CustomFontName])
+////				self.font  = [UIFont fontWithName:CustomFontName size:self.font.pointSize];
+//		}
+//	}
 	
 }
 
