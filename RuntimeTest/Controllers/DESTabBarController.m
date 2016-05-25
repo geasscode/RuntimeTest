@@ -14,7 +14,7 @@
 #import "DESNavigationController.h"
 #import "SigmaTableViewController.h"
 #import "ArticleHomeViewController.h"
-
+#import "BarCodeViewController.h"
 @implementation DESTabBarController
 + (void)initialize {
 	
@@ -55,10 +55,17 @@
 							 title:@"周刊"
 							 image:@"tabBDeselected"
 					 selectedImage:@"tabBSelected"];
-	[self setupChildViewController:[[scanViewController alloc] init]
+	
+//	[self setupChildViewController:[[scanViewController alloc] init]
+//							 title:@"二维码"
+//							 image:@"tabCDeselected"
+//					 selectedImage:@"tabCSelected"];
+	
+	[self setupChildViewController:[[BarCodeViewController alloc] init]
 							 title:@"二维码"
 							 image:@"tabCDeselected"
 					 selectedImage:@"tabCSelected"];
+	
 	[self setupChildViewController:[[ContactInfoTableViewController alloc] init]
 							 title:@"通讯录"
 							 image:@"tabDDeselected"

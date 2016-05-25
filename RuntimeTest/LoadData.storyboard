@@ -76,6 +76,11 @@
                                     <action selector="gotoMessagePage:" destination="aFy-QA-WhR" eventType="touchUpInside" id="xhl-cU-8cV"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zpq-dq-d6I">
+                                <rect key="frame" x="212" y="519" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -87,6 +92,7 @@
                             <constraint firstItem="Suv-2o-87e" firstAttribute="top" secondItem="vCF-YC-O0v" secondAttribute="bottom" constant="31" id="BRS-h6-exl"/>
                             <constraint firstItem="4bZ-sG-w8n" firstAttribute="top" secondItem="egL-FV-Am0" secondAttribute="bottom" constant="20" id="D39-6q-iFn"/>
                             <constraint firstItem="l2h-CO-RIa" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="EAB-iy-Zsh"/>
+                            <constraint firstItem="Zpq-dq-d6I" firstAttribute="baseline" secondItem="egL-FV-Am0" secondAttribute="baseline" id="FBk-Ob-E6n"/>
                             <constraint firstItem="l2h-CO-RIa" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="34" id="IQ1-T3-tJO"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="PGf-3Y-g0w"/>
                             <constraint firstItem="CyU-t1-x4N" firstAttribute="leading" secondItem="Suv-2o-87e" secondAttribute="leading" constant="34" id="RE1-DK-UF4"/>
@@ -94,13 +100,18 @@
                             <constraint firstItem="ejy-7l-1zX" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="Zq7-Dt-XHa"/>
                             <constraint firstItem="IvB-DQ-pbI" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="b5W-N4-CCP"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerY" secondItem="YRg-5f-7nD" secondAttribute="centerY" id="bYz-p9-MMv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zpq-dq-d6I" secondAttribute="trailing" constant="-5" id="cIV-IV-gKo"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="87" id="frj-gl-aq4"/>
                             <constraint firstItem="vCF-YC-O0v" firstAttribute="centerX" secondItem="IvB-DQ-pbI" secondAttribute="centerX" id="lGw-vT-dq7"/>
+                            <constraint firstItem="Zpq-dq-d6I" firstAttribute="leading" secondItem="egL-FV-Am0" secondAttribute="trailing" constant="14" id="lgz-dp-n3k"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="l2h-CO-RIa" secondAttribute="bottom" constant="23" id="wBX-oB-EmF"/>
                             <constraint firstItem="6WJ-If-kbH" firstAttribute="top" secondItem="Suv-2o-87e" secondAttribute="bottom" constant="40" id="wru-U9-6dZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9mR-5H-Lie"/>
+                    <connections>
+                        <outlet property="hideKeyboardTest" destination="Zpq-dq-d6I" id="0k3-yJ-vMZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rKu-vp-8zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

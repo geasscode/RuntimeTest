@@ -172,6 +172,8 @@
 		F7BB42EF1CEEECE2006F5EE3 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BB42DF1CEEECE2006F5EE3 /* MOBFoundation.framework */; };
 		F7BB42F01CEEECE2006F5EE3 /* ShareSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F7BB42E01CEEECE2006F5EE3 /* ShareSDK.bundle */; };
 		F7BB42F11CEEECE2006F5EE3 /* ShareSDKConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BB42E11CEEECE2006F5EE3 /* ShareSDKConnector.framework */; };
+		F7BB42F71CF2D6F6006F5EE3 /* UIImage+mask.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BB42F61CF2D6F6006F5EE3 /* UIImage+mask.m */; };
+		F7BB42FB1CF2D82C006F5EE3 /* BarCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BB42FA1CF2D82C006F5EE3 /* BarCodeViewController.m */; };
 		F7BCC53B1CCDBCF400704878 /* TableViewSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC53A1CCDBCF400704878 /* TableViewSampleViewController.m */; };
 		F7BCC5541CCDBD1000704878 /* NSObject+TCIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC53E1CCDBD1000704878 /* NSObject+TCIdentifier.m */; };
 		F7BCC5551CCDBD1000704878 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC53F1CCDBD1000704878 /* README.md */; };
@@ -207,7 +209,7 @@
 		F7BCC5B01CCE17A000704878 /* photodata.bin in Resources */ = {isa = PBXBuildFile; fileRef = F7BCC5AF1CCE17A000704878 /* photodata.bin */; };
 		F7BCC5B71CCE20FD00704878 /* resultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5B31CCE20FD00704878 /* resultViewController.m */; };
 		F7BCC5B81CCE20FD00704878 /* scanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5B51CCE20FD00704878 /* scanViewController.m */; };
-		F7BCC5B91CCE20FD00704878 /* 滴-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F7BCC5B61CCE20FD00704878 /* 滴-2.mp3 */; };
+		F7BCC5B91CCE20FD00704878 /* didi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F7BCC5B61CCE20FD00704878 /* didi.mp3 */; };
 		F7BCC5BB1CCE261A00704878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BCC5BA1CCE261A00704878 /* AVFoundation.framework */; };
 		F7BCC5C01CCF629500704878 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5BF1CCF629500704878 /* UIView+Utils.m */; };
 		F7BCC5C41CCF63EF00704878 /* HomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7BCC5C31CCF63EF00704878 /* HomeViewModel.m */; };
@@ -575,6 +577,10 @@
 		F7BB42F21CEEF31C006F5EE3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		F7BB42F31CEEF31D006F5EE3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		F7BB42F41CEEF31D006F5EE3 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainInterface.strings"; sourceTree = "<group>"; };
+		F7BB42F51CF2D6F6006F5EE3 /* UIImage+mask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+mask.h"; sourceTree = "<group>"; };
+		F7BB42F61CF2D6F6006F5EE3 /* UIImage+mask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+mask.m"; sourceTree = "<group>"; };
+		F7BB42F91CF2D82C006F5EE3 /* BarCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarCodeViewController.h; sourceTree = "<group>"; };
+		F7BB42FA1CF2D82C006F5EE3 /* BarCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarCodeViewController.m; sourceTree = "<group>"; };
 		F7BCC5391CCDBCF400704878 /* TableViewSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewSampleViewController.h; sourceTree = "<group>"; };
 		F7BCC53A1CCDBCF400704878 /* TableViewSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewSampleViewController.m; sourceTree = "<group>"; };
 		F7BCC53D1CCDBD1000704878 /* NSObject+TCIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TCIdentifier.h"; sourceTree = "<group>"; };
@@ -643,7 +649,7 @@
 		F7BCC5B31CCE20FD00704878 /* resultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = resultViewController.m; sourceTree = "<group>"; };
 		F7BCC5B41CCE20FD00704878 /* scanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scanViewController.h; sourceTree = "<group>"; };
 		F7BCC5B51CCE20FD00704878 /* scanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scanViewController.m; sourceTree = "<group>"; };
-		F7BCC5B61CCE20FD00704878 /* 滴-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "滴-2.mp3"; sourceTree = "<group>"; };
+		F7BCC5B61CCE20FD00704878 /* didi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = didi.mp3; sourceTree = "<group>"; };
 		F7BCC5BA1CCE261A00704878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		F7BCC5BE1CCF629500704878 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
 		F7BCC5BF1CCF629500704878 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
@@ -915,6 +921,8 @@
 		F74676BA1CABC83F0001D3A5 /* DESExtension */ = {
 			isa = PBXGroup;
 			children = (
+				F7BB42F51CF2D6F6006F5EE3 /* UIImage+mask.h */,
+				F7BB42F61CF2D6F6006F5EE3 /* UIImage+mask.m */,
 				F74676C91CB63A320001D3A5 /* UIViewController+swizzling.h */,
 				F74676CA1CB63A320001D3A5 /* UIViewController+swizzling.m */,
 				F74676CC1CB6415C0001D3A5 /* NSObject+PropertyAdd.h */,
@@ -1256,6 +1264,7 @@
 		F7B412941C9BDA3900E45E22 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F7BB42F81CF2D7EF006F5EE3 /* Media */,
 				F707FE8B1CDC722A008E4F7C /* Share */,
 				F7275CF81CD0C3FD002F0F68 /* Weekly */,
 				F7BCC5DA1CCF6C5700704878 /* TableViewCell */,
@@ -1516,6 +1525,15 @@
 			path = Required;
 			sourceTree = "<group>";
 		};
+		F7BB42F81CF2D7EF006F5EE3 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				F7BB42F91CF2D82C006F5EE3 /* BarCodeViewController.h */,
+				F7BB42FA1CF2D82C006F5EE3 /* BarCodeViewController.m */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
 		F7BCC53C1CCDBD1000704878 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1555,7 +1573,7 @@
 				F7BCC5B31CCE20FD00704878 /* resultViewController.m */,
 				F7BCC5B41CCE20FD00704878 /* scanViewController.h */,
 				F7BCC5B51CCE20FD00704878 /* scanViewController.m */,
-				F7BCC5B61CCE20FD00704878 /* 滴-2.mp3 */,
+				F7BCC5B61CCE20FD00704878 /* didi.mp3 */,
 			);
 			path = BarCode;
 			sourceTree = "<group>";
@@ -1791,7 +1809,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7BB42EA1CEEECE2006F5EE3 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
-				F7BCC5B91CCE20FD00704878 /* 滴-2.mp3 in Resources */,
+				F7BCC5B91CCE20FD00704878 /* didi.mp3 in Resources */,
 				F7BAC7591CC8D40F000D9795 /* 7.png in Resources */,
 				F7F773141CD36C6F0060861B /* search.plist in Resources */,
 				F7F773131CD36C6F0060861B /* article_image.png in Resources */,
@@ -1970,6 +1988,7 @@
 				F74676B21CABC7B50001D3A5 /* MJBaseObject.m in Sources */,
 				F7BCC58E1CCDF64B00704878 /* MyUser.m in Sources */,
 				F7BAC7001CC786A6000D9795 /* Tool.m in Sources */,
+				F7BB42F71CF2D6F6006F5EE3 /* UIImage+mask.m in Sources */,
 				F707FE941CDC7F89008E4F7C /* JMCollectionItem.m in Sources */,
 				F74676D21CB647490001D3A5 /* NSMutableArray+Extension.m in Sources */,
 				F7275CFB1CD0C42F002F0F68 /* WeeklyItemHeaderView.m in Sources */,
@@ -2038,6 +2057,7 @@
 				F76CB7FD1CE4803C00D8474F /* ContentTableViewController.m in Sources */,
 				F707FEA91CE06C85008E4F7C /* OpenShare+Alipay.m in Sources */,
 				F7BCC5751CCDF0D500704878 /* PhotosViewController.m in Sources */,
+				F7BB42FB1CF2D82C006F5EE3 /* BarCodeViewController.m in Sources */,
 				F7BCC53B1CCDBCF400704878 /* TableViewSampleViewController.m in Sources */,
 				F7BCC5821CCDF33200704878 /* PhotoCell.m in Sources */,
 				F707FE8E1CDC725B008E4F7C /* DESShareView.m in Sources */,
@@ -2305,6 +2325,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.geasscode.RuntimeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "-Wunused-variable";
 			};
 			name = Debug;
 		};
@@ -2356,6 +2377,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.geasscode.RuntimeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "-Wunused-variable";
 			};
 			name = Release;
 		};

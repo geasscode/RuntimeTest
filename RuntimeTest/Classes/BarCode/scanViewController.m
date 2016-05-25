@@ -147,7 +147,7 @@
 {
     SystemSoundID soundID;
     
-    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"滴-2"ofType:@"mp3"]], &soundID);
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"didi"ofType:@"mp3"]], &soundID);
     
     AudioServicesPlaySystemSound(soundID);
     

@@ -17,9 +17,15 @@
 #import "WeeklyTableViewController.h"
 #import "LBToAppStore.h"
 #import <SMS_SDK/SMSSDK.h>
+#import "BarCodeViewController.h"
+#import "ZYKeyboardUtil.h"
+
+#define MARGIN_KEYBOARD 20
 
 
 @interface MainViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *hideKeyboardTest;
+@property (strong, nonatomic) ZYKeyboardUtil *keyboardUtil;
 
 @end
 
@@ -35,6 +41,11 @@
 	LBToAppStore *toAppStore = [[LBToAppStore alloc]init];
 	toAppStore.myAppID = @"1067787090";
 	[toAppStore showGotoAppStore:self];
+	
+	
+	self.hideKeyboardTest.delegate = self;
+	
+	[self configKeyBoardRespond];
 
     // Do any additional setup after loading the view.
 //	NSArray * array  = @[@"hoem"];
@@ -89,6 +100,63 @@
 #define TOCK   NSLog(@"Time: %f", CFAbsoluteTimeGetCurrent() - start)
 }
 
+
+- (void)configKeyBoardRespond {
+	
+	
+//	ZYKeyboardUtil 通过lazy方式注册键盘通知监听者，核心工作围绕一个model和四个Block(一个主功能Block和三个附加Block)，内部类KeyboardInfo作为model存储着每次处理时所需的键盘信息。animateWhenKeyboardAppearAutomaticAnimBlock作全自动处理，animateWhenKeyboardAppearBlock作键盘展示时的处理，animateWhenKeyboardDisappearBlock作键盘收起时的处理，而printKeyboardInfoBlock用作在必要时输出键盘信息。AppearBlock和DisappearBlock统一做了UIViewAnimation，自定义处理事件时只需要编写需要的界面变化即可。
+	
+	self.keyboardUtil = [[ZYKeyboardUtil alloc] init];
+	
+	__weak MainViewController *weakSelf = self;
+	
+	//自定义键盘弹出处理
+#pragma explain - use animateWhenKeyboardAppearAutomaticAnimBlock, animateWhenKeyboardAppearBlock must be nil.
+	/*
+	 [_keyboardUtil setAnimateWhenKeyboardAppearBlock:^(int appearPostIndex, CGRect keyboardRect, CGFloat keyboardHeight, CGFloat keyboardHeightIncrement) {
+	 
+	 NSLog(@"\n\n键盘弹出来第 %d 次了~  高度比上一次增加了%0.f  当前高度是:%0.f"  , appearPostIndex, keyboardHeightIncrement, keyboardHeight);
+	 
+	 //处理
+	 UIWindow *window = [UIApplication sharedApplication].keyWindow;
+	 CGRect convertRect = [weakSelf.mainTextField.superview convertRect:weakSelf.mainTextField.frame toView:window];
+	 
+	 if (CGRectGetMinY(keyboardRect) - MARGIN_KEYBOARD < CGRectGetMaxY(convertRect)) {
+	 CGFloat signedDiff = CGRectGetMinY(keyboardRect) - CGRectGetMaxY(convertRect) - MARGIN_KEYBOARD;
+	 //updateOriginY
+	 CGFloat newOriginY = CGRectGetMinY(weakSelf.view.frame) + signedDiff;
+	 weakSelf.view.frame = CGRectMake(weakSelf.view.frame.origin.x, newOriginY, weakSelf.view.frame.size.width, weakSelf.view.frame.size.height);
+	 }
+	 }];
+	 */
+	
+	
+	//全自动键盘弹出处理 (需调用keyboardUtil 的 adaptiveViewHandleWithController:adaptiveView:)
+#pragma explain - use animateWhenKeyboardAppearBlock, animateWhenKeyboardAppearAutomaticAnimBlock will be invalid.
+	[_keyboardUtil setAnimateWhenKeyboardAppearAutomaticAnimBlock:^(ZYKeyboardUtil *keyboardUtil) {
+		[keyboardUtil adaptiveViewHandleWithController:weakSelf adaptiveView:weakSelf.hideKeyboardTest, nil];
+	}];
+	
+	
+	//自定义键盘收起处理(如不配置，则默认启动自动收起处理)
+#pragma explain - if not configure this Block, automatically itself.
+	
+	 [_keyboardUtil setAnimateWhenKeyboardDisappearBlock:^(CGFloat keyboardHeight) {
+	 NSLog(@"\n\n键盘在收起来~  上次高度为:+%f", keyboardHeight);
+	 
+	 //uodateOriginY
+	 CGFloat newOriginY = 0;
+	 weakSelf.view.frame = CGRectMake(weakSelf.view.frame.origin.x, newOriginY, weakSelf.view.frame.size.width, weakSelf.view.frame.size.height);
+	 }];
+	
+	
+	
+	//获取键盘信息
+	[_keyboardUtil setPrintKeyboardInfoBlock:^(ZYKeyboardUtil *keyboardUtil, KeyboardInfo *keyboardInfo) {
+		//弹出前是y是－200，弹出后是64.textField 被隐藏掉了，应该再加上setAnimateWhenKeyboardDisappearBlock 重置Y坐标。
+		NSLog(@"\n\n拿到键盘信息 和 ZYKeyboardUtil对象,%f,%f",weakSelf.view.frame.origin.x,weakSelf.view.frame.origin.y);
+	}];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -179,8 +247,11 @@
 }
 
 - (IBAction)gotoBarcodeView:(id)sender {
-	scanViewController * scan = [scanViewController new];
-	[self.navigationController pushViewController:scan animated:YES];
+	
+	BarCodeViewController *barcode = [BarCodeViewController new];
+	[self.navigationController pushViewController:barcode animated:YES];
+//	scanViewController * scan = [scanViewController new];
+//	[self.navigationController pushViewController:scan animated:YES];
 }
 
 - (IBAction)gotoNewsView:(id)sender {
@@ -190,7 +261,21 @@
 }
 
 
+//解决虚拟键盘挡住UITextField的方法
 
+
+#pragma mark delegate
+//点击编辑区以外的地方
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+	[self.hideKeyboardTest resignFirstResponder];
+}
+
+//实现轻触 Return 关闭键盘
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+	[self.hideKeyboardTest resignFirstResponder];
+
+	return YES;
+}
 /*
 #pragma mark - Navigation
 
