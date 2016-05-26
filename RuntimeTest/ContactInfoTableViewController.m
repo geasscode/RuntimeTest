@@ -47,6 +47,8 @@
 	
 	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navBar_bg"] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
 	
+
+	
 	[self.tableView setSectionIndexBackgroundColor:[UIColor clearColor]];
 	[self.tableView setSectionIndexColor:[UIColor darkGrayColor]];
 	[self.tableView setBackgroundColor:[UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:1]];
@@ -91,12 +93,34 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)night {
+	self.dk_manager.themeVersion = DKThemeVersionNight;
+}
 
 - (void)configNav{
+	
+	
+	UIBarButtonItem *nightItem = [[UIBarButtonItem alloc] initWithTitle:@"Night" style:UIBarButtonItemStylePlain target:self action:@selector(night)];
+	
+	nightItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
+	
 	UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
 	[btn setFrame:CGRectMake(0.0, 0.0, 30.0, 30.0)];
 	[btn setBackgroundImage:[UIImage imageNamed:@"contacts_add_friend"] forState:UIControlStateNormal];
-	[self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc]initWithCustomView:btn]];
+//	[self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc]initWithCustomView:btn],nightItem];
+	
+		self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc]initWithCustomView:btn],nightItem];
+
+	
+	
+	
+	//	redItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
+	
+	
+	//	    self.tableView.dk_backgroundColorPicker =  DKColorPickerWithKey(BG);
+	self.tableView.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+	self.tableView.dk_separatorColorPicker = DKColorPickerWithKey(SEP);
+	self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithKey(BAR);
 }
 
 #pragma mark - setUpView
@@ -205,6 +229,8 @@
 		[cell.nameLabel setText:model.name];
 	}
 	
+	cell.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+
 	return cell;
 }
 
