@@ -49,6 +49,10 @@
 		F74676CE1CB6415C0001D3A5 /* NSObject+PropertyAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676CD1CB6415C0001D3A5 /* NSObject+PropertyAdd.m */; };
 		F74676D21CB647490001D3A5 /* NSMutableArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676D11CB647490001D3A5 /* NSMutableArray+Extension.m */; };
 		F74676D71CB7B38F0001D3A5 /* RunLoopTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676D61CB7B38F0001D3A5 /* RunLoopTest.m */; };
+		F75244211CF6D8F7001C88EE /* AppConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = F75244191CF6D8F7001C88EE /* AppConfigure.m */; };
+		F75244221CF6D8F7001C88EE /* BaseFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = F752441B1CF6D8F7001C88EE /* BaseFunction.m */; };
+		F75244241CF6D8F7001C88EE /* TopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F75244201CF6D8F7001C88EE /* TopWindow.m */; };
+		F75244271CF6E1B7001C88EE /* SettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F75244261CF6E1B7001C88EE /* SettingTableViewController.m */; };
 		F7526FF01C9A940A0012FE76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FEF1C9A940A0012FE76 /* main.m */; };
 		F7526FF31C9A940A0012FE76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FF21C9A940A0012FE76 /* AppDelegate.m */; };
 		F7526FF61C9A940A0012FE76 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7526FF51C9A940A0012FE76 /* ViewController.m */; };
@@ -227,6 +231,10 @@
 		F7CA0D891CEAC0B9009D1C51 /* LBToAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CA0D881CEAC0B9009D1C51 /* LBToAppStore.m */; };
 		F7CA0D8E1CEAF73A009D1C51 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CA0D8B1CEAF73A009D1C51 /* NSData+AES.m */; };
 		F7CA0D8F1CEAF73A009D1C51 /* NSString+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CA0D8D1CEAF73A009D1C51 /* NSString+AES.m */; };
+		F7CBB40D1CF6F9BB00662347 /* DKNight.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB40C1CF6F9BB00662347 /* DKNight.m */; };
+		F7CBB4101CF6FA2100662347 /* SuccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB40F1CF6FA2100662347 /* SuccViewController.m */; };
+		F7CBB4131CF6FAAF00662347 /* DKNightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4121CF6FAAF00662347 /* DKNightTableViewCell.m */; };
+		F7CBB4161CF6FB3C00662347 /* PresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4151CF6FB3C00662347 /* PresentingViewController.m */; };
 		F7DB40731C9FEAF900E164C7 /* loadXIBFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40711C9FEAF900E164C7 /* loadXIBFile.m */; };
 		F7DB40741C9FEAF900E164C7 /* loadXIBFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */; };
 		F7DB40771CA0E9F300E164C7 /* CYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40761CA0E9F300E164C7 /* CYAlertView.m */; };
@@ -370,6 +378,15 @@
 		F74676D11CB647490001D3A5 /* NSMutableArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Extension.m"; sourceTree = "<group>"; };
 		F74676D51CB7B38F0001D3A5 /* RunLoopTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunLoopTest.h; sourceTree = "<group>"; };
 		F74676D61CB7B38F0001D3A5 /* RunLoopTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopTest.m; sourceTree = "<group>"; };
+		F75244181CF6D8F7001C88EE /* AppConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigure.h; sourceTree = "<group>"; };
+		F75244191CF6D8F7001C88EE /* AppConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfigure.m; sourceTree = "<group>"; };
+		F752441A1CF6D8F7001C88EE /* BaseFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseFunction.h; sourceTree = "<group>"; };
+		F752441B1CF6D8F7001C88EE /* BaseFunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseFunction.m; sourceTree = "<group>"; };
+		F752441C1CF6D8F7001C88EE /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		F752441F1CF6D8F7001C88EE /* TopWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopWindow.h; sourceTree = "<group>"; };
+		F75244201CF6D8F7001C88EE /* TopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopWindow.m; sourceTree = "<group>"; };
+		F75244251CF6E1B7001C88EE /* SettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewController.h; sourceTree = "<group>"; };
+		F75244261CF6E1B7001C88EE /* SettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewController.m; sourceTree = "<group>"; };
 		F7526FEB1C9A940A0012FE76 /* RuntimeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7526FEF1C9A940A0012FE76 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F7526FF11C9A940A0012FE76 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -685,6 +702,14 @@
 		F7CA0D8B1CEAF73A009D1C51 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
 		F7CA0D8C1CEAF73A009D1C51 /* NSString+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+AES.h"; sourceTree = "<group>"; };
 		F7CA0D8D1CEAF73A009D1C51 /* NSString+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+AES.m"; sourceTree = "<group>"; };
+		F7CBB40B1CF6F9BB00662347 /* DKNight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNight.h; sourceTree = "<group>"; };
+		F7CBB40C1CF6F9BB00662347 /* DKNight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNight.m; sourceTree = "<group>"; };
+		F7CBB40E1CF6FA2100662347 /* SuccViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuccViewController.h; sourceTree = "<group>"; };
+		F7CBB40F1CF6FA2100662347 /* SuccViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuccViewController.m; sourceTree = "<group>"; };
+		F7CBB4111CF6FAAF00662347 /* DKNightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKNightTableViewCell.h; sourceTree = "<group>"; };
+		F7CBB4121CF6FAAF00662347 /* DKNightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightTableViewCell.m; sourceTree = "<group>"; };
+		F7CBB4141CF6FB3C00662347 /* PresentingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentingViewController.h; sourceTree = "<group>"; };
+		F7CBB4151CF6FB3C00662347 /* PresentingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingViewController.m; sourceTree = "<group>"; };
 		F7DB40701C9FEAF900E164C7 /* loadXIBFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadXIBFile.h; sourceTree = "<group>"; };
 		F7DB40711C9FEAF900E164C7 /* loadXIBFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadXIBFile.m; sourceTree = "<group>"; };
 		F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loadXIBFile.xib; sourceTree = "<group>"; };
@@ -956,6 +981,20 @@
 			path = DESExtension;
 			sourceTree = "<group>";
 		};
+		F75244171CF6D8F7001C88EE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F75244181CF6D8F7001C88EE /* AppConfigure.h */,
+				F75244191CF6D8F7001C88EE /* AppConfigure.m */,
+				F752441A1CF6D8F7001C88EE /* BaseFunction.h */,
+				F752441B1CF6D8F7001C88EE /* BaseFunction.m */,
+				F752441C1CF6D8F7001C88EE /* Constants.h */,
+				F752441F1CF6D8F7001C88EE /* TopWindow.h */,
+				F75244201CF6D8F7001C88EE /* TopWindow.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		F7526FE21C9A940A0012FE76 = {
 			isa = PBXGroup;
 			children = (
@@ -984,6 +1023,7 @@
 		F7526FED1C9A940A0012FE76 /* RuntimeTest */ = {
 			isa = PBXGroup;
 			children = (
+				F7CBB40A1CF6F97700662347 /* TestFile */,
 				F707FEB11CE08555008E4F7C /* Assets.xcassets */,
 				F7F7731E1CD997E70060861B /* Manager */,
 				F7BCC5D61CCF6B4600704878 /* ViewController */,
@@ -1120,6 +1160,7 @@
 		F7B1EAB21CC633E000307F41 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				F75244171CF6D8F7001C88EE /* Utilities */,
 				F76CB7E81CE423A100D8474F /* Helpers */,
 				F7BCC5C51CCF649100704878 /* NetWork(网络) */,
 				F7BCC53C1CCDBD1000704878 /* Sources */,
@@ -1621,6 +1662,8 @@
 				F76CB7F31CE47DF300D8474F /* BaseHomeViewController.m */,
 				F76CB7FB1CE4803C00D8474F /* ContentTableViewController.h */,
 				F76CB7FC1CE4803C00D8474F /* ContentTableViewController.m */,
+				F75244251CF6E1B7001C88EE /* SettingTableViewController.h */,
+				F75244261CF6E1B7001C88EE /* SettingTableViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1640,6 +1683,21 @@
 				F76CB8071CE4891700D8474F /* NewsTableViewCell.xib */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		F7CBB40A1CF6F97700662347 /* TestFile */ = {
+			isa = PBXGroup;
+			children = (
+				F7CBB40B1CF6F9BB00662347 /* DKNight.h */,
+				F7CBB40C1CF6F9BB00662347 /* DKNight.m */,
+				F7CBB40E1CF6FA2100662347 /* SuccViewController.h */,
+				F7CBB40F1CF6FA2100662347 /* SuccViewController.m */,
+				F7CBB4111CF6FAAF00662347 /* DKNightTableViewCell.h */,
+				F7CBB4121CF6FAAF00662347 /* DKNightTableViewCell.m */,
+				F7CBB4141CF6FB3C00662347 /* PresentingViewController.h */,
+				F7CBB4151CF6FB3C00662347 /* PresentingViewController.m */,
+			);
+			path = TestFile;
 			sourceTree = "<group>";
 		};
 		F7F773161CD8AFD00060861B /* iCarousel */ = {
@@ -1990,11 +2048,13 @@
 				F7BCC55B1CCDBD1000704878 /* TCHelper.m in Sources */,
 				F74676B11CABC7B50001D3A5 /* MJBag.m in Sources */,
 				F76CB8061CE488FB00D8474F /* NewsTableViewCell.m in Sources */,
+				F7CBB4101CF6FA2100662347 /* SuccViewController.m in Sources */,
 				F74676B21CABC7B50001D3A5 /* MJBaseObject.m in Sources */,
 				F7BCC58E1CCDF64B00704878 /* MyUser.m in Sources */,
 				F7BAC7001CC786A6000D9795 /* Tool.m in Sources */,
 				F7BB42F71CF2D6F6006F5EE3 /* UIImage+mask.m in Sources */,
 				F707FE941CDC7F89008E4F7C /* JMCollectionItem.m in Sources */,
+				F75244271CF6E1B7001C88EE /* SettingTableViewController.m in Sources */,
 				F74676D21CB647490001D3A5 /* NSMutableArray+Extension.m in Sources */,
 				F7275CFB1CD0C42F002F0F68 /* WeeklyItemHeaderView.m in Sources */,
 				F7BCC5D51CCF672800704878 /* HomeModel.m in Sources */,
@@ -2002,6 +2062,7 @@
 				F74676B01CABC7B50001D3A5 /* MJAd.m in Sources */,
 				F7BCC5551CCDBD1000704878 /* README.md in Sources */,
 				F76CB7DB1CE33E6600D8474F /* FeThreeDotGlow.m in Sources */,
+				F7CBB40D1CF6F9BB00662347 /* DKNight.m in Sources */,
 				F76CB7EB1CE423C100D8474F /* DBHelper.m in Sources */,
 				F76CB7F41CE47DF300D8474F /* BaseHomeViewController.m in Sources */,
 				F76CB8031CE4857C00D8474F /* ArticleTool.m in Sources */,
@@ -2043,6 +2104,7 @@
 				F74676CB1CB63A320001D3A5 /* UIViewController+swizzling.m in Sources */,
 				F7BCC6181CCF6F2A00704878 /* HomeDetailViewController.m in Sources */,
 				F7BB42E71CEEECE2006F5EE3 /* README.md in Sources */,
+				F7CBB4131CF6FAAF00662347 /* DKNightTableViewCell.m in Sources */,
 				F76CB7F11CE47A8C00D8474F /* TitleScrollView.m in Sources */,
 				F707FE971CE034C9008E4F7C /* DESTabBarController.m in Sources */,
 				F7BCC5621CCDBD7900704878 /* TableViewDelegate.m in Sources */,
@@ -2056,8 +2118,10 @@
 				F7275D051CD1A801002F0F68 /* WeeklyItemStageModel.m in Sources */,
 				F7BCC5CE1CCF649100704878 /* NetTool.m in Sources */,
 				F7BCC5E31CCF6D0D00704878 /* HomeTableViewCell.m in Sources */,
+				F75244241CF6D8F7001C88EE /* TopWindow.m in Sources */,
 				F74676B71CABC7B50001D3A5 /* MJStatusResult.m in Sources */,
 				F7B412901C9BD96C00E45E22 /* AFAppDotNetAPIClient.m in Sources */,
+				F7CBB4161CF6FB3C00662347 /* PresentingViewController.m in Sources */,
 				F7B1EAB01CC618CE00307F41 /* FoundViewController.m in Sources */,
 				F7F7731D1CD8B55F0060861B /* FocusImageScrollView.m in Sources */,
 				F76CB7FD1CE4803C00D8474F /* ContentTableViewController.m in Sources */,
@@ -2068,6 +2132,7 @@
 				F7BCC5821CCDF33200704878 /* PhotoCell.m in Sources */,
 				F707FE8E1CDC725B008E4F7C /* DESShareView.m in Sources */,
 				F7CA0D8F1CEAF73A009D1C51 /* NSString+AES.m in Sources */,
+				F75244221CF6D8F7001C88EE /* BaseFunction.m in Sources */,
 				F7B412971C9BDA3900E45E22 /* GlobalTimelineViewController.m in Sources */,
 				F707FE911CDC7425008E4F7C /* UIControl+Blocks.m in Sources */,
 				F7F772F21CD33BCD0060861B /* SigmaTableViewController.m in Sources */,
@@ -2097,6 +2162,7 @@
 				F7B4128E1C9BD96C00E45E22 /* Post.m in Sources */,
 				F76CB8001CE480F600D8474F /* ArticleModel.m in Sources */,
 				F7B1EAAD1CC611B300307F41 /* NavigationItem.m in Sources */,
+				F75244211CF6D8F7001C88EE /* AppConfigure.m in Sources */,
 				F7BAC7031CC78E9C000D9795 /* UIButton+Hook.m in Sources */,
 				F7BCC5D21CCF66AE00704878 /* BaseModel.m in Sources */,
 				F7B412981C9BDA3900E45E22 /* PostTableViewCell.m in Sources */,

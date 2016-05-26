@@ -44,6 +44,9 @@
 #import "WeiboSDK.h"
 //新浪微博SDK需要在项目Build Settings中的Other Linker Flags添加"-ObjC"
 
+#import "Constants.h"
+#import "BaseFunction.h"
+#import <DKNightVersion/DKNightVersion.h>
 
 
 
@@ -129,6 +132,9 @@
 #define kAddressCellColor RGB(215, 228, 225)          // 收货地址选中颜色
 
 
+
+
+
 #define kColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 //弱引用
@@ -139,6 +145,33 @@
 #define NavColor [UIColor colorWithRed:22.0/255.0 green:147.0/255.0 blue:114.0/255.0 alpha:1.0]
 
 #endif /* Define_h */
+
+
+#define BoldSystemFont(size)  [UIFont boldSystemFontOfSize:size]
+#define systemFont(size)      [UIFont systemFontOfSize:size]
+#define isIOS7                [[UIDevice currentDevice].systemVersion doubleValue]>=7.0?YES:NO
+#define isGreatThanIOS9       [[UIDevice currentDevice].systemVersion doubleValue]>=9.0
+#define SYSTEM_VERSION        [[[UIDevice currentDevice] systemVersion] floatValue]
+#define STATUSBAR_HEIGHT      [[UIApplication sharedApplication] statusBarFrame].size.height
+#define NAVBAR_HEIGHT         (44.f + ((SYSTEM_VERSION >= 7) ? STATUSBAR_HEIGHT : 0))
+
+#define FULL_WIDTH            SCREEN_WIDTH
+#define FULL_HEIGHT           (SCREEN_HEIGHT - ((SYSTEM_VERSION >= 7) ? 0 : STATUSBAR_HEIGHT))
+#define CONTENT_HEIGHT        (FULL_HEIGHT - NAVBAR_HEIGHT)
+
+// 获取 View 的 frame 的属性
+#define GetViewWidth(view)    view.frame.size.width
+#define GetViewHeight(view)   view.frame.size.height
+#define GetViewX(view)        view.frame.origin.x
+#define GetViewY(view)        view.frame.origin.y
+
+// common
+#define UserDefaults          [NSUserDefaults standardUserDefaults]
+
+#define IsStringEmpty(string) (!string || [@"" isEqualToString:string])
+#define IsStringNotEmpty(string) (string && ![@"" isEqualToString:string])
+
+
 
 //全局打印
 #ifdef DEBUG

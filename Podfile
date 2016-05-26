@@ -18,7 +18,7 @@ pod 'ionicons'
 pod 'SVProgressHUD'
 pod 'MWPhotoBrowser'
 pod 'ZYKeyboardUtil', '~> 0.6.1'
-
+pod 'DKNightVersion'
 pod 'SMSSDK'
 ## 主模块(必须)
 #pod 'ShareSDK3'
