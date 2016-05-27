@@ -11,6 +11,8 @@
 #import "ContactModel.h"
 #import "ContactDataHelper.h"
 
+#define DawnCellBGColor [UIColor colorWithRed:249 / 255.0 green:249 / 255.0 blue:249 / 255.0 alpha:1] // #F9F9F9
+
 @interface ContactInfoTableViewController ()<UISearchBarDelegate,UISearchDisplayDelegate>
 {
 	NSArray * _rowArr;
@@ -45,7 +47,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navBar_bg"] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
+//	[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navBar_bg"] forBarPosition:UIBarPositionAny barMetrics:UIBarMetricsDefault];
 	
 
 	
@@ -61,9 +63,9 @@
 
 	//cell无数据时，不显示间隔线
 	//		_tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
-	
-	UIView *v = [[UIView alloc] initWithFrame:CGRectZero];
-	[self.tableView setTableFooterView:v];
+	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+
+	[self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
 
 	
 	self.dataArr=[NSMutableArray array];
@@ -93,6 +95,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
+- (void)normal {
+	self.dk_manager.themeVersion = DKThemeVersionNormal;
+}
+
 - (void)night {
 	self.dk_manager.themeVersion = DKThemeVersionNight;
 }
@@ -100,7 +107,10 @@
 - (void)configNav{
 	
 	
-	UIBarButtonItem *nightItem = [[UIBarButtonItem alloc] initWithTitle:@"Night" style:UIBarButtonItemStylePlain target:self action:@selector(night)];
+	UIBarButtonItem *nightItem = [[UIBarButtonItem alloc] initWithTitle:@"晚上" style:UIBarButtonItemStylePlain target:self action:@selector(night)];
+	
+	
+	UIBarButtonItem *normalItem = [[UIBarButtonItem alloc] initWithTitle:@"白天" style:UIBarButtonItemStylePlain target:self action:@selector(normal)];
 	
 	nightItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
 	
@@ -109,7 +119,7 @@
 	[btn setBackgroundImage:[UIImage imageNamed:@"contacts_add_friend"] forState:UIControlStateNormal];
 //	[self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc]initWithCustomView:btn],nightItem];
 	
-		self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc]initWithCustomView:btn],nightItem];
+		self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc]initWithCustomView:btn],normalItem,nightItem];
 
 	
 	
@@ -181,17 +191,34 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 	return 50.0;
 }
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+	
+	UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, 35)];
+	headerView.backgroundColor = [UIColor colorWithRed:235 / 255.0 green:235 / 255.0 blue:235 / 255.0 alpha:1];
+	UILabel *headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 0, CGRectGetWidth(headerView.frame) - 40, CGRectGetHeight(headerView.frame))];
+	headerLabel.text = _sectionArr[section+1];
+	headerLabel.textColor = [UIColor colorWithRed:85 / 255.0 green:85 / 255.0 blue:85 / 255.0 alpha:1];
+	headerLabel.dk_textColorPicker = DKColorPickerWithKey(TEXT);
+
+//	headerLabel.nightTextColor = NightCellHeaderTextColor;TINT
+	headerLabel.font = [UIFont fontWithName:@"HelveticaNeue-Medium" size:17];
+	[headerView addSubview:headerLabel];
+    headerView.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+
+
+//   headerView.nightBackgroundColor = NightBGViewColor;
+	return headerView;
 	//viewforHeader
-	id label = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"headerView"];
-	if (!label) {
-		label = [[UILabel alloc] init];
-		[label setFont:[UIFont systemFontOfSize:14.5f]];
-		[label setTextColor:[UIColor grayColor]];
-		[label setBackgroundColor:[UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:1]];
-	}
-	[label setText:[NSString stringWithFormat:@"  %@",_sectionArr[section+1]]];
-	return label;
+//	id label = [tableView dequeueReusableHeaderFooterViewWithIdentifier:@"headerView"];
+//	if (!label) {
+//		label = [[UILabel alloc] init];
+//		[label setFont:[UIFont systemFontOfSize:14.5f]];
+//		[label setTextColor:[UIColor grayColor]];
+//		[label setBackgroundColor:[UIColor colorWithRed:240.0/255 green:240.0/255 blue:240.0/255 alpha:1]];
+//	}
+//	[label setText:[NSString stringWithFormat:@"  %@",_sectionArr[section+1]]];
+//	return label;
 }
 //A-Z index
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
@@ -229,8 +256,10 @@
 		[cell.nameLabel setText:model.name];
 	}
 	
-	cell.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+	cell.nameLabel.textColor = [UIColor colorWithRed:128 / 255.0 green:127 / 255.0 blue:125 / 255.0 alpha:1];
 
+	cell.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+	
 	return cell;
 }
 

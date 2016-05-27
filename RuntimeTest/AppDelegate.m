@@ -14,6 +14,7 @@
 #import "AFNetworkActivityIndicatorManager.h"
 #import "DESTabBarController.h"
 #import "APOpenAPI.h"
+#import "LaunchAnimationViewController.h"
 
 #define appkey @"12f1847875e26"
 #define app_secrect @"69471e44e59a7d4bcf068d7b7329d9c8"
@@ -231,8 +232,12 @@
 	
 	self.window = [[UIWindow alloc] init];
 	self.window.frame = [UIScreen mainScreen].bounds;
-	self.window.rootViewController = [[DESTabBarController alloc] init];
-	[self.window makeKeyAndVisible];
+	
+	
+	LaunchAnimationViewController *launchVC = [[LaunchAnimationViewController alloc] init];
+	self.window.rootViewController = launchVC;
+//	self.window.rootViewController = [[DESTabBarController alloc] init];
+//	[self.window makeKeyAndVisible];
 	
 	
 	// 获取时间间隔

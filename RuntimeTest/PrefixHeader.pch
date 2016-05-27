@@ -180,6 +180,22 @@
 #define DMLog(...) do { } while (0)
 #endif
 
+
+//更加完善点的全局打印
+
+//__VA_ARGS__是一个可变参数的宏，这个可变参数的宏是新的C99规范中新增的，目前似乎只有gcc支（VC6.0的编译器不支持）。宏前面加上##的作用在于，当可变参数的个数为0时，这里的##起到把前面多余的","去掉的作用,否则会编译出错, 你可以试试。
+//__FILE__宏在预编译时会替换成当前的源文件名
+//__LINE__宏在预编译时会替换成当前的行号
+//__FUNCTION__宏在预编译时会替换成当前的函数名称
+
+#ifdef DEBUG
+# define DLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+# define DLog(...);
+#endif
+
+
+
 #pragma clang diagnostic ignored "-W#warnings"
 
 #ifndef weakifyObject

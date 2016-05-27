@@ -235,6 +235,10 @@
 		F7CBB4101CF6FA2100662347 /* SuccViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB40F1CF6FA2100662347 /* SuccViewController.m */; };
 		F7CBB4131CF6FAAF00662347 /* DKNightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4121CF6FAAF00662347 /* DKNightTableViewCell.m */; };
 		F7CBB4161CF6FB3C00662347 /* PresentingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4151CF6FB3C00662347 /* PresentingViewController.m */; };
+		F7CBB41A1CF84BC000662347 /* iPhone-5-Crop.gif in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB4171CF84BC000662347 /* iPhone-5-Crop.gif */; };
+		F7CBB41B1CF84BC000662347 /* iPhone-6-Crop.gif in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB4181CF84BC000662347 /* iPhone-6-Crop.gif */; };
+		F7CBB41C1CF84BC000662347 /* Loading-225px-W.gif in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB4191CF84BC000662347 /* Loading-225px-W.gif */; };
+		F7CBB41F1CF84DB300662347 /* LaunchAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB41E1CF84DB300662347 /* LaunchAnimationViewController.m */; };
 		F7DB40731C9FEAF900E164C7 /* loadXIBFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40711C9FEAF900E164C7 /* loadXIBFile.m */; };
 		F7DB40741C9FEAF900E164C7 /* loadXIBFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */; };
 		F7DB40771CA0E9F300E164C7 /* CYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40761CA0E9F300E164C7 /* CYAlertView.m */; };
@@ -710,6 +714,11 @@
 		F7CBB4121CF6FAAF00662347 /* DKNightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKNightTableViewCell.m; sourceTree = "<group>"; };
 		F7CBB4141CF6FB3C00662347 /* PresentingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresentingViewController.h; sourceTree = "<group>"; };
 		F7CBB4151CF6FB3C00662347 /* PresentingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresentingViewController.m; sourceTree = "<group>"; };
+		F7CBB4171CF84BC000662347 /* iPhone-5-Crop.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "iPhone-5-Crop.gif"; sourceTree = "<group>"; };
+		F7CBB4181CF84BC000662347 /* iPhone-6-Crop.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "iPhone-6-Crop.gif"; sourceTree = "<group>"; };
+		F7CBB4191CF84BC000662347 /* Loading-225px-W.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Loading-225px-W.gif"; sourceTree = "<group>"; };
+		F7CBB41D1CF84DB300662347 /* LaunchAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAnimationViewController.h; sourceTree = "<group>"; };
+		F7CBB41E1CF84DB300662347 /* LaunchAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAnimationViewController.m; sourceTree = "<group>"; };
 		F7DB40701C9FEAF900E164C7 /* loadXIBFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadXIBFile.h; sourceTree = "<group>"; };
 		F7DB40711C9FEAF900E164C7 /* loadXIBFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadXIBFile.m; sourceTree = "<group>"; };
 		F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loadXIBFile.xib; sourceTree = "<group>"; };
@@ -1075,6 +1084,9 @@
 		F7526FEE1C9A940A0012FE76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F7CBB4171CF84BC000662347 /* iPhone-5-Crop.gif */,
+				F7CBB4181CF84BC000662347 /* iPhone-6-Crop.gif */,
+				F7CBB4191CF84BC000662347 /* Loading-225px-W.gif */,
 				F7BB42B31CEDAA0E006F5EE3 /* InfoPlist.strings */,
 				F7BB42B11CEDA8E2006F5EE3 /* country.plist */,
 				F707FE861CDA0113008E4F7C /* loveway.ttf */,
@@ -1303,6 +1315,8 @@
 				F7F772F41CD33ECE0060861B /* BaseTableViewController.m */,
 				F707FE951CE034C9008E4F7C /* DESTabBarController.h */,
 				F707FE961CE034C9008E4F7C /* DESTabBarController.m */,
+				F7CBB41D1CF84DB300662347 /* LaunchAnimationViewController.h */,
+				F7CBB41E1CF84DB300662347 /* LaunchAnimationViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1878,6 +1892,7 @@
 				F7F773131CD36C6F0060861B /* article_image.png in Resources */,
 				F707FE871CDA0113008E4F7C /* loveway.ttf in Resources */,
 				F7BAC7541CC8D40F000D9795 /* 2.png in Resources */,
+				F7CBB41A1CF84BC000662347 /* iPhone-5-Crop.gif in Resources */,
 				F7BAC74D1CC8D40F000D9795 /* 12.png in Resources */,
 				F7F7730F1CD36B0D0060861B /* article_detail.html in Resources */,
 				F7BCC5761CCDF0D500704878 /* PhotosViewController.xib in Resources */,
@@ -1910,6 +1925,8 @@
 				F7526FF91C9A940A0012FE76 /* Main.storyboard in Resources */,
 				F7BCC5AC1CCE058A00704878 /* photodata.bin in Resources */,
 				F7BCC5B01CCE17A000704878 /* photodata.bin in Resources */,
+				F7CBB41B1CF84BC000662347 /* iPhone-6-Crop.gif in Resources */,
+				F7CBB41C1CF84BC000662347 /* Loading-225px-W.gif in Resources */,
 				F7BAC7501CC8D40F000D9795 /* 15.png in Resources */,
 				F7BAC7531CC8D40F000D9795 /* 18.png in Resources */,
 				F7BAC7461CC8D40F000D9795 /* contacts_add_friend@3x.png in Resources */,
@@ -2082,6 +2099,7 @@
 				F7BCC55F1CCDBD3700704878 /* TableViewDataSource.m in Sources */,
 				F7BCC5A71CCDFCB700704878 /* DetailsViewController.m in Sources */,
 				F7BCC5791CCDF1A100704878 /* ArrayDataSource.m in Sources */,
+				F7CBB41F1CF84DB300662347 /* LaunchAnimationViewController.m in Sources */,
 				F7BAC7421CC8D40F000D9795 /* JSONModel+networking.m in Sources */,
 				F74676C51CB6077C0001D3A5 /* Person.m in Sources */,
 				F7275CF71CD0C011002F0F68 /* WeeklyTableViewController.m in Sources */,
