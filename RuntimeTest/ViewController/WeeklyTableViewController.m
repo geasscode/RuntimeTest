@@ -16,6 +16,8 @@
 #import "HomeViewModel.h"
 #import "UIImageView+AFNetworking.h"
 #import "FeThreeDotGlow.h"
+#import "ImageModel.h"
+#import "GifImage.h"
 
 @interface WeeklyTableViewController ()<HeaderViewDelegate,iCarouselDataSource,iCarouselDelegate>
 @property(nonatomic,strong) NSArray * weeklyItemArray;
@@ -47,15 +49,27 @@ UIPageControl *_pageControl;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	
+
+	
 	self.edgesForExtendedLayout = UIRectEdgeBottom;
 	
-		self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+	//之前折腾了很久找动画一直没关闭找原因，原来关闭的是footer。
+	self.tableView.mj_header = [GifImage headerWithRefreshingBlock:^{
+		[self getData];
+        [self.tableView.mj_header endRefreshing];
+	}];
 	
-	
-			[self getData];
-			[self.tableView.mj_header endRefreshing];
-	
-		}];
+	[self.tableView.mj_header beginRefreshing];
+
+//		self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//	
+//	
+//			[self getData];
+//			[self.tableView.mj_header endRefreshing];
+//	
+//		}];
 	
 		self.tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingBlock:^{
 	
@@ -63,7 +77,7 @@ UIPageControl *_pageControl;
 			[self.tableView.mj_footer endRefreshing];
 			
 		}];
-
+	
 	[self setupNav];
 	[self getData];
 	[self setupUI];
@@ -104,8 +118,11 @@ UIPageControl *_pageControl;
 		
 //		[MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
 
-		
+//		[self.tableView.mj_header endRefreshing];
+
 	}];
+	
+
 }
 
 

@@ -160,6 +160,9 @@
 			
 		}];
 	}
+	
+		[self.tableView.mj_header endRefreshing];
+
 }
 
 

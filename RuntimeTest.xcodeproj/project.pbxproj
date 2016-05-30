@@ -239,6 +239,12 @@
 		F7CBB41B1CF84BC000662347 /* iPhone-6-Crop.gif in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB4181CF84BC000662347 /* iPhone-6-Crop.gif */; };
 		F7CBB41C1CF84BC000662347 /* Loading-225px-W.gif in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB4191CF84BC000662347 /* Loading-225px-W.gif */; };
 		F7CBB41F1CF84DB300662347 /* LaunchAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB41E1CF84DB300662347 /* LaunchAnimationViewController.m */; };
+		F7CBB4221CFBE9DC00662347 /* ChooseCityTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4211CFBE9DC00662347 /* ChooseCityTableViewController.m */; };
+		F7CBB4251CFBEAD500662347 /* ChooseCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4241CFBEAD500662347 /* ChooseCityModel.m */; };
+		F7CBB4271CFBEEBB00662347 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB4261CFBEEBB00662347 /* city.plist */; };
+		F7CBB42B1CFC1CE200662347 /* icon_listheader_animation_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB4291CFC1CE200662347 /* icon_listheader_animation_1@2x.png */; };
+		F7CBB42C1CFC1CE200662347 /* icon_listheader_animation_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB42A1CFC1CE200662347 /* icon_listheader_animation_2@2x.png */; };
+		F7CBB4301CFC254000662347 /* GifImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB42F1CFC254000662347 /* GifImage.m */; };
 		F7DB40731C9FEAF900E164C7 /* loadXIBFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40711C9FEAF900E164C7 /* loadXIBFile.m */; };
 		F7DB40741C9FEAF900E164C7 /* loadXIBFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */; };
 		F7DB40771CA0E9F300E164C7 /* CYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40761CA0E9F300E164C7 /* CYAlertView.m */; };
@@ -719,6 +725,15 @@
 		F7CBB4191CF84BC000662347 /* Loading-225px-W.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Loading-225px-W.gif"; sourceTree = "<group>"; };
 		F7CBB41D1CF84DB300662347 /* LaunchAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAnimationViewController.h; sourceTree = "<group>"; };
 		F7CBB41E1CF84DB300662347 /* LaunchAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAnimationViewController.m; sourceTree = "<group>"; };
+		F7CBB4201CFBE9DC00662347 /* ChooseCityTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseCityTableViewController.h; sourceTree = "<group>"; };
+		F7CBB4211CFBE9DC00662347 /* ChooseCityTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseCityTableViewController.m; sourceTree = "<group>"; };
+		F7CBB4231CFBEAD500662347 /* ChooseCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseCityModel.h; sourceTree = "<group>"; };
+		F7CBB4241CFBEAD500662347 /* ChooseCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseCityModel.m; sourceTree = "<group>"; };
+		F7CBB4261CFBEEBB00662347 /* city.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = city.plist; sourceTree = "<group>"; };
+		F7CBB4291CFC1CE200662347 /* icon_listheader_animation_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_listheader_animation_1@2x.png"; sourceTree = "<group>"; };
+		F7CBB42A1CFC1CE200662347 /* icon_listheader_animation_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_listheader_animation_2@2x.png"; sourceTree = "<group>"; };
+		F7CBB42E1CFC254000662347 /* GifImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifImage.h; sourceTree = "<group>"; };
+		F7CBB42F1CFC254000662347 /* GifImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifImage.m; sourceTree = "<group>"; };
 		F7DB40701C9FEAF900E164C7 /* loadXIBFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadXIBFile.h; sourceTree = "<group>"; };
 		F7DB40711C9FEAF900E164C7 /* loadXIBFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadXIBFile.m; sourceTree = "<group>"; };
 		F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loadXIBFile.xib; sourceTree = "<group>"; };
@@ -1084,6 +1099,7 @@
 		F7526FEE1C9A940A0012FE76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F7CBB4261CFBEEBB00662347 /* city.plist */,
 				F7CBB4171CF84BC000662347 /* iPhone-5-Crop.gif */,
 				F7CBB4181CF84BC000662347 /* iPhone-6-Crop.gif */,
 				F7CBB4191CF84BC000662347 /* Loading-225px-W.gif */,
@@ -1200,6 +1216,7 @@
 		F7B412851C9BD96C00E45E22 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F7CBB42D1CFC251100662347 /* GifAnimation */,
 				F7F7731A1CD8B55F0060861B /* FocusImage */,
 				F7BCC5B11CCE20FD00704878 /* BarCode */,
 				F7BAC7041CC88441000D9795 /* GWWPICLabel.h */,
@@ -1324,6 +1341,7 @@
 		F7B412941C9BDA3900E45E22 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F7CBB4281CFC1CE200662347 /* Refresh */,
 				F7BB42F81CF2D7EF006F5EE3 /* Media */,
 				F707FE8B1CDC722A008E4F7C /* Share */,
 				F7275CF81CD0C3FD002F0F68 /* Weekly */,
@@ -1710,8 +1728,30 @@
 				F7CBB4121CF6FAAF00662347 /* DKNightTableViewCell.m */,
 				F7CBB4141CF6FB3C00662347 /* PresentingViewController.h */,
 				F7CBB4151CF6FB3C00662347 /* PresentingViewController.m */,
+				F7CBB4201CFBE9DC00662347 /* ChooseCityTableViewController.h */,
+				F7CBB4211CFBE9DC00662347 /* ChooseCityTableViewController.m */,
+				F7CBB4231CFBEAD500662347 /* ChooseCityModel.h */,
+				F7CBB4241CFBEAD500662347 /* ChooseCityModel.m */,
 			);
 			path = TestFile;
+			sourceTree = "<group>";
+		};
+		F7CBB4281CFC1CE200662347 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				F7CBB4291CFC1CE200662347 /* icon_listheader_animation_1@2x.png */,
+				F7CBB42A1CFC1CE200662347 /* icon_listheader_animation_2@2x.png */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
+		F7CBB42D1CFC251100662347 /* GifAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F7CBB42E1CFC254000662347 /* GifImage.h */,
+				F7CBB42F1CFC254000662347 /* GifImage.m */,
+			);
+			path = GifAnimation;
 			sourceTree = "<group>";
 		};
 		F7F773161CD8AFD00060861B /* iCarousel */ = {
@@ -1908,6 +1948,7 @@
 				F7BB42EC1CEEECE2006F5EE3 /* WeiboSDK.bundle in Resources */,
 				F7B1EA611CC5D5AF00307F41 /* LoadData.storyboard in Resources */,
 				F707FEB21CE08555008E4F7C /* Assets.xcassets in Resources */,
+				F7CBB42B1CFC1CE200662347 /* icon_listheader_animation_1@2x.png in Resources */,
 				F7BAC7451CC8D40F000D9795 /* contacts_add_friend@2x.png in Resources */,
 				F76CB8081CE4891700D8474F /* NewsTableViewCell.xib in Resources */,
 				F7BAC75B1CC8D40F000D9795 /* 9.png in Resources */,
@@ -1917,10 +1958,12 @@
 				F7B4129A1C9BFCE800E45E22 /* ImageSet.xcassets in Resources */,
 				F7526FFE1C9A940A0012FE76 /* LaunchScreen.storyboard in Resources */,
 				F7BCC5961CCDFA2D00704878 /* PhotoViewController.xib in Resources */,
+				F7CBB4271CFBEEBB00662347 /* city.plist in Resources */,
 				F7BB42F01CEEECE2006F5EE3 /* ShareSDK.bundle in Resources */,
 				F7BAC74C1CC8D40F000D9795 /* 11.png in Resources */,
 				F7BAC7571CC8D40F000D9795 /* 5.png in Resources */,
 				F7BAC7551CC8D40F000D9795 /* 3.png in Resources */,
+				F7CBB42C1CFC1CE200662347 /* icon_listheader_animation_2@2x.png in Resources */,
 				F7BAC7561CC8D40F000D9795 /* 4.png in Resources */,
 				F7526FF91C9A940A0012FE76 /* Main.storyboard in Resources */,
 				F7BCC5AC1CCE058A00704878 /* photodata.bin in Resources */,
@@ -2033,6 +2076,7 @@
 				F7B1EABB1CC633E000307F41 /* UIColor+WNXColor.m in Sources */,
 				F7BAC7671CC8DC30000D9795 /* ContactTableViewCell.m in Sources */,
 				F74676D71CB7B38F0001D3A5 /* RunLoopTest.m in Sources */,
+				F7CBB4301CFC254000662347 /* GifImage.m in Sources */,
 				F7B4128F1C9BD96C00E45E22 /* User.m in Sources */,
 				F7BAC73F1CC8D40F000D9795 /* NSArray+JSONModel.m in Sources */,
 				F7BCC5651CCDBDAC00704878 /* TableViewCell.m in Sources */,
@@ -2082,6 +2126,7 @@
 				F7CBB40D1CF6F9BB00662347 /* DKNight.m in Sources */,
 				F76CB7EB1CE423C100D8474F /* DBHelper.m in Sources */,
 				F76CB7F41CE47DF300D8474F /* BaseHomeViewController.m in Sources */,
+				F7CBB4221CFBE9DC00662347 /* ChooseCityTableViewController.m in Sources */,
 				F76CB8031CE4857C00D8474F /* ArticleTool.m in Sources */,
 				F7BCC55C1CCDBD1000704878 /* TCSectionDataMetric.m in Sources */,
 				F7F773011CD34AB80060861B /* WeeklyItemStageCategoryDetail.m in Sources */,
@@ -2134,6 +2179,7 @@
 				F7BCC5561CCDBD1000704878 /* ResuableView+TCExtension.m in Sources */,
 				F7BCC56B1CCDC54200704878 /* Text.m in Sources */,
 				F7275D051CD1A801002F0F68 /* WeeklyItemStageModel.m in Sources */,
+				F7CBB4251CFBEAD500662347 /* ChooseCityModel.m in Sources */,
 				F7BCC5CE1CCF649100704878 /* NetTool.m in Sources */,
 				F7BCC5E31CCF6D0D00704878 /* HomeTableViewCell.m in Sources */,
 				F75244241CF6D8F7001C88EE /* TopWindow.m in Sources */,

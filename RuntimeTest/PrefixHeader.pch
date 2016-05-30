@@ -110,6 +110,7 @@
 #define kAppGrayColor [UIColor grayColor]//灰色
 #define kAppMainBgColor UICOLOR_FROM_RGB(240,240,240,1)
 #define kTabBarNormalColor RGB(170, 170, 170)         // TabBar颜色
+#define navigationBarColor RGB(33, 192, 174)
 
 /**
  *  1.返回一个RGBA格式的UIColor对象
@@ -133,6 +134,7 @@
 
 
 
+#define globalColor [UIColor colorWithRed:255/255.0 green:70/255.0 blue:131/255.0 alpha:1.0]
 
 
 #define kColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]

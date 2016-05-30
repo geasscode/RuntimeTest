@@ -18,4 +18,9 @@
 
 @property (nonatomic,copy) NSString *src;
 
++(NSArray *)idleImages;
+
+
++(NSArray *)pullingImages;
+
 @end

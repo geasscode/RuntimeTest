@@ -87,7 +87,11 @@
 		weakSelf.stageDetailArray = array;
 		
 		[weakSelf.tableView reloadData];
+		[self.tableView.mj_header endRefreshing];
+
 	}];
+	
+
 }
 
 #pragma mark - Table view data source

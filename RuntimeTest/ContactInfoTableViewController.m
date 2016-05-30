@@ -10,7 +10,8 @@
 #import "ContactTableViewCell.h"
 #import "ContactModel.h"
 #import "ContactDataHelper.h"
-
+#import "UIBarButtonItem+Extension.h"
+#import "ChooseCityTableViewController.h"
 #define DawnCellBGColor [UIColor colorWithRed:249 / 255.0 green:249 / 255.0 blue:249 / 255.0 alpha:1] // #F9F9F9
 
 @interface ContactInfoTableViewController ()<UISearchBarDelegate,UISearchDisplayDelegate>
@@ -23,6 +24,7 @@
 @property (nonatomic,strong) NSArray *serverDataArr;//数据源
 @property (nonatomic,strong) NSMutableArray *dataArr;
 @property (nonatomic,strong) UISearchBar *searchBar;//搜索框
+@property (nonatomic,strong) UILabel *cityLabel;
 
 //@property (nonatomic,strong) UISearchController *searchDisplayController;//搜索VC
 //下面的类已经过期。
@@ -79,6 +81,8 @@
 	
 	//configNav
 	[self configNav];
+	
+	[self getChooseCityNotification];
 
 	
 	_searchDisplayController=[[UISearchDisplayController alloc]initWithSearchBar:self.searchBar contentsController:self];
@@ -93,6 +97,13 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+
+-(void)dealloc{
+	
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
+	
 }
 
 
@@ -114,12 +125,43 @@
 	
 	nightItem.dk_tintColorPicker = DKColorPickerWithKey(TINT);
 	
+	
+	
+	UILabel *city = [UILabel new];
+	city.text = @"北京";
+	city.textColor = globalColor;
+	
+	_cityLabel = city;
+	city.font = [UIFont systemFontOfSize:15];
+	city.size = CGSizeMake(40, 50);
+	city.textAlignment = NSTextAlignmentLeft;
+	
+	UIBarButtonItem *cityNameItem = [[UIBarButtonItem alloc] initWithCustomView:city];
+	
+	UIBarButtonItem *chooseCityItem = [UIBarButtonItem itemWithImageName:@"home_arrow_down_red.png" target:self action:@selector(chooseCityClick)];
+	
+	
 	UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
 	[btn setFrame:CGRectMake(0.0, 0.0, 30.0, 30.0)];
 	[btn setBackgroundImage:[UIImage imageNamed:@"contacts_add_friend"] forState:UIControlStateNormal];
+	
+	
+	
+	UISearchBar *searchView = [[UISearchBar alloc] init];
+	
+	searchView.placeholder = @"搜索";
+	
+	self.navigationItem.titleView = searchView;
+	
+	
+	//自定义 navigation button 使用方式。
+	UIBarButtonItem *contactInfo = [[UIBarButtonItem alloc]initWithCustomView:btn];
 //	[self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc]initWithCustomView:btn],nightItem];
 	
-		self.navigationItem.rightBarButtonItems = @[[[UIBarButtonItem alloc]initWithCustomView:btn],normalItem,nightItem];
+	
+	
+	    self.navigationItem.leftBarButtonItems = @[cityNameItem,chooseCityItem];
+		self.navigationItem.rightBarButtonItems = @[contactInfo,normalItem,nightItem];
 
 	
 	
@@ -145,6 +187,31 @@
 }
 
 
+-(void)getChooseCityNotification{
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(chooseCityNotification:) name:@"chooseCityNotification" object:nil];
+	
+}
+
+-(void)chooseCityNotification:(NSNotification *)notification{
+	
+	NSString *cityName = notification.userInfo[@"cityName"];
+	
+	_cityLabel.text = cityName;
+}
+
+-(void)chooseCityClick{
+	
+ NSLog(@"chooseCityClick");
+	
+	ChooseCityTableViewController *chooseCityVC = [ChooseCityTableViewController new];
+	
+	//加上这句就有导航标题。
+	UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:chooseCityVC];
+	
+	[self presentViewController:nav animated:YES completion:nil];
+	
+}
 
 - (UISearchBar *)searchBar{
 	if (!_searchBar) {
