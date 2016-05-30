@@ -349,6 +349,55 @@
             </objects>
             <point key="canvasLocation" x="1472.5" y="1152.5"/>
         </scene>
+        <!--My View Controller-->
+        <scene sceneID="vN9-pQ-nr0">
+            <objects>
+                <viewController id="aU3-s7-ayU" customClass="MyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T0T-Fs-o6H"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q8j-Xj-QPk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A9P-EF-t3b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_me" translatesAutoresizingMaskIntoConstraints="NO" id="Fgw-Km-eoW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5e-ky-Ard">
+                                <rect key="frame" x="125" y="74" width="124" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="Z1C-TM-HOZ"/>
+                                </constraints>
+                                <state key="normal" image="bg_headinmage"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBE-96-nlh">
+                                <rect key="frame" x="162" y="152" width="51" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="未登录">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Fgw-Km-eoW" firstAttribute="centerX" secondItem="U5e-ky-Ard" secondAttribute="centerX" id="BfK-ob-brA"/>
+                            <constraint firstItem="Fgw-Km-eoW" firstAttribute="top" secondItem="A9P-EF-t3b" secondAttribute="top" id="XXI-Pg-Nia"/>
+                            <constraint firstItem="Fgw-Km-eoW" firstAttribute="leading" secondItem="A9P-EF-t3b" secondAttribute="leading" id="Xxe-dZ-ciC"/>
+                            <constraint firstItem="U5e-ky-Ard" firstAttribute="top" secondItem="T0T-Fs-o6H" secondAttribute="bottom" constant="54" id="q03-BK-gcn"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0f7-Vn-kA4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1984.5" y="1116.5"/>
+        </scene>
         <!--Dynamic Add Method View Controller-->
         <scene sceneID="6fZ-Zh-b9j">
             <objects>
@@ -536,4 +585,8 @@
             <point key="canvasLocation" x="1189.5" y="-68.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg_headinmage" width="70" height="70"/>
+        <image name="bg_me" width="375" height="200"/>
+    </resources>
 </document>

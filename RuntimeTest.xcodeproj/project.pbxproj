@@ -245,6 +245,9 @@
 		F7CBB42B1CFC1CE200662347 /* icon_listheader_animation_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB4291CFC1CE200662347 /* icon_listheader_animation_1@2x.png */; };
 		F7CBB42C1CFC1CE200662347 /* icon_listheader_animation_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB42A1CFC1CE200662347 /* icon_listheader_animation_2@2x.png */; };
 		F7CBB4301CFC254000662347 /* GifImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB42F1CFC254000662347 /* GifImage.m */; };
+		F7CBB4331CFC461000662347 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4321CFC461000662347 /* MineViewController.m */; };
+		F7CBB4361CFC46E400662347 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4351CFC46E400662347 /* MyCollectionViewCell.m */; };
+		F7CBB4381CFC470100662347 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB4371CFC470100662347 /* MyCollectionViewCell.xib */; };
 		F7DB40731C9FEAF900E164C7 /* loadXIBFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40711C9FEAF900E164C7 /* loadXIBFile.m */; };
 		F7DB40741C9FEAF900E164C7 /* loadXIBFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */; };
 		F7DB40771CA0E9F300E164C7 /* CYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40761CA0E9F300E164C7 /* CYAlertView.m */; };
@@ -734,6 +737,11 @@
 		F7CBB42A1CFC1CE200662347 /* icon_listheader_animation_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_listheader_animation_2@2x.png"; sourceTree = "<group>"; };
 		F7CBB42E1CFC254000662347 /* GifImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GifImage.h; sourceTree = "<group>"; };
 		F7CBB42F1CFC254000662347 /* GifImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GifImage.m; sourceTree = "<group>"; };
+		F7CBB4311CFC461000662347 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		F7CBB4321CFC461000662347 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		F7CBB4341CFC46E400662347 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		F7CBB4351CFC46E400662347 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
+		F7CBB4371CFC470100662347 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
 		F7DB40701C9FEAF900E164C7 /* loadXIBFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadXIBFile.h; sourceTree = "<group>"; };
 		F7DB40711C9FEAF900E164C7 /* loadXIBFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadXIBFile.m; sourceTree = "<group>"; };
 		F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loadXIBFile.xib; sourceTree = "<group>"; };
@@ -1352,6 +1360,9 @@
 				F7BCC5DC1CCF6CA100704878 /* HomeTableView.m */,
 				F7BCC5DE1CCF6CDA00704878 /* HomeDetailView.h */,
 				F7BCC5DF1CCF6CDA00704878 /* HomeDetailView.m */,
+				F7CBB4341CFC46E400662347 /* MyCollectionViewCell.h */,
+				F7CBB4351CFC46E400662347 /* MyCollectionViewCell.m */,
+				F7CBB4371CFC470100662347 /* MyCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1696,6 +1707,8 @@
 				F76CB7FC1CE4803C00D8474F /* ContentTableViewController.m */,
 				F75244251CF6E1B7001C88EE /* SettingTableViewController.h */,
 				F75244261CF6E1B7001C88EE /* SettingTableViewController.m */,
+				F7CBB4311CFC461000662347 /* MineViewController.h */,
+				F7CBB4321CFC461000662347 /* MineViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1945,6 +1958,7 @@
 				F7BCC5A81CCDFCB700704878 /* DetailsViewController.xib in Resources */,
 				F7275D071CD1AFE0002F0F68 /* WeeklyItemCell.xib in Resources */,
 				F7BAC74B1CC8D40F000D9795 /* 10.png in Resources */,
+				F7CBB4381CFC470100662347 /* MyCollectionViewCell.xib in Resources */,
 				F7BB42EC1CEEECE2006F5EE3 /* WeiboSDK.bundle in Resources */,
 				F7B1EA611CC5D5AF00307F41 /* LoadData.storyboard in Resources */,
 				F707FEB21CE08555008E4F7C /* Assets.xcassets in Resources */,
@@ -2146,6 +2160,7 @@
 				F7BCC5791CCDF1A100704878 /* ArrayDataSource.m in Sources */,
 				F7CBB41F1CF84DB300662347 /* LaunchAnimationViewController.m in Sources */,
 				F7BAC7421CC8D40F000D9795 /* JSONModel+networking.m in Sources */,
+				F7CBB4361CFC46E400662347 /* MyCollectionViewCell.m in Sources */,
 				F74676C51CB6077C0001D3A5 /* Person.m in Sources */,
 				F7275CF71CD0C011002F0F68 /* WeeklyTableViewController.m in Sources */,
 				F7F773191CD8AFD00060861B /* iCarousel.m in Sources */,
@@ -2178,6 +2193,7 @@
 				F7F7730D1CD359F80060861B /* ImageModel.m in Sources */,
 				F7BCC5561CCDBD1000704878 /* ResuableView+TCExtension.m in Sources */,
 				F7BCC56B1CCDC54200704878 /* Text.m in Sources */,
+				F7CBB4331CFC461000662347 /* MineViewController.m in Sources */,
 				F7275D051CD1A801002F0F68 /* WeeklyItemStageModel.m in Sources */,
 				F7CBB4251CFBEAD500662347 /* ChooseCityModel.m in Sources */,
 				F7BCC5CE1CCF649100704878 /* NetTool.m in Sources */,

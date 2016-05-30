@@ -15,6 +15,7 @@
 #import "SigmaTableViewController.h"
 #import "ArticleHomeViewController.h"
 #import "BarCodeViewController.h"
+#import "MineViewController.h"
 @implementation DESTabBarController
 + (void)initialize {
 	
@@ -66,8 +67,13 @@
 							 image:@"tabCDeselected"
 					 selectedImage:@"tabCSelected"];
 	
-	[self setupChildViewController:[[ContactInfoTableViewController alloc] init]
-							 title:@"通讯录"
+//	[self setupChildViewController:[[ContactInfoTableViewController alloc] init]
+//							 title:@"通讯录"
+//							 image:@"tabDDeselected"
+//					 selectedImage:@"tabDSelected"];
+	
+	[self setupChildViewController:[[MineViewController alloc] init]
+							 title:@"我的"
 							 image:@"tabDDeselected"
 					 selectedImage:@"tabDSelected"];
 	
