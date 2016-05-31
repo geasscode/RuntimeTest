@@ -22,6 +22,7 @@
 					   @"icon_me_qchc",
 					   @"icon_me_yjfk",
 					   @"icon_me_about",
+					   @"icon_me_wddd",
 					   nil];
 }
 

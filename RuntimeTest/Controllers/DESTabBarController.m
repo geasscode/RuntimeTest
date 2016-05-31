@@ -35,6 +35,15 @@
 	
 }
 
+//知识点，看到好的文章的知识点可以随时补充到这个项目来。
+//nil是OC的，空对象，地址指向空（0）的对象。对象的字面零值
+//
+//* Nil是Objective-C类的字面零值
+//
+//* NULL是C的，空地址，地址的数值是0，是个长整数
+//
+//* NSNull用于解决向NSArray和NSDictionary等集合中添加空值的问题
+
 - (void)viewDidLoad {
 	
 	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
@@ -86,8 +95,37 @@
 	childController.title = title;
 	[childController.tabBarItem setImage:[UIImage imageNamed:image]];
 	[childController.tabBarItem setSelectedImage:[UIImage imageNamed:selectedImage]];
+	
+//	去掉BackBarButtonItem的文字
+//	[[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+//														 forBarMetrics:UIBarMetricsDefault];
+	
+//	// 修改标题位置
+//	childController.tabBarItem.titlePositionAdjustment = UIOffsetMake(0, -10);
+//	// 修改图片位置
+//	childController.tabBarItem.imageInsets = UIEdgeInsetsMake(-3, 0, 3, 0);
+//	
+//	// 批量修改属性
+//	for (UIBarItem *item in self.tabBarController.tabBar.items) {
+//		[item setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+//									  [UIFont fontWithName:@"Helvetica" size:19.0], NSFontAttributeName, nil]
+//							forState:UIControlStateNormal];
+//	}
+//	
+//	// 设置选中和未选中字体颜色
+//	[[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
+//	
+//	//未选中字体颜色
+//	[[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor greenColor]} forState:UIControlStateNormal];
+//	
+//	//选中字体颜色
+//	[[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor cyanColor]} forState:UIControlStateSelected];
+	
 	DESNavigationController *navCon = [[DESNavigationController alloc] initWithRootViewController:childController];
 	navCon.title = title;
+	
+	
+	
 	
 	[self addChildViewController:navCon];
 }

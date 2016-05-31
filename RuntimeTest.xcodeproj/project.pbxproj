@@ -248,6 +248,15 @@
 		F7CBB4331CFC461000662347 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4321CFC461000662347 /* MineViewController.m */; };
 		F7CBB4361CFC46E400662347 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4351CFC46E400662347 /* MyCollectionViewCell.m */; };
 		F7CBB4381CFC470100662347 /* MyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB4371CFC470100662347 /* MyCollectionViewCell.xib */; };
+		F7CBB43B1CFD706000662347 /* 方正隶书繁体.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB4391CFD706000662347 /* 方正隶书繁体.ttf */; };
+		F7CBB43C1CFD706000662347 /* 隶书_GBK.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB43A1CFD706000662347 /* 隶书_GBK.TTF */; };
+		F7CBB44E1CFD757000662347 /* BtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4421CFD757000662347 /* BtnCell.m */; };
+		F7CBB44F1CFD757000662347 /* BtnCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4441CFD757000662347 /* BtnCollectionView.m */; };
+		F7CBB4501CFD757000662347 /* CoBtnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4461CFD757000662347 /* CoBtnCell.m */; };
+		F7CBB4511CFD757000662347 /* CoBtnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7CBB4471CFD757000662347 /* CoBtnCell.xib */; };
+		F7CBB4521CFD757000662347 /* FileSave.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB4491CFD757000662347 /* FileSave.m */; };
+		F7CBB4531CFD757000662347 /* ScrollviewHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB44B1CFD757000662347 /* ScrollviewHeaderView.m */; };
+		F7CBB4541CFD757000662347 /* SegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7CBB44D1CFD757000662347 /* SegmentView.m */; };
 		F7DB40731C9FEAF900E164C7 /* loadXIBFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40711C9FEAF900E164C7 /* loadXIBFile.m */; };
 		F7DB40741C9FEAF900E164C7 /* loadXIBFile.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */; };
 		F7DB40771CA0E9F300E164C7 /* CYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = F7DB40761CA0E9F300E164C7 /* CYAlertView.m */; };
@@ -742,6 +751,21 @@
 		F7CBB4341CFC46E400662347 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
 		F7CBB4351CFC46E400662347 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 		F7CBB4371CFC470100662347 /* MyCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyCollectionViewCell.xib; sourceTree = "<group>"; };
+		F7CBB4391CFD706000662347 /* 方正隶书繁体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "方正隶书繁体.ttf"; sourceTree = "<group>"; };
+		F7CBB43A1CFD706000662347 /* 隶书_GBK.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "隶书_GBK.TTF"; sourceTree = "<group>"; };
+		F7CBB4411CFD757000662347 /* BtnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtnCell.h; sourceTree = "<group>"; };
+		F7CBB4421CFD757000662347 /* BtnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtnCell.m; sourceTree = "<group>"; };
+		F7CBB4431CFD757000662347 /* BtnCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BtnCollectionView.h; sourceTree = "<group>"; };
+		F7CBB4441CFD757000662347 /* BtnCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BtnCollectionView.m; sourceTree = "<group>"; };
+		F7CBB4451CFD757000662347 /* CoBtnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoBtnCell.h; sourceTree = "<group>"; };
+		F7CBB4461CFD757000662347 /* CoBtnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoBtnCell.m; sourceTree = "<group>"; };
+		F7CBB4471CFD757000662347 /* CoBtnCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoBtnCell.xib; sourceTree = "<group>"; };
+		F7CBB4481CFD757000662347 /* FileSave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSave.h; sourceTree = "<group>"; };
+		F7CBB4491CFD757000662347 /* FileSave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSave.m; sourceTree = "<group>"; };
+		F7CBB44A1CFD757000662347 /* ScrollviewHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollviewHeaderView.h; sourceTree = "<group>"; };
+		F7CBB44B1CFD757000662347 /* ScrollviewHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollviewHeaderView.m; sourceTree = "<group>"; };
+		F7CBB44C1CFD757000662347 /* SegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentView.h; sourceTree = "<group>"; };
+		F7CBB44D1CFD757000662347 /* SegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentView.m; sourceTree = "<group>"; };
 		F7DB40701C9FEAF900E164C7 /* loadXIBFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadXIBFile.h; sourceTree = "<group>"; };
 		F7DB40711C9FEAF900E164C7 /* loadXIBFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadXIBFile.m; sourceTree = "<group>"; };
 		F7DB40721C9FEAF900E164C7 /* loadXIBFile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loadXIBFile.xib; sourceTree = "<group>"; };
@@ -1107,6 +1131,8 @@
 		F7526FEE1C9A940A0012FE76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F7CBB4391CFD706000662347 /* 方正隶书繁体.ttf */,
+				F7CBB43A1CFD706000662347 /* 隶书_GBK.TTF */,
 				F7CBB4261CFBEEBB00662347 /* city.plist */,
 				F7CBB4171CF84BC000662347 /* iPhone-5-Crop.gif */,
 				F7CBB4181CF84BC000662347 /* iPhone-6-Crop.gif */,
@@ -1479,6 +1505,7 @@
 		F7BAC76B1CC8DD33000D9795 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				F7CBB4401CFD757000662347 /* segmentView */,
 				F7BB42261CED61A7006F5EE3 /* jpush-ios-2.1.6.a */,
 				F7BB42271CED61A7006F5EE3 /* JPUSHService.h */,
 				F7CA0D8A1CEAF73A009D1C51 /* NSData+AES.h */,
@@ -1767,6 +1794,26 @@
 			path = GifAnimation;
 			sourceTree = "<group>";
 		};
+		F7CBB4401CFD757000662347 /* segmentView */ = {
+			isa = PBXGroup;
+			children = (
+				F7CBB4411CFD757000662347 /* BtnCell.h */,
+				F7CBB4421CFD757000662347 /* BtnCell.m */,
+				F7CBB4431CFD757000662347 /* BtnCollectionView.h */,
+				F7CBB4441CFD757000662347 /* BtnCollectionView.m */,
+				F7CBB4451CFD757000662347 /* CoBtnCell.h */,
+				F7CBB4461CFD757000662347 /* CoBtnCell.m */,
+				F7CBB4471CFD757000662347 /* CoBtnCell.xib */,
+				F7CBB4481CFD757000662347 /* FileSave.h */,
+				F7CBB4491CFD757000662347 /* FileSave.m */,
+				F7CBB44A1CFD757000662347 /* ScrollviewHeaderView.h */,
+				F7CBB44B1CFD757000662347 /* ScrollviewHeaderView.m */,
+				F7CBB44C1CFD757000662347 /* SegmentView.h */,
+				F7CBB44D1CFD757000662347 /* SegmentView.m */,
+			);
+			path = segmentView;
+			sourceTree = "<group>";
+		};
 		F7F773161CD8AFD00060861B /* iCarousel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1943,6 +1990,7 @@
 				F7BAC7591CC8D40F000D9795 /* 7.png in Resources */,
 				F7F773141CD36C6F0060861B /* search.plist in Resources */,
 				F7F773131CD36C6F0060861B /* article_image.png in Resources */,
+				F7CBB43C1CFD706000662347 /* 隶书_GBK.TTF in Resources */,
 				F707FE871CDA0113008E4F7C /* loveway.ttf in Resources */,
 				F7BAC7541CC8D40F000D9795 /* 2.png in Resources */,
 				F7CBB41A1CF84BC000662347 /* iPhone-5-Crop.gif in Resources */,
@@ -1950,6 +1998,7 @@
 				F7F7730F1CD36B0D0060861B /* article_detail.html in Resources */,
 				F7BCC5761CCDF0D500704878 /* PhotosViewController.xib in Resources */,
 				F7BCC5831CCDF33200704878 /* PhotoCell.xib in Resources */,
+				F7CBB4511CFD757000662347 /* CoBtnCell.xib in Resources */,
 				F7BAC7511CC8D40F000D9795 /* 16.png in Resources */,
 				F7BB42B21CEDA8E2006F5EE3 /* country.plist in Resources */,
 				F7BB42B41CEDAA0E006F5EE3 /* InfoPlist.strings in Resources */,
@@ -1962,6 +2011,7 @@
 				F7BB42EC1CEEECE2006F5EE3 /* WeiboSDK.bundle in Resources */,
 				F7B1EA611CC5D5AF00307F41 /* LoadData.storyboard in Resources */,
 				F707FEB21CE08555008E4F7C /* Assets.xcassets in Resources */,
+				F7CBB43B1CFD706000662347 /* 方正隶书繁体.ttf in Resources */,
 				F7CBB42B1CFC1CE200662347 /* icon_listheader_animation_1@2x.png in Resources */,
 				F7BAC7451CC8D40F000D9795 /* contacts_add_friend@2x.png in Resources */,
 				F76CB8081CE4891700D8474F /* NewsTableViewCell.xib in Resources */,
@@ -2140,6 +2190,7 @@
 				F7CBB40D1CF6F9BB00662347 /* DKNight.m in Sources */,
 				F76CB7EB1CE423C100D8474F /* DBHelper.m in Sources */,
 				F76CB7F41CE47DF300D8474F /* BaseHomeViewController.m in Sources */,
+				F7CBB4521CFD757000662347 /* FileSave.m in Sources */,
 				F7CBB4221CFBE9DC00662347 /* ChooseCityTableViewController.m in Sources */,
 				F76CB8031CE4857C00D8474F /* ArticleTool.m in Sources */,
 				F7BCC55C1CCDBD1000704878 /* TCSectionDataMetric.m in Sources */,
@@ -2175,6 +2226,7 @@
 				F7CA0D891CEAC0B9009D1C51 /* LBToAppStore.m in Sources */,
 				F762B85A1CEC144400E5DDAD /* UITextView+Utils.m in Sources */,
 				F7B1EABA1CC633E000307F41 /* UIBarButtonItem+WNXBarButtonItem.m in Sources */,
+				F7CBB4531CFD757000662347 /* ScrollviewHeaderView.m in Sources */,
 				F7B1EAA41CC6104200307F41 /* MainViewController.m in Sources */,
 				F7B1EABC1CC633E000307F41 /* UIImage+Size.m in Sources */,
 				F762B8571CEC13DB00E5DDAD /* UILabel+Utils.m in Sources */,
@@ -2189,12 +2241,15 @@
 				F74676B91CABC7B50001D3A5 /* MJUser.m in Sources */,
 				F7754BE91CC7548A00F989DA /* OtherFunctionViewController.m in Sources */,
 				F7BCC5581CCDBD1000704878 /* TCDefaultSupplementaryView.m in Sources */,
+				F7CBB44F1CFD757000662347 /* BtnCollectionView.m in Sources */,
 				F7F772F51CD33ECE0060861B /* BaseTableViewController.m in Sources */,
 				F7F7730D1CD359F80060861B /* ImageModel.m in Sources */,
+				F7CBB4541CFD757000662347 /* SegmentView.m in Sources */,
 				F7BCC5561CCDBD1000704878 /* ResuableView+TCExtension.m in Sources */,
 				F7BCC56B1CCDC54200704878 /* Text.m in Sources */,
 				F7CBB4331CFC461000662347 /* MineViewController.m in Sources */,
 				F7275D051CD1A801002F0F68 /* WeeklyItemStageModel.m in Sources */,
+				F7CBB4501CFD757000662347 /* CoBtnCell.m in Sources */,
 				F7CBB4251CFBEAD500662347 /* ChooseCityModel.m in Sources */,
 				F7BCC5CE1CCF649100704878 /* NetTool.m in Sources */,
 				F7BCC5E31CCF6D0D00704878 /* HomeTableViewCell.m in Sources */,
@@ -2211,6 +2266,7 @@
 				F7BCC53B1CCDBCF400704878 /* TableViewSampleViewController.m in Sources */,
 				F7BCC5821CCDF33200704878 /* PhotoCell.m in Sources */,
 				F707FE8E1CDC725B008E4F7C /* DESShareView.m in Sources */,
+				F7CBB44E1CFD757000662347 /* BtnCell.m in Sources */,
 				F7CA0D8F1CEAF73A009D1C51 /* NSString+AES.m in Sources */,
 				F75244221CF6D8F7001C88EE /* BaseFunction.m in Sources */,
 				F7B412971C9BDA3900E45E22 /* GlobalTimelineViewController.m in Sources */,

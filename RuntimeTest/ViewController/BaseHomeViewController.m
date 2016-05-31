@@ -7,6 +7,7 @@
 //
 
 #import "BaseHomeViewController.h"
+#import "SegmentView.h"
 
 
 #define contentIdentifier @"contentCollectionViewIdentifier"
@@ -69,8 +70,24 @@
 #pragma mark - 设置子控件
 -(void)setUI{
 	
+	//添加SegmentView
+//	SegmentView *seg = [[SegmentView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 50) titles:self.titleModelArray selectedBtn:^(NSInteger selectedItem) {
+//		
+//		NSLog(@"%ld",(long)selectedItem);
+//		
+//	}];
+//	
+//	[self.view addSubview:seg];
 	[self.view addSubview:self.titleScrollView];
 	
+//	这个问题iOS7就出现了，只要scrollView是其父视图上的第一个子视图，且navigationBar不隐藏的情况下，添加到scrollView里的视图，都会默认下移64个像素。 导致scrollview里面的内容向下偏移了64 添加此方法 从导航栏下开始计算 （待改善。）
+//	if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+//		self.edgesForExtendedLayout = UIRectEdgeNone;
+//	}
+	
+	//无意中搜索edgesForExtendedLayout 意外解决一直存在的问题。就是title 位置 跑到下面去了，以为没有显示数据。
+//	A Boolean value that indicates whether the view controller should automatically adjust its scroll view insets.
+	self.automaticallyAdjustsScrollViewInsets = NO ;
 	[self.view addSubview:self.contentCollectionView];
 	
 }

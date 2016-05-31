@@ -51,6 +51,16 @@
 	
 	UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"more1"] style:UIBarButtonItemStylePlain target:self action:@selector(moreBtn)];
 	
+	//设置字体记得在plist增加 Font provided by application
+	
+//	UILabel *titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 80, 44)];
+//	titleLabel.text = @"文章";
+//	[titleLabel setFont:[UIFont fontWithName:@"LiSu" size:30]];
+//	titleLabel.textColor = [UIColor whiteColor];
+//	titleLabel.textAlignment = NSTextAlignmentCenter;
+//	[self.navigationController.navigationBar addSubview:titleLabel];
+//	titleLabel.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, 28);
+	
 	self.navigationItem.leftBarButtonItem = leftItem;
 	self.navigationItem.rightBarButtonItem = rightItem;
 	

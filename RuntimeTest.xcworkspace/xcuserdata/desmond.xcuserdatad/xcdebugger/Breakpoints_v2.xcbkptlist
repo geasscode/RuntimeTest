@@ -916,11 +916,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/AppDelegate.m"
-            timestampString = "486035180.36468"
+            timestampString = "486373448.266753"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
+            startingLineNumber = "342"
+            endingLineNumber = "342"
             landmarkName = "-application:didFailToRegisterForRemoteNotificationsWithError:"
             landmarkType = "5">
          </BreakpointContent>
@@ -932,11 +932,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/AppDelegate.m"
-            timestampString = "486035180.36468"
+            timestampString = "486373448.266753"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "384"
-            endingLineNumber = "384"
+            startingLineNumber = "386"
+            endingLineNumber = "386"
             landmarkName = "-application:didReceiveRemoteNotification:fetchCompletionHandler:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1007,13 +1007,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RuntimeTest/ViewController/BaseHomeViewController.m"
-            timestampString = "486292137.661406"
+            filePath = "RuntimeTest/Other/libs/segmentView/SegmentView.m"
+            timestampString = "486379304.518458"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
-            landmarkName = "-titleScrollView"
+            startingLineNumber = "183"
+            endingLineNumber = "183"
+            landmarkName = "-scrollviewItemSelected:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SegmentView scrollviewItemSelected:]"
+                  moduleName = "RuntimeTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/Other/libs/segmentView/SegmentView.m"
+                  timestampString = "486379305.644112"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SegmentView scrollviewItemSelected:]"
+                  moduleName = "RuntimeTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/Other/libs/segmentView/SegmentView.m"
+                  timestampString = "486379305.644225"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "183"
+                  endingLineNumber = "183"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeTest/Other/libs/segmentView/SegmentView.m"
+            timestampString = "486379275.072878"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-changeItem:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

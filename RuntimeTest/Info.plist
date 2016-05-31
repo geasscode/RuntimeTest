@@ -74,6 +74,8 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>隶书_GBK.TTF</string>
+		<string>方正隶书繁体.ttf</string>
 		<string>loveway.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
