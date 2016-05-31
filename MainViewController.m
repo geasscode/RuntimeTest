@@ -37,7 +37,7 @@
 	//查看源码
 //	clang -rewrite-objc MyClass.m
 	
-	//用户好评系统
+	//用户好评系统test
 	LBToAppStore *toAppStore = [[LBToAppStore alloc]init];
 	toAppStore.myAppID = @"1067787090";
 	[toAppStore showGotoAppStore:self];
