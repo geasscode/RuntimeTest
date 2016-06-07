@@ -21,7 +21,7 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	self.view.backgroundColor = [UIColor whiteColor];
-	
+
 	UIImageView *launchAnimationView = nil;
 	if (self.view.bounds.size.width == 414.0) {
 		launchAnimationView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 100, self.view.bounds.size.width, 260)];
@@ -43,6 +43,7 @@
 		[delegate.window makeKeyAndVisible];
 	}];
 }
+
 
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];

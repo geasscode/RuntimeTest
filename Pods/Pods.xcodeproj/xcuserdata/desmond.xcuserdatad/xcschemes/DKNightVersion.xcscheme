@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B436EA94C300A6463096EC69'
+               BlueprintIdentifier = 'EC29A0422BF888D6E5B6EE28'
                BlueprintName = 'DKNightVersion'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libDKNightVersion.a'>

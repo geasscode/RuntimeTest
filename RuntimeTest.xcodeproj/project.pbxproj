@@ -64,6 +64,9 @@
 		F762B85A1CEC144400E5DDAD /* UITextView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8591CEC144400E5DDAD /* UITextView+Utils.m */; };
 		F7644F5C1CF5A0B000FD9DAF /* ActivityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7644F5B1CF5A0B000FD9DAF /* ActivityItem.m */; };
 		F7650A791CBE2E7F0065AA41 /* SocketTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7650A781CBE2E7F0065AA41 /* SocketTest.m */; };
+		F768EF261D069E6D005747E3 /* AdvertiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EF251D069E6D005747E3 /* AdvertiseViewController.m */; };
+		F768EF291D06A083005747E3 /* AdvertiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EF281D06A083005747E3 /* AdvertiseView.m */; };
+		F768EF2C1D06A39C005747E3 /* ADWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EF2B1D06A39C005747E3 /* ADWebView.m */; };
 		F76CB7DB1CE33E6600D8474F /* FeThreeDotGlow.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DA1CE33E6600D8474F /* FeThreeDotGlow.m */; };
 		F76CB7DE1CE33F5700D8474F /* UIColor+flat.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DD1CE33F5700D8474F /* UIColor+flat.m */; };
 		F76CB7EB1CE423C100D8474F /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7EA1CE423C100D8474F /* DBHelper.m */; };
@@ -432,6 +435,12 @@
 		F7644F5B1CF5A0B000FD9DAF /* ActivityItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityItem.m; sourceTree = "<group>"; };
 		F7650A771CBE2E7F0065AA41 /* SocketTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketTest.h; sourceTree = "<group>"; };
 		F7650A781CBE2E7F0065AA41 /* SocketTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketTest.m; sourceTree = "<group>"; };
+		F768EF241D069E6D005747E3 /* AdvertiseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertiseViewController.h; sourceTree = "<group>"; };
+		F768EF251D069E6D005747E3 /* AdvertiseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertiseViewController.m; sourceTree = "<group>"; };
+		F768EF271D06A083005747E3 /* AdvertiseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertiseView.h; sourceTree = "<group>"; };
+		F768EF281D06A083005747E3 /* AdvertiseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertiseView.m; sourceTree = "<group>"; };
+		F768EF2A1D06A39C005747E3 /* ADWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADWebView.h; sourceTree = "<group>"; };
+		F768EF2B1D06A39C005747E3 /* ADWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADWebView.m; sourceTree = "<group>"; };
 		F76CB7D91CE33E6600D8474F /* FeThreeDotGlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeThreeDotGlow.h; sourceTree = "<group>"; };
 		F76CB7DA1CE33E6600D8474F /* FeThreeDotGlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeThreeDotGlow.m; sourceTree = "<group>"; };
 		F76CB7DC1CE33F5700D8474F /* UIColor+flat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+flat.h"; sourceTree = "<group>"; };
@@ -1368,6 +1377,10 @@
 				F707FE961CE034C9008E4F7C /* DESTabBarController.m */,
 				F7CBB41D1CF84DB300662347 /* LaunchAnimationViewController.h */,
 				F7CBB41E1CF84DB300662347 /* LaunchAnimationViewController.m */,
+				F768EF241D069E6D005747E3 /* AdvertiseViewController.h */,
+				F768EF251D069E6D005747E3 /* AdvertiseViewController.m */,
+				F768EF2A1D06A39C005747E3 /* ADWebView.h */,
+				F768EF2B1D06A39C005747E3 /* ADWebView.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1389,6 +1402,8 @@
 				F7CBB4341CFC46E400662347 /* MyCollectionViewCell.h */,
 				F7CBB4351CFC46E400662347 /* MyCollectionViewCell.m */,
 				F7CBB4371CFC470100662347 /* MyCollectionViewCell.xib */,
+				F768EF271D06A083005747E3 /* AdvertiseView.h */,
+				F768EF281D06A083005747E3 /* AdvertiseView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2160,9 +2175,12 @@
 				F7BAC7701CC8DD33000D9795 /* ContactDataHelper.m in Sources */,
 				F7275D021CD1A76B002F0F68 /* WeeklyItemCell.m in Sources */,
 				F7B1EAAA1CC6112000307F41 /* HomeViewController.m in Sources */,
+				F768EF291D06A083005747E3 /* AdvertiseView.m in Sources */,
 				F7754BDD1CC7536B00F989DA /* IvarListViewController.m in Sources */,
 				F76CB7EE1CE46E3000D8474F /* TitleModel.m in Sources */,
+				F768EF261D069E6D005747E3 /* AdvertiseViewController.m in Sources */,
 				F7BCC5991CCDFAB800704878 /* DetailViewController.m in Sources */,
+				F768EF2C1D06A39C005747E3 /* ADWebView.m in Sources */,
 				F707FEAD1CE06C85008E4F7C /* OpenShare+Weixin.m in Sources */,
 				F7BCC5541CCDBD1000704878 /* NSObject+TCIdentifier.m in Sources */,
 				F7F773071CD356400060861B /* StageCategoryHeaderView.m in Sources */,

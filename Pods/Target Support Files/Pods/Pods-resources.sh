@@ -59,6 +59,7 @@ install_resource()
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "DKNightVersion/DKNightVersion/ColorTable/DKColorTable.txt"
+  install_resource "DateTools/DateTools/DateTools.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "SMSSDK/SMSSDKUI.bundle"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
@@ -68,6 +69,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "DKNightVersion/DKNightVersion/ColorTable/DKColorTable.txt"
+  install_resource "DateTools/DateTools/DateTools.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
   install_resource "SMSSDK/SMSSDKUI.bundle"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"

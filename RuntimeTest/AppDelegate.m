@@ -15,6 +15,8 @@
 #import "DESTabBarController.h"
 #import "APOpenAPI.h"
 #import "LaunchAnimationViewController.h"
+#import "AdvertiseView.h"
+#import "AdvertiseViewController.h"
 
 #define appkey @"12f1847875e26"
 #define app_secrect @"69471e44e59a7d4bcf068d7b7329d9c8"
@@ -257,6 +259,23 @@
 //	self.window.backgroundColor = [UIColor whiteColor];
 //	self.window.rootViewController = self.navigationController;
 //	[self.window makeKeyAndVisible];
+
+
+//	AdvertiseViewController * advertise = [AdvertiseViewController new];
+//	
+//	NSString *filePath = [advertise getFilePathWithImageName:[UserDefaults valueForKey:adImageName]];
+//	
+//	BOOL isExist = [advertise isFileExistWithFilePath:filePath];
+//	if (isExist) {// 图片存在
+//		
+//		AdvertiseView *advertiseView = [[AdvertiseView alloc] initWithFrame:self.window.bounds];
+//		advertiseView.filePath = filePath;
+//		[advertiseView show];
+//		
+//	}
+//	
+//	// 2.无论沙盒中是否存在广告图片，都需要重新调用广告接口，判断广告是否更新
+//	[advertise getAdvertisingImage];
 
 	return YES;
 }

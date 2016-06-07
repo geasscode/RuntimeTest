@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DateTools.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -107,12 +112,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>41A79BCC5261C201167B540514D256A2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4FE672C1DA030830A76EE3BDA3BED01D</key>
+		<key>31FF44B5E2FF8CF00090950A8B67AFF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -127,12 +127,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>5E922F32BB93C2BFF6E72304DF1A6F89</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>77D888169B36842A44D3D0D29C4FB47F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8F74D9EA91F4C43190670066BAC37D44</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>969DEAC04586DA1167721A90D21D785B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,17 +167,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A1C4CE8EBE7BEF067CEB7CDD457711F7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A9119F9D2E83513791FF2E6C42DC19FA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>B1F9AD3EFFF8821894B3ABC3BB1AAB8F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D5E7983E5E2D83FB3883975598357D03</key>
 		<dict>
 			<key>primary</key>
 			<true/>
