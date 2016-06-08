@@ -17,6 +17,7 @@
 #import "LaunchAnimationViewController.h"
 #import "AdvertiseView.h"
 #import "AdvertiseViewController.h"
+#import "CBIconfont.h"
 
 #define appkey @"12f1847875e26"
 #define app_secrect @"69471e44e59a7d4bcf068d7b7329d9c8"
@@ -71,6 +72,16 @@
 //启动但还没进入状态保存
 
 -(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+	
+	[[CBIconfont instance] initWithConfig:@{
+											@(IFFontPath):@"iconfont.ttf",
+											@(IFFontIdentify):@{
+													@"ic_star":@"\ue600",
+													@"ic_fire":@"\ue602",
+													@"ic_coffee":@"\ue601",
+													}
+											}];
+
 	return YES;
 }
 

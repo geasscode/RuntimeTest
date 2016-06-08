@@ -19,6 +19,7 @@
 #import <SMS_SDK/SMSSDK.h>
 #import "BarCodeViewController.h"
 #import "ZYKeyboardUtil.h"
+#import "FirstViewController.h"
 
 #define MARGIN_KEYBOARD 20
 
@@ -162,6 +163,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)gotoTestView:(id)sender {
+	
+	FirstViewController *firstVC = [FirstViewController new];
+	[self.navigationController pushViewController:firstVC animated:YES];
+
+	
+}
 
 - (IBAction)gotoWeeklyView:(id)sender {
 	

@@ -83,6 +83,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgm-Ts-1LQ">
+                                <rect key="frame" x="145" y="172" width="30" height="28"/>
+                                <state key="normal" title="Test"/>
+                                <connections>
+                                    <action selector="gotoTestView:" destination="aFy-QA-WhR" eventType="touchUpInside" id="xrF-5u-tF2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -96,6 +103,7 @@
                             <constraint firstItem="l2h-CO-RIa" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="EAB-iy-Zsh"/>
                             <constraint firstItem="Zpq-dq-d6I" firstAttribute="baseline" secondItem="egL-FV-Am0" secondAttribute="baseline" id="FBk-Ob-E6n"/>
                             <constraint firstItem="l2h-CO-RIa" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="34" id="IQ1-T3-tJO"/>
+                            <constraint firstItem="Fgm-Ts-1LQ" firstAttribute="top" secondItem="ejy-7l-1zX" secondAttribute="bottom" constant="8" id="MzH-CJ-ZgI"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="PGf-3Y-g0w"/>
                             <constraint firstItem="CyU-t1-x4N" firstAttribute="leading" secondItem="Suv-2o-87e" secondAttribute="leading" constant="34" id="RE1-DK-UF4"/>
                             <constraint firstItem="ejy-7l-1zX" firstAttribute="top" secondItem="IvB-DQ-pbI" secondAttribute="bottom" constant="16" id="VcM-Bz-foX"/>
@@ -103,6 +111,8 @@
                             <constraint firstItem="IvB-DQ-pbI" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="b5W-N4-CCP"/>
                             <constraint firstItem="Suv-2o-87e" firstAttribute="centerY" secondItem="YRg-5f-7nD" secondAttribute="centerY" id="bYz-p9-MMv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zpq-dq-d6I" secondAttribute="trailing" constant="-5" id="cIV-IV-gKo"/>
+                            <constraint firstItem="vCF-YC-O0v" firstAttribute="top" secondItem="Fgm-Ts-1LQ" secondAttribute="bottom" constant="8" id="cfg-H5-b5V"/>
+                            <constraint firstItem="Fgm-Ts-1LQ" firstAttribute="centerX" secondItem="YRg-5f-7nD" secondAttribute="centerX" id="eQD-de-AlD"/>
                             <constraint firstItem="egL-FV-Am0" firstAttribute="top" secondItem="CyU-t1-x4N" secondAttribute="bottom" constant="87" id="frj-gl-aq4"/>
                             <constraint firstItem="vCF-YC-O0v" firstAttribute="centerX" secondItem="IvB-DQ-pbI" secondAttribute="centerX" id="lGw-vT-dq7"/>
                             <constraint firstItem="Zpq-dq-d6I" firstAttribute="leading" secondItem="egL-FV-Am0" secondAttribute="trailing" constant="14" id="lgz-dp-n3k"/>
