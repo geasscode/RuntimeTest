@@ -21,6 +21,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
+	self.tabBarController.tabBar.hidden=YES;
+	self.navigationController.navigationBarHidden = NO;
+
 	self.view.backgroundColor = [UIColor whiteColor];
 	self.navigationItem.title = @"我的收藏";
 

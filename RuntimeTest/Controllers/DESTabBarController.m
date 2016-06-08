@@ -49,6 +49,10 @@
 	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
 	MainViewController *mainVC = (MainViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"mainVC"];
 	
+//	对于storyboard中的UI 组建直接new 一个会黑屏，必须加载storyboard。
+	MineViewController *mine = (MineViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"mineVC"];
+
+	
 	 
 
 	[self setupChildViewController:mainVC
@@ -81,7 +85,7 @@
 //							 image:@"tabDDeselected"
 //					 selectedImage:@"tabDSelected"];
 	
-	[self setupChildViewController:[[MineViewController alloc] init]
+	[self setupChildViewController:mine
 							 title:@"我的"
 							 image:@"tabDDeselected"
 					 selectedImage:@"tabDSelected"];

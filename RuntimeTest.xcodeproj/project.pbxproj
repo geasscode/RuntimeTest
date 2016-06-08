@@ -67,6 +67,8 @@
 		F768EF261D069E6D005747E3 /* AdvertiseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EF251D069E6D005747E3 /* AdvertiseViewController.m */; };
 		F768EF291D06A083005747E3 /* AdvertiseView.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EF281D06A083005747E3 /* AdvertiseView.m */; };
 		F768EF2C1D06A39C005747E3 /* ADWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EF2B1D06A39C005747E3 /* ADWebView.m */; };
+		F768EF2F1D06D053005747E3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EF2E1D06D053005747E3 /* LoginViewController.m */; };
+		F768EF321D06D49B005747E3 /* FindPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EF311D06D49B005747E3 /* FindPasswordViewController.m */; };
 		F76CB7DB1CE33E6600D8474F /* FeThreeDotGlow.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DA1CE33E6600D8474F /* FeThreeDotGlow.m */; };
 		F76CB7DE1CE33F5700D8474F /* UIColor+flat.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DD1CE33F5700D8474F /* UIColor+flat.m */; };
 		F76CB7EB1CE423C100D8474F /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7EA1CE423C100D8474F /* DBHelper.m */; };
@@ -441,6 +443,10 @@
 		F768EF281D06A083005747E3 /* AdvertiseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertiseView.m; sourceTree = "<group>"; };
 		F768EF2A1D06A39C005747E3 /* ADWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADWebView.h; sourceTree = "<group>"; };
 		F768EF2B1D06A39C005747E3 /* ADWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADWebView.m; sourceTree = "<group>"; };
+		F768EF2D1D06D053005747E3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		F768EF2E1D06D053005747E3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		F768EF301D06D49B005747E3 /* FindPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindPasswordViewController.h; sourceTree = "<group>"; };
+		F768EF311D06D49B005747E3 /* FindPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindPasswordViewController.m; sourceTree = "<group>"; };
 		F76CB7D91CE33E6600D8474F /* FeThreeDotGlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeThreeDotGlow.h; sourceTree = "<group>"; };
 		F76CB7DA1CE33E6600D8474F /* FeThreeDotGlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeThreeDotGlow.m; sourceTree = "<group>"; };
 		F76CB7DC1CE33F5700D8474F /* UIColor+flat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+flat.h"; sourceTree = "<group>"; };
@@ -1751,6 +1757,10 @@
 				F75244261CF6E1B7001C88EE /* SettingTableViewController.m */,
 				F7CBB4311CFC461000662347 /* MineViewController.h */,
 				F7CBB4321CFC461000662347 /* MineViewController.m */,
+				F768EF2D1D06D053005747E3 /* LoginViewController.h */,
+				F768EF2E1D06D053005747E3 /* LoginViewController.m */,
+				F768EF301D06D49B005747E3 /* FindPasswordViewController.h */,
+				F768EF311D06D49B005747E3 /* FindPasswordViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2201,6 +2211,7 @@
 				F74676D21CB647490001D3A5 /* NSMutableArray+Extension.m in Sources */,
 				F7275CFB1CD0C42F002F0F68 /* WeeklyItemHeaderView.m in Sources */,
 				F7BCC5D51CCF672800704878 /* HomeModel.m in Sources */,
+				F768EF321D06D49B005747E3 /* FindPasswordViewController.m in Sources */,
 				F7275CFF1CD0C6D4002F0F68 /* WeeklyItemModel.m in Sources */,
 				F74676B01CABC7B50001D3A5 /* MJAd.m in Sources */,
 				F7BCC5551CCDBD1000704878 /* README.md in Sources */,
@@ -2245,6 +2256,7 @@
 				F762B85A1CEC144400E5DDAD /* UITextView+Utils.m in Sources */,
 				F7B1EABA1CC633E000307F41 /* UIBarButtonItem+WNXBarButtonItem.m in Sources */,
 				F7CBB4531CFD757000662347 /* ScrollviewHeaderView.m in Sources */,
+				F768EF2F1D06D053005747E3 /* LoginViewController.m in Sources */,
 				F7B1EAA41CC6104200307F41 /* MainViewController.m in Sources */,
 				F7B1EABC1CC633E000307F41 /* UIImage+Size.m in Sources */,
 				F762B8571CEC13DB00E5DDAD /* UILabel+Utils.m in Sources */,

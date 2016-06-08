@@ -448,7 +448,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
@@ -819,28 +819,12 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RuntimeTest/Other/Helpers/DBHelper.m"
-            timestampString = "485081545.583465"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "+getListData"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Views/Weekly/FavoriteTableViewController.m"
-            timestampString = "485233005.327802"
+            timestampString = "487050422.245138"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-tableView:commitEditingStyle:forRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1024,7 +1008,7 @@
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/Other/libs/segmentView/SegmentView.m"
-                  timestampString = "486976263.165193"
+                  timestampString = "487046134.078645"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "183"
@@ -1039,7 +1023,7 @@
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/Other/libs/segmentView/SegmentView.m"
-                  timestampString = "486976263.165317"
+                  timestampString = "487046134.078783"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "183"
@@ -1062,6 +1046,22 @@
             startingLineNumber = "116"
             endingLineNumber = "116"
             landmarkName = "-changeItem:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeTest/ViewController/MineViewController.m"
+            timestampString = "486988101.53039"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "-collectionView:didSelectItemAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

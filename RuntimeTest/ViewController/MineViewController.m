@@ -9,6 +9,7 @@
 #import "MineViewController.h"
 #import "MyCollectionViewCell.h"
 #import "User.h"
+#import "FavoriteTableViewController.h"
 #define CELL_WIDTH self.view.bounds.size.width / 3
 
 @implementation MineViewController{
@@ -46,6 +47,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 	
+	
 	if (user) {
 		
 		if (indexPath.row == 5) {
@@ -66,6 +68,17 @@
 		}
 	}else {
 		
+		if(indexPath.row == 1){
+			
+//			UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
+//			FavoriteTableViewController *favorite = (FavoriteTableViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"myfavorite"];
+//			self.hidesBottomBarWhenPushed=YES;
+			FavoriteTableViewController *favorite = [FavoriteTableViewController new];
+			[self.navigationController pushViewController:favorite animated:YES];
+//			self.hidesBottomBarWhenPushed=NO;
+			return;
+		}
+		
 		[self performSegueWithIdentifier:@"isLogin" sender:self];
 	}
 }
@@ -78,9 +91,7 @@
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserinfo:) name:@"WBAuthorSuccessfulNotification" object:nil];
 	
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserinfo:) name:@"WXAuthorSuccessfulNotification" object:nil];
-	
-}
+	}
 
 - (void)viewWillAppear:(BOOL)animated{
 	[super viewWillAppear:animated];
