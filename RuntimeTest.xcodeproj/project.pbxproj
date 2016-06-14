@@ -125,6 +125,14 @@
 		F768EFB61D0805EE005747E3 /* image6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F768EF8D1D0805EE005747E3 /* image6.jpg */; };
 		F768EFB71D0805EE005747E3 /* index.json in Resources */ = {isa = PBXBuildFile; fileRef = F768EF8E1D0805EE005747E3 /* index.json */; };
 		F768EFB81D0805EE005747E3 /* reward.json in Resources */ = {isa = PBXBuildFile; fileRef = F768EF8F1D0805EE005747E3 /* reward.json */; };
+		F768EFBB1D0E5251005747E3 /* SuggestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EFBA1D0E5251005747E3 /* SuggestViewController.m */; };
+		F768EFC11D0E5451005747E3 /* SuggestView.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EFC01D0E5451005747E3 /* SuggestView.m */; };
+		F768EFC41D0E8B6C005747E3 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EFC31D0E8B6C005747E3 /* RegisterViewController.m */; };
+		F768EFC71D0E8C12005747E3 /* RegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EFC61D0E8C12005747E3 /* RegisterView.m */; };
+		F768EFCB1D0E8D15005747E3 /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EFCA1D0E8D15005747E3 /* BaseTextField.m */; };
+		F768EFCE1D0E8E06005747E3 /* RegisterViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EFCD1D0E8E06005747E3 /* RegisterViewModel.m */; };
+		F768EFD11D0E91C0005747E3 /* IPhoneSizeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EFD01D0E91C0005747E3 /* IPhoneSizeTool.m */; };
+		F768EFD91D0E9A94005747E3 /* Statics.m in Sources */ = {isa = PBXBuildFile; fileRef = F768EFD81D0E9A94005747E3 /* Statics.m */; };
 		F76CB7DB1CE33E6600D8474F /* FeThreeDotGlow.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DA1CE33E6600D8474F /* FeThreeDotGlow.m */; };
 		F76CB7DE1CE33F5700D8474F /* UIColor+flat.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7DD1CE33F5700D8474F /* UIColor+flat.m */; };
 		F76CB7EB1CE423C100D8474F /* DBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F76CB7EA1CE423C100D8474F /* DBHelper.m */; };
@@ -574,6 +582,25 @@
 		F768EF8D1D0805EE005747E3 /* image6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image6.jpg; sourceTree = "<group>"; };
 		F768EF8E1D0805EE005747E3 /* index.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = index.json; sourceTree = "<group>"; };
 		F768EF8F1D0805EE005747E3 /* reward.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = reward.json; sourceTree = "<group>"; };
+		F768EFB91D0E5251005747E3 /* SuggestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestViewController.h; sourceTree = "<group>"; };
+		F768EFBA1D0E5251005747E3 /* SuggestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestViewController.m; sourceTree = "<group>"; };
+		F768EFBF1D0E5451005747E3 /* SuggestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestView.h; sourceTree = "<group>"; };
+		F768EFC01D0E5451005747E3 /* SuggestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestView.m; sourceTree = "<group>"; };
+		F768EFC21D0E8B6C005747E3 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		F768EFC31D0E8B6C005747E3 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		F768EFC51D0E8C12005747E3 /* RegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterView.h; sourceTree = "<group>"; };
+		F768EFC61D0E8C12005747E3 /* RegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterView.m; sourceTree = "<group>"; };
+		F768EFC91D0E8D15005747E3 /* BaseTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTextField.h; sourceTree = "<group>"; };
+		F768EFCA1D0E8D15005747E3 /* BaseTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTextField.m; sourceTree = "<group>"; };
+		F768EFCC1D0E8E06005747E3 /* RegisterViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewModel.h; sourceTree = "<group>"; };
+		F768EFCD1D0E8E06005747E3 /* RegisterViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewModel.m; sourceTree = "<group>"; };
+		F768EFCF1D0E91C0005747E3 /* IPhoneSizeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPhoneSizeTool.h; sourceTree = "<group>"; };
+		F768EFD01D0E91C0005747E3 /* IPhoneSizeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPhoneSizeTool.m; sourceTree = "<group>"; };
+		F768EFD41D0E948B005747E3 /* VendorMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VendorMacro.h; sourceTree = "<group>"; };
+		F768EFD51D0E94B9005747E3 /* UtilsMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsMacro.h; sourceTree = "<group>"; };
+		F768EFD61D0E959F005747E3 /* AppMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
+		F768EFD71D0E9A94005747E3 /* Statics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Statics.h; sourceTree = "<group>"; };
+		F768EFD81D0E9A94005747E3 /* Statics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Statics.m; sourceTree = "<group>"; };
 		F76CB7D91CE33E6600D8474F /* FeThreeDotGlow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeThreeDotGlow.h; sourceTree = "<group>"; };
 		F76CB7DA1CE33E6600D8474F /* FeThreeDotGlow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeThreeDotGlow.m; sourceTree = "<group>"; };
 		F76CB7DC1CE33F5700D8474F /* UIColor+flat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+flat.h"; sourceTree = "<group>"; };
@@ -1117,6 +1144,10 @@
 				F78E020E1CE9AF63003CD195 /* FavoriteTableViewController.m */,
 				F78E02101CE9B26A003CD195 /* FavoriteCell.h */,
 				F78E02111CE9B26A003CD195 /* FavoriteCell.m */,
+				F768EFBF1D0E5451005747E3 /* SuggestView.h */,
+				F768EFC01D0E5451005747E3 /* SuggestView.m */,
+				F768EFC51D0E8C12005747E3 /* RegisterView.h */,
+				F768EFC61D0E8C12005747E3 /* RegisterView.m */,
 			);
 			path = Weekly;
 			sourceTree = "<group>";
@@ -1221,6 +1252,7 @@
 		F7526FED1C9A940A0012FE76 /* RuntimeTest */ = {
 			isa = PBXGroup;
 			children = (
+				F768EFD21D0E9445005747E3 /* Macro */,
 				F7CBB40A1CF6F97700662347 /* TestFile */,
 				F707FEB11CE08555008E4F7C /* Assets.xcassets */,
 				F7F7731E1CD997E70060861B /* Manager */,
@@ -1425,6 +1457,27 @@
 			path = assets;
 			sourceTree = "<group>";
 		};
+		F768EFC81D0E8CF2005747E3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F768EFC91D0E8D15005747E3 /* BaseTextField.h */,
+				F768EFCA1D0E8D15005747E3 /* BaseTextField.m */,
+				F768EFD71D0E9A94005747E3 /* Statics.h */,
+				F768EFD81D0E9A94005747E3 /* Statics.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F768EFD21D0E9445005747E3 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				F768EFD41D0E948B005747E3 /* VendorMacro.h */,
+				F768EFD51D0E94B9005747E3 /* UtilsMacro.h */,
+				F768EFD61D0E959F005747E3 /* AppMacro.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
 		F76CB7D81CE33E6500D8474F /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1437,6 +1490,8 @@
 		F76CB7E81CE423A100D8474F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				F768EFCF1D0E91C0005747E3 /* IPhoneSizeTool.h */,
+				F768EFD01D0E91C0005747E3 /* IPhoneSizeTool.m */,
 				F76CB7E91CE423C100D8474F /* DBHelper.h */,
 				F76CB7EA1CE423C100D8474F /* DBHelper.m */,
 				F76CB8011CE4857C00D8474F /* ArticleTool.h */,
@@ -1493,6 +1548,7 @@
 		F7B412851C9BD96C00E45E22 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F768EFC81D0E8CF2005747E3 /* Base */,
 				F7CBB42D1CFC251100662347 /* GifAnimation */,
 				F7F7731A1CD8B55F0060861B /* FocusImage */,
 				F7BCC5B11CCE20FD00704878 /* BarCode */,
@@ -1954,6 +2010,8 @@
 			children = (
 				F7BCC5C21CCF63EF00704878 /* HomeViewModel.h */,
 				F7BCC5C31CCF63EF00704878 /* HomeViewModel.m */,
+				F768EFCC1D0E8E06005747E3 /* RegisterViewModel.h */,
+				F768EFCD1D0E8E06005747E3 /* RegisterViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1995,6 +2053,10 @@
 				F768EF2E1D06D053005747E3 /* LoginViewController.m */,
 				F768EF301D06D49B005747E3 /* FindPasswordViewController.h */,
 				F768EF311D06D49B005747E3 /* FindPasswordViewController.m */,
+				F768EFB91D0E5251005747E3 /* SuggestViewController.h */,
+				F768EFBA1D0E5251005747E3 /* SuggestViewController.m */,
+				F768EFC21D0E8B6C005747E3 /* RegisterViewController.h */,
+				F768EFC31D0E8B6C005747E3 /* RegisterViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2439,6 +2501,7 @@
 				F76CB7DE1CE33F5700D8474F /* UIColor+flat.m in Sources */,
 				F7F772ED1CD33B250060861B /* YZSTableViewCellModel.m in Sources */,
 				F78E020F1CE9AF64003CD195 /* FavoriteTableViewController.m in Sources */,
+				F768EFC71D0E8C12005747E3 /* RegisterView.m in Sources */,
 				F76CB80B1CE48C6B00D8474F /* ArticleHomeViewController.m in Sources */,
 				F707FEAC1CE06C85008E4F7C /* OpenShare+Weibo.m in Sources */,
 				F707FEAB1CE06C85008E4F7C /* OpenShare+Renren.m in Sources */,
@@ -2450,6 +2513,7 @@
 				F7CBB4301CFC254000662347 /* GifImage.m in Sources */,
 				F7B4128F1C9BD96C00E45E22 /* User.m in Sources */,
 				F7BAC73F1CC8D40F000D9795 /* NSArray+JSONModel.m in Sources */,
+				F768EFBB1D0E5251005747E3 /* SuggestViewController.m in Sources */,
 				F7BCC5651CCDBDAC00704878 /* TableViewCell.m in Sources */,
 				F7526FF61C9A940A0012FE76 /* ViewController.m in Sources */,
 				F7BAC7711CC8DD33000D9795 /* NSString+Utils.m in Sources */,
@@ -2566,6 +2630,7 @@
 				F768EF601D07FF08005747E3 /* SecondViewController.m in Sources */,
 				F7F7730D1CD359F80060861B /* ImageModel.m in Sources */,
 				F7CBB4541CFD757000662347 /* SegmentView.m in Sources */,
+				F768EFD11D0E91C0005747E3 /* IPhoneSizeTool.m in Sources */,
 				F7BCC5561CCDBD1000704878 /* ResuableView+TCExtension.m in Sources */,
 				F768EF5D1D07FF08005747E3 /* SplitView.m in Sources */,
 				F7BCC56B1CCDC54200704878 /* Text.m in Sources */,
@@ -2582,6 +2647,7 @@
 				F7B1EAB01CC618CE00307F41 /* FoundViewController.m in Sources */,
 				F7F7731D1CD8B55F0060861B /* FocusImageScrollView.m in Sources */,
 				F76CB7FD1CE4803C00D8474F /* ContentTableViewController.m in Sources */,
+				F768EFD91D0E9A94005747E3 /* Statics.m in Sources */,
 				F707FEA91CE06C85008E4F7C /* OpenShare+Alipay.m in Sources */,
 				F7BCC5751CCDF0D500704878 /* PhotosViewController.m in Sources */,
 				F7BB42FB1CF2D82C006F5EE3 /* BarCodeViewController.m in Sources */,
@@ -2589,6 +2655,8 @@
 				F7BCC5821CCDF33200704878 /* PhotoCell.m in Sources */,
 				F707FE8E1CDC725B008E4F7C /* DESShareView.m in Sources */,
 				F7CBB44E1CFD757000662347 /* BtnCell.m in Sources */,
+				F768EFCE1D0E8E06005747E3 /* RegisterViewModel.m in Sources */,
+				F768EFCB1D0E8D15005747E3 /* BaseTextField.m in Sources */,
 				F7CA0D8F1CEAF73A009D1C51 /* NSString+AES.m in Sources */,
 				F75244221CF6D8F7001C88EE /* BaseFunction.m in Sources */,
 				F7B412971C9BDA3900E45E22 /* GlobalTimelineViewController.m in Sources */,
@@ -2611,6 +2679,7 @@
 				F7BCC5CF1CCF649100704878 /* Response.m in Sources */,
 				F74676CE1CB6415C0001D3A5 /* NSObject+PropertyAdd.m in Sources */,
 				F7F772FB1CD349830060861B /* StageCategoryDetailCell.m in Sources */,
+				F768EFC41D0E8B6C005747E3 /* RegisterViewController.m in Sources */,
 				F7BAC7441CC8D40F000D9795 /* JSONValueTransformer.m in Sources */,
 				F7BCC5D91CCF6B6B00704878 /* MyHomeViewController.m in Sources */,
 				F7BCC5C41CCF63EF00704878 /* HomeViewModel.m in Sources */,
@@ -2626,6 +2695,7 @@
 				F7BAC7031CC78E9C000D9795 /* UIButton+Hook.m in Sources */,
 				F7BCC5D21CCF66AE00704878 /* BaseModel.m in Sources */,
 				F7B412981C9BDA3900E45E22 /* PostTableViewCell.m in Sources */,
+				F768EFC11D0E5451005747E3 /* SuggestView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

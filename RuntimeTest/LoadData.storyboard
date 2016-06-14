@@ -741,6 +741,9 @@
                                 <state key="normal" title="注册新用户">
                                     <color key="titleColor" red="0.090196078430000007" green="0.67450980390000004" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="registerNewUser:" destination="5Wo-ku-H7J" eventType="touchUpInside" id="96X-DL-jl1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZa-n1-vhF">
                                 <rect key="frame" x="38" y="476" width="45" height="45"/>
@@ -1009,18 +1012,18 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="WTo-Vf-tfe"/>
-                                <exclude reference="gYj-wN-JSZ"/>
+                                <exclude reference="2mJ-B3-eeo"/>
                                 <exclude reference="3bg-Vd-ipd"/>
                                 <exclude reference="Aq9-tc-dOm"/>
-                                <exclude reference="2mJ-B3-eeo"/>
+                                <exclude reference="gYj-wN-JSZ"/>
                                 <exclude reference="NDN-RD-K0C"/>
                                 <exclude reference="TPk-T8-wCV"/>
                                 <exclude reference="iGB-OD-vfp"/>
                                 <exclude reference="Bb5-Tu-UMd"/>
                                 <exclude reference="Rf9-gu-SIg"/>
+                                <exclude reference="Bop-q5-oSS"/>
                                 <exclude reference="N1t-0b-aL5"/>
                                 <exclude reference="Rct-l9-VIE"/>
-                                <exclude reference="Bop-q5-oSS"/>
                                 <exclude reference="cOz-lr-52n"/>
                             </mask>
                         </variation>

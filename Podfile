@@ -21,6 +21,7 @@ pod 'ZYKeyboardUtil', '~> 0.6.1'
 pod 'DKNightVersion'
 pod 'SMSSDK'
 pod 'DateTools'
+pod 'ReactiveCocoa', '~> 2.5'
 
 ## 主模块(必须)
 #pod 'ShareSDK3'

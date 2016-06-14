@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "RegisterViewController.h"
 
 @interface LoginViewController ()
 
@@ -25,6 +26,11 @@
 }
 
 
+- (IBAction)registerNewUser:(id)sender {
+	
+	RegisterViewController *registerVC = [[RegisterViewController alloc]initWithType:Register];
+	[self.navigationController pushViewController:registerVC animated:YES];
+}
 
 
 - (void)viewWillAppear:(BOOL)animated{
