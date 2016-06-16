@@ -470,6 +470,14 @@ SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string></string>
+			<key>Title</key>
+			<string>WeiboSDK</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>Of course, ionicons-iOS couldn't exist without ionicons:
 http://ionicons.com
 

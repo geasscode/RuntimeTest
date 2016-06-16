@@ -22,6 +22,8 @@ pod 'DKNightVersion'
 pod 'SMSSDK'
 pod 'DateTools'
 pod 'ReactiveCocoa', '~> 2.5'
+pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
+
 
 ## 主模块(必须)
 #pod 'ShareSDK3'

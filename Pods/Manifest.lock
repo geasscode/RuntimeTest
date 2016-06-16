@@ -69,6 +69,7 @@ PODS:
   - SDWebImage/Core (3.7.6)
   - SMSSDK (2.0.4)
   - SVProgressHUD (2.0.3)
+  - WeiboSDK (3.1.4)
   - WMPageController (1.4.9)
   - ZYKeyboardUtil (0.6.1)
 
@@ -88,8 +89,18 @@ DEPENDENCIES:
   - ReactiveCocoa (~> 2.5)
   - SMSSDK
   - SVProgressHUD
+  - WeiboSDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk.git`)
   - WMPageController
   - ZYKeyboardUtil (~> 0.6.1)
+
+EXTERNAL SOURCES:
+  WeiboSDK:
+    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
+
+CHECKOUT OPTIONS:
+  WeiboSDK:
+    :commit: 024997bef30c81a787425739a32d3575a9264a5d
+    :git: https://github.com/sinaweibosdk/weibo_ios_sdk.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -109,6 +120,7 @@ SPEC CHECKSUMS:
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   SMSSDK: 642b6a8c55fd382be44487cd5e0b0710681895f9
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  WeiboSDK: bceab625ec59b7039ba721cc4ba9f5868804f63e
   WMPageController: f4830b6aed39f16196d4008f8d95c720cf6b1ace
   ZYKeyboardUtil: 2d613031e0639d17cd198cc24c46be2af1a55713
 

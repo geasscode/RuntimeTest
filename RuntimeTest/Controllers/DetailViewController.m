@@ -19,13 +19,16 @@
 
 #define kToolBarHeight 38
 
-@interface DetailViewController ()<UIWebViewDelegate>
+@interface DetailViewController ()<UIGestureRecognizerDelegate,UIWebViewDelegate,UIAlertViewDelegate>
 
 @property (nonatomic,weak) UIWebView *webView;
 
 @property (nonatomic,weak) UIToolbar *toolbar;
 
 @property (nonatomic,strong) NSString *content;
+
+@property (nonatomic,strong) NSString *webImageURL;
+
 
 @property (nonatomic,strong) DetailModel *webModel;
 
@@ -56,6 +59,12 @@
 	UIWebView *webview = [[UIWebView alloc]init];
 	self.webView = webview;
 	self.webView.backgroundColor = [UIColor colorWithRed:248 / 255.0 green:248 / 255.0 blue:248 / 255.0 alpha:1];
+	
+	
+	UILongPressGestureRecognizer * longPressed = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressed:)];
+	longPressed.delegate = self;
+	
+	[self.webView addGestureRecognizer:longPressed];
 	[self.view addSubview:webview];
 	//设置是否透明
 	webview.opaque = YES;
@@ -96,6 +105,73 @@
 	toolbar.items = @[wait,fixedSpace,save,fixedSpace,share,fixedSpace,comment];
 	
 }
+
+
+
+- (void)longPressed:(UITapGestureRecognizer*)recognizer{
+	
+	//只在长按手势开始的时候才去获取图片的url
+	if (recognizer.state != UIGestureRecognizerStateBegan) {
+		return;
+	}
+	
+	CGPoint touchPoint = [recognizer locationInView:self.webView];
+	
+	NSString *js = [NSString stringWithFormat:@"document.elementFromPoint(%f, %f).src", touchPoint.x, touchPoint.y];
+	NSString *urlToSave = [self.webView stringByEvaluatingJavaScriptFromString:js];
+	
+	if (urlToSave.length == 0) {
+		return;
+	}
+	
+	NSLog(@"获取到图片地址：%@",urlToSave);
+	_webImageURL = urlToSave;
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"您确定要保存吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+	[alert show];
+}
+
+//可以识别多个手势
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+	return YES;
+}
+
+
+#pragma mark - UIAlertDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+	if (buttonIndex == 1) {
+		//NSInteger index = _imagesDisplayView.imagesScrollView.contentOffset.x / kScreenWidth;
+		
+		UIImage * webImage = [UIImage new];
+//		_webImageURL = @"http://img1.tuicool.com/FfqABjf.jpg";
+		
+		UIImage *img = [UIImage imageNamed:@"arrow.png"];
+
+
+		NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:_webImageURL]];
+		webImage = [UIImage imageWithData:data];
+		
+		UIImageWriteToSavedPhotosAlbum(webImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil );
+
+//		UIImageWriteToSavedPhotosAlbum(webImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil );
+
+	}
+	
+}
+
+//判断图片保存状态
+
+
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+{
+	if(!error){
+		NSLog(@"Photo saved to library!");
+	}
+	else{
+		NSLog(@"Saving failed :(");
+	}
+}
+
 
 /**
  *  带读按钮点击事件

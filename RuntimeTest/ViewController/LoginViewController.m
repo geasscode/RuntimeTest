@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
+#import "AppDelegate.h"
 
 @interface LoginViewController ()
 
@@ -81,7 +82,7 @@
  */
 - (void)WeChatLogin {
 	
-//	[[AppDelegate sharedAppdelegate] getWXCodeStringWithController:self];
+	[[AppDelegate sharedAppdelegate] getWXCodeStringWithController:self];
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 

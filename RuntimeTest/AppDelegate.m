@@ -18,15 +18,32 @@
 #import "AdvertiseView.h"
 #import "AdvertiseViewController.h"
 #import "CBIconfont.h"
+#import "LoginViewController.h"
 
+#define weiboAppKey @"4003638958"
 #define appkey @"12f1847875e26"
 #define app_secrect @"69471e44e59a7d4bcf068d7b7329d9c8"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<WXApiDelegate>
 
 @end
 
+
+static AppDelegate *appdelegate;
+
 @implementation AppDelegate
+
++ (AppDelegate*)sharedAppdelegate {
+	
+	static dispatch_once_t onceToken;
+	
+	dispatch_once(&onceToken, ^{
+		
+		appdelegate = [[AppDelegate alloc] init];
+	});
+	return appdelegate;
+	
+}
 
 //设置LaunchScreen url 如果不生效需要将app删除重新装。
 //http://blog.csdn.net/riven_wn/article/details/49275157
@@ -101,6 +118,9 @@
 	
 	
 	
+	//weibo 登录
+	[WeiboSDK registerApp:weiboAppKey];
+
 	//Mob  记住这里有个大坑就是plist白名单一定要设置LSApplicationQueriesSchemes，直接从demo里面的source 复制。
 	//不然会出现qq或者微信icon显示不了。
 	
@@ -352,11 +372,18 @@
 }
 
 -(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
+	
+	
+	
 	if ([OpenShare handleOpenURL:url]) {
 		return YES;
 	}
+	
+	[WXApi handleOpenURL:url delegate:self];
+	return [WeiboSDK handleOpenURL:url delegate:self];
+	
 	//这里可以写上其他OpenShare不支持的客户端的回调，比如支付宝等。
-	return YES;
+//	return YES;
 }
 
 
@@ -420,6 +447,118 @@ fetchCompletionHandler:
 didReceiveLocalNotification:(UILocalNotification *)notification {
 	[JPUSHService showLocalNotificationAtFront:notification identifierKey:nil];
 }
+
+
+
+- (void)didReceiveWeiboRequest:(WBBaseRequest *)request{
+}
+
+- (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
+	if ([response isKindOfClass:[WBSendMessageToWeiboResponse class]]) {
+		NSLog(@"返回状态%ld  %@   %@",response.statusCode,response.userInfo,response.requestUserInfo);
+	}else if([response isKindOfClass:[WBAuthorizeResponse class]]){
+		self.userID = [(WBAuthorizeResponse *)response userID];
+		self.access_token = [(WBAuthorizeResponse *)response accessToken];
+		self.refresh_token = [(WBAuthorizeResponse *)response refreshToken];
+		self.expirationDate = [(WBAuthorizeResponse *)response expirationDate];
+		[self refreshUserInfo];
+	}
+}
+
+- (void)refreshUserInfo{
+	NSString * urlStr = [NSString stringWithFormat:@"https://api.weibo.com/2/users/show.json?access_token=%@&uid=%@" ,self.access_token,self.userID];
+	
+	NSData *userInfoData = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStr]];
+	
+	NSDictionary *userInfoDict = [NSJSONSerialization JSONObjectWithData:userInfoData options:NSJSONReadingAllowFragments error:nil];
+	
+	NSLog(@"%@",userInfoDict);
+	
+	[[NSNotificationCenter defaultCenter] postNotificationName:@"WBAuthorSuccessfulNotification" object:nil userInfo:userInfoDict];
+	
+}
+
+
+#pragma mark - WXApiDelegate
+- (void)onResp:(BaseResp *)resp{
+	
+	if ([resp isKindOfClass:[SendAuthResp class]]) {
+		SendAuthResp *temp=(SendAuthResp*)resp;
+		//根据code获取
+		[self getAccess_token:temp.code];
+	}
+}
+
+-(void)getWXCodeStringWithController:(id)vc
+{
+	//构造SendAuthReq结构体
+	SendAuthReq * req =[[SendAuthReq alloc] init];
+	req.scope = @"snsapi_userinfo,snsapi_base,snsapi_contact" ;
+	req.state = @"owner";
+	
+	//第三方向微信终端发送一个SendAuthReq消息结构
+	LoginViewController *controller = (LoginViewController*)vc;
+	
+	[WXApi sendAuthReq:req viewController:controller delegate:self];
+}
+
+/**
+ *  根据code获取access_token
+ *
+ *  @param code code
+ */
+-(void)getAccess_token:(NSString*)code{
+	
+	NSString *urlStr =[NSString stringWithFormat:@"https://api.weixin.qq.com/sns/oauth2/access_token?appid=%@&secret=%@&code=%@&grant_type=authorization_code",@"wx8011e108b672eee2",@"52b79fcca9ca43fcc7cd37358c7f3feb",code];
+	
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+		
+		NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:urlStr]];
+		
+		NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+		
+		if (dic) {
+			
+			NSString *access_token = [dic objectForKey:@"access_token"];
+			NSString *openId = [dic objectForKey:@"openid"];
+			
+			[self getUserInfoWithAccess_token:access_token andOpenId:openId];
+		}
+	});
+	
+}
+
+/**
+ *  根据得到的access_token和openid得到用户个人信息
+ *
+ *  @param access_token_ access_token
+ *  @param openId_       openid
+ */
+-(void)getUserInfoWithAccess_token:(NSString*)access_token_ andOpenId:(NSString*)openId_{
+	
+	NSString *url =[NSString stringWithFormat:@"https://api.weixin.qq.com/sns/userinfo?access_token=%@&openid=%@",access_token_, openId_];
+	
+	NSURL *zoneUrl=[NSURL URLWithString:url];
+	
+	//微信第三方登录时必须异步加载
+	dispatch_async(dispatch_get_main_queue(), ^{
+		
+		NSData *data = [NSData dataWithContentsOfURL:zoneUrl];
+		
+		NSDictionary *userInfoDic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+		
+		[[NSNotificationCenter defaultCenter] postNotificationName:@"WXAuthorSuccessfulNotification" object:nil userInfo:userInfoDic];
+	});
+}
+
+
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+	[WXApi handleOpenURL:url delegate:self];
+	return [WeiboSDK handleOpenURL:url delegate:self];
+	
+}
+
 
 // log NSSet with UTF8
 // if not ,log will be \Uxxx
