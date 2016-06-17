@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface NSObject (Property)
+- (id)performSelector:(SEL)selector withObjects:(NSArray *)objects;
 
 @end

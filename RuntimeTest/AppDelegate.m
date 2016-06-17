@@ -455,6 +455,19 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
 
 - (void)didReceiveWeiboResponse:(WBBaseResponse *)response{
 	if ([response isKindOfClass:[WBSendMessageToWeiboResponse class]]) {
+		NSString *title = NSLocalizedString(@"发送结果", nil);
+		NSString *message = [NSString stringWithFormat:@"%@: %d\\n%@: %@\\n%@: %@", NSLocalizedString(@"响应状态", nil), (int)response.statusCode, NSLocalizedString(@"响应UserInfo数据", nil), response.userInfo, NSLocalizedString(@"原请求UserInfo数据", nil),response.requestUserInfo];
+		
+		WBSendMessageToWeiboResponse* sendMessageToWeiboResponse = (WBSendMessageToWeiboResponse*)response;
+		NSString* accessToken = [sendMessageToWeiboResponse.authResponse accessToken];
+		if (accessToken)
+		{
+			self.access_token = accessToken;
+		}
+		NSString* userID = [sendMessageToWeiboResponse.authResponse userID];
+		if (userID) {
+			self.userID = userID;
+		}
 		NSLog(@"返回状态%ld  %@   %@",response.statusCode,response.userInfo,response.requestUserInfo);
 	}else if([response isKindOfClass:[WBAuthorizeResponse class]]){
 		self.userID = [(WBAuthorizeResponse *)response userID];

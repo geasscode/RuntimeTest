@@ -165,8 +165,22 @@
 
 - (IBAction)gotoTestView:(id)sender {
 	
-	FirstViewController *firstVC = [FirstViewController new];
-	[self.navigationController pushViewController:firstVC animated:YES];
+	UIImage * webImage = [UIImage new];
+		NSString *webImageURL = @"http://img1.tuicool.com/FfqABjf.jpg";
+	
+//	UIImage *img = [UIImage imageNamed:@"arrow.png"];
+	
+	NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:webImageURL]];
+	UIImage* webURL = [UIImage imageWithData:data];
+												  
+												  //UIImageWriteToSavedPhotosAlbum(image, nil, nil,nil);
+//	UIImageWriteToSavedPhotosAlbum(webURL, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+
+	
+	UIImageWriteToSavedPhotosAlbum(webURL, self, nil,nil );
+	
+//	FirstViewController *firstVC = [FirstViewController new];
+//	[self.navigationController pushViewController:firstVC animated:YES];
 
 	
 }

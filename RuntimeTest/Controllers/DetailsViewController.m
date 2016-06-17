@@ -9,6 +9,7 @@
 #import "DetailsViewController.h"
 #import "Photo.h"
 #import "RatingCell.h"
+#import "NSObject+PropertyAdd.h"
 
 
 static NSString *const DetailCellIdentifier = @"DetailCell";
@@ -30,6 +31,9 @@ static NSString *const PhotoCreationDateKey = @"creationDate";
 	[super viewDidLoad];
 	[self setupTableView];
 }
+
+
+
 
 - (void)setupTableView
 {

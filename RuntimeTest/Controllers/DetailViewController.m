@@ -16,6 +16,7 @@
 #import "DBHelper.h"
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
+#import "NSObject+PropertyAdd.h"
 
 #define kToolBarHeight 38
 
@@ -45,13 +46,73 @@
 	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
 	hud.labelText = NSLocalizedString(@"正在加载请稍后...", @"HUD loading title");
 	
-	
-	
 	[self creatWebview];
-	
 	[self creatToolBar];
 }
 
+
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+	[self injectJS:webView];
+	
+}
+
+-(void)injectJS:(UIWebView *)webView{
+	//js方法遍历图片添加点击事件 返回图片个数
+	static  NSString * const jsGetImages =
+	@"function getImages(){\
+	var objs = document.getElementsByTagName(\"img\");\
+	for(var i=0;i<objs.length;i++){\
+	objs[i].onclick=function(){\
+	document.location.href=\"jscallbackoc://saveImage_*\"+this.src;\
+	};\
+	};\
+	return objs.length;\
+	};";
+	
+	[webView stringByEvaluatingJavaScriptFromString:jsGetImages];//注入js方法
+	
+	//注入自定义的js方法后别忘了调用 否则不会生效
+	[webView stringByEvaluatingJavaScriptFromString:@"getImages()"];//调用js方法
+	
+	// 禁用用户选择
+	[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
+	
+	// 禁用长按弹出框
+	[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
+}
+
+
+- (void)performJSMethodWithURL:(NSString *)url protocolName:(NSString *)name performViewController:(UIViewController *)viewController {
+	/*
+	 跳转url ：        jscallbackoc://sendMessage_number2_number3_*100$100$99
+	 protocolName：   jscallbackoc://
+	 方法名：          sendMessage:number2:number3
+	 参数：            100，100，99
+	 
+	 方法名和参数组合为oc的方法为：- (void)sendMessage:(NSString *)number number2:(NSString *)number2 number3:(NSString *)number3
+	 */
+	
+	// 获得协议后面的路径为： sendMessage_number2_*200$300
+	NSString *path = [url substringFromIndex:name.length];
+	
+	// 利用“*”切割路径，“*”前面是方法名，后面是参数
+	NSArray *subpaths = [path componentsSeparatedByString:@"*"];
+	
+	// 方法名 methodName == sendMessage:number2:
+	// 下面的方法是把"_"替换为"?', js返回的url里面把“:”直接省略了，只能在js里面使用“_”来表示，然后在oc里面再替换回“:”
+	NSString *methodName =[[subpaths firstObject ] stringByReplacingOccurrencesOfString:@"_" withString:@":"];
+	
+	// 参数  200$300，每个参数之间使用符号$链接（避免和url里面的其他字符混淆，因为一般url里面不会出现这个字符）
+	NSArray *params = nil;
+	if (subpaths.count == 2) {
+		params = [[subpaths lastObject] componentsSeparatedByString:@"$"];
+	}
+	NSLog(@"方法名：%@-----参数：%@", methodName,params);
+	// 调用NSObject类扩展方法，传递多个参数
+	[viewController performSelector:NSSelectorFromString(methodName) withObjects:params];
+}
 
 #pragma mark - 创建webview
 -(void)creatWebview{
@@ -142,18 +203,11 @@
 	if (buttonIndex == 1) {
 		//NSInteger index = _imagesDisplayView.imagesScrollView.contentOffset.x / kScreenWidth;
 		
-		UIImage * webImage = [UIImage new];
-//		_webImageURL = @"http://img1.tuicool.com/FfqABjf.jpg";
-		
-		UIImage *img = [UIImage imageNamed:@"arrow.png"];
-
-
-		NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:_webImageURL]];
-		webImage = [UIImage imageWithData:data];
-		
-		UIImageWriteToSavedPhotosAlbum(webImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil );
-
-//		UIImageWriteToSavedPhotosAlbum(webImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil );
+		//这段代码移值到新的project 没有任何问题。但是此项目就出现了问题。估计某些库的rumtime除了问题。 具体在哪以我技术难以查找。
+		NSString *webImageURL = @"http://img1.tuicool.com/FfqABjf.jpg";
+		NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:webImageURL]];
+		UIImage* webURL = [UIImage imageWithData:data];
+		UIImageWriteToSavedPhotosAlbum(webURL, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
 
 	}
 	
@@ -172,6 +226,10 @@
 	}
 }
 
+-(void)saveImage:(NSString *)imageURL
+{
+	NSLog(@"获取到图片地址：%@",imageURL);
+}
 
 /**
  *  带读按钮点击事件
@@ -746,10 +804,24 @@
 
 #pragma mark - webview的代理方法
 
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+
+//拦截跳转url，如果跳转过来的url包含了前缀"jscallbackoc://，就说明使我们自定义的方法，
+//我们需要做拦截处理，转换为oc方法，但是其他跳转url就不做任务处理。
+//每次网页在需要跳转之前，就会执行该方法。返回yes，表示可以跳转。返回no，表示不跳转。我们可以在这个方法里面拦截到跳转的url，然后做处理
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+	//点击web页面的图片调用如下代码
+	NSString *url = [[request URL] absoluteString];
+	NSString *protocolName = @"jscallbackoc://";
 	
+	if ( [url hasPrefix:protocolName]) {
+		[self performJSMethodWithURL:url protocolName:protocolName performViewController:self ];
+		return NO;
+	}
 	return YES;
+	
 }
+
 
 
 @end
