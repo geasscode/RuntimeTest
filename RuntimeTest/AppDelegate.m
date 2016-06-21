@@ -86,6 +86,31 @@ static AppDelegate *appdelegate;
 	return [UIApplication sharedApplication].delegate;
 }
 
+
+- (void)umengTrack {
+	
+	//设备识别信息
+	Class cls = NSClassFromString(@"UMANUtil");
+	SEL deviceIDSelector = @selector(openUDIDString);
+	NSString *deviceID = nil;
+	if(cls && [cls respondsToSelector:deviceIDSelector]){
+		deviceID = [cls performSelector:deviceIDSelector];
+	}
+	NSData* jsonData = [NSJSONSerialization dataWithJSONObject:@{@"oid" : deviceID}
+													   options:NSJSONWritingPrettyPrinted
+														 error:nil];
+	
+	NSLog(@"%@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
+	
+	
+	//    [MobClick setAppVersion:XcodeAppVersion]; //参数为NSString * 类型,自定义app版本信息，如果不设置，默认从CFBundleVersion里取
+	[MobClick setLogEnabled:YES];
+	UMConfigInstance.appKey = @"5768b29be0f55a3b24002ff2";
+//	UMConfigInstance.secret = @"secretstringaldfkals";
+	//    UMConfigInstance.eSType = E_UM_GAME;
+	[MobClick startWithConfigure:UMConfigInstance];
+}
+
 //启动但还没进入状态保存
 
 -(BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
@@ -105,8 +130,23 @@ static AppDelegate *appdelegate;
 //基本完成程序准备开始运行
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
-	[self saveDataToFile];
+	//JSPatch
 	
+	[JPEngine startEngine];
+	NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"js"];
+	NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+	[JPEngine evaluateScript:script];
+	
+	//如果开发者自己做了错误捕捉，可以调用下面方法关闭友盟的错误统计：
+	
+
+	[MobClick setCrashReportEnabled:NO];
+	
+
+	
+	[self saveDataToFile];
+	//  友盟的方法本身是异步执行，所以不需要再异步调用
+	[self umengTrack];
 	//第一步：注册key
 //	[OpenShare connectWeixinWithAppId:@"wxd930ea5d5a258f4f"];
 //	[OpenShare connectQQWithAppId:@"101128744"];

@@ -49,6 +49,9 @@ PODS:
   - FMDB/standard (2.6.2)
   - ionicons (2.0.3)
   - JMActionSheetDescription (0.4.8)
+  - JSPatch (1.0):
+    - JSPatch/Core (= 1.0)
+  - JSPatch/Core (1.0)
   - Masonry (1.0.0)
   - MBProgressHUD (0.9.2)
   - MJExtension (3.0.10)
@@ -69,6 +72,7 @@ PODS:
   - SDWebImage/Core (3.7.6)
   - SMSSDK (2.0.4)
   - SVProgressHUD (2.0.3)
+  - UMengAnalytics-NO-IDFA (4.0.5)
   - WeiboSDK (3.1.4)
   - WMPageController (1.4.9)
   - ZYKeyboardUtil (0.6.1)
@@ -81,6 +85,7 @@ DEPENDENCIES:
   - FMDB
   - ionicons
   - JMActionSheetDescription
+  - JSPatch
   - Masonry
   - MBProgressHUD
   - MJExtension
@@ -89,6 +94,7 @@ DEPENDENCIES:
   - ReactiveCocoa (~> 2.5)
   - SMSSDK
   - SVProgressHUD
+  - UMengAnalytics-NO-IDFA
   - WeiboSDK (from `https://github.com/sinaweibosdk/weibo_ios_sdk.git`)
   - WMPageController
   - ZYKeyboardUtil (~> 0.6.1)
@@ -111,6 +117,7 @@ SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   ionicons: ec1e86e6c3316bd9942a7f024080dd75c70dd6a5
   JMActionSheetDescription: 3cc02ba1a5b8248b03ea9e125e5c7472c584205c
+  JSPatch: c689ea4dde17441f2f4a95d40dfedb8900c20099
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
@@ -120,6 +127,7 @@ SPEC CHECKSUMS:
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   SMSSDK: 642b6a8c55fd382be44487cd5e0b0710681895f9
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  UMengAnalytics-NO-IDFA: 965a219b05475ff2a4c09a164139a27bbaa0e25b
   WeiboSDK: bceab625ec59b7039ba721cc4ba9f5868804f63e
   WMPageController: f4830b6aed39f16196d4008f8d95c720cf6b1ace
   ZYKeyboardUtil: 2d613031e0639d17cd198cc24c46be2af1a55713

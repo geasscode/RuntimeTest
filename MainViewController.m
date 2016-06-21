@@ -35,6 +35,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 50, [UIScreen mainScreen].bounds.size.width, 50)];
+	[btn setTitle:@"JSPatch Test" forState:UIControlStateNormal];
+	[btn addTarget:self action:@selector(handleBtn:) forControlEvents:UIControlEventTouchUpInside];
+	[btn setBackgroundColor:[UIColor grayColor]];
+	[self.view addSubview:btn];
+
 	//查看源码
 //	clang -rewrite-objc MyClass.m
 	
@@ -165,6 +171,8 @@
 
 - (IBAction)gotoTestView:(id)sender {
 	
+	/*
+	
 	UIImage * webImage = [UIImage new];
 		NSString *webImageURL = @"http://img1.tuicool.com/FfqABjf.jpg";
 	
@@ -182,7 +190,17 @@
 //	FirstViewController *firstVC = [FirstViewController new];
 //	[self.navigationController pushViewController:firstVC animated:YES];
 
+	*/
+	UIButton *btn = (UIButton *)sender;
 	
+	[btn addTarget:self action:@selector(handleBtn:) forControlEvents:UIControlEventTouchUpInside];
+
+//	[self handleBtn:sender];
+}
+
+- (void)handleBtn:(id)sender
+{
+	NSLog(@"hello");
 }
 
 - (IBAction)gotoWeeklyView:(id)sender {

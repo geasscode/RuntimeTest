@@ -153,6 +153,7 @@
 		F7754BE31CC753F600F989DA /* DynamicExchangeMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BE21CC753F600F989DA /* DynamicExchangeMethodViewController.m */; };
 		F7754BE61CC7541A00F989DA /* ReplaceMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BE51CC7541A00F989DA /* ReplaceMethodViewController.m */; };
 		F7754BE91CC7548A00F989DA /* OtherFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BE81CC7548A00F989DA /* OtherFunctionViewController.m */; };
+		F77FDA4E1D19275200562A3F /* demo.js in Resources */ = {isa = PBXBuildFile; fileRef = F77FDA4D1D19275200562A3F /* demo.js */; };
 		F78E020F1CE9AF64003CD195 /* FavoriteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F78E020E1CE9AF63003CD195 /* FavoriteTableViewController.m */; };
 		F78E02121CE9B26A003CD195 /* FavoriteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F78E02111CE9B26A003CD195 /* FavoriteCell.m */; };
 		F7B1EA611CC5D5AF00307F41 /* LoadData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B1EA601CC5D5AF00307F41 /* LoadData.storyboard */; };
@@ -640,6 +641,8 @@
 		F7754BE51CC7541A00F989DA /* ReplaceMethodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceMethodViewController.m; sourceTree = "<group>"; };
 		F7754BE71CC7548A00F989DA /* OtherFunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherFunctionViewController.h; sourceTree = "<group>"; };
 		F7754BE81CC7548A00F989DA /* OtherFunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherFunctionViewController.m; sourceTree = "<group>"; };
+		F77FDA4A1D18E2A200562A3F /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = RuntimeTest/Other/libs/UMMobClick.framework; sourceTree = "<group>"; };
+		F77FDA4D1D19275200562A3F /* demo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = demo.js; sourceTree = "<group>"; };
 		F78E020D1CE9AF63003CD195 /* FavoriteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteTableViewController.h; sourceTree = "<group>"; };
 		F78E020E1CE9AF63003CD195 /* FavoriteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteTableViewController.m; sourceTree = "<group>"; };
 		F78E02101CE9B26A003CD195 /* FavoriteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteCell.h; sourceTree = "<group>"; };
@@ -1051,6 +1054,7 @@
 		E06492DA06779C2A54DCC373 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F77FDA4A1D18E2A200562A3F /* UMMobClick.framework */,
 				F7BB42B51CEEBE64006F5EE3 /* libsqlite3.tbd */,
 				F7BB424B1CED9BE1006F5EE3 /* AddressBookUI.framework */,
 				F7BB42491CED9BDA006F5EE3 /* AddressBook.framework */,
@@ -1305,6 +1309,7 @@
 		F7526FEE1C9A940A0012FE76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F77FDA4D1D19275200562A3F /* demo.js */,
 				F768EF661D0805EE005747E3 /* assets */,
 				F7CBB4391CFD706000662347 /* 方正隶书繁体.ttf */,
 				F7CBB43A1CFD706000662347 /* 隶书_GBK.TTF */,
@@ -2378,6 +2383,7 @@
 				F768EF931D0805EE005747E3 /* activity4.jpg in Resources */,
 				F768EFAC1D0805EE005747E3 /* goods5.jpg in Resources */,
 				F768EFB61D0805EE005747E3 /* image6.jpg in Resources */,
+				F77FDA4E1D19275200562A3F /* demo.js in Resources */,
 				F768EF9F1D0805EE005747E3 /* category1.png in Resources */,
 				F7BB42F01CEEECE2006F5EE3 /* ShareSDK.bundle in Resources */,
 				F768EF9A1D0805EE005747E3 /* banner2.png in Resources */,
@@ -2893,6 +2899,7 @@
 					"$(PROJECT_DIR)/RuntimeTest/Other/3rd/ShareSDK/Support/PlatformSDK/FacebookMessengerSDK",
 					"$(PROJECT_DIR)/RuntimeTest/Other/3rd/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/RuntimeTest/Other/3rd/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/RuntimeTest/Other/libs",
 				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2946,6 +2953,7 @@
 					"$(PROJECT_DIR)/RuntimeTest/Other/3rd/ShareSDK/Support/PlatformSDK/FacebookMessengerSDK",
 					"$(PROJECT_DIR)/RuntimeTest/Other/3rd/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/RuntimeTest/Other/3rd/ShareSDK/Support/Required",
+					"$(PROJECT_DIR)/RuntimeTest/Other/libs",
 				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
