@@ -50,6 +50,7 @@
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 	MyCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
 	[cell setImageForCellWithIndexPath:indexPath];
+	cell.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
 	return cell;
 }
 
@@ -88,7 +89,11 @@
 		}
 		
 		else if (indexPath.row ==5){
-			[self cleanCache];
+			
+		
+			self.dk_manager.themeVersion = DKThemeVersionNight;
+			
+//			[self cleanCache];
 			return;
 		}
 		
@@ -116,7 +121,8 @@
 	[self.view addSubview:self.collectionView];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserinfo:) name:@"WBAuthorSuccessfulNotification" object:nil];
-	
+//	self.collectionView.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+
 	}
 
 - (void)viewWillAppear:(BOOL)animated{

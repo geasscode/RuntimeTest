@@ -48,8 +48,20 @@
 	
 	[self creatWebview];
 	[self creatToolBar];
+	
+	
+	
 }
 
+
+-(void)loadDocument:(NSString *)documentName inView:(UIWebView *)webView
+{
+	NSString *path = [[NSBundle mainBundle] pathForResource:documentName ofType:nil];
+	NSURL *url = [NSURL fileURLWithPath:path];
+	NSURLRequest *request = [NSURLRequest requestWithURL:url];
+	[webView loadRequest:request];
+	
+}
 
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
@@ -126,7 +138,20 @@
 	longPressed.delegate = self;
 	
 	[self.webView addGestureRecognizer:longPressed];
+	
+	
+//	[self loadDocument:@"现有的本地word文档.docx" inView:webview];
+	
+
+
 	[self.view addSubview:webview];
+	
+//	///自动适应大小
+//	webview.scalesPageToFit = YES;
+//	
+//	///关闭下拉刷新效果
+//	webview.scrollView.bounces = NO;
+	
 	//设置是否透明
 	webview.opaque = YES;
 	webview.delegate = self;
@@ -136,6 +161,12 @@
 		make.bottom.equalTo(super.view.mas_bottom).mas_offset(-kToolBarHeight);
 		
 	}];
+	
+
+	
+
+	
+	
 	
 }
 

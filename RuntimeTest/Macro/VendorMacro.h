@@ -32,6 +32,7 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import "UMMobClick/MobClick.h"
 #import "JPEngine.h"
+#import "DKNight.h"
 
 //微信SDK头文件
 #import "WXApi.h"

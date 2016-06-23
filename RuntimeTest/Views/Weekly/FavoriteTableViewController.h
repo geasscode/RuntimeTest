@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DESSearchControllerBaseViewController.h"
 
-@interface FavoriteTableViewController : UITableViewController
+@interface FavoriteTableViewController : DESSearchControllerBaseViewController
 
 @end
