@@ -154,8 +154,12 @@
 		F7754BE61CC7541A00F989DA /* ReplaceMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BE51CC7541A00F989DA /* ReplaceMethodViewController.m */; };
 		F7754BE91CC7548A00F989DA /* OtherFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BE81CC7548A00F989DA /* OtherFunctionViewController.m */; };
 		F77FDA4E1D19275200562A3F /* demo.js in Resources */ = {isa = PBXBuildFile; fileRef = F77FDA4D1D19275200562A3F /* demo.js */; };
+		F77FDA511D19443D00562A3F /* CollectionViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FDA501D19443D00562A3F /* CollectionViewTest.m */; };
+		F77FDA541D1945A300562A3F /* RegularExpressionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FDA531D1945A300562A3F /* RegularExpressionTest.m */; };
 		F78E020F1CE9AF64003CD195 /* FavoriteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F78E020E1CE9AF63003CD195 /* FavoriteTableViewController.m */; };
 		F78E02121CE9B26A003CD195 /* FavoriteCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F78E02111CE9B26A003CD195 /* FavoriteCell.m */; };
+		F7962D271D1A6C2600CE3119 /* DESSearchControllerBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7962D261D1A6C2500CE3119 /* DESSearchControllerBaseViewController.m */; };
+		F7962D2A1D1A6CB900CE3119 /* DESSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7962D291D1A6CB900CE3119 /* DESSearchResultsViewController.m */; };
 		F7B1EA611CC5D5AF00307F41 /* LoadData.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7B1EA601CC5D5AF00307F41 /* LoadData.storyboard */; };
 		F7B1EAA41CC6104200307F41 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EAA31CC6104200307F41 /* MainViewController.m */; };
 		F7B1EAA71CC610B800307F41 /* DESNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7B1EAA61CC610B800307F41 /* DESNavigationController.m */; };
@@ -643,10 +647,18 @@
 		F7754BE81CC7548A00F989DA /* OtherFunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherFunctionViewController.m; sourceTree = "<group>"; };
 		F77FDA4A1D18E2A200562A3F /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = RuntimeTest/Other/libs/UMMobClick.framework; sourceTree = "<group>"; };
 		F77FDA4D1D19275200562A3F /* demo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = demo.js; sourceTree = "<group>"; };
+		F77FDA4F1D19443D00562A3F /* CollectionViewTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewTest.h; sourceTree = "<group>"; };
+		F77FDA501D19443D00562A3F /* CollectionViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewTest.m; sourceTree = "<group>"; };
+		F77FDA521D1945A300562A3F /* RegularExpressionTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularExpressionTest.h; sourceTree = "<group>"; };
+		F77FDA531D1945A300562A3F /* RegularExpressionTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularExpressionTest.m; sourceTree = "<group>"; };
 		F78E020D1CE9AF63003CD195 /* FavoriteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteTableViewController.h; sourceTree = "<group>"; };
 		F78E020E1CE9AF63003CD195 /* FavoriteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteTableViewController.m; sourceTree = "<group>"; };
 		F78E02101CE9B26A003CD195 /* FavoriteCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoriteCell.h; sourceTree = "<group>"; };
 		F78E02111CE9B26A003CD195 /* FavoriteCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoriteCell.m; sourceTree = "<group>"; };
+		F7962D251D1A6C2500CE3119 /* DESSearchControllerBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESSearchControllerBaseViewController.h; sourceTree = "<group>"; };
+		F7962D261D1A6C2500CE3119 /* DESSearchControllerBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESSearchControllerBaseViewController.m; sourceTree = "<group>"; };
+		F7962D281D1A6CB900CE3119 /* DESSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESSearchResultsViewController.h; sourceTree = "<group>"; };
+		F7962D291D1A6CB900CE3119 /* DESSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESSearchResultsViewController.m; sourceTree = "<group>"; };
 		F7B1EA601CC5D5AF00307F41 /* LoadData.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoadData.storyboard; sourceTree = "<group>"; };
 		F7B1EAA21CC6104200307F41 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = ../MainViewController.h; sourceTree = "<group>"; };
 		F7B1EAA31CC6104200307F41 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
@@ -1152,6 +1164,10 @@
 				F768EFC01D0E5451005747E3 /* SuggestView.m */,
 				F768EFC51D0E8C12005747E3 /* RegisterView.h */,
 				F768EFC61D0E8C12005747E3 /* RegisterView.m */,
+				F7962D251D1A6C2500CE3119 /* DESSearchControllerBaseViewController.h */,
+				F7962D261D1A6C2500CE3119 /* DESSearchControllerBaseViewController.m */,
+				F7962D281D1A6CB900CE3119 /* DESSearchResultsViewController.h */,
+				F7962D291D1A6CB900CE3119 /* DESSearchResultsViewController.m */,
 			);
 			path = Weekly;
 			sourceTree = "<group>";
@@ -1399,6 +1415,10 @@
 				F768EF4F1D07FF08005747E3 /* FirstViewController.m */,
 				F768EF501D07FF08005747E3 /* SecondViewController.h */,
 				F768EF511D07FF08005747E3 /* SecondViewController.m */,
+				F77FDA4F1D19443D00562A3F /* CollectionViewTest.h */,
+				F77FDA501D19443D00562A3F /* CollectionViewTest.m */,
+				F77FDA521D1945A300562A3F /* RegularExpressionTest.h */,
+				F77FDA531D1945A300562A3F /* RegularExpressionTest.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2516,6 +2536,7 @@
 				F768EF571D07FF08005747E3 /* CBIconfont.m in Sources */,
 				F7BAC7671CC8DC30000D9795 /* ContactTableViewCell.m in Sources */,
 				F74676D71CB7B38F0001D3A5 /* RunLoopTest.m in Sources */,
+				F7962D271D1A6C2600CE3119 /* DESSearchControllerBaseViewController.m in Sources */,
 				F7CBB4301CFC254000662347 /* GifImage.m in Sources */,
 				F7B4128F1C9BD96C00E45E22 /* User.m in Sources */,
 				F7BAC73F1CC8D40F000D9795 /* NSArray+JSONModel.m in Sources */,
@@ -2695,10 +2716,13 @@
 				F7DB40731C9FEAF900E164C7 /* loadXIBFile.m in Sources */,
 				F7DB40771CA0E9F300E164C7 /* CYAlertView.m in Sources */,
 				F7B4128E1C9BD96C00E45E22 /* Post.m in Sources */,
+				F77FDA511D19443D00562A3F /* CollectionViewTest.m in Sources */,
 				F76CB8001CE480F600D8474F /* ArticleModel.m in Sources */,
 				F7B1EAAD1CC611B300307F41 /* NavigationItem.m in Sources */,
 				F75244211CF6D8F7001C88EE /* AppConfigure.m in Sources */,
 				F7BAC7031CC78E9C000D9795 /* UIButton+Hook.m in Sources */,
+				F77FDA541D1945A300562A3F /* RegularExpressionTest.m in Sources */,
+				F7962D2A1D1A6CB900CE3119 /* DESSearchResultsViewController.m in Sources */,
 				F7BCC5D21CCF66AE00704878 /* BaseModel.m in Sources */,
 				F7B412981C9BDA3900E45E22 /* PostTableViewCell.m in Sources */,
 				F768EFC11D0E5451005747E3 /* SuggestView.m in Sources */,
