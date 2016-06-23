@@ -66,6 +66,8 @@
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
+	
+
 	[self injectJS:webView];
 	
 }
@@ -84,6 +86,11 @@
 	};";
 	
 	[webView stringByEvaluatingJavaScriptFromString:jsGetImages];//注入js方法
+	
+	//通过这个控制字体大小。默认是100%。
+	int fontSize = 100;
+	NSString *jsString = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%'", fontSize];
+	[webView stringByEvaluatingJavaScriptFromString:jsString];
 	
 	//注入自定义的js方法后别忘了调用 否则不会生效
 	[webView stringByEvaluatingJavaScriptFromString:@"getImages()"];//调用js方法
