@@ -24,6 +24,7 @@
 		F707FEAE1CE06C85008E4F7C /* OpenShare.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FEA71CE06C85008E4F7C /* OpenShare.m */; };
 		F707FEB01CE06E8E008E4F7C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F707FEAF1CE06E8E008E4F7C /* MessageUI.framework */; };
 		F707FEB21CE08555008E4F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F707FEB11CE08555008E4F7C /* Assets.xcassets */; };
+		F72516441D1D1EA700A5BAC7 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72516431D1D1EA600A5BAC7 /* NewsViewController.m */; };
 		F7275CE61CD08E38002F0F68 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7275CE51CD08E38002F0F68 /* ShareViewController.m */; };
 		F7275CE91CD08E38002F0F68 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7275CE71CD08E38002F0F68 /* MainInterface.storyboard */; };
 		F7275CED1CD08E38002F0F68 /* ReaderList.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F7275CE21CD08E38002F0F68 /* ReaderList.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -426,6 +427,8 @@
 		F707FEA81CE06C85008E4F7C /* OpenShareHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenShareHeader.h; sourceTree = "<group>"; };
 		F707FEAF1CE06E8E008E4F7C /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		F707FEB11CE08555008E4F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F72516421D1D1EA600A5BAC7 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		F72516431D1D1EA600A5BAC7 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
 		F7275CE21CD08E38002F0F68 /* ReaderList.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ReaderList.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7275CE41CD08E38002F0F68 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		F7275CE51CD08E38002F0F68 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
@@ -1168,6 +1171,8 @@
 				F7962D261D1A6C2500CE3119 /* DESSearchControllerBaseViewController.m */,
 				F7962D281D1A6CB900CE3119 /* DESSearchResultsViewController.h */,
 				F7962D291D1A6CB900CE3119 /* DESSearchResultsViewController.m */,
+				F72516421D1D1EA600A5BAC7 /* NewsViewController.h */,
+				F72516431D1D1EA600A5BAC7 /* NewsViewController.m */,
 			);
 			path = Weekly;
 			sourceTree = "<group>";
@@ -2530,6 +2535,7 @@
 				F768EFC71D0E8C12005747E3 /* RegisterView.m in Sources */,
 				F76CB80B1CE48C6B00D8474F /* ArticleHomeViewController.m in Sources */,
 				F707FEAC1CE06C85008E4F7C /* OpenShare+Weibo.m in Sources */,
+				F72516441D1D1EA700A5BAC7 /* NewsViewController.m in Sources */,
 				F707FEAB1CE06C85008E4F7C /* OpenShare+Renren.m in Sources */,
 				F7BCC5E01CCF6CDA00704878 /* HomeDetailView.m in Sources */,
 				F7B1EABB1CC633E000307F41 /* UIColor+WNXColor.m in Sources */,
@@ -2911,7 +2917,6 @@
 			baseConfigurationReference = FA61B4E808F54EC6643CA1A3 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2967,7 +2972,6 @@
 			baseConfigurationReference = 2CA5276C8B2F3D8FCC327D72 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

@@ -9,6 +9,7 @@
 #import "DESSearchControllerBaseViewController.h"
 #import "DBHelper.h"
 #import "DetailViewController.h"
+#import "NewsViewController.h"
 #import "DESSearchResultsViewController.h"
 
 NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @"searchCell";
@@ -108,7 +109,10 @@ NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @
 	// Create the search controller and make it perform the results updating.
 	self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
 	self.searchController.searchResultsUpdater = searchResultsController;
+	self.searchController.searchBar.delegate = searchResultsController;
 	self.searchController.hidesNavigationBarDuringPresentation = NO;
+//	self.definesPresentationContext = YES;
+
 	// Present the view controller.
 	[self presentViewController:self.searchController animated:YES completion:nil];
 	
@@ -222,6 +226,43 @@ NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @
 
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
 	return @"删除";
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	
+	[self.searchController.searchBar becomeFirstResponder];
+	
+	
+	if ([self.searchController isActive]) {
+		[self.searchController setActive:NO];
+	} else {
+		
+		DetailModel *model = self.visibleResults[indexPath.row];
+											
+		NewsViewController *detail = [[NewsViewController alloc] init];
+		detail.detailTextId = model.detatilArticleId;
+		[self.navigationController pushViewController:detail animated:YES];
+	}
+
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+	
+	
+	[self.searchController.searchBar becomeFirstResponder];
+	
+	
+	if ([self.searchController isActive]) {
+		[self.searchController setActive:NO];
+	} else {
+		
+		DetailModel *model = self.visibleResults[0];
+		NewsViewController *detail = [[NewsViewController alloc] init];
+		detail.detailTextId = model.detatilArticleId;
+		[self.navigationController pushViewController:detail animated:YES];
+	}
+
+
 }
 
 

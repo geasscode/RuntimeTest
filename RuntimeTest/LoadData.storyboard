@@ -273,6 +273,25 @@
             </objects>
             <point key="canvasLocation" x="997.5" y="942.5"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="R5U-tL-CGS">
+            <objects>
+                <viewController storyboardIdentifier="newsView" id="Emd-je-6i9" customClass="DetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PHO-o3-rgT"/>
+                        <viewControllerLayoutGuide type="bottom" id="htf-U1-Ii2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QAA-Qv-e34">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ceg-6x-h8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="1679"/>
+        </scene>
         <!--Search Results View Controller-->
         <scene sceneID="I1Q-df-P37">
             <objects>

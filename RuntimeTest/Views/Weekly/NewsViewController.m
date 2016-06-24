@@ -1,4 +1,4 @@
-#import "DetailViewController.h"
+#import "NewsViewController.h"
 #import "DetailModel.h"
 
 #import "UIBarButtonItem+WNXBarButtonItem.h"
@@ -20,7 +20,7 @@
 
 #define kToolBarHeight 38
 
-@interface DetailViewController ()<UIGestureRecognizerDelegate,UIWebViewDelegate,UIAlertViewDelegate>
+@interface NewsViewController ()<UIGestureRecognizerDelegate,UIWebViewDelegate,UIAlertViewDelegate>
 
 @property (nonatomic,weak) UIWebView *webView;
 
@@ -36,7 +36,7 @@
 
 @end
 
-@implementation DetailViewController
+@implementation NewsViewController
 
 #pragma mark - 试图生命周期
 - (void)viewDidLoad {
@@ -65,7 +65,7 @@
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
 	
-
+	
 	[self injectJS:webView];
 	
 }
@@ -145,17 +145,17 @@
 	[self.webView addGestureRecognizer:longPressed];
 	
 	
-//	[self loadDocument:@"现有的本地word文档.docx" inView:webview];
+	//	[self loadDocument:@"现有的本地word文档.docx" inView:webview];
 	
-
-
+	
+	
 	[self.view addSubview:webview];
 	
-//	///自动适应大小
-//	webview.scalesPageToFit = YES;
-//	
-//	///关闭下拉刷新效果
-//	webview.scrollView.bounces = NO;
+	//	///自动适应大小
+	//	webview.scalesPageToFit = YES;
+	//
+	//	///关闭下拉刷新效果
+	//	webview.scrollView.bounces = NO;
 	
 	//设置是否透明
 	webview.opaque = YES;
@@ -167,9 +167,9 @@
 		
 	}];
 	
-
 	
-
+	
+	
 	
 	
 	
@@ -244,7 +244,7 @@
 		NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:webImageURL]];
 		UIImage* webURL = [UIImage imageWithData:data];
 		UIImageWriteToSavedPhotosAlbum(webURL, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-
+		
 	}
 	
 }
@@ -406,12 +406,12 @@
 						   [alertView show];
 						   break;
 					   }
-
+						   
 					   default:
 						   break;
 				   }
 				   
-			
+				   
 			   }
 	 ];
 }
@@ -511,30 +511,30 @@
 -(void)activityItems{
 	//Bookmark, Add To Reading List, and Add To Homescreen are only available in safari, unless you define them yourself. To add those buttons, you need to create an applicationActivities NSArray, populated with UIActivity objects for various services. You can pass this array into the initWithActivityItems:applicationActivities:
 	
-//	UIActivityViewController中的服务分为了两种，UIActivityCategoryAction和UIActivityCategoryShare,UIActivityCategoryAction表示在最下面一栏的操作型服务,比如Copy、Print;UIActivityCategoryShare表示在中间一栏的分享型服务，比如一些社交软件。
+	//	UIActivityViewController中的服务分为了两种，UIActivityCategoryAction和UIActivityCategoryShare,UIActivityCategoryAction表示在最下面一栏的操作型服务,比如Copy、Print;UIActivityCategoryShare表示在中间一栏的分享型服务，比如一些社交软件。
 	
-
+	
 	//用系统自带的方法增加qq收藏，微信收藏，分享到朋友圈。新浪微博。待实现。
-//	NSArray* imageArray = @[[UIImage imageNamed:@"icon.jpg"]];
+	//	NSArray* imageArray = @[[UIImage imageNamed:@"icon.jpg"]];
 	
 	NSString *title = _webModel.title;
 	
 	NSString *description = _webModel.title;;
 	
-
+	
 	//要显示存储图像icon首先要有图片。
 	UIImage *imageIcon = [UIImage imageNamed:@"icon.jpg"];
 	//当有URL 时才能显示添加到阅读列表。
 	NSURL *URL = [NSURL URLWithString:_webModel.url];
 	
-//	UISimpleTextPrintFormatter *printData = [[UISimpleTextPrintFormatter alloc] initWithText:self.title];								
+	//	UISimpleTextPrintFormatter *printData = [[UISimpleTextPrintFormatter alloc] initWithText:self.title];
 	NSArray *activityItems = @[title, description,imageIcon,URL];
 	UIActivityViewController *activityViewController = [[UIActivityViewController alloc]
 														initWithActivityItems:activityItems applicationActivities:nil];
 	
 	
 	activityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-
+	
 	//排除不需要的功能如AirDrop
 	activityViewController.excludedActivityTypes = @[UIActivityTypeAirDrop,UIActivityTypePostToFacebook,UIActivityTypePostToTwitter,UIActivityTypeAssignToContact];
 	
@@ -549,26 +549,26 @@
 	
 	
 	
-//	UIPopoverPresentationController *popover = activityViewController.popoverPresentationController;
-//	if (popover) {
-//		popover.sourceView = self.view;
-//		popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
-//	}
-
+	//	UIPopoverPresentationController *popover = activityViewController.popoverPresentationController;
+	//	if (popover) {
+	//		popover.sourceView = self.view;
+	//		popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
+	//	}
+	
 	
 	// 写一个bolck，用于completionHandler的初始化
-//	UIActivityViewControllerCompletionHandler myBlock = ^(NSString *activityType,BOOL completed) {
-//		NSLog(@"%@", activityType);
-//		
-//		if(completed) {
-//			NSLog(@"completed");
-//		} else
-//		{
-//			NSLog(@"cancled");
-//		}
-//		[activityViewController dismissViewControllerAnimated:YES completion:Nil];
-//	};
-//	
+	//	UIActivityViewControllerCompletionHandler myBlock = ^(NSString *activityType,BOOL completed) {
+	//		NSLog(@"%@", activityType);
+	//
+	//		if(completed) {
+	//			NSLog(@"completed");
+	//		} else
+	//		{
+	//			NSLog(@"cancled");
+	//		}
+	//		[activityViewController dismissViewControllerAnimated:YES completion:Nil];
+	//	};
+	//
 	
 	activityViewController.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
 		NSLog(@"Finished with activity %@", activityType);
@@ -579,11 +579,11 @@
 		{
 			NSLog(@"cancled");
 		}
-//		[activityViewController dismissViewControllerAnimated:YES completion:Nil];
+		//		[activityViewController dismissViewControllerAnimated:YES completion:Nil];
 	};
 	
 	// 初始化completionHandler，当post结束之后（无论是done还是cancell）该blog都会被调用
-//	activityViewController.completionHandler = myBlock;
+	//	activityViewController.completionHandler = myBlock;
 	
 	
 	//if iPhone
@@ -598,15 +598,15 @@
 		[popup presentPopoverFromBarButtonItem:shareBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 	}
 	
-//	[self presentViewController:activityViewController animated:YES completion:nil];
+	//	[self presentViewController:activityViewController animated:YES completion:nil];
 }
 /**
  *  分享按钮点击事件
  */
 -(void)shareItemClick:(id)sender{
 	
-//	[self shareMethod:sender];
-//	[self sdkShareMethod];
+	//	[self shareMethod:sender];
+	//	[self sdkShareMethod];
 	[self activityItems];
 }
 /**

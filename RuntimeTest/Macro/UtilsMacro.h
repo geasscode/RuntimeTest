@@ -16,6 +16,7 @@
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
 
+#define kUserDefaults [NSUserDefaults standardUserDefaults]
 
 // 随机颜色
 #define RANDOM_COLOR [UIColor colorWithRed:arc4random_uniform(256) / 255.0 green:arc4random_uniform(256) / 255.0 blue:arc4random_uniform(256) / 255.0 alpha:1]
