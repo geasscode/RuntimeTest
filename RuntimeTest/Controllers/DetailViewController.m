@@ -49,10 +49,11 @@
 	[self creatWebview];
 	[self creatToolBar];
 	
-	
-	
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+	NSLog(@"why?");
+}
 
 -(void)loadDocument:(NSString *)documentName inView:(UIWebView *)webView
 {

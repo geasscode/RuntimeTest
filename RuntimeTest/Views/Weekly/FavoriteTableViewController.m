@@ -56,29 +56,29 @@
 }
 
 
-- (void)searchArtical{
-
-	
-	// Create the search results view controller and use it for the UISearchController.
-	
-	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
-	DESSearchResultsViewController *searchResultsController  = (DESSearchResultsViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"DESSearchResultsViewControllerStoryboardIdentifier"];
-
-//	DESSearchResultsViewController *searchResultsController = [self.storyboard instantiateViewControllerWithIdentifier:DESSearchResultsViewControllerStoryboardIdentifier];
-	
-	// Create the search controller and make it perform the results updating.
-	self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
-	self.searchController.searchResultsUpdater = searchResultsController;
-	self.searchController.hidesNavigationBarDuringPresentation = NO;
-	// Present the view controller.
-	[self presentViewController:self.searchController animated:YES completion:nil];
-
-	
-}
-- (void)handleBack {
-	[self.navigationController popViewControllerAnimated:YES];
-	//[self.navigationController popToRootViewControllerAnimated:YES];
-}
+//- (void)searchArtical{
+//
+//	
+//	// Create the search results view controller and use it for the UISearchController.
+//	
+//	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
+//	DESSearchResultsViewController *searchResultsController  = (DESSearchResultsViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"DESSearchResultsViewControllerStoryboardIdentifier"];
+//
+////	DESSearchResultsViewController *searchResultsController = [self.storyboard instantiateViewControllerWithIdentifier:DESSearchResultsViewControllerStoryboardIdentifier];
+//	
+//	// Create the search controller and make it perform the results updating.
+//	self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
+//	self.searchController.searchResultsUpdater = searchResultsController;
+//	self.searchController.hidesNavigationBarDuringPresentation = NO;
+//	// Present the view controller.
+//	[self presentViewController:self.searchController animated:YES completion:nil];
+//
+//	
+//}
+//- (void)handleBack {
+//	[self.navigationController popViewControllerAnimated:YES];
+//	//[self.navigationController popToRootViewControllerAnimated:YES];
+//}
 
 
 #pragma mark - Table view data source

@@ -7,6 +7,8 @@
 //
 
 #import "DESSearchResultsViewController.h"
+#import "DetailModel.h"
+#import "DetailViewController.h"
 NSString *const DESSearchResultsViewControllerStoryboardIdentifier = @"DESSearchResultsViewControllerStoryboardIdentifier";
 
 @implementation DESSearchResultsViewController
@@ -23,5 +25,21 @@ NSString *const DESSearchResultsViewControllerStoryboardIdentifier = @"DESSearch
 	}
 	
 	self.filterString = searchController.searchBar.text;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	
+	DetailModel *model = self.visibleResults[indexPath.row];
+	
+	DetailViewController *detail = [[DetailViewController alloc] init];
+	detail.detailTextId = model.detatilArticleId;
+	[self.navigationController pushViewController:detail animated:YES];
+
+}
+
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+	NSLog(@"hello");
+	//perform the same functionality of the create button
 }
 @end

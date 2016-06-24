@@ -8,6 +8,8 @@
 
 #import "DESSearchControllerBaseViewController.h"
 #import "DBHelper.h"
+#import "DetailViewController.h"
+#import "DESSearchResultsViewController.h"
 
 NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @"searchCell";
 
@@ -16,6 +18,7 @@ NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @
 @property (copy) NSArray *allResults;
 
 @property (readwrite, copy) NSArray *visibleResults;
+@property (nonatomic, strong) UISearchController *searchController;
 
 @end
 
@@ -90,6 +93,30 @@ NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @
 //	
 	self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithKey(BAR);
 	
+}
+
+- (void)searchArtical{
+	
+	
+	// Create the search results view controller and use it for the UISearchController.
+	
+	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
+	DESSearchResultsViewController *searchResultsController  = (DESSearchResultsViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"DESSearchResultsViewControllerStoryboardIdentifier"];
+	
+	//	DESSearchResultsViewController *searchResultsController = [self.storyboard instantiateViewControllerWithIdentifier:DESSearchResultsViewControllerStoryboardIdentifier];
+	
+	// Create the search controller and make it perform the results updating.
+	self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
+	self.searchController.searchResultsUpdater = searchResultsController;
+	self.searchController.hidesNavigationBarDuringPresentation = NO;
+	// Present the view controller.
+	[self presentViewController:self.searchController animated:YES completion:nil];
+	
+	
+}
+- (void)handleBack {
+	[self.navigationController popViewControllerAnimated:YES];
+	//[self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 
@@ -196,6 +223,7 @@ NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
 	return @"删除";
 }
+
 
 
 

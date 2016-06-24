@@ -10,7 +10,7 @@
 
 extern NSString *const DESSearchResultsViewControllerStoryboardIdentifier;
 
-@interface DESSearchResultsViewController : DESSearchControllerBaseViewController<UISearchResultsUpdating>
+@interface DESSearchResultsViewController : DESSearchControllerBaseViewController<UISearchResultsUpdating,UISearchBarDelegate>
 
 #pragma mark - UISearchResultsUpdating
 
