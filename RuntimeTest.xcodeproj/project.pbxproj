@@ -25,6 +25,20 @@
 		F707FEB01CE06E8E008E4F7C /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F707FEAF1CE06E8E008E4F7C /* MessageUI.framework */; };
 		F707FEB21CE08555008E4F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F707FEB11CE08555008E4F7C /* Assets.xcassets */; };
 		F72516441D1D1EA700A5BAC7 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F72516431D1D1EA600A5BAC7 /* NewsViewController.m */; };
+		F72516471D211BFD00A5BAC7 /* DESTableViewActionSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = F72516461D211BFC00A5BAC7 /* DESTableViewActionSheetView.m */; };
+		F725164F1D2124B400A5BAC7 /* LLAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F725164A1D2124B400A5BAC7 /* LLAnimationManager.m */; };
+		F72516501D2124B400A5BAC7 /* LLEyesLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F725164C1D2124B400A5BAC7 /* LLEyesLayer.m */; };
+		F72516511D2124B400A5BAC7 /* LLSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = F725164E1D2124B400A5BAC7 /* LLSwitch.m */; };
+		F72516611D21366700A5BAC7 /* TBActionBackground.m in Sources */ = {isa = PBXBuildFile; fileRef = F72516541D21366700A5BAC7 /* TBActionBackground.m */; };
+		F72516621D21366700A5BAC7 /* TBActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F72516561D21366700A5BAC7 /* TBActionButton.m */; };
+		F72516631D21366700A5BAC7 /* TBActionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F72516581D21366700A5BAC7 /* TBActionContainer.m */; };
+		F72516641D21366700A5BAC7 /* TBActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = F725165A1D21366700A5BAC7 /* TBActionSheet.m */; };
+		F72516651D21366700A5BAC7 /* TBActionSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = F725165C1D21366700A5BAC7 /* TBActionSheetController.m */; };
+		F72516661D21366700A5BAC7 /* UIView+TBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F725165E1D21366700A5BAC7 /* UIView+TBAdditions.m */; };
+		F72516671D21366700A5BAC7 /* UIWindow+TBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F72516601D21366700A5BAC7 /* UIWindow+TBAdditions.m */; };
+		F725166B1D21384C00A5BAC7 /* ConditionerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F72516691D21384C00A5BAC7 /* ConditionerView.m */; };
+		F725166C1D21384C00A5BAC7 /* ConditionerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F725166A1D21384C00A5BAC7 /* ConditionerView.xib */; };
+		F725166F1D21396000A5BAC7 /* UIImage+BoxBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = F725166E1D21396000A5BAC7 /* UIImage+BoxBlur.m */; };
 		F7275CE61CD08E38002F0F68 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7275CE51CD08E38002F0F68 /* ShareViewController.m */; };
 		F7275CE91CD08E38002F0F68 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7275CE71CD08E38002F0F68 /* MainInterface.storyboard */; };
 		F7275CED1CD08E38002F0F68 /* ReaderList.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F7275CE21CD08E38002F0F68 /* ReaderList.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -429,6 +443,33 @@
 		F707FEB11CE08555008E4F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F72516421D1D1EA600A5BAC7 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
 		F72516431D1D1EA600A5BAC7 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		F72516451D211BFC00A5BAC7 /* DESTableViewActionSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESTableViewActionSheetView.h; sourceTree = "<group>"; };
+		F72516461D211BFC00A5BAC7 /* DESTableViewActionSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESTableViewActionSheetView.m; sourceTree = "<group>"; };
+		F72516491D2124B400A5BAC7 /* LLAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLAnimationManager.h; sourceTree = "<group>"; };
+		F725164A1D2124B400A5BAC7 /* LLAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLAnimationManager.m; sourceTree = "<group>"; };
+		F725164B1D2124B400A5BAC7 /* LLEyesLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLEyesLayer.h; sourceTree = "<group>"; };
+		F725164C1D2124B400A5BAC7 /* LLEyesLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLEyesLayer.m; sourceTree = "<group>"; };
+		F725164D1D2124B400A5BAC7 /* LLSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLSwitch.h; sourceTree = "<group>"; };
+		F725164E1D2124B400A5BAC7 /* LLSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLSwitch.m; sourceTree = "<group>"; };
+		F72516531D21366700A5BAC7 /* TBActionBackground.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBActionBackground.h; sourceTree = "<group>"; };
+		F72516541D21366700A5BAC7 /* TBActionBackground.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBActionBackground.m; sourceTree = "<group>"; };
+		F72516551D21366700A5BAC7 /* TBActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBActionButton.h; sourceTree = "<group>"; };
+		F72516561D21366700A5BAC7 /* TBActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBActionButton.m; sourceTree = "<group>"; };
+		F72516571D21366700A5BAC7 /* TBActionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBActionContainer.h; sourceTree = "<group>"; };
+		F72516581D21366700A5BAC7 /* TBActionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBActionContainer.m; sourceTree = "<group>"; };
+		F72516591D21366700A5BAC7 /* TBActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBActionSheet.h; sourceTree = "<group>"; };
+		F725165A1D21366700A5BAC7 /* TBActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBActionSheet.m; sourceTree = "<group>"; };
+		F725165B1D21366700A5BAC7 /* TBActionSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBActionSheetController.h; sourceTree = "<group>"; };
+		F725165C1D21366700A5BAC7 /* TBActionSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBActionSheetController.m; sourceTree = "<group>"; };
+		F725165D1D21366700A5BAC7 /* UIView+TBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TBAdditions.h"; sourceTree = "<group>"; };
+		F725165E1D21366700A5BAC7 /* UIView+TBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TBAdditions.m"; sourceTree = "<group>"; };
+		F725165F1D21366700A5BAC7 /* UIWindow+TBAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+TBAdditions.h"; sourceTree = "<group>"; };
+		F72516601D21366700A5BAC7 /* UIWindow+TBAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+TBAdditions.m"; sourceTree = "<group>"; };
+		F72516681D21384C00A5BAC7 /* ConditionerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConditionerView.h; sourceTree = "<group>"; };
+		F72516691D21384C00A5BAC7 /* ConditionerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConditionerView.m; sourceTree = "<group>"; };
+		F725166A1D21384C00A5BAC7 /* ConditionerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConditionerView.xib; sourceTree = "<group>"; };
+		F725166D1D21396000A5BAC7 /* UIImage+BoxBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BoxBlur.h"; sourceTree = "<group>"; };
+		F725166E1D21396000A5BAC7 /* UIImage+BoxBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BoxBlur.m"; sourceTree = "<group>"; };
 		F7275CE21CD08E38002F0F68 /* ReaderList.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ReaderList.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7275CE41CD08E38002F0F68 /* ShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		F7275CE51CD08E38002F0F68 /* ShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
@@ -1133,6 +1174,40 @@
 			path = openshare;
 			sourceTree = "<group>";
 		};
+		F72516481D2124B400A5BAC7 /* LLSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				F72516491D2124B400A5BAC7 /* LLAnimationManager.h */,
+				F725164A1D2124B400A5BAC7 /* LLAnimationManager.m */,
+				F725164B1D2124B400A5BAC7 /* LLEyesLayer.h */,
+				F725164C1D2124B400A5BAC7 /* LLEyesLayer.m */,
+				F725164D1D2124B400A5BAC7 /* LLSwitch.h */,
+				F725164E1D2124B400A5BAC7 /* LLSwitch.m */,
+			);
+			path = LLSwitch;
+			sourceTree = "<group>";
+		};
+		F72516521D21366700A5BAC7 /* TBActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				F72516531D21366700A5BAC7 /* TBActionBackground.h */,
+				F72516541D21366700A5BAC7 /* TBActionBackground.m */,
+				F72516551D21366700A5BAC7 /* TBActionButton.h */,
+				F72516561D21366700A5BAC7 /* TBActionButton.m */,
+				F72516571D21366700A5BAC7 /* TBActionContainer.h */,
+				F72516581D21366700A5BAC7 /* TBActionContainer.m */,
+				F72516591D21366700A5BAC7 /* TBActionSheet.h */,
+				F725165A1D21366700A5BAC7 /* TBActionSheet.m */,
+				F725165B1D21366700A5BAC7 /* TBActionSheetController.h */,
+				F725165C1D21366700A5BAC7 /* TBActionSheetController.m */,
+				F725165D1D21366700A5BAC7 /* UIView+TBAdditions.h */,
+				F725165E1D21366700A5BAC7 /* UIView+TBAdditions.m */,
+				F725165F1D21366700A5BAC7 /* UIWindow+TBAdditions.h */,
+				F72516601D21366700A5BAC7 /* UIWindow+TBAdditions.m */,
+			);
+			path = TBActionSheet;
+			sourceTree = "<group>";
+		};
 		F7275CE31CD08E38002F0F68 /* ReaderList */ = {
 			isa = PBXGroup;
 			children = (
@@ -1147,6 +1222,9 @@
 		F7275CF81CD0C3FD002F0F68 /* Weekly */ = {
 			isa = PBXGroup;
 			children = (
+				F72516681D21384C00A5BAC7 /* ConditionerView.h */,
+				F72516691D21384C00A5BAC7 /* ConditionerView.m */,
+				F725166A1D21384C00A5BAC7 /* ConditionerView.xib */,
 				F7275CF91CD0C42F002F0F68 /* WeeklyItemHeaderView.h */,
 				F7275CFA1CD0C42F002F0F68 /* WeeklyItemHeaderView.m */,
 				F7F773051CD356400060861B /* StageCategoryHeaderView.h */,
@@ -1173,6 +1251,8 @@
 				F7962D291D1A6CB900CE3119 /* DESSearchResultsViewController.m */,
 				F72516421D1D1EA600A5BAC7 /* NewsViewController.h */,
 				F72516431D1D1EA600A5BAC7 /* NewsViewController.m */,
+				F72516451D211BFC00A5BAC7 /* DESTableViewActionSheetView.h */,
+				F72516461D211BFC00A5BAC7 /* DESTableViewActionSheetView.m */,
 			);
 			path = Weekly;
 			sourceTree = "<group>";
@@ -1238,6 +1318,8 @@
 		F75244171CF6D8F7001C88EE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F725166D1D21396000A5BAC7 /* UIImage+BoxBlur.h */,
+				F725166E1D21396000A5BAC7 /* UIImage+BoxBlur.m */,
 				F75244181CF6D8F7001C88EE /* AppConfigure.h */,
 				F75244191CF6D8F7001C88EE /* AppConfigure.m */,
 				F752441A1CF6D8F7001C88EE /* BaseFunction.h */,
@@ -1840,6 +1922,8 @@
 		F7BAC76B1CC8DD33000D9795 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				F72516521D21366700A5BAC7 /* TBActionSheet */,
+				F72516481D2124B400A5BAC7 /* LLSwitch */,
 				F768EF631D07FFEE005747E3 /* UINavigationBar+Awesome.h */,
 				F768EF641D07FFEE005747E3 /* UINavigationBar+Awesome.m */,
 				F768EF351D07FCD8005747E3 /* CBDataSourceMaker.h */,
@@ -2433,6 +2517,7 @@
 				F7BAC7461CC8D40F000D9795 /* contacts_add_friend@3x.png in Resources */,
 				F7BAC75A1CC8D40F000D9795 /* 8.png in Resources */,
 				F768EF991D0805EE005747E3 /* banner1.png in Resources */,
+				F725166C1D21384C00A5BAC7 /* ConditionerView.xib in Resources */,
 				F7DB40741C9FEAF900E164C7 /* loadXIBFile.xib in Resources */,
 				F7BAC7471CC8D40F000D9795 /* footerImage.png in Resources */,
 				F7BAC74A1CC8D40F000D9795 /* 1.png in Resources */,
@@ -2544,6 +2629,7 @@
 				F74676D71CB7B38F0001D3A5 /* RunLoopTest.m in Sources */,
 				F7962D271D1A6C2600CE3119 /* DESSearchControllerBaseViewController.m in Sources */,
 				F7CBB4301CFC254000662347 /* GifImage.m in Sources */,
+				F72516621D21366700A5BAC7 /* TBActionButton.m in Sources */,
 				F7B4128F1C9BD96C00E45E22 /* User.m in Sources */,
 				F7BAC73F1CC8D40F000D9795 /* NSArray+JSONModel.m in Sources */,
 				F768EFBB1D0E5251005747E3 /* SuggestViewController.m in Sources */,
@@ -2590,8 +2676,10 @@
 				F707FE941CDC7F89008E4F7C /* JMCollectionItem.m in Sources */,
 				F75244271CF6E1B7001C88EE /* SettingTableViewController.m in Sources */,
 				F74676D21CB647490001D3A5 /* NSMutableArray+Extension.m in Sources */,
+				F72516611D21366700A5BAC7 /* TBActionBackground.m in Sources */,
 				F7275CFB1CD0C42F002F0F68 /* WeeklyItemHeaderView.m in Sources */,
 				F7BCC5D51CCF672800704878 /* HomeModel.m in Sources */,
+				F72516471D211BFD00A5BAC7 /* DESTableViewActionSheetView.m in Sources */,
 				F768EF321D06D49B005747E3 /* FindPasswordViewController.m in Sources */,
 				F7275CFF1CD0C6D4002F0F68 /* WeeklyItemModel.m in Sources */,
 				F74676B01CABC7B50001D3A5 /* MJAd.m in Sources */,
@@ -2613,13 +2701,16 @@
 				F76CB7FA1CE47FA700D8474F /* DESCollectionViewCell.m in Sources */,
 				F7BAC7431CC8D40F000D9795 /* JSONKeyMapper.m in Sources */,
 				F7BCC5CD1CCF649100704878 /* APIClient.m in Sources */,
+				F72516631D21366700A5BAC7 /* TBActionContainer.m in Sources */,
 				F76CB7F71CE47E7200D8474F /* DESCollectionView.m in Sources */,
+				F72516671D21366700A5BAC7 /* UIWindow+TBAdditions.m in Sources */,
 				F7B1EAA71CC610B800307F41 /* DESNavigationController.m in Sources */,
 				F7F772EF1CD33B250060861B /* YZSTableViewSectionModel.m in Sources */,
 				F7F773041CD34B5A0060861B /* WeeklyItemStageDetailModel.m in Sources */,
 				F768EF5E1D07FF08005747E3 /* BaseNavigationViewController.m in Sources */,
 				F7BCC55F1CCDBD3700704878 /* TableViewDataSource.m in Sources */,
 				F7BCC5A71CCDFCB700704878 /* DetailsViewController.m in Sources */,
+				F725164F1D2124B400A5BAC7 /* LLAnimationManager.m in Sources */,
 				F7BCC5791CCDF1A100704878 /* ArrayDataSource.m in Sources */,
 				F7CBB41F1CF84DB300662347 /* LaunchAnimationViewController.m in Sources */,
 				F7BAC7421CC8D40F000D9795 /* JSONModel+networking.m in Sources */,
@@ -2652,7 +2743,10 @@
 				F7BB42E71CEEECE2006F5EE3 /* README.md in Sources */,
 				F7CBB4131CF6FAAF00662347 /* DKNightTableViewCell.m in Sources */,
 				F768EF5A1D07FF08005747E3 /* GoodsCell.m in Sources */,
+				F72516501D2124B400A5BAC7 /* LLEyesLayer.m in Sources */,
 				F76CB7F11CE47A8C00D8474F /* TitleScrollView.m in Sources */,
+				F725166B1D21384C00A5BAC7 /* ConditionerView.m in Sources */,
+				F725166F1D21396000A5BAC7 /* UIImage+BoxBlur.m in Sources */,
 				F707FE971CE034C9008E4F7C /* DESTabBarController.m in Sources */,
 				F7BCC5621CCDBD7900704878 /* TableViewDelegate.m in Sources */,
 				F74676B91CABC7B50001D3A5 /* MJUser.m in Sources */,
@@ -2662,10 +2756,12 @@
 				F7F772F51CD33ECE0060861B /* BaseTableViewController.m in Sources */,
 				F768EF601D07FF08005747E3 /* SecondViewController.m in Sources */,
 				F7F7730D1CD359F80060861B /* ImageModel.m in Sources */,
+				F72516511D2124B400A5BAC7 /* LLSwitch.m in Sources */,
 				F7CBB4541CFD757000662347 /* SegmentView.m in Sources */,
 				F768EFD11D0E91C0005747E3 /* IPhoneSizeTool.m in Sources */,
 				F7BCC5561CCDBD1000704878 /* ResuableView+TCExtension.m in Sources */,
 				F768EF5D1D07FF08005747E3 /* SplitView.m in Sources */,
+				F72516641D21366700A5BAC7 /* TBActionSheet.m in Sources */,
 				F7BCC56B1CCDC54200704878 /* Text.m in Sources */,
 				F7CBB4331CFC461000662347 /* MineViewController.m in Sources */,
 				F7275D051CD1A801002F0F68 /* WeeklyItemStageModel.m in Sources */,
@@ -2704,6 +2800,7 @@
 				F7754BE01CC753BC00F989DA /* DynamicAddMethodViewController.m in Sources */,
 				F7754BE61CC7541A00F989DA /* ReplaceMethodViewController.m in Sources */,
 				F7CA0D8E1CEAF73A009D1C51 /* NSData+AES.m in Sources */,
+				F72516651D21366700A5BAC7 /* TBActionSheetController.m in Sources */,
 				F7BCC58A1CCDF50600704878 /* Photo.m in Sources */,
 				F7754BD91CC72D8500F989DA /* RuntimeTableViewController.m in Sources */,
 				F7BAC7061CC88441000D9795 /* GWWPICLabel.m in Sources */,
@@ -2721,6 +2818,7 @@
 				F707FE8A1CDA021C008E4F7C /* UILabel+FontChange.m in Sources */,
 				F7DB40731C9FEAF900E164C7 /* loadXIBFile.m in Sources */,
 				F7DB40771CA0E9F300E164C7 /* CYAlertView.m in Sources */,
+				F72516661D21366700A5BAC7 /* UIView+TBAdditions.m in Sources */,
 				F7B4128E1C9BD96C00E45E22 /* Post.m in Sources */,
 				F77FDA511D19443D00562A3F /* CollectionViewTest.m in Sources */,
 				F76CB8001CE480F600D8474F /* ArticleModel.m in Sources */,

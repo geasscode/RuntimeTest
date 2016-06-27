@@ -16,6 +16,8 @@
 #import "ArticleHomeViewController.h"
 #import "BarCodeViewController.h"
 #import "MineViewController.h"
+#import "AdvertiseViewController.h"
+
 @implementation DESTabBarController
 + (void)initialize {
 	
@@ -45,6 +47,9 @@
 //* NSNull用于解决向NSArray和NSDictionary等集合中添加空值的问题
 
 - (void)viewDidLoad {
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pushToAd) name:@"pushtoad" object:nil];
+
 	
 	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
 	MainViewController *mainVC = (MainViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"mainVC"];
@@ -133,5 +138,16 @@
 	
 	[self addChildViewController:navCon];
 }
+
+//- (void)pushToAd {
+//	
+//
+//	AdvertiseViewController *adVc = [[AdvertiseViewController alloc] init];
+//	
+//	DESNavigationController *navCon = [[DESNavigationController alloc] initWithRootViewController:adVc];
+//	
+//	navCon.title = @"pic";
+//
+//}
 
 @end

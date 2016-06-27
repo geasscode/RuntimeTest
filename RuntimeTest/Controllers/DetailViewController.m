@@ -17,10 +17,13 @@
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
 #import "NSObject+PropertyAdd.h"
+#import "DESTableViewActionSheetView.h"
+#import "TBActionSheet.h"
+#import "ConditionerView.h"
 
 #define kToolBarHeight 38
 
-@interface DetailViewController ()<UIGestureRecognizerDelegate,UIWebViewDelegate,UIAlertViewDelegate>
+@interface DetailViewController ()<UIGestureRecognizerDelegate,UIWebViewDelegate,UIAlertViewDelegate,TBActionSheetDelegate>
 
 @property (nonatomic,weak) UIWebView *webView;
 
@@ -30,6 +33,8 @@
 
 @property (nonatomic,strong) NSString *webImageURL;
 
+@property (nonnull,nonatomic) NSObject *leakTest;
+@property (nonnull,nonatomic) ConditionerView *conditioner;
 
 @property (nonatomic,strong) DetailModel *webModel;
 
@@ -41,7 +46,8 @@
 #pragma mark - 试图生命周期
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	
+	_leakTest = [NSObject new];
+
 	self.title = @"正文";
 	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
 	hud.labelText = NSLocalizedString(@"正在加载请稍后...", @"HUD loading title");
@@ -194,7 +200,7 @@
 	
 	UIBarButtonItem *share = [UIBarButtonItem barButtonItemByCustomButtonWithImage:@"upload" highlightedImage:@"upload" target:self action:@selector(shareItemClick:)];
 	
-	UIBarButtonItem *comment = [UIBarButtonItem barButtonItemByCustomButtonWithImage:@"bottom_bar_comment" highlightedImage:@"bottom_bar_comment" target:self action:@selector(commentItemClick)];
+	UIBarButtonItem *comment = [UIBarButtonItem barButtonItemByCustomButtonWithImage:@"bottom_bar_comment" highlightedImage:@"bottom_bar_comment" target:self action:@selector(moreItemClick:)];
 	
 	//添加空隙
 	UIBarButtonItem *fixedSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
@@ -283,6 +289,29 @@
 		[item setImage:[UIImage imageNamed:@"article_detail_late_on"] forState:UIControlStateNormal];
 	}
 	
+}
+
+
+
+-(void)moreItemClick:(UIButton *)item{
+//	[[DESTableViewActionSheetView DESTableViewActionSheetViewWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)
+//														   itemArray:@[@"dfdsf",@"sdfdsf",@"dsfdsf",@"dfdsf",@"sdfdsf",@"dsfdsf"]
+//													   showItemCount:5
+//													 bottomCellTitle:@"Test"] show];
+	
+	
+	TBActionSheet *actionSheet = [[TBActionSheet alloc] initWithTitle:@"MagicalActionSheet" message:@"巴拉巴拉小魔仙，变！" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"销毁" otherButtonTitles:nil];
+	NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"ConditionerView" owner:nil options:nil];
+	self.conditioner = views[0];
+	self.conditioner.frame = CGRectMake(0, 0, [TBActionSheet appearance].sheetWidth, 400);
+	self.conditioner.actionSheet = actionSheet;
+	actionSheet.customView = self.conditioner;
+	
+	[actionSheet addButtonWithTitle:@"支持 block" style:TBActionButtonStyleDefault handler:^(TBActionButton * _Nonnull button) {
+		NSLog(@"%@ %@",button.currentTitle,self.leakTest);
+	}];
+	[actionSheet showInView:self.view];
+
 }
 /**
  *  收藏按钮的点击事件

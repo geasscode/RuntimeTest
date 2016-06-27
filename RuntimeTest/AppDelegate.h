@@ -11,7 +11,7 @@
 static NSString *appKey = @"e0418a16e57dc8de664b6d64";
 static NSString *channel = @"Publish channel";
 static BOOL isProduction = FALSE;
-static NSString *const adImageName = @"adImageName";
+//static NSString *const adImageName = @"adImageName";
 static NSString *const adUrl = @"adUrl";
 #define UMENG_APPKEY @"5768b29be0f55a3b24002ff2"
 
