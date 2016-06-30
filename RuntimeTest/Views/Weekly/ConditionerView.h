@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LLSwitch.h"
+#import "DetailViewController.h"
 @class TBActionSheet;
 @interface ConditionerView : UIView
+
 @property (weak,nonatomic) TBActionSheet *actionSheet;
+@property (nonatomic,weak) DetailViewController *detailVC;
+@property (strong, nonatomic) IBOutlet LLSwitch *nightMode;
+
 - (void)setUpUI;
 @end

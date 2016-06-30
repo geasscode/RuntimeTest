@@ -12,7 +12,7 @@
 #define CELL_HEIGHT 59
 
 
-@interface DESTableViewActionSheetView () <UITableViewDataSource, UITableViewDelegate,LLSwitchDelegate>
+@interface DESTableViewActionSheetView () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UIView *maskBackgroundView;
 @property (nonatomic, strong) UIView *maskView;
@@ -278,12 +278,6 @@
 }
 
 
--(void)didTapLLSwitch:(LLSwitch *)llSwitch {
-	NSLog(@"start");
-}
 
-- (void)animationDidStopForLLSwitch:(LLSwitch *)llSwitch {
-	NSLog(@"stop");
-}
 
 @end

@@ -75,6 +75,11 @@
 		F7526FFE1C9A940A0012FE76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7526FFC1C9A940A0012FE76 /* LaunchScreen.storyboard */; };
 		F75270091C9A940A0012FE76 /* RuntimeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75270081C9A940A0012FE76 /* RuntimeTestTests.m */; };
 		F75270141C9A940A0012FE76 /* RuntimeTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75270131C9A940A0012FE76 /* RuntimeTestUITests.m */; };
+		F754B7C01D23A99C0003A340 /* night.css in Resources */ = {isa = PBXBuildFile; fileRef = F754B7BE1D23A99C0003A340 /* night.css */; };
+		F754B7C11D23A99C0003A340 /* normal.css in Resources */ = {isa = PBXBuildFile; fileRef = F754B7BF1D23A99C0003A340 /* normal.css */; };
+		F754B7C51D24EDF20003A340 /* DESWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F754B7C41D24EDF20003A340 /* DESWebViewController.m */; };
+		F754B7C81D24EF5C0003A340 /* ADHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F754B7C71D24EF5C0003A340 /* ADHelper.m */; };
+		F754B7CA1D24F2050003A340 /* adimage.png in Resources */ = {isa = PBXBuildFile; fileRef = F754B7C91D24F2050003A340 /* adimage.png */; };
 		F762B8571CEC13DB00E5DDAD /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8561CEC13DB00E5DDAD /* UILabel+Utils.m */; };
 		F762B85A1CEC144400E5DDAD /* UITextView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8591CEC144400E5DDAD /* UITextView+Utils.m */; };
 		F7644F5C1CF5A0B000FD9DAF /* ActivityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7644F5B1CF5A0B000FD9DAF /* ActivityItem.m */; };
@@ -542,6 +547,13 @@
 		F752700F1C9A940A0012FE76 /* RuntimeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F75270131C9A940A0012FE76 /* RuntimeTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTestUITests.m; sourceTree = "<group>"; };
 		F75270151C9A940A0012FE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F754B7BE1D23A99C0003A340 /* night.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = night.css; sourceTree = "<group>"; };
+		F754B7BF1D23A99C0003A340 /* normal.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = normal.css; sourceTree = "<group>"; };
+		F754B7C31D24EDF20003A340 /* DESWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESWebViewController.h; sourceTree = "<group>"; };
+		F754B7C41D24EDF20003A340 /* DESWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESWebViewController.m; sourceTree = "<group>"; };
+		F754B7C61D24EF5C0003A340 /* ADHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADHelper.h; sourceTree = "<group>"; };
+		F754B7C71D24EF5C0003A340 /* ADHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADHelper.m; sourceTree = "<group>"; };
+		F754B7C91D24F2050003A340 /* adimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adimage.png; sourceTree = "<group>"; };
 		F762B8551CEC13DB00E5DDAD /* UILabel+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Utils.h"; sourceTree = "<group>"; };
 		F762B8561CEC13DB00E5DDAD /* UILabel+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Utils.m"; sourceTree = "<group>"; };
 		F762B8581CEC144400E5DDAD /* UITextView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Utils.h"; sourceTree = "<group>"; };
@@ -1412,6 +1424,8 @@
 		F7526FEE1C9A940A0012FE76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F754B7BE1D23A99C0003A340 /* night.css */,
+				F754B7BF1D23A99C0003A340 /* normal.css */,
 				F77FDA4D1D19275200562A3F /* demo.js */,
 				F768EF661D0805EE005747E3 /* assets */,
 				F7CBB4391CFD706000662347 /* 方正隶书繁体.ttf */,
@@ -1608,6 +1622,8 @@
 				F76CB7EA1CE423C100D8474F /* DBHelper.m */,
 				F76CB8011CE4857C00D8474F /* ArticleTool.h */,
 				F76CB8021CE4857C00D8474F /* ArticleTool.m */,
+				F754B7C61D24EF5C0003A340 /* ADHelper.h */,
+				F754B7C71D24EF5C0003A340 /* ADHelper.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1884,6 +1900,7 @@
 		F7BAC7221CC8D40E000D9795 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F754B7C91D24F2050003A340 /* adimage.png */,
 				F7BAC7231CC8D40E000D9795 /* contacts_add_friend@2x.png */,
 				F7BAC7241CC8D40E000D9795 /* contacts_add_friend@3x.png */,
 				F7BAC7251CC8D40E000D9795 /* footerImage.png */,
@@ -2171,6 +2188,8 @@
 				F768EFBA1D0E5251005747E3 /* SuggestViewController.m */,
 				F768EFC21D0E8B6C005747E3 /* RegisterViewController.h */,
 				F768EFC31D0E8B6C005747E3 /* RegisterViewController.m */,
+				F754B7C31D24EDF20003A340 /* DESWebViewController.h */,
+				F754B7C41D24EDF20003A340 /* DESWebViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2442,6 +2461,7 @@
 				F7BAC7541CC8D40F000D9795 /* 2.png in Resources */,
 				F7CBB41A1CF84BC000662347 /* iPhone-5-Crop.gif in Resources */,
 				F7BAC74D1CC8D40F000D9795 /* 12.png in Resources */,
+				F754B7C01D23A99C0003A340 /* night.css in Resources */,
 				F768EFB41D0805EE005747E3 /* image4.jpg in Resources */,
 				F768EFA01D0805EE005747E3 /* category2.png in Resources */,
 				F7F7730F1CD36B0D0060861B /* article_detail.html in Resources */,
@@ -2495,6 +2515,7 @@
 				F77FDA4E1D19275200562A3F /* demo.js in Resources */,
 				F768EF9F1D0805EE005747E3 /* category1.png in Resources */,
 				F7BB42F01CEEECE2006F5EE3 /* ShareSDK.bundle in Resources */,
+				F754B7C11D23A99C0003A340 /* normal.css in Resources */,
 				F768EF9A1D0805EE005747E3 /* banner2.png in Resources */,
 				F768EFA11D0805EE005747E3 /* category3.png in Resources */,
 				F7BAC74C1CC8D40F000D9795 /* 11.png in Resources */,
@@ -2520,6 +2541,7 @@
 				F725166C1D21384C00A5BAC7 /* ConditionerView.xib in Resources */,
 				F7DB40741C9FEAF900E164C7 /* loadXIBFile.xib in Resources */,
 				F7BAC7471CC8D40F000D9795 /* footerImage.png in Resources */,
+				F754B7CA1D24F2050003A340 /* adimage.png in Resources */,
 				F7BAC74A1CC8D40F000D9795 /* 1.png in Resources */,
 				F768EFB71D0805EE005747E3 /* index.json in Resources */,
 				F768EFA31D0805EE005747E3 /* category5.png in Resources */,
@@ -2714,6 +2736,7 @@
 				F7BCC5791CCDF1A100704878 /* ArrayDataSource.m in Sources */,
 				F7CBB41F1CF84DB300662347 /* LaunchAnimationViewController.m in Sources */,
 				F7BAC7421CC8D40F000D9795 /* JSONModel+networking.m in Sources */,
+				F754B7C81D24EF5C0003A340 /* ADHelper.m in Sources */,
 				F7CBB4361CFC46E400662347 /* MyCollectionViewCell.m in Sources */,
 				F74676C51CB6077C0001D3A5 /* Person.m in Sources */,
 				F7275CF71CD0C011002F0F68 /* WeeklyTableViewController.m in Sources */,
@@ -2798,6 +2821,7 @@
 				F7BAC73C1CC8D40F000D9795 /* JSONModelArray.m in Sources */,
 				F74676B81CABC7B50001D3A5 /* MJStudent.m in Sources */,
 				F7754BE01CC753BC00F989DA /* DynamicAddMethodViewController.m in Sources */,
+				F754B7C51D24EDF20003A340 /* DESWebViewController.m in Sources */,
 				F7754BE61CC7541A00F989DA /* ReplaceMethodViewController.m in Sources */,
 				F7CA0D8E1CEAF73A009D1C51 /* NSData+AES.m in Sources */,
 				F72516651D21366700A5BAC7 /* TBActionSheetController.m in Sources */,

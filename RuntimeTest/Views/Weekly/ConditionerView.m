@@ -9,106 +9,138 @@
 #import "ConditionerView.h"
 #import "TBActionSheet.h"
 #import "TBActionContainer.h"
+#import "DetailViewController.h"
 
 @interface ConditionerView ()
-@property (weak, nonatomic) IBOutlet UISlider *buttonHeightSlider;
-@property (weak, nonatomic) IBOutlet UISlider *buttonWidthSlider;
-@property (weak, nonatomic) IBOutlet UISlider *offsetYSlider;
-@property (weak, nonatomic) IBOutlet UISwitch *enableBackgroundTransparentSwitch;
-@property (weak, nonatomic) IBOutlet UISwitch *enableBlurEffectSwitch;
-@property (weak, nonatomic) IBOutlet UISlider *rectCornerRadiusSlider;
-@property (weak, nonatomic) IBOutlet UISlider *animationDurationSlider;
-@property (weak, nonatomic) IBOutlet UISlider *animationDumpingRatioSlider;
-@property (weak, nonatomic) IBOutlet UISlider *animationVelocitySlider;
-@property (weak, nonatomic) IBOutlet UISlider *ambientColorSlider;
+
+@property (weak, nonatomic) IBOutlet UISlider *screenLight;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *fontSize;
+
 @end
 
 @implementation ConditionerView
 
-- (IBAction)buttonHeight:(UISlider *)sender {
-    self.actionSheet.buttonHeight = sender.value;
-    [TBActionSheet appearance].buttonHeight = sender.value;
+-(void)awakeFromNib{
+	[self setUpUI];
 }
 
-- (IBAction)buttonWidth:(UISlider *)sender {
-    self.actionSheet.sheetWidth = sender.value * [UIScreen mainScreen].bounds.size.width;
-    [TBActionSheet appearance].sheetWidth = sender.value * [UIScreen mainScreen].bounds.size.width;
+//-(instancetype)initWithFrame:(CGRect)frame{
+//	self = [super initWithFrame:frame];
+//	if (self) {
+//
+//	}
+//	return self;
+//}
+//
+//-(instancetype)initWithCoder:(NSCoder *)aDecoder{
+//	self = [super initWithCoder:aDecoder];
+//	if (self) {
+//		_nightMode = [[LLSwitch alloc] initWithFrame:CGRectMake(100, 100, 120, 60)];
+//		_nightMode.delegate = self;
+//
+//	}
+//	return self;
+//}
+
+
+- (IBAction)screenLight:(UISlider *)sender {
+	
+	CGFloat lightValue = sender.value;
+	[[UIScreen mainScreen] setBrightness: lightValue];
+	
+	//获取当前屏幕的亮度:另外,屏幕的亮度调节只能在真机上看到效果 在模拟器上看不到效果
+	//	[[UIScreen mainScreen] brightness];
+	
+ 	NSLog(@"lightValue value is %f",lightValue);
+	
 }
 
-
-- (IBAction)offsetY:(UISlider *)sender {
-    self.actionSheet.offsetY = -sender.value;
-    [TBActionSheet appearance].offsetY = -sender.value;
-}
-
-
-- (IBAction)backgroundTransparentEnabled:(UISwitch *)sender {
-    self.actionSheet.backgroundTransparentEnabled = sender.isOn;
-    [TBActionSheet appearance].backgroundTransparentEnabled = sender.isOn;
-    [self refreshActionSheet];
-}
-
-
-- (IBAction)blurEffectEnabled:(UISwitch *)sender {
-    self.actionSheet.blurEffectEnabled = sender.isOn;
-    [TBActionSheet appearance].blurEffectEnabled = sender.isOn;
-    [self refreshActionSheet];
-}
-
-
-- (IBAction)cornerRadius:(UISlider *)sender {
-    self.actionSheet.rectCornerRadius = sender.value;
-    [TBActionSheet appearance].rectCornerRadius = sender.value;
-}
-
-
-- (IBAction)animationDuration:(UISlider *)sender {
-    self.actionSheet.animationDuration = sender.value;
-    [TBActionSheet appearance].animationDuration = sender.value;
-}
-
-- (IBAction)animationDampingRatio:(UISlider *)sender {
-    self.actionSheet.animationDampingRatio = sender.value;
-    [TBActionSheet appearance].animationDampingRatio = sender.value;
-}
-
-- (IBAction)animationVelocity:(UISlider *)sender {
-    self.actionSheet.animationVelocity = sender.value;
-    [TBActionSheet appearance].animationVelocity = sender.value;
-}
-
-- (IBAction)ambientColor:(UISlider *)sender {
-    self.actionSheet.ambientColor = [UIColor colorWithHue:sender.value saturation:sender.value brightness:1 alpha:0.5];
-    [TBActionSheet appearance].ambientColor = self.actionSheet.ambientColor;
+- (IBAction)fontSize:(id)sender {
 }
 
 - (IBAction)touchUp:(id)sender {
-    [self refreshActionSheet];
+	[self refreshActionSheet];
 }
 
 - (void)setUpUI
 {
-    self.buttonHeightSlider.value = self.actionSheet.buttonHeight;
-    self.buttonWidthSlider.value = self.actionSheet.sheetWidth / [UIScreen mainScreen].bounds.size.width;
-    self.offsetYSlider.value = self.actionSheet.offsetY;
-    self.enableBackgroundTransparentSwitch.on = self.actionSheet.isBackgroundTransparentEnabled;
-    self.enableBlurEffectSwitch.on = self.actionSheet.isBlurEffectEnabled;
-    self.rectCornerRadiusSlider.value = self.actionSheet.rectCornerRadius;
-    self.animationDurationSlider.value = self.actionSheet.animationDuration;
-    self.animationDumpingRatioSlider.value = self.actionSheet.animationDampingRatio;
-    self.animationVelocitySlider.value = self.actionSheet.animationVelocity;
-    self.ambientColorSlider.value = 0;
+	//是否让背景透明。
+//	self.actionSheet.backgroundTransparentEnabled = YES;
+//	[TBActionSheet appearance].backgroundTransparentEnabled = YES;
+//	
+	//是否启用毛玻璃效果
+//	self.actionSheet.blurEffectEnabled = NO;
+//	[TBActionSheet appearance].blurEffectEnabled = NO;
+	
+	//控制ActionSheet背景颜色。
+
+//	self.actionSheet.ambientColor = [UIColor colorWithRed:0.965 green:0.965 blue:0.965 alpha:1.00];
+//	[TBActionSheet appearance].ambientColor = self.actionSheet.ambientColor;
+	[self refreshActionSheet];
+	[self configureSegmentedUI];
+
 }
 
 - (void)refreshActionSheet
 {
-    self.bounds = CGRectMake(0, 0, self.actionSheet.sheetWidth, self.bounds.size.height);
-    [[self.actionSheet valueForKeyPath:@"actionContainer"] removeFromSuperview];
-    TBActionContainer *container = [[TBActionContainer alloc] initWithSheet:self.actionSheet];
-    [self.actionSheet setValue:container forKeyPath:@"actionContainer"];
-    [self.actionSheet addSubview:container];
-    [self.actionSheet setUpLayout];
-    [self.actionSheet setUpContainerFrame];
-    [self.actionSheet setUpStyle];
+	self.bounds = CGRectMake(0, 0, self.actionSheet.sheetWidth, self.bounds.size.height);
+	[[self.actionSheet valueForKeyPath:@"actionContainer"] removeFromSuperview];
+	TBActionContainer *container = [[TBActionContainer alloc] initWithSheet:self.actionSheet];
+	[self.actionSheet setValue:container forKeyPath:@"actionContainer"];
+	[self.actionSheet addSubview:container];
+	[self.actionSheet setUpLayout];
+	[self.actionSheet setUpContainerFrame];
+	[self.actionSheet setUpStyle];
 }
+
+- (void)configureSegmentedUI {
+	self.fontSize.momentary = NO;
+	self.fontSize.selectedSegmentIndex = 3;
+	self.fontSize.tintColor = [UIColor redColor];
+
+
+	//	[self.fontSize setEnabled:NO forSegmentAtIndex:0];
+	
+	[self.fontSize addTarget:self action:@selector(selectedSegmentDidChange:) forControlEvents:UIControlEventValueChanged];
+}
+
+//-(void)didTapLLSwitch:(LLSwitch *)llSwitch {
+//	NSLog(@"start");
+//}
+//
+//- (void)animationDidStopForLLSwitch:(LLSwitch *)llSwitch {
+//	NSLog(@"stop");
+//}
+
+- (void)selectedSegmentDidChange:(UISegmentedControl *)segmentedControl {
+	
+	NSInteger currentIndex = segmentedControl.selectedSegmentIndex;
+	switch (currentIndex) {
+		case 0:{
+			NSLog(@"Index %li", (long)currentIndex);
+			_detailVC.fontSizeValue = 80;
+			break;
+		}
+		case 1:
+			NSLog(@"Index %li", (long)currentIndex);
+			_detailVC.fontSizeValue = 110;
+			
+			break;
+		case 2:
+			NSLog(@"Index %li", (long)currentIndex);
+			_detailVC.fontSizeValue = 130;
+			
+			break;
+		case 3:
+			NSLog(@"Index %li", (long)currentIndex);
+			_detailVC.fontSizeValue = 100;
+			
+			break;
+			
+		default:
+			break;
+	}
+	NSLog(@"The selected segment changed for: %@.", segmentedControl);
+}
+
 @end

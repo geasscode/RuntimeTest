@@ -23,21 +23,15 @@
 
 #define kToolBarHeight 38
 
-@interface DetailViewController ()<UIGestureRecognizerDelegate,UIWebViewDelegate,UIAlertViewDelegate,TBActionSheetDelegate>
+@interface DetailViewController ()<UIGestureRecognizerDelegate,UIWebViewDelegate,UIAlertViewDelegate,TBActionSheetDelegate,LLSwitchDelegate>
 
 @property (nonatomic,weak) UIWebView *webView;
-
 @property (nonatomic,weak) UIToolbar *toolbar;
-
 @property (nonatomic,strong) NSString *content;
-
 @property (nonatomic,strong) NSString *webImageURL;
-
 @property (nonnull,nonatomic) NSObject *leakTest;
 @property (nonnull,nonatomic) ConditionerView *conditioner;
-
 @property (nonatomic,strong) DetailModel *webModel;
-
 
 @end
 
@@ -47,14 +41,25 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	_leakTest = [NSObject new];
-
+	_fontSizeValue = 100;
+	_backgroundColor = @"#343434";
+	_isNightMode = NO;
 	self.title = @"正文";
 	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
 	hud.labelText = NSLocalizedString(@"正在加载请稍后...", @"HUD loading title");
-	
 	[self creatWebview];
 	[self creatToolBar];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+	NSLog(@"hello");
+}
+
+-(void)setFontSizeValue:(NSInteger)fontSizeValue{
 	
+	_fontSizeValue = fontSizeValue;
+	[self loadHtml:_webModel];
+	//[_webView reload];
 }
 
 
@@ -64,16 +69,12 @@
 	NSURL *url = [NSURL fileURLWithPath:path];
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 	[webView loadRequest:request];
-	
 }
 
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
-	
-
 	[self injectJS:webView];
-	
 }
 
 -(void)injectJS:(UIWebView *)webView{
@@ -92,12 +93,24 @@
 	[webView stringByEvaluatingJavaScriptFromString:jsGetImages];//注入js方法
 	
 	//通过这个控制字体大小。默认是100%。
-	int fontSize = 100;
-	NSString *jsString = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%d%%'", fontSize];
+	//	_fontSizeValue = 100;
+	NSString *jsString = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%ld%%'", (long)_fontSizeValue];
 	[webView stringByEvaluatingJavaScriptFromString:jsString];
 	
 	//注入自定义的js方法后别忘了调用 否则不会生效
 	[webView stringByEvaluatingJavaScriptFromString:@"getImages()"];//调用js方法
+	
+	
+	//更改背景颜色
+//	NSString *backgroundColorString = [[NSString alloc] initWithFormat:@"document.getElementsByTagName('html')[0].style.backgroundColor= '%@'", _backgroundColor];
+	
+	NSString *lightMode = @"document.getElementById('changeCSS').setAttribute('href','normal.css');";
+	NSString *nightMode = @"document.getElementById('changeCSS').setAttribute('href','night.css');";
+	
+	NSString * backgroundColorString = _isNightMode? nightMode:lightMode;
+
+	[webView stringByEvaluatingJavaScriptFromString:backgroundColorString];
+
 	
 	// 禁用用户选择
 	[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
@@ -151,17 +164,17 @@
 	[self.webView addGestureRecognizer:longPressed];
 	
 	
-//	[self loadDocument:@"现有的本地word文档.docx" inView:webview];
+	//	[self loadDocument:@"现有的本地word文档.docx" inView:webview];
 	
-
-
+	
+	
 	[self.view addSubview:webview];
 	
-//	///自动适应大小
-//	webview.scalesPageToFit = YES;
-//	
-//	///关闭下拉刷新效果
-//	webview.scrollView.bounces = NO;
+	//	///自动适应大小
+	//	webview.scalesPageToFit = YES;
+	//
+	//	///关闭下拉刷新效果
+	//	webview.scrollView.bounces = NO;
 	
 	//设置是否透明
 	webview.opaque = YES;
@@ -172,12 +185,6 @@
 		make.bottom.equalTo(super.view.mas_bottom).mas_offset(-kToolBarHeight);
 		
 	}];
-	
-
-	
-
-	
-	
 	
 }
 
@@ -250,7 +257,7 @@
 		NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:webImageURL]];
 		UIImage* webURL = [UIImage imageWithData:data];
 		UIImageWriteToSavedPhotosAlbum(webURL, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-
+		
 	}
 	
 }
@@ -294,24 +301,41 @@
 
 
 -(void)moreItemClick:(UIButton *)item{
-//	[[DESTableViewActionSheetView DESTableViewActionSheetViewWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)
-//														   itemArray:@[@"dfdsf",@"sdfdsf",@"dsfdsf",@"dfdsf",@"sdfdsf",@"dsfdsf"]
-//													   showItemCount:5
-//													 bottomCellTitle:@"Test"] show];
+	//	[[DESTableViewActionSheetView DESTableViewActionSheetViewWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)
+	//														   itemArray:@[@"dfdsf",@"sdfdsf",@"dsfdsf",@"dfdsf",@"sdfdsf",@"dsfdsf"]
+	//													   showItemCount:5
+	//													 bottomCellTitle:@"Test"] show];
 	
-	
-	TBActionSheet *actionSheet = [[TBActionSheet alloc] initWithTitle:@"MagicalActionSheet" message:@"巴拉巴拉小魔仙，变！" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"销毁" otherButtonTitles:nil];
+	NSLog(@"current webView is %@",_webView);
+	TBActionSheet *actionSheet = [[TBActionSheet alloc] initWithTitle:@"偏好设置" message:nil delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
 	NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"ConditionerView" owner:nil options:nil];
 	self.conditioner = views[0];
-	self.conditioner.frame = CGRectMake(0, 0, [TBActionSheet appearance].sheetWidth, 400);
+	self.conditioner.frame = CGRectMake(0, 0, [TBActionSheet appearance].sheetWidth, 200);
 	self.conditioner.actionSheet = actionSheet;
-	actionSheet.customView = self.conditioner;
+	self.conditioner.detailVC = self;
+	self.conditioner.nightMode.delegate = self;
 	
-	[actionSheet addButtonWithTitle:@"支持 block" style:TBActionButtonStyleDefault handler:^(TBActionButton * _Nonnull button) {
-		NSLog(@"%@ %@",button.currentTitle,self.leakTest);
-	}];
+	actionSheet.customView = self.conditioner;
+	//
+	//	[actionSheet addButtonWithTitle:@"支持 block" style:TBActionButtonStyleDefault handler:^(TBActionButton * _Nonnull button) {
+	//		NSLog(@"%@ %@",button.currentTitle,self.leakTest);
+	//	}];
 	[actionSheet showInView:self.view];
+	
+}
 
+-(void)didTapLLSwitch:(LLSwitch *)llSwitch {
+	
+	//这里 on 即NO。
+	_isNightMode = llSwitch.on ? NO:YES;
+	_backgroundColor =  llSwitch.on ? @"#343434":@"#fff";
+//	_backgroundColor = @"#fff";
+	[self loadHtml:_webModel];
+	NSLog(@"start");
+}
+
+- (void)animationDidStopForLLSwitch:(LLSwitch *)llSwitch {
+	NSLog(@"stop");
 }
 /**
  *  收藏按钮的点击事件
@@ -435,12 +459,12 @@
 						   [alertView show];
 						   break;
 					   }
-
+						   
 					   default:
 						   break;
 				   }
 				   
-			
+				   
 			   }
 	 ];
 }
@@ -540,30 +564,30 @@
 -(void)activityItems{
 	//Bookmark, Add To Reading List, and Add To Homescreen are only available in safari, unless you define them yourself. To add those buttons, you need to create an applicationActivities NSArray, populated with UIActivity objects for various services. You can pass this array into the initWithActivityItems:applicationActivities:
 	
-//	UIActivityViewController中的服务分为了两种，UIActivityCategoryAction和UIActivityCategoryShare,UIActivityCategoryAction表示在最下面一栏的操作型服务,比如Copy、Print;UIActivityCategoryShare表示在中间一栏的分享型服务，比如一些社交软件。
+	//	UIActivityViewController中的服务分为了两种，UIActivityCategoryAction和UIActivityCategoryShare,UIActivityCategoryAction表示在最下面一栏的操作型服务,比如Copy、Print;UIActivityCategoryShare表示在中间一栏的分享型服务，比如一些社交软件。
 	
-
+	
 	//用系统自带的方法增加qq收藏，微信收藏，分享到朋友圈。新浪微博。待实现。
-//	NSArray* imageArray = @[[UIImage imageNamed:@"icon.jpg"]];
+	//	NSArray* imageArray = @[[UIImage imageNamed:@"icon.jpg"]];
 	
 	NSString *title = _webModel.title;
 	
 	NSString *description = _webModel.title;;
 	
-
+	
 	//要显示存储图像icon首先要有图片。
 	UIImage *imageIcon = [UIImage imageNamed:@"icon.jpg"];
 	//当有URL 时才能显示添加到阅读列表。
 	NSURL *URL = [NSURL URLWithString:_webModel.url];
 	
-//	UISimpleTextPrintFormatter *printData = [[UISimpleTextPrintFormatter alloc] initWithText:self.title];								
+	//	UISimpleTextPrintFormatter *printData = [[UISimpleTextPrintFormatter alloc] initWithText:self.title];
 	NSArray *activityItems = @[title, description,imageIcon,URL];
 	UIActivityViewController *activityViewController = [[UIActivityViewController alloc]
 														initWithActivityItems:activityItems applicationActivities:nil];
 	
 	
 	activityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
-
+	
 	//排除不需要的功能如AirDrop
 	activityViewController.excludedActivityTypes = @[UIActivityTypeAirDrop,UIActivityTypePostToFacebook,UIActivityTypePostToTwitter,UIActivityTypeAssignToContact];
 	
@@ -578,26 +602,26 @@
 	
 	
 	
-//	UIPopoverPresentationController *popover = activityViewController.popoverPresentationController;
-//	if (popover) {
-//		popover.sourceView = self.view;
-//		popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
-//	}
-
+	//	UIPopoverPresentationController *popover = activityViewController.popoverPresentationController;
+	//	if (popover) {
+	//		popover.sourceView = self.view;
+	//		popover.permittedArrowDirections = UIPopoverArrowDirectionUp;
+	//	}
+	
 	
 	// 写一个bolck，用于completionHandler的初始化
-//	UIActivityViewControllerCompletionHandler myBlock = ^(NSString *activityType,BOOL completed) {
-//		NSLog(@"%@", activityType);
-//		
-//		if(completed) {
-//			NSLog(@"completed");
-//		} else
-//		{
-//			NSLog(@"cancled");
-//		}
-//		[activityViewController dismissViewControllerAnimated:YES completion:Nil];
-//	};
-//	
+	//	UIActivityViewControllerCompletionHandler myBlock = ^(NSString *activityType,BOOL completed) {
+	//		NSLog(@"%@", activityType);
+	//
+	//		if(completed) {
+	//			NSLog(@"completed");
+	//		} else
+	//		{
+	//			NSLog(@"cancled");
+	//		}
+	//		[activityViewController dismissViewControllerAnimated:YES completion:Nil];
+	//	};
+	//
 	
 	activityViewController.completionWithItemsHandler = ^(NSString *activityType, BOOL completed, NSArray *returnedItems, NSError *activityError) {
 		NSLog(@"Finished with activity %@", activityType);
@@ -608,11 +632,11 @@
 		{
 			NSLog(@"cancled");
 		}
-//		[activityViewController dismissViewControllerAnimated:YES completion:Nil];
+		//		[activityViewController dismissViewControllerAnimated:YES completion:Nil];
 	};
 	
 	// 初始化completionHandler，当post结束之后（无论是done还是cancell）该blog都会被调用
-//	activityViewController.completionHandler = myBlock;
+	//	activityViewController.completionHandler = myBlock;
 	
 	
 	//if iPhone
@@ -627,15 +651,15 @@
 		[popup presentPopoverFromBarButtonItem:shareBarButtonItem permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 	}
 	
-//	[self presentViewController:activityViewController animated:YES completion:nil];
+	//	[self presentViewController:activityViewController animated:YES completion:nil];
 }
 /**
  *  分享按钮点击事件
  */
 -(void)shareItemClick:(id)sender{
 	
-//	[self shareMethod:sender];
-//	[self sdkShareMethod];
+	//	[self shareMethod:sender];
+	//	[self sdkShareMethod];
 	[self activityItems];
 }
 /**
@@ -803,27 +827,62 @@
 		
 		weakself.webModel = model;
 		
-		NSURL *file = [[NSBundle mainBundle] URLForResource:@"article_detail.html" withExtension:nil];
+		[self loadHtml:model];
 		
-		NSString *htmlstring = [NSString stringWithContentsOfURL:file encoding:NSUTF8StringEncoding error:nil];
-		
-		
-		//替换内容中的img
-		NSString *contensHtmlString = model.content;
-		
-		contensHtmlString = [self getImageWith:contensHtmlString imageArray:model.images];
-		
-		htmlstring = [htmlstring stringByReplacingOccurrencesOfString:@"%@title" withString:model.title];
-		htmlstring = [htmlstring stringByReplacingOccurrencesOfString:@"%@feed" withString:model.feed_title];
-		htmlstring = [htmlstring stringByReplacingOccurrencesOfString:@"%@time" withString:model.time];
-		
-		htmlstring = [htmlstring stringByReplacingOccurrencesOfString:@"%@content" withString:contensHtmlString];
-		
-		[self.webView loadHTMLString:htmlstring baseURL:file];
+		//		NSURL *file = [[NSBundle mainBundle] URLForResource:@"article_detail.html" withExtension:nil];
+		//
+		//		NSString *htmlstring = [NSString stringWithContentsOfURL:file encoding:NSUTF8StringEncoding error:nil];
+		//
+		//
+		//		//替换内容中的img
+		//		NSString *contensHtmlString = model.content;
+		//
+		//		contensHtmlString = [self getImageWith:contensHtmlString imageArray:model.images];
+		//
+		//		htmlstring = [htmlstring stringByReplacingOccurrencesOfString:@"%@title" withString:model.title];
+		//		htmlstring = [htmlstring stringByReplacingOccurrencesOfString:@"%@feed" withString:model.feed_title];
+		//		htmlstring = [htmlstring stringByReplacingOccurrencesOfString:@"%@time" withString:model.time];
+		//
+		//		htmlstring = [htmlstring stringByReplacingOccurrencesOfString:@"%@content" withString:contensHtmlString];
+		//
+		//		[self.webView loadHTMLString:htmlstring baseURL:file];
 		
 		[MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
 		
 	}];
+	
+}
+
+
+//-(void)setBackgroundColor:(NSString *)backgroundColor{
+//	_backgroundColor = backgroundColor;
+//	[self loadHtml:_webModel];
+//}
+
+
+
+
+-(void)loadHtml:(DetailModel* )model{
+	NSURL *file = [[NSBundle mainBundle] URLForResource:@"article_detail.html" withExtension:nil];
+	
+	NSString *htmlstring = [NSString stringWithContentsOfURL:file encoding:NSUTF8StringEncoding error:nil];
+	
+	
+	//替换内容中的img
+	NSString *contensHtmlString = model.content;
+	
+	contensHtmlString = [self getImageWith:contensHtmlString imageArray:model.images];
+	
+	htmlstring = [htmlstring stringByReplacingOccurrencesOfString:@"%@title" withString:model.title];
+	htmlstring = [htmlstring stringByReplacingOccurrencesOfString:@"%@feed" withString:model.feed_title];
+	htmlstring = [htmlstring stringByReplacingOccurrencesOfString:@"%@time" withString:model.time];
+	
+	htmlstring = [htmlstring stringByReplacingOccurrencesOfString:@"%@content" withString:contensHtmlString];
+	
+	[self.webView loadHTMLString:htmlstring baseURL:file];
+	
+	[MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+	
 	
 }
 /**

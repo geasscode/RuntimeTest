@@ -12,6 +12,9 @@
 
 @property (nonatomic, strong) NSString *key;
 @property (nonatomic,copy) NSString *detailTextId;
+@property (nonatomic) NSInteger fontSizeValue;
+@property (nonatomic, strong) NSString *backgroundColor;
+@property (nonatomic, assign) BOOL isNightMode;
 
 
 @end

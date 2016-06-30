@@ -316,11 +316,13 @@ static AppDelegate *appdelegate;
 //	self.window.rootViewController = [[DESTabBarController alloc] init];
 //	[self.window makeKeyAndVisible];
 	
-	AdvertiseView *advertise = [AdvertiseView new];
+	//AdvertiseView *advertise = [AdvertiseView new];
 	
 	
 	self.window.rootViewController = [[DESTabBarController alloc] init];
 	[self.window makeKeyAndVisible];
+	
+	/*
 	// 1.判断沙盒中是否存在广告图片，如果存在，直接显示
 	NSString *filePath = [advertise getFilePathWithImageName:[kUserDefaults valueForKey:adImageName]];
 	
@@ -335,7 +337,7 @@ static AppDelegate *appdelegate;
 	
 	// 2.无论沙盒中是否存在广告图片，都需要重新调用广告接口，判断广告是否更新
 	[advertise getAdvertisingImage];
-
+   */
 	return YES;
 }
 
@@ -352,6 +354,11 @@ static AppDelegate *appdelegate;
 - (void)applicationWillResignActive:(UIApplication *)application {
 	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
 	// Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+	
+	//这个亮度就是在你完全退出这个app后还是会保持的 所以当我们不需要这个亮度继续保持的时候 我们需要在app的代理方法里做些处理 :
+	[[UIScreen mainScreen] setBrightness: 0.5];//0.5是自己设定认为比较合适的亮度值
+	
+
 	NSLog(@"execute applicationWillResignActive");
 
 }
