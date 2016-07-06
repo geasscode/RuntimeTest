@@ -87,6 +87,31 @@
 }
 
 
+
+//- (IBAction)loginBtn:(id)sender {
+//	if ([CheckUtil isStrEmpty:accountTf.text]) {
+//		[CheckUtil showAlertWithMessage:@"账号不能为空" delegate:self];
+//		return;
+//	}
+//	
+//	if ([CheckUtil isStrEmpty:passwordTf.text]) {
+//		[CheckUtil showAlertWithMessage:@"密码不能为空" delegate:self];
+//		return;
+//	}
+//	
+//	[BmobUser loginInbackgroundWithAccount:accountTf.text andPassword:passwordTf.text block:^(BmobUser *user, NSError *error) {
+//		if (user) {
+//			//跳转
+//			ShowUserMessageViewController *showUser = [[ShowUserMessageViewController alloc] init];
+//			showUser.title = @"用户信息";
+//			
+//			[self.navigationController pushViewController:showUser animated:YES];
+//		} else {
+//			[CheckUtil showAlertWithMessage:[error description] delegate:self];
+//		}
+//	}];
+//	
+//}
 /*
 #pragma mark - Navigation
 

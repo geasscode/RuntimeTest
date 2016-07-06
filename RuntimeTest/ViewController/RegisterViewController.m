@@ -10,6 +10,7 @@
 #import "RegisterView.h"
 #import "RegisterViewModel.h"
 #import "IPhoneSizeTool.h"
+#import "CheckUtil.h"
 
 @interface RegisterViewController ()
 
@@ -132,6 +133,29 @@
 	return _backBtn;
 }
 
+
+- (IBAction)registerBtn:(UIButton *)sender {
+//	if ([CheckUtil isStrEmpty:self.accountTf.text] ||
+//		[CheckUtil isStrEmpty:self.passwordTf.text]||
+//		[CheckUtil isStrEmpty:self.verifyPasswordTf.text]) {
+//		[CheckUtil showAlertWithMessage:@"输入不能为空" delegate:self];
+//	} else if (![self.passwordTf.text isEqualToString:self.verifyPasswordTf.text]){
+//		[CheckUtil showAlertWithMessage:@"两次输入密码不相同" delegate:self];
+//	} else {
+//		BmobUser *user = [[BmobUser alloc] init];
+//		user.username = self.accountTf.text;
+//		user.password = self.passwordTf.text;
+//		[user signUpInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {
+//			if (isSuccessful) {
+//				[CheckUtil showAlertWithMessage:@"注册成功" delegate:self];
+//			} else {
+//				[CheckUtil showAlertWithMessage:[error description] delegate:self];
+//			}
+//		}];
+//	}
+	
+	
+}
 /*
 #pragma mark - Navigation
 

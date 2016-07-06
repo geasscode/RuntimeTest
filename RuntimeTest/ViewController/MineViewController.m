@@ -277,5 +277,20 @@
 	self.alertView = nil;
 }
 
+
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//	if ([segue.identifier isEqualToString:@"showDetail"])
+//	{
+//		NSIndexPath *selectedIndexPath = [self.collectionView indexPathsForSelectedItems][0];
+//		
+//		// load the image, to prevent it from being cached we use 'initWithContentsOfFile'
+//		NSString *imageNameToLoad = [NSString stringWithFormat:@"%ld_full", (long)selectedIndexPath.row];
+//		UIImage *image = [UIImage imageNamed:imageNameToLoad];
+//		DetailViewController *detailViewController = segue.destinationViewController;
+//		detailViewController.image = image;
+//	}
+//}
+
 @end
 

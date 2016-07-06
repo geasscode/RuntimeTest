@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *nemuItemImage;
 
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+
 - (void)setImageForCellWithIndexPath:(NSIndexPath*)indexPath;
 
 @end

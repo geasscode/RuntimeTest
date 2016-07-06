@@ -43,7 +43,7 @@
             <connections>
                 <outlet property="nemuItemImage" destination="Ma0-Sy-nbU" id="0Na-56-Q9P"/>
             </connections>
-            <point key="canvasLocation" x="420.5" y="276.5"/>
+            <point key="canvasLocation" x="556.5" y="276.5"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -305,10 +305,11 @@ static AppDelegate *appdelegate;
 	
 	[[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
 	
-	self.window = [[UIWindow alloc] init];
-	self.window.frame = [UIScreen mainScreen].bounds;
+//	self.window = [[UIWindow alloc] init];
+//	self.window.frame = [UIScreen mainScreen].bounds;
 	
-	
+	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
 //	LaunchAnimationViewController *launchVC = [[LaunchAnimationViewController alloc] init];
 //	self.window.rootViewController = launchVC;
 	
@@ -318,7 +319,8 @@ static AppDelegate *appdelegate;
 	
 	//AdvertiseView *advertise = [AdvertiseView new];
 	
-	
+//	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+
 	self.window.rootViewController = [[DESTabBarController alloc] init];
 	[self.window makeKeyAndVisible];
 	

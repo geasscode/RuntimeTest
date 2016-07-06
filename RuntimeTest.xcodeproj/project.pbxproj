@@ -75,6 +75,18 @@
 		F7526FFE1C9A940A0012FE76 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7526FFC1C9A940A0012FE76 /* LaunchScreen.storyboard */; };
 		F75270091C9A940A0012FE76 /* RuntimeTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75270081C9A940A0012FE76 /* RuntimeTestTests.m */; };
 		F75270141C9A940A0012FE76 /* RuntimeTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F75270131C9A940A0012FE76 /* RuntimeTestUITests.m */; };
+		F752F6B51D2B9C8700DB4647 /* LBCDownLoad.m in Sources */ = {isa = PBXBuildFile; fileRef = F752F6B01D2B9C8700DB4647 /* LBCDownLoad.m */; };
+		F752F6B61D2B9C8700DB4647 /* LBCDownLoadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F752F6B21D2B9C8700DB4647 /* LBCDownLoadManager.m */; };
+		F752F6B71D2B9C8700DB4647 /* LBCDownLoadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F752F6B41D2B9C8700DB4647 /* LBCDownLoadModel.m */; };
+		F752F6BD1D2B9E6A00DB4647 /* ASPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = F752F6BA1D2B9E6A00DB4647 /* ASPopUpView.m */; };
+		F752F6BE1D2B9E6A00DB4647 /* ASProgressPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = F752F6BC1D2B9E6A00DB4647 /* ASProgressPopUpView.m */; };
+		F752F6C11D2B9F6100DB4647 /* DownloadTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F752F6C01D2B9F6100DB4647 /* DownloadTestVC.m */; };
+		F752F6C41D2BC34E00DB4647 /* CheckUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F752F6C31D2BC34E00DB4647 /* CheckUtil.m */; };
+		F752F6C71D2CA90D00DB4647 /* DESSiteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F752F6C61D2CA90D00DB4647 /* DESSiteTableViewController.m */; };
+		F752F6CA1D2CA9A200DB4647 /* DESBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F752F6C91D2CA9A200DB4647 /* DESBaseTableViewController.m */; };
+		F752F6CD1D2CAAAD00DB4647 /* DESSiteItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F752F6CC1D2CAAAD00DB4647 /* DESSiteItemModel.m */; };
+		F752F6D31D2CAC2800DB4647 /* DESSiteItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F752F6D21D2CAC2800DB4647 /* DESSiteItemTableViewCell.m */; };
+		F752F6D51D2CAC4200DB4647 /* DESSiteItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F752F6D41D2CAC4200DB4647 /* DESSiteItemTableViewCell.xib */; };
 		F754B7C01D23A99C0003A340 /* night.css in Resources */ = {isa = PBXBuildFile; fileRef = F754B7BE1D23A99C0003A340 /* night.css */; };
 		F754B7C11D23A99C0003A340 /* normal.css in Resources */ = {isa = PBXBuildFile; fileRef = F754B7BF1D23A99C0003A340 /* normal.css */; };
 		F754B7C51D24EDF20003A340 /* DESWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F754B7C41D24EDF20003A340 /* DESWebViewController.m */; };
@@ -547,6 +559,29 @@
 		F752700F1C9A940A0012FE76 /* RuntimeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F75270131C9A940A0012FE76 /* RuntimeTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeTestUITests.m; sourceTree = "<group>"; };
 		F75270151C9A940A0012FE76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F752F6AF1D2B9C8700DB4647 /* LBCDownLoad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBCDownLoad.h; sourceTree = "<group>"; };
+		F752F6B01D2B9C8700DB4647 /* LBCDownLoad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBCDownLoad.m; sourceTree = "<group>"; };
+		F752F6B11D2B9C8700DB4647 /* LBCDownLoadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBCDownLoadManager.h; sourceTree = "<group>"; };
+		F752F6B21D2B9C8700DB4647 /* LBCDownLoadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBCDownLoadManager.m; sourceTree = "<group>"; };
+		F752F6B31D2B9C8700DB4647 /* LBCDownLoadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBCDownLoadModel.h; sourceTree = "<group>"; };
+		F752F6B41D2B9C8700DB4647 /* LBCDownLoadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBCDownLoadModel.m; sourceTree = "<group>"; };
+		F752F6B91D2B9E6A00DB4647 /* ASPopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPopUpView.h; sourceTree = "<group>"; };
+		F752F6BA1D2B9E6A00DB4647 /* ASPopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPopUpView.m; sourceTree = "<group>"; };
+		F752F6BB1D2B9E6A00DB4647 /* ASProgressPopUpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASProgressPopUpView.h; sourceTree = "<group>"; };
+		F752F6BC1D2B9E6A00DB4647 /* ASProgressPopUpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASProgressPopUpView.m; sourceTree = "<group>"; };
+		F752F6BF1D2B9F6100DB4647 /* DownloadTestVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadTestVC.h; sourceTree = "<group>"; };
+		F752F6C01D2B9F6100DB4647 /* DownloadTestVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadTestVC.m; sourceTree = "<group>"; };
+		F752F6C21D2BC34E00DB4647 /* CheckUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckUtil.h; sourceTree = "<group>"; };
+		F752F6C31D2BC34E00DB4647 /* CheckUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckUtil.m; sourceTree = "<group>"; };
+		F752F6C51D2CA90D00DB4647 /* DESSiteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESSiteTableViewController.h; sourceTree = "<group>"; };
+		F752F6C61D2CA90D00DB4647 /* DESSiteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESSiteTableViewController.m; sourceTree = "<group>"; };
+		F752F6C81D2CA9A200DB4647 /* DESBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESBaseTableViewController.h; sourceTree = "<group>"; };
+		F752F6C91D2CA9A200DB4647 /* DESBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESBaseTableViewController.m; sourceTree = "<group>"; };
+		F752F6CB1D2CAAAD00DB4647 /* DESSiteItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESSiteItemModel.h; sourceTree = "<group>"; };
+		F752F6CC1D2CAAAD00DB4647 /* DESSiteItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESSiteItemModel.m; sourceTree = "<group>"; };
+		F752F6D11D2CAC2800DB4647 /* DESSiteItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESSiteItemTableViewCell.h; sourceTree = "<group>"; };
+		F752F6D21D2CAC2800DB4647 /* DESSiteItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESSiteItemTableViewCell.m; sourceTree = "<group>"; };
+		F752F6D41D2CAC4200DB4647 /* DESSiteItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DESSiteItemTableViewCell.xib; sourceTree = "<group>"; };
 		F754B7BE1D23A99C0003A340 /* night.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = night.css; sourceTree = "<group>"; };
 		F754B7BF1D23A99C0003A340 /* normal.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = normal.css; sourceTree = "<group>"; };
 		F754B7C31D24EDF20003A340 /* DESWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESWebViewController.h; sourceTree = "<group>"; };
@@ -1265,6 +1300,9 @@
 				F72516431D1D1EA600A5BAC7 /* NewsViewController.m */,
 				F72516451D211BFC00A5BAC7 /* DESTableViewActionSheetView.h */,
 				F72516461D211BFC00A5BAC7 /* DESTableViewActionSheetView.m */,
+				F752F6D11D2CAC2800DB4647 /* DESSiteItemTableViewCell.h */,
+				F752F6D21D2CAC2800DB4647 /* DESSiteItemTableViewCell.m */,
+				F752F6D41D2CAC4200DB4647 /* DESSiteItemTableViewCell.xib */,
 			);
 			path = Weekly;
 			sourceTree = "<group>";
@@ -1290,6 +1328,8 @@
 				F76CB7ED1CE46E3000D8474F /* TitleModel.m */,
 				F76CB7FE1CE480F600D8474F /* ArticleModel.h */,
 				F76CB7FF1CE480F600D8474F /* ArticleModel.m */,
+				F752F6CB1D2CAAAD00DB4647 /* DESSiteItemModel.h */,
+				F752F6CC1D2CAAAD00DB4647 /* DESSiteItemModel.m */,
 			);
 			path = WeeklyModel;
 			sourceTree = "<group>";
@@ -1339,6 +1379,8 @@
 				F752441C1CF6D8F7001C88EE /* Constants.h */,
 				F752441F1CF6D8F7001C88EE /* TopWindow.h */,
 				F75244201CF6D8F7001C88EE /* TopWindow.m */,
+				F752F6C21D2BC34E00DB4647 /* CheckUtil.h */,
+				F752F6C31D2BC34E00DB4647 /* CheckUtil.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1465,6 +1507,30 @@
 			path = RuntimeTestUITests;
 			sourceTree = "<group>";
 		};
+		F752F6AE1D2B9C8700DB4647 /* DownLoad */ = {
+			isa = PBXGroup;
+			children = (
+				F752F6AF1D2B9C8700DB4647 /* LBCDownLoad.h */,
+				F752F6B01D2B9C8700DB4647 /* LBCDownLoad.m */,
+				F752F6B11D2B9C8700DB4647 /* LBCDownLoadManager.h */,
+				F752F6B21D2B9C8700DB4647 /* LBCDownLoadManager.m */,
+				F752F6B31D2B9C8700DB4647 /* LBCDownLoadModel.h */,
+				F752F6B41D2B9C8700DB4647 /* LBCDownLoadModel.m */,
+			);
+			path = DownLoad;
+			sourceTree = "<group>";
+		};
+		F752F6B81D2B9E6A00DB4647 /* ASProgressPopUpView */ = {
+			isa = PBXGroup;
+			children = (
+				F752F6B91D2B9E6A00DB4647 /* ASPopUpView.h */,
+				F752F6BA1D2B9E6A00DB4647 /* ASPopUpView.m */,
+				F752F6BB1D2B9E6A00DB4647 /* ASProgressPopUpView.h */,
+				F752F6BC1D2B9E6A00DB4647 /* ASProgressPopUpView.m */,
+			);
+			path = ASProgressPopUpView;
+			sourceTree = "<group>";
+		};
 		F76128701CA4E920004136A7 /* Stores */ = {
 			isa = PBXGroup;
 			children = (
@@ -1520,6 +1586,8 @@
 				F77FDA501D19443D00562A3F /* CollectionViewTest.m */,
 				F77FDA521D1945A300562A3F /* RegularExpressionTest.h */,
 				F77FDA531D1945A300562A3F /* RegularExpressionTest.m */,
+				F752F6BF1D2B9F6100DB4647 /* DownloadTestVC.h */,
+				F752F6C01D2B9F6100DB4647 /* DownloadTestVC.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1939,6 +2007,8 @@
 		F7BAC76B1CC8DD33000D9795 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				F752F6B81D2B9E6A00DB4647 /* ASProgressPopUpView */,
+				F752F6AE1D2B9C8700DB4647 /* DownLoad */,
 				F72516521D21366700A5BAC7 /* TBActionSheet */,
 				F72516481D2124B400A5BAC7 /* LLSwitch */,
 				F768EF631D07FFEE005747E3 /* UINavigationBar+Awesome.h */,
@@ -2190,6 +2260,10 @@
 				F768EFC31D0E8B6C005747E3 /* RegisterViewController.m */,
 				F754B7C31D24EDF20003A340 /* DESWebViewController.h */,
 				F754B7C41D24EDF20003A340 /* DESWebViewController.m */,
+				F752F6C51D2CA90D00DB4647 /* DESSiteTableViewController.h */,
+				F752F6C61D2CA90D00DB4647 /* DESSiteTableViewController.m */,
+				F752F6C81D2CA9A200DB4647 /* DESBaseTableViewController.h */,
+				F752F6C91D2CA9A200DB4647 /* DESBaseTableViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2519,6 +2593,7 @@
 				F768EF9A1D0805EE005747E3 /* banner2.png in Resources */,
 				F768EFA11D0805EE005747E3 /* category3.png in Resources */,
 				F7BAC74C1CC8D40F000D9795 /* 11.png in Resources */,
+				F752F6D51D2CAC4200DB4647 /* DESSiteItemTableViewCell.xib in Resources */,
 				F7BAC7571CC8D40F000D9795 /* 5.png in Resources */,
 				F7BAC7551CC8D40F000D9795 /* 3.png in Resources */,
 				F768EFB51D0805EE005747E3 /* image5.jpg in Resources */,
@@ -2637,6 +2712,7 @@
 				F707FE851CD9F1B2008E4F7C /* HWPopTool.m in Sources */,
 				F7BCC5B81CCE20FD00704878 /* scanViewController.m in Sources */,
 				F76CB7DE1CE33F5700D8474F /* UIColor+flat.m in Sources */,
+				F752F6C71D2CA90D00DB4647 /* DESSiteTableViewController.m in Sources */,
 				F7F772ED1CD33B250060861B /* YZSTableViewCellModel.m in Sources */,
 				F78E020F1CE9AF64003CD195 /* FavoriteTableViewController.m in Sources */,
 				F768EFC71D0E8C12005747E3 /* RegisterView.m in Sources */,
@@ -2645,6 +2721,7 @@
 				F72516441D1D1EA700A5BAC7 /* NewsViewController.m in Sources */,
 				F707FEAB1CE06C85008E4F7C /* OpenShare+Renren.m in Sources */,
 				F7BCC5E01CCF6CDA00704878 /* HomeDetailView.m in Sources */,
+				F752F6B61D2B9C8700DB4647 /* LBCDownLoadManager.m in Sources */,
 				F7B1EABB1CC633E000307F41 /* UIColor+WNXColor.m in Sources */,
 				F768EF571D07FF08005747E3 /* CBIconfont.m in Sources */,
 				F7BAC7671CC8DC30000D9795 /* ContactTableViewCell.m in Sources */,
@@ -2653,6 +2730,7 @@
 				F7CBB4301CFC254000662347 /* GifImage.m in Sources */,
 				F72516621D21366700A5BAC7 /* TBActionButton.m in Sources */,
 				F7B4128F1C9BD96C00E45E22 /* User.m in Sources */,
+				F752F6B71D2B9C8700DB4647 /* LBCDownLoadModel.m in Sources */,
 				F7BAC73F1CC8D40F000D9795 /* NSArray+JSONModel.m in Sources */,
 				F768EFBB1D0E5251005747E3 /* SuggestViewController.m in Sources */,
 				F7BCC5651CCDBDAC00704878 /* TableViewCell.m in Sources */,
@@ -2671,6 +2749,7 @@
 				F78E02121CE9B26A003CD195 /* FavoriteCell.m in Sources */,
 				F7BCC58B1CCDF50600704878 /* Store.m in Sources */,
 				F7BAC7701CC8DD33000D9795 /* ContactDataHelper.m in Sources */,
+				F752F6CD1D2CAAAD00DB4647 /* DESSiteItemModel.m in Sources */,
 				F7275D021CD1A76B002F0F68 /* WeeklyItemCell.m in Sources */,
 				F7B1EAAA1CC6112000307F41 /* HomeViewController.m in Sources */,
 				F768EF291D06A083005747E3 /* AdvertiseView.m in Sources */,
@@ -2691,6 +2770,7 @@
 				F76CB8061CE488FB00D8474F /* NewsTableViewCell.m in Sources */,
 				F7CBB4101CF6FA2100662347 /* SuccViewController.m in Sources */,
 				F74676B21CABC7B50001D3A5 /* MJBaseObject.m in Sources */,
+				F752F6CA1D2CA9A200DB4647 /* DESBaseTableViewController.m in Sources */,
 				F768EF5F1D07FF08005747E3 /* FirstViewController.m in Sources */,
 				F7BCC58E1CCDF64B00704878 /* MyUser.m in Sources */,
 				F7BAC7001CC786A6000D9795 /* Tool.m in Sources */,
@@ -2707,6 +2787,7 @@
 				F74676B01CABC7B50001D3A5 /* MJAd.m in Sources */,
 				F7BCC5551CCDBD1000704878 /* README.md in Sources */,
 				F76CB7DB1CE33E6600D8474F /* FeThreeDotGlow.m in Sources */,
+				F752F6BD1D2B9E6A00DB4647 /* ASPopUpView.m in Sources */,
 				F7CBB40D1CF6F9BB00662347 /* DKNight.m in Sources */,
 				F76CB7EB1CE423C100D8474F /* DBHelper.m in Sources */,
 				F76CB7F41CE47DF300D8474F /* BaseHomeViewController.m in Sources */,
@@ -2724,6 +2805,7 @@
 				F7BAC7431CC8D40F000D9795 /* JSONKeyMapper.m in Sources */,
 				F7BCC5CD1CCF649100704878 /* APIClient.m in Sources */,
 				F72516631D21366700A5BAC7 /* TBActionContainer.m in Sources */,
+				F752F6D31D2CAC2800DB4647 /* DESSiteItemTableViewCell.m in Sources */,
 				F76CB7F71CE47E7200D8474F /* DESCollectionView.m in Sources */,
 				F72516671D21366700A5BAC7 /* UIWindow+TBAdditions.m in Sources */,
 				F7B1EAA71CC610B800307F41 /* DESNavigationController.m in Sources */,
@@ -2743,6 +2825,7 @@
 				F7F773191CD8AFD00060861B /* iCarousel.m in Sources */,
 				F7644F5C1CF5A0B000FD9DAF /* ActivityItem.m in Sources */,
 				F7BCC5591CCDBD1000704878 /* TCDelegate.m in Sources */,
+				F752F6C41D2BC34E00DB4647 /* CheckUtil.m in Sources */,
 				F7BAC7411CC8D40F000D9795 /* JSONHTTPClient.m in Sources */,
 				F7F7730A1CD3593F0060861B /* DetailModel.m in Sources */,
 				F7F772F81CD347BF0060861B /* WeeklyItemStageDetatilController.m in Sources */,
@@ -2771,6 +2854,7 @@
 				F725166B1D21384C00A5BAC7 /* ConditionerView.m in Sources */,
 				F725166F1D21396000A5BAC7 /* UIImage+BoxBlur.m in Sources */,
 				F707FE971CE034C9008E4F7C /* DESTabBarController.m in Sources */,
+				F752F6C11D2B9F6100DB4647 /* DownloadTestVC.m in Sources */,
 				F7BCC5621CCDBD7900704878 /* TableViewDelegate.m in Sources */,
 				F74676B91CABC7B50001D3A5 /* MJUser.m in Sources */,
 				F7754BE91CC7548A00F989DA /* OtherFunctionViewController.m in Sources */,
@@ -2850,7 +2934,9 @@
 				F75244211CF6D8F7001C88EE /* AppConfigure.m in Sources */,
 				F7BAC7031CC78E9C000D9795 /* UIButton+Hook.m in Sources */,
 				F77FDA541D1945A300562A3F /* RegularExpressionTest.m in Sources */,
+				F752F6BE1D2B9E6A00DB4647 /* ASProgressPopUpView.m in Sources */,
 				F7962D2A1D1A6CB900CE3119 /* DESSearchResultsViewController.m in Sources */,
+				F752F6B51D2B9C8700DB4647 /* LBCDownLoad.m in Sources */,
 				F7BCC5D21CCF66AE00704878 /* BaseModel.m in Sources */,
 				F7B412981C9BDA3900E45E22 /* PostTableViewCell.m in Sources */,
 				F768EFC11D0E5451005747E3 /* SuggestView.m in Sources */,

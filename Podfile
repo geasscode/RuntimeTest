@@ -27,6 +27,7 @@ pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
 pod 'UMengAnalytics-NO-IDFA' #无IDFA版SDK（请根据需要选择其中一个）
 pod 'JSPatch'
 
+
 ## 主模块(必须)
 #pod 'ShareSDK3'
 ## Mob 公共库(必须) 如果同时集成SMSSDK iOS2.0:可看此注意事项：http://bbs.mob.com/thread-20051-1-1.html

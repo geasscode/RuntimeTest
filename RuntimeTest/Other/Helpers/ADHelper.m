@@ -10,6 +10,7 @@
 
 #import "ADHelper.h"
 #import "DESWebViewController.h"
+#import "DESTabBarController.h"
 
 #define kCachedCurrentImage ([[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingString:@"/adcurrent.png"])
 #define kCachedNewImage     ([[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)objectAtIndex:0]stringByAppendingString:@"/adnew.png"])
@@ -95,7 +96,10 @@
 	}];
 	
 	///防止释放，显示完后  要手动设置为 nil
+	
+	
 	self.window = window;
+	
 }
 
 - (void)letGo

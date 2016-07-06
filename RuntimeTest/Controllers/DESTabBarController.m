@@ -17,6 +17,7 @@
 #import "BarCodeViewController.h"
 #import "MineViewController.h"
 #import "AdvertiseViewController.h"
+#import "DESSiteTableViewController.h"
 
 @implementation DESTabBarController
 + (void)initialize {
@@ -80,8 +81,13 @@
 //							 image:@"tabCDeselected"
 //					 selectedImage:@"tabCSelected"];
 	
-	[self setupChildViewController:[[BarCodeViewController alloc] init]
-							 title:@"二维码"
+//	[self setupChildViewController:[[BarCodeViewController alloc] init]
+//							 title:@"二维码"
+//							 image:@"tabCDeselected"
+//					 selectedImage:@"tabCSelected"];
+	
+	[self setupChildViewController:[[DESSiteTableViewController alloc] init]
+							 title:@"站点"
 							 image:@"tabCDeselected"
 					 selectedImage:@"tabCSelected"];
 	

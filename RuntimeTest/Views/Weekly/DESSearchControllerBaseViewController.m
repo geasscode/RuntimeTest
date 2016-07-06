@@ -102,7 +102,9 @@ NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @
 	// Create the search results view controller and use it for the UISearchController.
 	
 	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
-	DESSearchResultsViewController *searchResultsController  = (DESSearchResultsViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"DESSearchResultsViewControllerStoryboardIdentifier"];
+//	DESSearchResultsViewController *searchResultsController  = (DESSearchResultsViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"DESSearchResultsViewControllerStoryboardIdentifier"];
+	
+	DESSearchResultsViewController *searchResultsController  = [DESSearchResultsViewController new];
 	
 	//	DESSearchResultsViewController *searchResultsController = [self.storyboard instantiateViewControllerWithIdentifier:DESSearchResultsViewControllerStoryboardIdentifier];
 	
@@ -114,7 +116,8 @@ NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @
 //	self.definesPresentationContext = YES;
 
 	// Present the view controller.
-	[self presentViewController:self.searchController animated:YES completion:nil];
+
+	[self.navigationController presentViewController:self.searchController animated:YES completion:nil];
 	
 	
 }
@@ -238,10 +241,13 @@ NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @
 	} else {
 		
 		DetailModel *model = self.visibleResults[indexPath.row];
-											
-		NewsViewController *detail = [[NewsViewController alloc] init];
+		DetailViewController *detail = [[DetailViewController alloc] init];
+		
 		detail.detailTextId = model.detatilArticleId;
-		[self.navigationController pushViewController:detail animated:YES];
+		
+//		[self.presentingViewController.navigationController pushViewController:detail animated:YES];
+
+	   [self.navigationController pushViewController:detail animated:YES];
 	}
 
 }
@@ -257,13 +263,14 @@ NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @
 	} else {
 		
 		DetailModel *model = self.visibleResults[0];
-		NewsViewController *detail = [[NewsViewController alloc] init];
+		DetailViewController *detail = [[DetailViewController alloc] init];
 		detail.detailTextId = model.detatilArticleId;
 		[self.navigationController pushViewController:detail animated:YES];
 	}
 
 
 }
+
 
 
 

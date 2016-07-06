@@ -20,7 +20,7 @@
 #import "BarCodeViewController.h"
 #import "ZYKeyboardUtil.h"
 #import "FirstViewController.h"
-
+#import "DownloadTestVC.h"
 #define MARGIN_KEYBOARD 20
 
 
@@ -171,6 +171,10 @@
 
 - (IBAction)gotoTestView:(id)sender {
 	
+	
+	DownloadTestVC *downloadTest = [DownloadTestVC new];
+	[self.navigationController pushViewController:downloadTest animated:YES];
+	
 	/*
 	
 	UIImage * webImage = [UIImage new];
@@ -191,16 +195,17 @@
 //	[self.navigationController pushViewController:firstVC animated:YES];
 
 	*/
-	UIButton *btn = (UIButton *)sender;
-	
-	[btn addTarget:self action:@selector(handleBtn:) forControlEvents:UIControlEventTouchUpInside];
+//	UIButton *btn = (UIButton *)sender;
+//	
+//	[btn addTarget:self action:@selector(handleBtn:) forControlEvents:UIControlEventTouchUpInside];
 
 //	[self handleBtn:sender];
 }
 
 - (void)handleBtn:(id)sender
 {
-	NSLog(@"hello");
+	
+	    NSLog(@"hello");
 }
 
 - (IBAction)gotoWeeklyView:(id)sender {
