@@ -251,7 +251,9 @@
 	if (tableView==_searchDisplayController.searchResultsTableView) {
 		return _searchResultArr.count;
 	}else{
-		return [_rowArr[section] count];
+		NSArray * list = _rowArr[section];
+		return list.count;
+//		return [_rowArr[section] count];
 	}
 }
 

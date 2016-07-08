@@ -16,5 +16,5 @@
 #import "UIView+Utils.h"
 #import "Constants.h"
 #import "BaseFunction.h"
-
+#import "AllUtils.h"
 #endif /* AppMacro_h */

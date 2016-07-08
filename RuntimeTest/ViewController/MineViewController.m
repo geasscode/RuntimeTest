@@ -11,6 +11,7 @@
 #import "User.h"
 #import "FavoriteTableViewController.h"
 #import "SuggestViewController.h"
+#import "LoginViewController.h"
 #define CELL_WIDTH self.view.bounds.size.width / 3
 
 @interface MineViewController () <UIAlertViewDelegate>
@@ -29,17 +30,35 @@
 - (UICollectionView*)collectionView{
 	if (!_collectionView) {
 		UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+		
+		// 设置垂直间距
 		flowLayout.minimumInteritemSpacing = 1;
+		// 设置最小行间距
 		flowLayout.minimumLineSpacing = 1;
 		flowLayout.itemSize = CGSizeMake(CELL_WIDTH -1 , CELL_WIDTH -1);
+		
+		// 设置滚动方向（默认垂直滚动）
+		//flowLayout = UICollectionViewScrollDirectionHorizontal;
+		
+		// 设置边缘的间距，默认是{0，0，0，0}
+		//flowLayout.sectionInset = UIEdgeInsetsMake(20, 20, 20, 20);
+
+		
 		_collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, headBackgroundImage.frame.size.height , kScreenWidth, kScreenWidth) collectionViewLayout:flowLayout];
-		[_collectionView registerNib:[UINib nibWithNibName:@"MyCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"cell"];
+		
+		//更严谨一点的方法加上NSStringFromClass
+	    [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionViewCell class]) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"cell"];
+
+//		[_collectionView registerNib:[UINib nibWithNibName:@"MyCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"cell"];
+		
 		_collectionView.scrollEnabled = YES;
 		_collectionView.backgroundColor = [UIColor clearColor];
 		_collectionView.delegate = self;
 		_collectionView.dataSource = self;
 	}
 	return _collectionView;
+//	return [self initWithCollectionViewLayout:flowLayout];
+
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -210,8 +229,12 @@
 //		[self.navigationController pushViewController:userInfoDetailVC animated:YES];
 	}else {
 		
+		LoginViewController *loginVC = [LoginViewController new];
+		
+		[self.navigationController presentViewController:loginVC animated:YES completion:nil];
+		
 		//未登录状态下进入登录页面
-		[self performSegueWithIdentifier:@"isLogin" sender:self];
+//		[self performSegueWithIdentifier:@"isLogin" sender:self];
 	}
 }
 

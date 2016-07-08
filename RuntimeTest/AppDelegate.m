@@ -130,6 +130,11 @@ static AppDelegate *appdelegate;
 //基本完成程序准备开始运行
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
+	
+	//后台Bmob
+	[Bmob registerWithAppKey:@"a1605700080f9bfddf67f6ed29e42e12"];
+
+	
 	//JSPatch
 	
 	[JPEngine startEngine];
@@ -170,8 +175,9 @@ static AppDelegate *appdelegate;
 	
 //	支持QQ所需的相关配置及代码 登录QQ互联（http://connect.qq.com/ ）注册成为开发者并登记应用取得AppId，然后打开下图位置，在URL Types中添加QQ的AppID，其格式为：”QQ” ＋ AppId的16进制（如果appId转换的16进制数不够8位则在前面补0，如转换的是：5FB8B52，则最终填入为：QQ05FB8B52 注意：转换后的字母要大写） 转换16进制的方法：echo ‘ibase=10;obase=16;801312852′|bc，其中801312852为QQ的AppID
 	
-//	[SMSSDK registerApp:appkey withSecret:app_secrect];
+	[SMSSDK registerApp:@"2160fe96d444" withSecret:@"95c9f57e5ffd7b0eda510b020f004cf0"];
 	//shareSDK
+	
 	
 	[ShareSDK registerApp:@"2160fe96d444"
 	 

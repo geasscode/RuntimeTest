@@ -19,6 +19,8 @@ pod 'SVProgressHUD'
 pod 'MWPhotoBrowser'
 pod 'ZYKeyboardUtil', '~> 0.6.1'
 pod 'DKNightVersion'
+
+pod 'MOBFoundation_IDFA'
 pod 'SMSSDK'
 pod 'DateTools'
 pod 'ReactiveCocoa', '~> 2.5'
@@ -26,6 +28,9 @@ pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
 #pod 'UMengAnalytics'//标准SDK，含IDFA
 pod 'UMengAnalytics-NO-IDFA' #无IDFA版SDK（请根据需要选择其中一个）
 pod 'JSPatch'
+pod 'BmobSDK'
+
+
 
 
 ## 主模块(必须)

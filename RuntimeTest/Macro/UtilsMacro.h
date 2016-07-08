@@ -80,6 +80,7 @@ _Pragma("clang diagnostic pop")
 #ifndef Define_h
 #define Define_h
 
+#define USER_TABLE @"User"
 
 #pragma mark 获取当前屏幕的宽度、高度
 

@@ -64,6 +64,9 @@
 		F74676CE1CB6415C0001D3A5 /* NSObject+PropertyAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676CD1CB6415C0001D3A5 /* NSObject+PropertyAdd.m */; };
 		F74676D21CB647490001D3A5 /* NSMutableArray+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676D11CB647490001D3A5 /* NSMutableArray+Extension.m */; };
 		F74676D71CB7B38F0001D3A5 /* RunLoopTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F74676D61CB7B38F0001D3A5 /* RunLoopTest.m */; };
+		F746C84F1D2F856F0022836E /* dismissBtn_Nav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C84E1D2F856F0022836E /* dismissBtn_Nav@2x.png */; };
+		F746C8511D2F93550022836E /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F746C8501D2F93550022836E /* RegisterViewController.xib */; };
+		F746C8541D2FA66A0022836E /* AllUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F746C8531D2FA66A0022836E /* AllUtils.m */; };
 		F75244211CF6D8F7001C88EE /* AppConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = F75244191CF6D8F7001C88EE /* AppConfigure.m */; };
 		F75244221CF6D8F7001C88EE /* BaseFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = F752441B1CF6D8F7001C88EE /* BaseFunction.m */; };
 		F75244241CF6D8F7001C88EE /* TopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F75244201CF6D8F7001C88EE /* TopWindow.m */; };
@@ -535,6 +538,10 @@
 		F74676D11CB647490001D3A5 /* NSMutableArray+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Extension.m"; sourceTree = "<group>"; };
 		F74676D51CB7B38F0001D3A5 /* RunLoopTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunLoopTest.h; sourceTree = "<group>"; };
 		F74676D61CB7B38F0001D3A5 /* RunLoopTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunLoopTest.m; sourceTree = "<group>"; };
+		F746C84E1D2F856F0022836E /* dismissBtn_Nav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dismissBtn_Nav@2x.png"; sourceTree = "<group>"; };
+		F746C8501D2F93550022836E /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		F746C8521D2FA66A0022836E /* AllUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllUtils.h; sourceTree = "<group>"; };
+		F746C8531D2FA66A0022836E /* AllUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllUtils.m; sourceTree = "<group>"; };
 		F75244181CF6D8F7001C88EE /* AppConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigure.h; sourceTree = "<group>"; };
 		F75244191CF6D8F7001C88EE /* AppConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfigure.m; sourceTree = "<group>"; };
 		F752441A1CF6D8F7001C88EE /* BaseFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseFunction.h; sourceTree = "<group>"; };
@@ -1381,6 +1388,8 @@
 				F75244201CF6D8F7001C88EE /* TopWindow.m */,
 				F752F6C21D2BC34E00DB4647 /* CheckUtil.h */,
 				F752F6C31D2BC34E00DB4647 /* CheckUtil.m */,
+				F746C8521D2FA66A0022836E /* AllUtils.h */,
+				F746C8531D2FA66A0022836E /* AllUtils.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1968,6 +1977,7 @@
 		F7BAC7221CC8D40E000D9795 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F746C84E1D2F856F0022836E /* dismissBtn_Nav@2x.png */,
 				F754B7C91D24F2050003A340 /* adimage.png */,
 				F7BAC7231CC8D40E000D9795 /* contacts_add_friend@2x.png */,
 				F7BAC7241CC8D40E000D9795 /* contacts_add_friend@3x.png */,
@@ -2264,6 +2274,7 @@
 				F752F6C61D2CA90D00DB4647 /* DESSiteTableViewController.m */,
 				F752F6C81D2CA9A200DB4647 /* DESBaseTableViewController.h */,
 				F752F6C91D2CA9A200DB4647 /* DESBaseTableViewController.m */,
+				F746C8501D2F93550022836E /* RegisterViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2528,6 +2539,7 @@
 				F768EFAE1D0805EE005747E3 /* goods7.jpg in Resources */,
 				F768EFAB1D0805EE005747E3 /* goods4.jpg in Resources */,
 				F7F773141CD36C6F0060861B /* search.plist in Resources */,
+				F746C8511D2F93550022836E /* RegisterViewController.xib in Resources */,
 				F768EF901D0805EE005747E3 /* activity1.jpg in Resources */,
 				F7F773131CD36C6F0060861B /* article_image.png in Resources */,
 				F7CBB43C1CFD706000662347 /* 隶书_GBK.TTF in Resources */,
@@ -2604,6 +2616,7 @@
 				F7BCC5AC1CCE058A00704878 /* photodata.bin in Resources */,
 				F7BCC5B01CCE17A000704878 /* photodata.bin in Resources */,
 				F768EF911D0805EE005747E3 /* activity2.jpg in Resources */,
+				F746C84F1D2F856F0022836E /* dismissBtn_Nav@2x.png in Resources */,
 				F7CBB41B1CF84BC000662347 /* iPhone-6-Crop.gif in Resources */,
 				F7CBB41C1CF84BC000662347 /* Loading-225px-W.gif in Resources */,
 				F7BAC7501CC8D40F000D9795 /* 15.png in Resources */,
@@ -2792,6 +2805,7 @@
 				F76CB7EB1CE423C100D8474F /* DBHelper.m in Sources */,
 				F76CB7F41CE47DF300D8474F /* BaseHomeViewController.m in Sources */,
 				F7CBB4521CFD757000662347 /* FileSave.m in Sources */,
+				F746C8541D2FA66A0022836E /* AllUtils.m in Sources */,
 				F7CBB4221CFBE9DC00662347 /* ChooseCityTableViewController.m in Sources */,
 				F76CB8031CE4857C00D8474F /* ArticleTool.m in Sources */,
 				F7BCC55C1CCDBD1000704878 /* TCSectionDataMetric.m in Sources */,

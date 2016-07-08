@@ -10,6 +10,5 @@
 #import "RegisterView.h"
 
 @interface RegisterViewController : UIViewController
-- (instancetype)initWithType:(Type)type;
 
 @end

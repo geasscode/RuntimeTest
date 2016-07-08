@@ -70,6 +70,18 @@
 	
 	[super viewDidLoad];
 	
+//	[self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DESSiteItemTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"SiteCellIdentifier"];
+	
+	//注册系统自带的cell
+//	[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"SiteCellIdentifier"];
+
+	
+	//默认使用上面那个省略下面这行，但是有自定义style 还是使用这个。
+	//	if (cell == nil) {
+	//		cell= [[DESSiteItemTableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"SiteCellIdentifier"];
+	//	}
+	//
+
 	[self setNav];
 	
 	[self getSiteData];

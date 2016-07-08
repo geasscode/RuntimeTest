@@ -15,7 +15,10 @@
 
 @interface ContentTableViewController ()
 
-@property (nonatomic,strong) NSMutableArray *articleModelArray;
+//使用新语法限制在ArticleModel里。
+@property (strong, nonatomic) NSMutableArray<ArticleModel *> * articleModelArray;
+
+//@property (nonatomic,strong) NSMutableArray *articleModelArray;
 
 @property (nonatomic,assign) BOOL islogin;
 

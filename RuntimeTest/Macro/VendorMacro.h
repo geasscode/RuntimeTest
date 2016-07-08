@@ -17,9 +17,12 @@
 #import <MJExtension.h>
 #import "MBProgressHUD.h"
 #import <Masonry.h>
-
 #import "NetTool.h"
 #import "JPUSHService.h"
+
+
+#import <BmobSDK/Bmob.h>
+
 
 #import <AdSupport/AdSupport.h>
 #import <SMS_SDK/SMSSDK.h>

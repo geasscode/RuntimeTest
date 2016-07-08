@@ -29,10 +29,14 @@
 	static AFHTTPSessionManager *manager = nil;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
+		
+		// 1.获得请求管理者
 		manager = [AFHTTPSessionManager manager];
 		// 设置接受解析的内容类型
 		manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html",@"text/json",@"text/plain",@"text/javascript",@"application/json", nil];
-		
+		//设置超时时间为10s
+		manager.requestSerializer.timeoutInterval = 10;
+
 		//下面这两句不是必须的。
 		NSString *userAgent = [NSString stringWithFormat:@"iOS/%@/3.19",[UIDevice currentDevice].name];
 		[manager.requestSerializer setValue:userAgent forHTTPHeaderField:@"User-Agent"];
