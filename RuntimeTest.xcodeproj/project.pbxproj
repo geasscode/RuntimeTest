@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		078D15482802E605E77C6D5C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1E452DD1BAF6AB92348AF8 /* libPods.a */; };
+		1931A8351D3379C20066CA0B /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1931A8341D3379C20066CA0B /* ForgetPasswordViewController.m */; };
+		1931A8381D337E150066CA0B /* UpdatePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1931A8371D337E150066CA0B /* UpdatePasswordViewController.m */; };
 		F707FE851CD9F1B2008E4F7C /* HWPopTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE841CD9F1B2008E4F7C /* HWPopTool.m */; };
 		F707FE871CDA0113008E4F7C /* loveway.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F707FE861CDA0113008E4F7C /* loveway.ttf */; };
 		F707FE8A1CDA021C008E4F7C /* UILabel+FontChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE891CDA021C008E4F7C /* UILabel+FontChange.m */; };
@@ -429,6 +431,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1931A8331D3379C20066CA0B /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
+		1931A8341D3379C20066CA0B /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
+		1931A8361D337E150066CA0B /* UpdatePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePasswordViewController.h; sourceTree = "<group>"; };
+		1931A8371D337E150066CA0B /* UpdatePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePasswordViewController.m; sourceTree = "<group>"; };
 		2CA5276C8B2F3D8FCC327D72 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6E1E452DD1BAF6AB92348AF8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F707FE831CD9F1B2008E4F7C /* HWPopTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWPopTool.h; sourceTree = "<group>"; };
@@ -2275,6 +2281,10 @@
 				F752F6C81D2CA9A200DB4647 /* DESBaseTableViewController.h */,
 				F752F6C91D2CA9A200DB4647 /* DESBaseTableViewController.m */,
 				F746C8501D2F93550022836E /* RegisterViewController.xib */,
+				1931A8331D3379C20066CA0B /* ForgetPasswordViewController.h */,
+				1931A8341D3379C20066CA0B /* ForgetPasswordViewController.m */,
+				1931A8361D337E150066CA0B /* UpdatePasswordViewController.h */,
+				1931A8371D337E150066CA0B /* UpdatePasswordViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2862,6 +2872,7 @@
 				F7BCC6181CCF6F2A00704878 /* HomeDetailViewController.m in Sources */,
 				F7BB42E71CEEECE2006F5EE3 /* README.md in Sources */,
 				F7CBB4131CF6FAAF00662347 /* DKNightTableViewCell.m in Sources */,
+				1931A8381D337E150066CA0B /* UpdatePasswordViewController.m in Sources */,
 				F768EF5A1D07FF08005747E3 /* GoodsCell.m in Sources */,
 				F72516501D2124B400A5BAC7 /* LLEyesLayer.m in Sources */,
 				F76CB7F11CE47A8C00D8474F /* TitleScrollView.m in Sources */,
@@ -2876,6 +2887,7 @@
 				F7CBB44F1CFD757000662347 /* BtnCollectionView.m in Sources */,
 				F7F772F51CD33ECE0060861B /* BaseTableViewController.m in Sources */,
 				F768EF601D07FF08005747E3 /* SecondViewController.m in Sources */,
+				1931A8351D3379C20066CA0B /* ForgetPasswordViewController.m in Sources */,
 				F7F7730D1CD359F80060861B /* ImageModel.m in Sources */,
 				F72516511D2124B400A5BAC7 /* LLSwitch.m in Sources */,
 				F7CBB4541CFD757000662347 /* SegmentView.m in Sources */,
