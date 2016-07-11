@@ -19,6 +19,9 @@
 /** 缓存弹出提示框 */
 @property (nonatomic, strong) UIAlertView *alertView;
 
+@property (nonatomic, strong) UIButton *backToTopBtn;
+
+
 @end
 
 @implementation MineViewController{
@@ -47,7 +50,11 @@
 		_collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, headBackgroundImage.frame.size.height , kScreenWidth, kScreenWidth) collectionViewLayout:flowLayout];
 		
 		//更严谨一点的方法加上NSStringFromClass
-	    [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionViewCell class]) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"cell"];
+//	    [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([MyCollectionViewCell class]) bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"cell"];
+		
+		//纯代码无xib 注册 registerClass 方式
+		[_collectionView registerClass:[MyCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+
 
 //		[_collectionView registerNib:[UINib nibWithNibName:@"MyCollectionViewCell" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"cell"];
 		
@@ -55,6 +62,11 @@
 		_collectionView.backgroundColor = [UIColor clearColor];
 		_collectionView.delegate = self;
 		_collectionView.dataSource = self;
+		
+		
+//		_collectionView.showsHorizontalScrollIndicator = YES;
+//		_collectionView.showsVerticalScrollIndicator = NO;
+//		[_collectionView setBounces:NO];
 	}
 	return _collectionView;
 //	return [self initWithCollectionViewLayout:flowLayout];
@@ -69,12 +81,13 @@
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
 	MyCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
 	[cell setImageForCellWithIndexPath:indexPath];
-	cell.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+//	cell.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
 	return cell;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-	
+	[collectionView deselectItemAtIndexPath:indexPath animated:YES];
+
 	
 	if (user) {
 		
@@ -139,6 +152,10 @@
 - (void)viewDidLoad{
 	[super viewDidLoad];
 	
+	
+	
+	[self backToTopUI];
+	
 	[self.view addSubview:self.collectionView];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserinfo:) name:@"WBAuthorSuccessfulNotification" object:nil];
@@ -171,6 +188,30 @@
 - (void)viewDidAppear:(BOOL)animated{
 	[super viewDidAppear:animated];
 	self.tabBarController.tabBar.hidden = NO;
+}
+
+
+-(void)backToTopUI{
+	self.backToTopBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+	_backToTopBtn.frame = CGRectMake(kScreenWidth - 50, kScreenHeight - 200, 40, 40);
+	_backToTopBtn.layer.cornerRadius = 20;
+	_backToTopBtn.layer.borderColor = [UIColor blackColor].CGColor;
+	_backToTopBtn.clipsToBounds = YES;
+	_backToTopBtn.titleLabel.font = [UIFont systemFontOfSize:10];
+	_backToTopBtn.hidden = YES;
+	[_backToTopBtn setBackgroundImage:[UIImage imageNamed:@"go_top"] forState:UIControlStateNormal];
+	[_backToTopBtn setTitle:@"回顶部" forState:UIControlStateNormal];
+	[_backToTopBtn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+	[_backToTopBtn setTitleEdgeInsets:UIEdgeInsetsMake(5, 0, 0, 0)];
+	[_backToTopBtn addTarget:self action:@selector(backToTopAction) forControlEvents:UIControlEventTouchUpInside];
+	[self.view addSubview:_backToTopBtn];
+
+}
+
+- (void)backToTopAction{
+	
+	self.collectionView.contentOffset = CGPointZero;
+	_backToTopBtn.hidden = YES;
 }
 
 #pragma mark - 更新授权后的个人信息

@@ -69,6 +69,18 @@
 		F746C84F1D2F856F0022836E /* dismissBtn_Nav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C84E1D2F856F0022836E /* dismissBtn_Nav@2x.png */; };
 		F746C8511D2F93550022836E /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F746C8501D2F93550022836E /* RegisterViewController.xib */; };
 		F746C8541D2FA66A0022836E /* AllUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F746C8531D2FA66A0022836E /* AllUtils.m */; };
+		F746C8581D3389AE0022836E /* MineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F746C8571D3389AE0022836E /* MineModel.m */; };
+		F746C8621D33A2CE0022836E /* aboutMe.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C8591D33A2CE0022836E /* aboutMe.png */; };
+		F746C8631D33A2CE0022836E /* changePassword.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C85A1D33A2CE0022836E /* changePassword.png */; };
+		F746C8641D33A2CE0022836E /* clean.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C85B1D33A2CE0022836E /* clean.png */; };
+		F746C8651D33A2CE0022836E /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C85C1D33A2CE0022836E /* favorite.png */; };
+		F746C8661D33A2CE0022836E /* feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C85D1D33A2CE0022836E /* feedback.png */; };
+		F746C8671D33A2CE0022836E /* noReadNews.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C85E1D33A2CE0022836E /* noReadNews.png */; };
+		F746C8681D33A2CE0022836E /* orderNews.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C85F1D33A2CE0022836E /* orderNews.png */; };
+		F746C8691D33A2CE0022836E /* password.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C8601D33A2CE0022836E /* password.png */; };
+		F746C86A1D33A2CE0022836E /* theme.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C8611D33A2CE0022836E /* theme.png */; };
+		F746C86D1D33A52B0022836E /* changeMyPassword.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C86B1D33A52B0022836E /* changeMyPassword.png */; };
+		F746C86E1D33A52B0022836E /* myFeedBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C86C1D33A52B0022836E /* myFeedBack.png */; };
 		F75244211CF6D8F7001C88EE /* AppConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = F75244191CF6D8F7001C88EE /* AppConfigure.m */; };
 		F75244221CF6D8F7001C88EE /* BaseFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = F752441B1CF6D8F7001C88EE /* BaseFunction.m */; };
 		F75244241CF6D8F7001C88EE /* TopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F75244201CF6D8F7001C88EE /* TopWindow.m */; };
@@ -548,6 +560,19 @@
 		F746C8501D2F93550022836E /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		F746C8521D2FA66A0022836E /* AllUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllUtils.h; sourceTree = "<group>"; };
 		F746C8531D2FA66A0022836E /* AllUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllUtils.m; sourceTree = "<group>"; };
+		F746C8561D3389AE0022836E /* MineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineModel.h; sourceTree = "<group>"; };
+		F746C8571D3389AE0022836E /* MineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineModel.m; sourceTree = "<group>"; };
+		F746C8591D33A2CE0022836E /* aboutMe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aboutMe.png; sourceTree = "<group>"; };
+		F746C85A1D33A2CE0022836E /* changePassword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changePassword.png; sourceTree = "<group>"; };
+		F746C85B1D33A2CE0022836E /* clean.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clean.png; sourceTree = "<group>"; };
+		F746C85C1D33A2CE0022836E /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
+		F746C85D1D33A2CE0022836E /* feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = feedback.png; sourceTree = "<group>"; };
+		F746C85E1D33A2CE0022836E /* noReadNews.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noReadNews.png; sourceTree = "<group>"; };
+		F746C85F1D33A2CE0022836E /* orderNews.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orderNews.png; sourceTree = "<group>"; };
+		F746C8601D33A2CE0022836E /* password.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = password.png; sourceTree = "<group>"; };
+		F746C8611D33A2CE0022836E /* theme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = theme.png; sourceTree = "<group>"; };
+		F746C86B1D33A52B0022836E /* changeMyPassword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeMyPassword.png; sourceTree = "<group>"; };
+		F746C86C1D33A52B0022836E /* myFeedBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myFeedBack.png; sourceTree = "<group>"; };
 		F75244181CF6D8F7001C88EE /* AppConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigure.h; sourceTree = "<group>"; };
 		F75244191CF6D8F7001C88EE /* AppConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfigure.m; sourceTree = "<group>"; };
 		F752441A1CF6D8F7001C88EE /* BaseFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseFunction.h; sourceTree = "<group>"; };
@@ -1343,6 +1368,8 @@
 				F76CB7FF1CE480F600D8474F /* ArticleModel.m */,
 				F752F6CB1D2CAAAD00DB4647 /* DESSiteItemModel.h */,
 				F752F6CC1D2CAAAD00DB4647 /* DESSiteItemModel.m */,
+				F746C8561D3389AE0022836E /* MineModel.h */,
+				F746C8571D3389AE0022836E /* MineModel.m */,
 			);
 			path = WeeklyModel;
 			sourceTree = "<group>";
@@ -1983,6 +2010,17 @@
 		F7BAC7221CC8D40E000D9795 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F746C86B1D33A52B0022836E /* changeMyPassword.png */,
+				F746C86C1D33A52B0022836E /* myFeedBack.png */,
+				F746C8591D33A2CE0022836E /* aboutMe.png */,
+				F746C85A1D33A2CE0022836E /* changePassword.png */,
+				F746C85B1D33A2CE0022836E /* clean.png */,
+				F746C85C1D33A2CE0022836E /* favorite.png */,
+				F746C85D1D33A2CE0022836E /* feedback.png */,
+				F746C85E1D33A2CE0022836E /* noReadNews.png */,
+				F746C85F1D33A2CE0022836E /* orderNews.png */,
+				F746C8601D33A2CE0022836E /* password.png */,
+				F746C8611D33A2CE0022836E /* theme.png */,
 				F746C84E1D2F856F0022836E /* dismissBtn_Nav@2x.png */,
 				F754B7C91D24F2050003A340 /* adimage.png */,
 				F7BAC7231CC8D40E000D9795 /* contacts_add_friend@2x.png */,
@@ -2542,6 +2580,7 @@
 				F7BB42EA1CEEECE2006F5EE3 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				F768EFA51D0805EE005747E3 /* category7.png in Resources */,
 				F768EFA71D0805EE005747E3 /* feed.json in Resources */,
+				F746C8691D33A2CE0022836E /* password.png in Resources */,
 				F7BCC5B91CCE20FD00704878 /* didi.mp3 in Resources */,
 				F768EFA21D0805EE005747E3 /* category4.png in Resources */,
 				F768EF9C1D0805EE005747E3 /* banner4.png in Resources */,
@@ -2551,16 +2590,19 @@
 				F7F773141CD36C6F0060861B /* search.plist in Resources */,
 				F746C8511D2F93550022836E /* RegisterViewController.xib in Resources */,
 				F768EF901D0805EE005747E3 /* activity1.jpg in Resources */,
+				F746C86D1D33A52B0022836E /* changeMyPassword.png in Resources */,
 				F7F773131CD36C6F0060861B /* article_image.png in Resources */,
 				F7CBB43C1CFD706000662347 /* 隶书_GBK.TTF in Resources */,
 				F707FE871CDA0113008E4F7C /* loveway.ttf in Resources */,
 				F7BAC7541CC8D40F000D9795 /* 2.png in Resources */,
 				F7CBB41A1CF84BC000662347 /* iPhone-5-Crop.gif in Resources */,
 				F7BAC74D1CC8D40F000D9795 /* 12.png in Resources */,
+				F746C8671D33A2CE0022836E /* noReadNews.png in Resources */,
 				F754B7C01D23A99C0003A340 /* night.css in Resources */,
 				F768EFB41D0805EE005747E3 /* image4.jpg in Resources */,
 				F768EFA01D0805EE005747E3 /* category2.png in Resources */,
 				F7F7730F1CD36B0D0060861B /* article_detail.html in Resources */,
+				F746C8661D33A2CE0022836E /* feedback.png in Resources */,
 				F768EFAD1D0805EE005747E3 /* goods6.jpg in Resources */,
 				F768EFB81D0805EE005747E3 /* reward.json in Resources */,
 				F7BCC5761CCDF0D500704878 /* PhotosViewController.xib in Resources */,
@@ -2575,6 +2617,7 @@
 				F7BB42EE1CEEECE2006F5EE3 /* README.txt in Resources */,
 				F7BCC5A31CCDFBF000704878 /* RatingCell.xib in Resources */,
 				F768EF941D0805EE005747E3 /* avatar1.jpg in Resources */,
+				F746C8651D33A2CE0022836E /* favorite.png in Resources */,
 				F7BCC5A81CCDFCB700704878 /* DetailsViewController.xib in Resources */,
 				F7275D071CD1AFE0002F0F68 /* WeeklyItemCell.xib in Resources */,
 				F768EF9B1D0805EE005747E3 /* banner3.png in Resources */,
@@ -2591,6 +2634,7 @@
 				F768EFB21D0805EE005747E3 /* image2.jpg in Resources */,
 				F7BAC7451CC8D40F000D9795 /* contacts_add_friend@2x.png in Resources */,
 				F76CB8081CE4891700D8474F /* NewsTableViewCell.xib in Resources */,
+				F746C86A1D33A2CE0022836E /* theme.png in Resources */,
 				F768EFB01D0805EE005747E3 /* iconfont.ttf in Resources */,
 				F768EF9D1D0805EE005747E3 /* banner5.png in Resources */,
 				F768EFA61D0805EE005747E3 /* category8.png in Resources */,
@@ -2608,12 +2652,14 @@
 				F768EF931D0805EE005747E3 /* activity4.jpg in Resources */,
 				F768EFAC1D0805EE005747E3 /* goods5.jpg in Resources */,
 				F768EFB61D0805EE005747E3 /* image6.jpg in Resources */,
+				F746C8681D33A2CE0022836E /* orderNews.png in Resources */,
 				F77FDA4E1D19275200562A3F /* demo.js in Resources */,
 				F768EF9F1D0805EE005747E3 /* category1.png in Resources */,
 				F7BB42F01CEEECE2006F5EE3 /* ShareSDK.bundle in Resources */,
 				F754B7C11D23A99C0003A340 /* normal.css in Resources */,
 				F768EF9A1D0805EE005747E3 /* banner2.png in Resources */,
 				F768EFA11D0805EE005747E3 /* category3.png in Resources */,
+				F746C8641D33A2CE0022836E /* clean.png in Resources */,
 				F7BAC74C1CC8D40F000D9795 /* 11.png in Resources */,
 				F752F6D51D2CAC4200DB4647 /* DESSiteItemTableViewCell.xib in Resources */,
 				F7BAC7571CC8D40F000D9795 /* 5.png in Resources */,
@@ -2621,6 +2667,7 @@
 				F768EFB51D0805EE005747E3 /* image5.jpg in Resources */,
 				F7CBB42C1CFC1CE200662347 /* icon_listheader_animation_2@2x.png in Resources */,
 				F768EF981D0805EE005747E3 /* avatar5.jpg in Resources */,
+				F746C86E1D33A52B0022836E /* myFeedBack.png in Resources */,
 				F7BAC7561CC8D40F000D9795 /* 4.png in Resources */,
 				F7526FF91C9A940A0012FE76 /* Main.storyboard in Resources */,
 				F7BCC5AC1CCE058A00704878 /* photodata.bin in Resources */,
@@ -2632,10 +2679,12 @@
 				F7BAC7501CC8D40F000D9795 /* 15.png in Resources */,
 				F768EFA41D0805EE005747E3 /* category6.png in Resources */,
 				F768EFB31D0805EE005747E3 /* image3.jpg in Resources */,
+				F746C8631D33A2CE0022836E /* changePassword.png in Resources */,
 				F7BAC7531CC8D40F000D9795 /* 18.png in Resources */,
 				F7BAC7461CC8D40F000D9795 /* contacts_add_friend@3x.png in Resources */,
 				F7BAC75A1CC8D40F000D9795 /* 8.png in Resources */,
 				F768EF991D0805EE005747E3 /* banner1.png in Resources */,
+				F746C8621D33A2CE0022836E /* aboutMe.png in Resources */,
 				F725166C1D21384C00A5BAC7 /* ConditionerView.xib in Resources */,
 				F7DB40741C9FEAF900E164C7 /* loadXIBFile.xib in Resources */,
 				F7BAC7471CC8D40F000D9795 /* footerImage.png in Resources */,
@@ -2941,6 +2990,7 @@
 				F74676B41CABC7B50001D3A5 /* MJBox.m in Sources */,
 				F74676B31CABC7B50001D3A5 /* MJBook.m in Sources */,
 				F7BCC5CF1CCF649100704878 /* Response.m in Sources */,
+				F746C8581D3389AE0022836E /* MineModel.m in Sources */,
 				F74676CE1CB6415C0001D3A5 /* NSObject+PropertyAdd.m in Sources */,
 				F7F772FB1CD349830060861B /* StageCategoryDetailCell.m in Sources */,
 				F768EFC41D0E8B6C005747E3 /* RegisterViewController.m in Sources */,

@@ -14,6 +14,11 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
 
+
+
+@property (nonatomic, strong) UIImageView *mineImageView;
+@property (nonatomic, strong) UILabel *mineTextLabel;
+
 - (void)setImageForCellWithIndexPath:(NSIndexPath*)indexPath;
 
 @end
