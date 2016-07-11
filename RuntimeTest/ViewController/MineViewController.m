@@ -112,7 +112,7 @@
 		
 			self.dk_manager.themeVersion = DKThemeVersionNight;
 			
-//			[self cleanCache];
+			[self cleanCache];
 			return;
 		}
 		
@@ -129,7 +129,9 @@
 
 		}
 		
-		[self performSegueWithIdentifier:@"isLogin" sender:self];
+		LoginViewController *loginVC = [LoginViewController new];
+		[self.navigationController presentViewController:loginVC animated:YES completion:nil];
+//		[self performSegueWithIdentifier:@"isLogin" sender:self];
 	}
 }
 

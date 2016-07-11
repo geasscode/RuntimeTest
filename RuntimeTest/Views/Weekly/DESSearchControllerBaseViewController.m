@@ -244,9 +244,8 @@ NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @
 		DetailViewController *detail = [[DetailViewController alloc] init];
 		
 		detail.detailTextId = model.detatilArticleId;
-		
+		[self dismissViewControllerAnimated:YES completion:nil];
 //		[self.presentingViewController.navigationController pushViewController:detail animated:YES];
-
 	   [self.navigationController pushViewController:detail animated:YES];
 	}
 

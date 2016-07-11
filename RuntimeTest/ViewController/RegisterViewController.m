@@ -54,8 +54,12 @@
 					if (isSuccessful) {
 						
 						[AllUtils showPromptDialog:@"提示" andMessage:@"注册成功，请登录！" OKButton:@"确定" OKButtonAction:^(UIAlertAction *action) {
+							LoginViewController *loginVC = [LoginViewController new];
+							[self.navigationController presentViewController:loginVC animated:YES completion:nil];
+
 							
-							[AllUtils jumpToViewController:@"LoginViewController" contextViewController:self handler:nil];
+							
+//							[AllUtils jumpToViewController:@"LoginViewController" contextViewController:self handler:nil];
 						} cancelButton:@"" cancelButtonAction:nil contextViewController:self];
 					} else {
 						
@@ -85,7 +89,7 @@
 }
 
 - (IBAction)loginButtonPressed:(id)sender {
-	
+	[self dismissViewControllerAnimated:YES completion:nil];
 	LoginViewController *loginVC = [LoginViewController new];
 	[self.navigationController presentViewController:loginVC animated:YES completion:nil];
 //	[AllUtils jumpToViewController:@"LoginViewController" contextViewController:self handler:nil];
@@ -94,7 +98,7 @@
 
 #pragma mark - 查询该手机号是否已经注册
 - (void)isRepeatUsername:(NSString*)tableName username:(NSString*)username limitCount:(int)limitCount{
-	__block BOOL isRepeatUsername = false;
+//	__block BOOL isRepeatUsername = false;
 	BmobQuery *queryUser = [BmobQuery queryWithClassName:tableName];
 	queryUser.limit = limitCount;
 	[queryUser findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {
@@ -103,18 +107,16 @@
 			for (BmobObject *obj in array) {
 				if ([(NSString*)[obj objectForKey:@"username"] isEqualToString:username]) {
 					//表示已经存在该用户名；
-					isRepeatUsername = true;
-					break;
+					[AllUtils showPromptDialog:@"提示" andMessage:@"该账户已经存在，请直接登录！" OKButton:@"确定" OKButtonAction:nil cancelButton:@"" cancelButtonAction:nil contextViewController:self];
+					
 				}
 			}
-		} else {
-			
-			[AllUtils showPromptDialog:@"提示" andMessage:@"网络异常，请稍候重试！" OKButton:@"确定" OKButtonAction:nil cancelButton:@"" cancelButtonAction:nil contextViewController:self];
 		}
-		if (isRepeatUsername) {
+		else{
 			
-			[AllUtils showPromptDialog:@"提示" andMessage:@"该账户已经存在，请直接登录！" OKButton:@"确定" OKButtonAction:nil cancelButton:@"" cancelButtonAction:nil contextViewController:self];
-		}else{
+			
+			[AllUtils showPromptDialog:@"提示" andMessage:@"不存在该用户，或者网络异常。" OKButton:@"确定" OKButtonAction:nil cancelButton:@"" cancelButtonAction:nil contextViewController:self];
+			
 			//该手机号没有注册，可以获取验证码；
 			[SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.usernameTextField.text
 										   zone:@"86"

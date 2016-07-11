@@ -9,7 +9,7 @@
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
 #import "AppDelegate.h"
-
+#import "MainViewController.h"
 
 #define mainSize    [UIScreen mainScreen].bounds.size
 
@@ -234,8 +234,11 @@
 			}//for();
 			if (isSuccessful) {
 				
-				//界面跳转；
-				[AllUtils jumpToViewController:@"MainViewController" contextViewController:self handler:nil];
+				[self dismissViewControllerAnimated:YES completion:nil];
+				UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
+				MainViewController *mainVC = (MainViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"mainVC"];
+				[self.navigationController pushViewController:mainVC animated:YES];
+			
 			} else {
 				
 				[AllUtils showPromptDialog:@"提示" andMessage:@"登录失败，请输入正确的用户名和密码！" OKButton:@"确定" OKButtonAction:nil cancelButton:@"" cancelButtonAction:nil contextViewController:self];
