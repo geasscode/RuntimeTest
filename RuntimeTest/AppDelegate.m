@@ -434,6 +434,9 @@ static AppDelegate *appdelegate;
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
 	
 	NSLog(@"%@", [NSString stringWithFormat:@"Device Token: %@", deviceToken]);
+	
+	[self developerInstall:deviceToken];
+
 	[JPUSHService registerDeviceToken:deviceToken];
 }
 
@@ -474,6 +477,9 @@ forRemoteNotification:(NSDictionary *)userInfo
 - (void)application:(UIApplication *)application
 didReceiveRemoteNotification:(NSDictionary *)userInfo {
 	[JPUSHService handleRemoteNotification:userInfo];
+	NSLog(@"userInfo %@",[userInfo description]);
+	[BmobPush handlePush:userInfo];
+	
 	NSLog(@"收到通知:%@", [self logDic:userInfo]);
 }
 
@@ -667,7 +673,30 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
 }
 
 
+/**
+ * 本例子程序，是以本台手机作为开发者接收推送的设备 ，主要是演示推送功能。
+ * 故如果是开发者的话会在Installation添加字段isDeveloper并设置为true，普通用户则设置为false
+ */
 
+
+
+
+
+-(void)developerInstall:(NSData*)deviceToken{
+	BmobInstallation    *installation = [BmobInstallation installation];
+	[installation setDeviceTokenFromData:deviceToken];
+	[installation setObject:[NSNumber numberWithBool:YES] forKey:@"isDeveloper"];
+	[installation saveInBackground];
+}
+
+-(void)userInstall:(NSData*)deviceToken{
+	BmobInstallation *installation = [BmobInstallation installation];
+	[installation setObject:[NSNumber numberWithBool:NO] forKey:@"isDeveloper"];
+	[installation setDeviceTokenFromData:deviceToken];
+	//用户订阅sport频道的内容
+	[installation subsccribeToChannels:@[@"sport"]];
+	[installation saveInBackground];
+}
 
 
 ////直接退出app

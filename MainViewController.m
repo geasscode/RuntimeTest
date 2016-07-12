@@ -21,6 +21,7 @@
 #import "ZYKeyboardUtil.h"
 #import "FirstViewController.h"
 #import "DownloadTestVC.h"
+#import "ReadFeedbackTableViewController.h"
 #define MARGIN_KEYBOARD 20
 
 
@@ -171,9 +172,12 @@
 
 - (IBAction)gotoTestView:(id)sender {
 	
-	
-	DownloadTestVC *downloadTest = [DownloadTestVC new];
-	[self.navigationController pushViewController:downloadTest animated:YES];
+	ReadFeedbackTableViewController *readFeedBack  = [ReadFeedbackTableViewController new];
+	[self.navigationController pushViewController:readFeedBack animated:YES];
+
+//	
+//	DownloadTestVC *downloadTest = [DownloadTestVC new];
+//	[self.navigationController pushViewController:downloadTest animated:YES];
 	
 	/*
 	
@@ -228,6 +232,7 @@
 }
 
 - (IBAction)gotoContactView:(id)sender {
+	
 	
 //	[self.navigationController pushViewController:rumtimeVC animated:YES];
 

@@ -30,4 +30,17 @@
  */
 @property (weak, nonatomic) IBOutlet UIImageView *headImageView;
 
+
+typedef NS_ENUM(NSUInteger, MineSetting) {
+	UnRead = 0,
+	Favorite,
+	Theme,
+	Subscribe,
+	ChangePassword,
+	CleanCache,
+	FeedBack,
+	AboutMe,
+	ExitLogin
+};
+
 @end

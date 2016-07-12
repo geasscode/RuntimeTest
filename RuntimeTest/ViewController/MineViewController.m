@@ -12,7 +12,12 @@
 #import "FavoriteTableViewController.h"
 #import "SuggestViewController.h"
 #import "LoginViewController.h"
+#import "UpdatePasswordViewController.h"
 #define CELL_WIDTH self.view.bounds.size.width / 3
+
+static NSString *const JDButtonName = @"JDButtonName";
+static NSString *const JDButtonInfo = @"JDButtonInfo";
+static NSString *const JDNotificationText = @"JDNotificationText";
 
 @interface MineViewController () <UIAlertViewDelegate>
 
@@ -88,72 +93,184 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 	[collectionView deselectItemAtIndexPath:indexPath animated:YES];
 
-	
-	if (user) {
-		
-		if (indexPath.row == 5) {
-			
-			[MBProgressHUD showHUDAddedTo:self.view animated:YES];
-			
-//			[[SDImageCache sharedImageCache] cleanDisk];
-			
-			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-				
-				[MBProgressHUD hideHUDForView:self.view animated:YES];
-				
-			});
-		}else {
-			
-//			AboutZealerViewController *aboutZealerVC = [[AboutZealerViewController alloc] init];
-//			[self.navigationController pushViewController:aboutZealerVC animated:YES];
-		}
-	}else {
-		
-		if(indexPath.row == 1){
-			
-//			UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
-//			FavoriteTableViewController *favorite = (FavoriteTableViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"myfavorite"];
-//			self.hidesBottomBarWhenPushed=YES;
-			FavoriteTableViewController *favorite = [FavoriteTableViewController new];
-			[self.navigationController pushViewController:favorite animated:YES];
-//			self.hidesBottomBarWhenPushed=NO;
-			return;
-		}
-		
-		else if (indexPath.row ==5){
-			
-		
-			self.dk_manager.themeVersion = DKThemeVersionNight;
-			
-			[self cleanCache];
-			return;
-		}
-		
-		else if (indexPath.row ==6){
-			SuggestViewController *suggestVC = [SuggestViewController new];
-			[self.navigationController pushViewController:suggestVC animated:YES];
-			return;
-		}
-		
-		else if (indexPath.row ==7){
-			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"关于我们" message:@"我们是geasscode团队，专注开发iOS应用\n团队成员：geass \n邮   箱：sai3300@163.com" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-			[alert show];
-			return;
 
+	NSUInteger MineSetting = indexPath.row;
+	
+	switch (MineSetting) {
+		case UnRead:
+			[self unReadConfig];
+			break;
+		case Favorite:
+			[self favoriteConfig];
+			break;
+		case Theme:
+			[self themeConfig];
+//			break;
+		case Subscribe:
+			[self subscribeConfig];
+			break;
+		case ChangePassword:
+			[self changePasswordConfig];
+			break;
+		case CleanCache:
+			[self cleanCacheConfig];
+			break;
+		case FeedBack:
+			[self feedBackConfig];
+			break;
+		case AboutMe:
+			[self aboutMeConfig];
+			break;
+		case ExitLogin:
+			[self exitLoginConfig];
+			break;
+			
+		default:{
+			//[self performSegueWithIdentifier:@"isLogin" sender:self];
+			[JDStatusBarNotification showWithStatus:@"该功能正在开发中。。。" dismissAfter:2.0
+										  styleName:JDStatusBarStyleDark];
+			LoginViewController *loginVC = [LoginViewController new];
+			[self.navigationController presentViewController:loginVC animated:YES completion:nil];
 		}
-		
-		LoginViewController *loginVC = [LoginViewController new];
-		[self.navigationController presentViewController:loginVC animated:YES completion:nil];
-//		[self performSegueWithIdentifier:@"isLogin" sender:self];
+			break;
 	}
+	
+	
+	
+	
+//	if (user) {
+//		
+//		if (indexPath.row == 5) {
+//			
+//			[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//			
+////			[[SDImageCache sharedImageCache] cleanDisk];
+//			
+//			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//				
+//				[MBProgressHUD hideHUDForView:self.view animated:YES];
+//				
+//			});
+//		}else {
+//			
+////			AboutZealerViewController *aboutZealerVC = [[AboutZealerViewController alloc] init];
+////			[self.navigationController pushViewController:aboutZealerVC animated:YES];
+//		}
+//	}else {
+//		
+//		if(indexPath.row == 1){
+//			
+////			UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
+////			FavoriteTableViewController *favorite = (FavoriteTableViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"myfavorite"];
+////			self.hidesBottomBarWhenPushed=YES;
+//			FavoriteTableViewController *favorite = [FavoriteTableViewController new];
+//			[self.navigationController pushViewController:favorite animated:YES];
+////			self.hidesBottomBarWhenPushed=NO;
+//			return;
+//		}
+//		
+//		else if (indexPath.row ==5){
+//			
+//		
+//			self.dk_manager.themeVersion = DKThemeVersionNight;
+//			
+//			[self cleanCache];
+//			return;
+//		}
+//		
+//		else if (indexPath.row ==6){
+//			SuggestViewController *suggestVC = [SuggestViewController new];
+//			[self.navigationController pushViewController:suggestVC animated:YES];
+//			return;
+//		}
+//		
+//		else if (indexPath.row ==7){
+//			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"关于我们" message:@"我们是geasscode团队，专注开发iOS应用\n团队成员：geass \n邮   箱：sai3300@163.com" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+//			[alert show];
+//			return;
+//
+//		}
+//		
+//		LoginViewController *loginVC = [LoginViewController new];
+//		[self.navigationController presentViewController:loginVC animated:YES completion:nil];
+////		[self performSegueWithIdentifier:@"isLogin" sender:self];
+//	}
 }
+
+
+
+- (void)unReadConfig{
+	[JDStatusBarNotification showWithStatus:@"该功能正在开发中。。。" dismissAfter:2.0
+								  styleName:JDStatusBarStyleSuccess];
+}
+
+- (void)favoriteConfig{
+	
+	//			UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
+	//			FavoriteTableViewController *favorite = (FavoriteTableViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"myfavorite"];
+	//			self.hidesBottomBarWhenPushed=YES;
+	FavoriteTableViewController *favorite = [FavoriteTableViewController new];
+	[self.navigationController pushViewController:favorite animated:YES];
+	//			self.hidesBottomBarWhenPushed=NO;
+
+}
+
+-(void)themeConfig{
+	[JDStatusBarNotification showWithStatus:@"该功能正在开发中。。。" dismissAfter:2.0
+								  styleName:JDStatusBarStyleSuccess];
+}
+
+-(void)subscribeConfig{
+	//JDStatusBarStyleDark
+	[JDStatusBarNotification showWithStatus:@"该功能正在开发中。。。" dismissAfter:2.0
+								  styleName:JDStatusBarStyleMatrix];
+}
+
+-(void)changePasswordConfig{
+
+	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
+	UpdatePasswordViewController *changePassword = (UpdatePasswordViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"passwordVC"];
+	
+	[self.navigationController presentViewController:changePassword animated:YES completion:nil];
+//	[self.navigationController pushViewController:changePassword animated:YES];
+
+}
+
+-(void)cleanCacheConfig{
+	
+	self.dk_manager.themeVersion = DKThemeVersionNight;
+	[self cleanCache];
+}
+
+-(void)feedBackConfig{
+	SuggestViewController *suggestVC = [SuggestViewController new];
+	[self.navigationController pushViewController:suggestVC animated:YES];
+}
+
+-(void)aboutMeConfig{
+	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"关于我们" message:@"我们是geasscode团队，专注开发iOS应用\n团队成员：geass \n邮   箱：sai3300@163.com" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+	[alert show];
+}
+
+-(void)exitLoginConfig{
+	
+//	NSArray *data = @[@{JDButtonName:@"Show Notification", JDButtonInfo:@"JDStatusBarStyleDefault", JDNotificationText:@"Better call Saul!"},
+//					  @{JDButtonName:@"Show Progress", JDButtonInfo:@"0-100% in 1s", JDNotificationText:@"Some Progress…"},
+//					  @{JDButtonName:@"Show Activity Indicator", JDButtonInfo:@"UIActivityIndicatorViewStyleGray", JDNotificationText:@"Some Activity…"},
+//					  @{JDButtonName:@"Dismiss Notification", JDButtonInfo:@"Animated", JDNotificationText:@""}];
+	
+	[JDStatusBarNotification showWithStatus:@"系统繁忙，请稍后再试。"
+							   dismissAfter:2.0
+								  styleName:@"geass"];
+}
+
 
 #pragma mark - life circle
 - (void)viewDidLoad{
 	[super viewDidLoad];
 	
 	
-	
+	[self notificationUI];
 	[self backToTopUI];
 	
 	[self.view addSubview:self.collectionView];
@@ -188,6 +305,22 @@
 - (void)viewDidAppear:(BOOL)animated{
 	[super viewDidAppear:animated];
 	self.tabBarController.tabBar.hidden = NO;
+}
+
+
+-(void)notificationUI{
+	
+	[JDStatusBarNotification addStyleNamed:@"geass"
+								   prepare:^JDStatusBarStyle *(JDStatusBarStyle *style) {
+									   style.barColor = [UIColor colorWithRed:0.056 green:0.478 blue:0.998 alpha:1.000];
+									   style.textColor = [UIColor whiteColor];
+									   style.animationType = JDStatusBarAnimationTypeBounce;
+									   style.font = [UIFont fontWithName:@"Courier-Bold" size:14.0];
+									   style.progressBarColor = [UIColor colorWithRed:0.986 green:0.062 blue:0.598 alpha:1.000];
+									   style.progressBarHeight =40.0;
+									   style.progressBarPosition = JDStatusBarProgressBarPositionTop;
+									   return style;
+								   }];
 }
 
 

@@ -81,6 +81,11 @@
 		F746C86A1D33A2CE0022836E /* theme.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C8611D33A2CE0022836E /* theme.png */; };
 		F746C86D1D33A52B0022836E /* changeMyPassword.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C86B1D33A52B0022836E /* changeMyPassword.png */; };
 		F746C86E1D33A52B0022836E /* myFeedBack.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C86C1D33A52B0022836E /* myFeedBack.png */; };
+		F746C8701D33A8B90022836E /* exit.png in Resources */ = {isa = PBXBuildFile; fileRef = F746C86F1D33A8B90022836E /* exit.png */; };
+		F746C8781D348FD40022836E /* JDStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = F746C8731D348FD40022836E /* JDStatusBarNotification.m */; };
+		F746C8791D348FD40022836E /* JDStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F746C8751D348FD40022836E /* JDStatusBarStyle.m */; };
+		F746C87A1D348FD40022836E /* JDStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F746C8771D348FD40022836E /* JDStatusBarView.m */; };
+		F746C87D1D34C8E80022836E /* ReadFeedbackTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F746C87C1D34C8E80022836E /* ReadFeedbackTableViewController.m */; };
 		F75244211CF6D8F7001C88EE /* AppConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = F75244191CF6D8F7001C88EE /* AppConfigure.m */; };
 		F75244221CF6D8F7001C88EE /* BaseFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = F752441B1CF6D8F7001C88EE /* BaseFunction.m */; };
 		F75244241CF6D8F7001C88EE /* TopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F75244201CF6D8F7001C88EE /* TopWindow.m */; };
@@ -573,6 +578,15 @@
 		F746C8611D33A2CE0022836E /* theme.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = theme.png; sourceTree = "<group>"; };
 		F746C86B1D33A52B0022836E /* changeMyPassword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = changeMyPassword.png; sourceTree = "<group>"; };
 		F746C86C1D33A52B0022836E /* myFeedBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myFeedBack.png; sourceTree = "<group>"; };
+		F746C86F1D33A8B90022836E /* exit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exit.png; sourceTree = "<group>"; };
+		F746C8721D348FD40022836E /* JDStatusBarNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarNotification.h; sourceTree = "<group>"; };
+		F746C8731D348FD40022836E /* JDStatusBarNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarNotification.m; sourceTree = "<group>"; };
+		F746C8741D348FD40022836E /* JDStatusBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarStyle.h; sourceTree = "<group>"; };
+		F746C8751D348FD40022836E /* JDStatusBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarStyle.m; sourceTree = "<group>"; };
+		F746C8761D348FD40022836E /* JDStatusBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDStatusBarView.h; sourceTree = "<group>"; };
+		F746C8771D348FD40022836E /* JDStatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarView.m; sourceTree = "<group>"; };
+		F746C87B1D34C8E80022836E /* ReadFeedbackTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFeedbackTableViewController.h; sourceTree = "<group>"; };
+		F746C87C1D34C8E80022836E /* ReadFeedbackTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFeedbackTableViewController.m; sourceTree = "<group>"; };
 		F75244181CF6D8F7001C88EE /* AppConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigure.h; sourceTree = "<group>"; };
 		F75244191CF6D8F7001C88EE /* AppConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfigure.m; sourceTree = "<group>"; };
 		F752441A1CF6D8F7001C88EE /* BaseFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseFunction.h; sourceTree = "<group>"; };
@@ -1407,6 +1421,19 @@
 			path = DESExtension;
 			sourceTree = "<group>";
 		};
+		F746C8711D348FD40022836E /* JDStatusBarNotification */ = {
+			isa = PBXGroup;
+			children = (
+				F746C8721D348FD40022836E /* JDStatusBarNotification.h */,
+				F746C8731D348FD40022836E /* JDStatusBarNotification.m */,
+				F746C8741D348FD40022836E /* JDStatusBarStyle.h */,
+				F746C8751D348FD40022836E /* JDStatusBarStyle.m */,
+				F746C8761D348FD40022836E /* JDStatusBarView.h */,
+				F746C8771D348FD40022836E /* JDStatusBarView.m */,
+			);
+			path = JDStatusBarNotification;
+			sourceTree = "<group>";
+		};
 		F75244171CF6D8F7001C88EE /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -1939,6 +1966,7 @@
 		F7BAC7071CC8D40E000D9795 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				F746C8711D348FD40022836E /* JDStatusBarNotification */,
 				F7BB42B81CEEECE1006F5EE3 /* ShareSDK */,
 				F707FE9B1CE06C85008E4F7C /* openshare */,
 				F7F773161CD8AFD00060861B /* iCarousel */,
@@ -2010,6 +2038,7 @@
 		F7BAC7221CC8D40E000D9795 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F746C86F1D33A8B90022836E /* exit.png */,
 				F746C86B1D33A52B0022836E /* changeMyPassword.png */,
 				F746C86C1D33A52B0022836E /* myFeedBack.png */,
 				F746C8591D33A2CE0022836E /* aboutMe.png */,
@@ -2323,6 +2352,8 @@
 				1931A8341D3379C20066CA0B /* ForgetPasswordViewController.m */,
 				1931A8361D337E150066CA0B /* UpdatePasswordViewController.h */,
 				1931A8371D337E150066CA0B /* UpdatePasswordViewController.m */,
+				F746C87B1D34C8E80022836E /* ReadFeedbackTableViewController.h */,
+				F746C87C1D34C8E80022836E /* ReadFeedbackTableViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -2667,6 +2698,7 @@
 				F768EFB51D0805EE005747E3 /* image5.jpg in Resources */,
 				F7CBB42C1CFC1CE200662347 /* icon_listheader_animation_2@2x.png in Resources */,
 				F768EF981D0805EE005747E3 /* avatar5.jpg in Resources */,
+				F746C8701D33A8B90022836E /* exit.png in Resources */,
 				F746C86E1D33A52B0022836E /* myFeedBack.png in Resources */,
 				F7BAC7561CC8D40F000D9795 /* 4.png in Resources */,
 				F7526FF91C9A940A0012FE76 /* Main.storyboard in Resources */,
@@ -2859,6 +2891,7 @@
 				F74676B01CABC7B50001D3A5 /* MJAd.m in Sources */,
 				F7BCC5551CCDBD1000704878 /* README.md in Sources */,
 				F76CB7DB1CE33E6600D8474F /* FeThreeDotGlow.m in Sources */,
+				F746C8781D348FD40022836E /* JDStatusBarNotification.m in Sources */,
 				F752F6BD1D2B9E6A00DB4647 /* ASPopUpView.m in Sources */,
 				F7CBB40D1CF6F9BB00662347 /* DKNight.m in Sources */,
 				F76CB7EB1CE423C100D8474F /* DBHelper.m in Sources */,
@@ -2912,6 +2945,7 @@
 				F7CBB4531CFD757000662347 /* ScrollviewHeaderView.m in Sources */,
 				F768EF2F1D06D053005747E3 /* LoginViewController.m in Sources */,
 				F7B1EAA41CC6104200307F41 /* MainViewController.m in Sources */,
+				F746C87A1D348FD40022836E /* JDStatusBarView.m in Sources */,
 				F768EF581D07FF08005747E3 /* CycleScrollViewCell.m in Sources */,
 				F7B1EABC1CC633E000307F41 /* UIImage+Size.m in Sources */,
 				F762B8571CEC13DB00E5DDAD /* UILabel+Utils.m in Sources */,
@@ -2945,9 +2979,11 @@
 				F768EF5D1D07FF08005747E3 /* SplitView.m in Sources */,
 				F72516641D21366700A5BAC7 /* TBActionSheet.m in Sources */,
 				F7BCC56B1CCDC54200704878 /* Text.m in Sources */,
+				F746C8791D348FD40022836E /* JDStatusBarStyle.m in Sources */,
 				F7CBB4331CFC461000662347 /* MineViewController.m in Sources */,
 				F7275D051CD1A801002F0F68 /* WeeklyItemStageModel.m in Sources */,
 				F7CBB4501CFD757000662347 /* CoBtnCell.m in Sources */,
+				F746C87D1D34C8E80022836E /* ReadFeedbackTableViewController.m in Sources */,
 				F7CBB4251CFBEAD500662347 /* ChooseCityModel.m in Sources */,
 				F7BCC5CE1CCF649100704878 /* NetTool.m in Sources */,
 				F7BCC5E31CCF6D0D00704878 /* HomeTableViewCell.m in Sources */,

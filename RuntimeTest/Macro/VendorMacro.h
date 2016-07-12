@@ -19,6 +19,7 @@
 #import <Masonry.h>
 #import "NetTool.h"
 #import "JPUSHService.h"
+#import "JDStatusBarNotification.h"
 
 
 #import <BmobSDK/Bmob.h>

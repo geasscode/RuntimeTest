@@ -27,7 +27,7 @@
 
 - (IBAction)naviCancelButtonPressed:(id)sender {
     
-    [AllUtils jumpToViewController:@"SettingViewController" contextViewController:self handler:nil];
+	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)naviDoneButtonPressed:(id)sender {

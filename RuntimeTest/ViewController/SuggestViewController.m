@@ -94,11 +94,32 @@
 	if (_rootView.content.text.length  < 5) {
 		alert.message = @"别吝啬，多留点字吧~";
 	} else {
-		alert.message = @"反馈成功";
+		
+		BmobObject *feedbackObj = [[BmobObject alloc] initWithClassName:@"Feedback"];
+		[feedbackObj setObject:_rootView.email.text forKey:@"contact"];
+		[feedbackObj setObject:_rootView.content.text forKey:@"content"];
+		[feedbackObj saveInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
+			if (isSuccessful) {
+				//发送推送
+				BmobPush *push = [BmobPush push];
+				BmobQuery *query = [BmobInstallation query];
+				//条件为isDeveloper是true
+				[query whereKey:@"isDeveloper" equalTo:[NSNumber numberWithBool:YES] ];
+				[push setQuery:query];
+				//推送内容为反馈的内容
+				[push setMessage:_rootView.content.text];
+				alert.message = @"反馈成功";
+				[alert show];
+
+
+				[push sendPushInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {
+					NSLog(@"push error =====>%@",[error description]);
+				}];
+			}
+		}];
 		_rootView.content.text = @"";
 		_rootView.email.text = @"";
 	}
-	[alert show];
 }
 
 @end

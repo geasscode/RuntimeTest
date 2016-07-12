@@ -52,10 +52,10 @@
 						   @"clean",
 						   @"myFeedBack",
 						   @"aboutMe",
-						   @"changeMyPassword",
+						   @"exit",
 						   nil];
 		
-		_titleArray = @[@"未读文章",@"我的收藏",@"主题切换",@"我的订阅",@"修改密码",@"清除缓存",@"意见反馈",@"关于我们",@"忘记密码"];
+		_titleArray = @[@"未读文章",@"我的收藏",@"主题切换",@"我的订阅",@"修改密码",@"清除缓存",@"意见反馈",@"关于我们",@"退出登录"];
 		self.backgroundColor = [UIColor whiteColor];
 		self.mineImageView.frame = CGRectMake(10, 10, 60, 60);
 		self.mineImageView.center = CGPointMake(self.contentView.center.x,self.contentView.center.y - 10);

@@ -204,7 +204,7 @@
 	
 	NSString *username = [self.txtUser.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 	NSString *password = [self.txtPwd.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-	
+	NSLog(@"current width is %f and %f ",kScreenWidth,kScreenHeight);
 	//在这里进行查询，登录；
 	BmobQuery *query = [BmobQuery queryWithClassName:USER_TABLE];
 	[query findObjectsInBackgroundWithBlock:^(NSArray *array, NSError *error) {

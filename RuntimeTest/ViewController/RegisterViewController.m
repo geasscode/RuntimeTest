@@ -18,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UITextField *validateCodeTextField;
+@property (strong, nonatomic) UIButton *dismissButton;
 
 @end
 
@@ -25,6 +26,11 @@
 
 
 - (void)viewDidLoad {
+	self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"login_register_background"]];
+	self.dismissButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 20, 50, 50)];
+	[self.dismissButton setImage:[UIImage imageNamed:@"dismissBtn_Nav"] forState:UIControlStateNormal];
+	[self.dismissButton addTarget:self action:@selector(dismissButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+	[self.view addSubview:self.dismissButton];
 	[super viewDidLoad];
 }
 
@@ -131,6 +137,14 @@
 										 }];
 		}
 	}];
+
+}
+
+
+
+- (void)dismissButtonClicked{
+	
+	[self dismissViewControllerAnimated:YES completion:nil];
 
 }
 

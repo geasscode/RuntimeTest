@@ -333,7 +333,7 @@
         <!--Update Password View Controller-->
         <scene sceneID="6vi-4L-Tu5">
             <objects>
-                <viewController id="Xp9-Nh-mAr" customClass="UpdatePasswordViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="passwordVC" id="Xp9-Nh-mAr" customClass="UpdatePasswordViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bq6-ey-UlP"/>
                         <viewControllerLayoutGuide type="bottom" id="Ieh-Tu-dRH"/>
