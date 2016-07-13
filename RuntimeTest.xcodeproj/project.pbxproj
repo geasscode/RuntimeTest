@@ -207,6 +207,7 @@
 		F7754BE31CC753F600F989DA /* DynamicExchangeMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BE21CC753F600F989DA /* DynamicExchangeMethodViewController.m */; };
 		F7754BE61CC7541A00F989DA /* ReplaceMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BE51CC7541A00F989DA /* ReplaceMethodViewController.m */; };
 		F7754BE91CC7548A00F989DA /* OtherFunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7754BE81CC7548A00F989DA /* OtherFunctionViewController.m */; };
+		F77878511D363916006D2900 /* ThirdLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = F77878501D363916006D2900 /* ThirdLoginView.m */; };
 		F77FDA4E1D19275200562A3F /* demo.js in Resources */ = {isa = PBXBuildFile; fileRef = F77FDA4D1D19275200562A3F /* demo.js */; };
 		F77FDA511D19443D00562A3F /* CollectionViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FDA501D19443D00562A3F /* CollectionViewTest.m */; };
 		F77FDA541D1945A300562A3F /* RegularExpressionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F77FDA531D1945A300562A3F /* RegularExpressionTest.m */; };
@@ -788,6 +789,8 @@
 		F7754BE51CC7541A00F989DA /* ReplaceMethodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceMethodViewController.m; sourceTree = "<group>"; };
 		F7754BE71CC7548A00F989DA /* OtherFunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherFunctionViewController.h; sourceTree = "<group>"; };
 		F7754BE81CC7548A00F989DA /* OtherFunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherFunctionViewController.m; sourceTree = "<group>"; };
+		F778784F1D363916006D2900 /* ThirdLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdLoginView.h; sourceTree = "<group>"; };
+		F77878501D363916006D2900 /* ThirdLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdLoginView.m; sourceTree = "<group>"; };
 		F77FDA4A1D18E2A200562A3F /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UMMobClick.framework; path = RuntimeTest/Other/libs/UMMobClick.framework; sourceTree = "<group>"; };
 		F77FDA4D1D19275200562A3F /* demo.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = demo.js; sourceTree = "<group>"; };
 		F77FDA4F1D19443D00562A3F /* CollectionViewTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewTest.h; sourceTree = "<group>"; };
@@ -1321,6 +1324,8 @@
 		F7275CF81CD0C3FD002F0F68 /* Weekly */ = {
 			isa = PBXGroup;
 			children = (
+				F778784F1D363916006D2900 /* ThirdLoginView.h */,
+				F77878501D363916006D2900 /* ThirdLoginView.m */,
 				F72516681D21384C00A5BAC7 /* ConditionerView.h */,
 				F72516691D21384C00A5BAC7 /* ConditionerView.m */,
 				F725166A1D21384C00A5BAC7 /* ConditionerView.xib */,
@@ -3003,6 +3008,7 @@
 				F707FE8E1CDC725B008E4F7C /* DESShareView.m in Sources */,
 				F7CBB44E1CFD757000662347 /* BtnCell.m in Sources */,
 				F768EFCE1D0E8E06005747E3 /* RegisterViewModel.m in Sources */,
+				F77878511D363916006D2900 /* ThirdLoginView.m in Sources */,
 				F768EFCB1D0E8D15005747E3 /* BaseTextField.m in Sources */,
 				F7CA0D8F1CEAF73A009D1C51 /* NSString+AES.m in Sources */,
 				F75244221CF6D8F7001C88EE /* BaseFunction.m in Sources */,

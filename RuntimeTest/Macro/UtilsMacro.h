@@ -148,6 +148,29 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 #endif /* Define_h */
 
+//判断是否为iPhone
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+//判断是否为iPad
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+//判断是否为ipod
+#define IS_IPOD ([[[UIDevice currentDevice] model] isEqualToString:@"iPod touch"])
+
+// 判断是否为 iPhone 5SE
+#define iPhone5SE [[UIScreen mainScreen] bounds].size.width == 320.0f && [[UIScreen mainScreen] bounds].size.height == 568.0f
+
+// 判断是否为iPhone 6/6s
+#define iPhone6_6s [[UIScreen mainScreen] bounds].size.width == 375.0f && [[UIScreen mainScreen] bounds].size.height == 667.0f
+
+// 判断是否为iPhone 6Plus/6sPlus
+#define iPhone6Plus_6sPlus [[UIScreen mainScreen] bounds].size.width == 414.0f && [[UIScreen mainScreen] bounds].size.height == 736.0f
+
+//获取系统版本
+#define IOS_SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+
+//判断 iOS 8 或更高的系统版本
+#define IOS_VERSION_8_OR_LATER (([[[UIDevice currentDevice] systemVersion] floatValue] >=8.0)? (YES):(NO))
 
 #define BoldSystemFont(size)  [UIFont boldSystemFontOfSize:size]
 #define systemFont(size)      [UIFont systemFontOfSize:size]
@@ -174,15 +197,6 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define IsStringNotEmpty(string) (string && ![@"" isEqualToString:string])
 
 
-
-//全局打印
-#ifdef DEBUG
-#define DMLog(...)NSLog(@"%s%@",__PRETTY_FUNCTION__,[NSString stringWithFormat:__VA_ARGS__])
-#else
-#define DMLog(...) do { } while (0)
-#endif
-
-
 //更加完善点的全局打印
 
 //__VA_ARGS__是一个可变参数的宏，这个可变参数的宏是新的C99规范中新增的，目前似乎只有gcc支（VC6.0的编译器不支持）。宏前面加上##的作用在于，当可变参数的个数为0时，这里的##起到把前面多余的","去掉的作用,否则会编译出错, 你可以试试。
@@ -191,9 +205,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 //__FUNCTION__宏在预编译时会替换成当前的函数名称
 
 #ifdef DEBUG
-# define DLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+# define DESLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
-# define DLog(...);
+# define DESLog(...);
 #endif
 
 
@@ -235,7 +249,24 @@ try {                                                                           
 #endif
 
 
+//获取temp
+#define kPathTemp NSTemporaryDirectory()
 
+//获取沙盒 Document
+#define kPathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+
+//获取沙盒 Cache
+#define kPathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
+
+
+//GCD - 一次性执行
+#define kDISPATCH_ONCE_BLOCK(onceBlock) static dispatch_once_t onceToken; dispatch_once(&onceToken, onceBlock);
+
+//GCD - 在Main线程上运行
+#define kDISPATCH_MAIN_THREAD(mainQueueBlock) dispatch_async(dispatch_get_main_queue(), mainQueueBlock);
+
+//GCD - 开启异步线程
+#define kDISPATCH_GLOBAL_QUEUE_DEFAULT(globalQueueBlock) dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), globalQueueBlocl);
 
 #ifdef DEBUG
 

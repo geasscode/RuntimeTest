@@ -254,6 +254,21 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 
 -(void)exitLoginConfig{
 	
+	[AllUtils showPromptDialog:@"提示" andMessage:@"你真的要退出吗？" OKButton:@"确定" OKButtonAction:^(UIAlertAction *action) {
+		//把用户名和密码设为nil；
+		NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+		[userDefaults setObject:nil forKey:@"username"];
+		[userDefaults setObject:nil forKey:@"Password"];
+		[userDefaults setObject:nil forKey:@"nickname"];
+		[userDefaults setObject:nil forKey:@"userId"];
+		//同时跳转到登录界面；
+		LoginViewController *loginVC = [LoginViewController new];
+		[self.navigationController presentViewController:loginVC animated:YES completion:nil];
+//		[AllUtils jumpToViewController:@"LoginViewController" contextViewController:self handler:nil];
+	} cancelButton:@"取消" cancelButtonAction:^(UIAlertAction *action) {
+		DESLog(@"取消");
+	} contextViewController:self];
+	
 //	NSArray *data = @[@{JDButtonName:@"Show Notification", JDButtonInfo:@"JDStatusBarStyleDefault", JDNotificationText:@"Better call Saul!"},
 //					  @{JDButtonName:@"Show Progress", JDButtonInfo:@"0-100% in 1s", JDNotificationText:@"Some Progress…"},
 //					  @{JDButtonName:@"Show Activity Indicator", JDButtonInfo:@"UIActivityIndicatorViewStyleGray", JDNotificationText:@"Some Activity…"},

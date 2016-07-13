@@ -1,4 +1,4 @@
-//
+ //
 //  LoginViewController.m
 //  RuntimeTest
 //
@@ -10,7 +10,7 @@
 #import "RegisterViewController.h"
 #import "AppDelegate.h"
 #import "MainViewController.h"
-
+#import "ThirdLoginView.h"
 #define mainSize    [UIScreen mainScreen].bounds.size
 
 #define offsetLeftHand      60
@@ -39,6 +39,7 @@
     @property(nonatomic,strong) AppDelegate *globalApp;
     @property(nonatomic,strong) NSUserDefaults *userDefaults;
 
+    @property (nonatomic, weak) ThirdLoginView *thirdView;
 
 
 
@@ -69,6 +70,36 @@
 }
 
 
+- (ThirdLoginView *)thirdView
+{
+	if (!_thirdView) {
+		ThirdLoginView *third = [[ThirdLoginView alloc] initWithFrame:CGRectMake(0, 0, 400, 200)];
+		[third setClickLogin:^(LoginType type) {
+			
+			switch (type) {
+				case LoginTypeSina:
+					[self WeiboLogin];
+					break;
+				case LoginTypeQQ:
+					//   [self QQLogin];
+					break;
+				case LoginTypeWechat:
+					[self WeChatLogin];
+					break;
+					
+				default:
+					break;
+			}
+			DESLog(@"第三方登录。")
+//			[self loginSuccess];
+		}];
+		third.hidden = NO;
+//		third.hidden = YES;
+		[self.view addSubview:third];
+		_thirdView = third;
+	}
+	return _thirdView;
+}
 
 -(void)setupLoginUI{
 	
@@ -163,8 +194,17 @@
 	[self.registerButton addTarget:self action:@selector(registerButtonClicked) forControlEvents:UIControlEventTouchUpInside];
 	
 	[self.view addSubview:self.registerButton];
+ 
+	
 
 	
+	
+	[self.thirdView mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.left.right.equalTo(@0);
+		make.height.equalTo(@60);
+		make.bottom.equalTo(@-60);
+//		.offset(-40);
+	}];
 	
 //	_loginQQButton = [[UIButton alloc] initWithFrame:CGRectMake(40, kScreenHeight-120, 200, 100)];
 //	[_loginQQButton setImage:[UIImage imageNamed:@"login_QQ_icon"] forState:UIControlStateNormal];
@@ -172,12 +212,12 @@
 //	[self.view addSubview:_loginQQButton];
 //	
 //	
-//	_loginSinaWBButton = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth/2, kScreenHeight-120, 200, 100)];
+//	_loginSinaWBButton = [[UIButton alloc] initWithFrame:CGRectMake(250, kScreenHeight-120, 200, 100)];
 //	[_loginSinaWBButton setImage:[UIImage imageNamed:@"login_sina_icon"] forState:UIControlStateNormal];
 //	[_loginSinaWBButton addTarget:self action:@selector(sinaButtonClicked) forControlEvents:UIControlEventTouchUpInside];
 //	[self.view addSubview:_loginSinaWBButton];
 //	
-//	_loginTengxunWBButton = [[UIButton alloc] initWithFrame:CGRectMake(kScreenWidth-20, kScreenHeight-120, 200, 100)];
+//	_loginTengxunWBButton = [[UIButton alloc] initWithFrame:CGRectMake(450, kScreenHeight-120, 200, 100)];
 //	[_loginTengxunWBButton setImage:[UIImage imageNamed:@"login_tecent_icon"] forState:UIControlStateNormal];
 //	[_loginTengxunWBButton addTarget:self action:@selector(tecentButtonClicked) forControlEvents:UIControlEventTouchUpInside];
 //	[self.view addSubview:_loginTengxunWBButton];
@@ -201,6 +241,15 @@
 
 
 - (void)loginButtonClicked{
+	
+	
+//	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//		[self presentViewController:[[MainViewController alloc] init] animated:NO completion:^{
+//			[self.player stop];
+//			[self.player.view removeFromSuperview];
+//			self.player = nil;
+//		}];
+//	});
 	
 	NSString *username = [self.txtUser.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 	NSString *password = [self.txtPwd.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
