@@ -125,6 +125,7 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 			[self exitLoginConfig];
 			break;
 			
+			//当在switch使用枚举类型时，’default’是不需要的
 		default:{
 			//[self performSegueWithIdentifier:@"isLogin" sender:self];
 			[JDStatusBarNotification showWithStatus:@"该功能正在开发中。。。" dismissAfter:2.0

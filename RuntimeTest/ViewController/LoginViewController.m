@@ -228,6 +228,7 @@
 
 
 
+
 - (void)dismissButtonClicked{
 	
    [self dismissViewControllerAnimated:YES completion:nil];
@@ -457,5 +458,25 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+//当访问CGRect里的x, y, width, 或 height时，应该使用CGGeometry函数而不是直接通过结构体来访问。引用Apple的CGGeometry：
+//
+//CGRect frame = self.view.frame;
+//CGFloat x = CGRectGetMinX(frame);
+//CGFloat y = CGRectGetMinY(frame);
+//CGFloat width = CGRectGetWidth(frame);
+//CGFloat height = CGRectGetHeight(frame);
+//CGRect frame = CGRectMake(0.0, 0.0, width, height);
+//不应该：
+//
+//CGRect frame = self.view.frame;
+//CGFloat x = frame.origin.x;
+//CGFloat y = frame.origin.y;
+//CGFloat width = frame.size.width;
+//CGFloat height = frame.size.height;
+//CGRect frame = (CGRect){ .origin = CGPointZero, .size = frame.size };
+
 
 @end
