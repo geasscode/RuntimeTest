@@ -17,4 +17,8 @@
 #import "Constants.h"
 #import "BaseFunction.h"
 #import "AllUtils.h"
+#import "UINavigationController+XWTransition.h"
+#import "UIViewController+XWTransition.h"
+#import "XWCoolAnimator.h"
+
 #endif /* AppMacro_h */

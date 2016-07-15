@@ -40,10 +40,11 @@
     @property(nonatomic,strong) NSUserDefaults *userDefaults;
 
     @property (nonatomic, weak) ThirdLoginView *thirdView;
+    @property (nonatomic, strong) UIButton *dragMeButton;
 
 
-
-
+//NSUserDefaults 详细使用，读取写入，系统类，自定义类的用法，忘记了可以从下面网址回顾。
+//http://www.jianshu.com/p/f935659fc637
 
 //	UITextField* txtUser;
 //	UITextField* txtPwd;
@@ -195,8 +196,8 @@
 	
 	[self.view addSubview:self.registerButton];
  
+	[self dargMeButtonUI];
 	
-
 	
 	
 	[self.thirdView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -228,6 +229,39 @@
 
 
 
+- (void)dragMeButtonClicked:(UIPanGestureRecognizer *)panGesture{
+	CGPoint transitionP = [panGesture translationInView:panGesture.view];
+	CGFloat transitionX = fmax(20, fmin(_dragMeButton.center.x + transitionP.x, kScreenWidth - 20));
+	CGFloat transitionY = fmax(64 + 20, fmin(_dragMeButton.center.y + transitionP.y, kScreenHeight- 20));
+	_dragMeButton.center = CGPointMake(transitionX, transitionY);
+	[panGesture setTranslation:CGPointZero inView:panGesture.view];
+}
+
+-(void)dargMeButtonUI{
+	
+	
+	
+//	_dragMeButton = [[UIButton alloc] initWithFrame:CGRectMake(20, kScreenHeight-20 , 40, 40)];
+	
+	
+	_dragMeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+	_dragMeButton.titleLabel.font = [UIFont systemFontOfSize:13];
+	_dragMeButton.titleLabel.textAlignment = 1;
+	
+	[_dragMeButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+	[_dragMeButton addTarget:self action:@selector(gotoTopPosition) forControlEvents:UIControlEventTouchUpInside];
+	
+	
+	[_dragMeButton addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(dragMeButtonClicked:)]];
+	[_dragMeButton setTitle:@"点我\n拖我" forState:UIControlStateNormal];
+	_dragMeButton.backgroundColor = [UIColor lightGrayColor];
+	_dragMeButton.titleLabel.numberOfLines = 0;
+	_dragMeButton.titleLabel.font = [UIFont systemFontOfSize:12];
+		_dragMeButton.bounds = CGRectMake(0, 0, 40, 40);
+		_dragMeButton.center = CGPointMake(self.view.center.x, self.view.center.y - 100);
+	_dragMeButton.layer.cornerRadius = 20;
+	[self.view addSubview:_dragMeButton];
+}
 
 - (void)dismissButtonClicked{
 	
@@ -240,6 +274,9 @@
 //	}
 }
 
+- (void)gotoTopPosition{
+	
+}
 
 - (void)loginButtonClicked{
 	

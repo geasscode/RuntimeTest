@@ -54,14 +54,14 @@
 				[self checkAD];
 			});
 		}];
-		///进入后台
-		[[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidEnterBackgroundNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
-			[self request];
-		}];
-		///后台启动,二次开屏广告
-		[[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
-			[self checkAD];
-		}];
+//		///进入后台
+//		[[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidEnterBackgroundNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+//			[self request];
+//		}];
+//		///后台启动,二次开屏广告
+//		[[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+//			[self checkAD];
+//		}];
 	}
 	return self;
 }
@@ -146,8 +146,8 @@
 //	[imageView setImage:[self imageCompressForWidth:imageView.image targetWidth:kScreenWidth]];
 
 	///给非UIControl的子类，增加点击事件
-	UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(letGo)];
-	[_adView addGestureRecognizer:tap];
+//	UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(letGo)];
+//	[_adView addGestureRecognizer:tap];
 	
 	[window addSubview:_adView];
 	

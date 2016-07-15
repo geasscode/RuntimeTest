@@ -35,6 +35,9 @@
 	[self setTitle:@"iOS头条"];
 	
 	self.dataArr=[NSMutableArray array];
+	//用这种方式初始化也行。
+//	self.dataArr = @[].mutableCopy;
+
 	
 	[self configNav];
 	//布局View

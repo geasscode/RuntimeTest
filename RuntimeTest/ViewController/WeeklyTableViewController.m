@@ -103,7 +103,8 @@ UIPageControl *_pageControl;
 	
 	self.navigationItem.leftBarButtonItem = nil;
 	self.navigationItem.rightBarButtonItem = rightButton;
-	
+	self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithKey(BAR);
+
 
 }
 

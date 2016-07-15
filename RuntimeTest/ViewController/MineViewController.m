@@ -26,6 +26,10 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 
 @property (nonatomic, strong) UIButton *backToTopBtn;
 
+@property (nonatomic, strong) NSMutableArray *titles;
+@property (nonatomic, strong) NSMutableArray *classNames;
+@property (nonatomic, strong) NSMutableArray *images;
+@property (nonatomic,assign) NSUInteger currentIndex;
 
 @end
 
@@ -93,8 +97,16 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 	[collectionView deselectItemAtIndexPath:indexPath animated:YES];
 
-
-	NSUInteger MineSetting = indexPath.row;
+	//另一种跳转方式。
+//	NSString *className = self.classNames[indexPath.row];
+//	Class class = NSClassFromString(className);
+//	if (class) {
+//		UIViewController *ctrl = class.new;
+//		ctrl.title = _titles[indexPath.row];
+//		self.title = @" ";
+//		[self.navigationController pushViewController:ctrl animated:YES];
+//	}
+	NSUInteger MineSetting  = indexPath.row;
 	
 	switch (MineSetting) {
 		case UnRead:
@@ -136,66 +148,6 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 			break;
 	}
 	
-	
-	
-	
-//	if (user) {
-//		
-//		if (indexPath.row == 5) {
-//			
-//			[MBProgressHUD showHUDAddedTo:self.view animated:YES];
-//			
-////			[[SDImageCache sharedImageCache] cleanDisk];
-//			
-//			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//				
-//				[MBProgressHUD hideHUDForView:self.view animated:YES];
-//				
-//			});
-//		}else {
-//			
-////			AboutZealerViewController *aboutZealerVC = [[AboutZealerViewController alloc] init];
-////			[self.navigationController pushViewController:aboutZealerVC animated:YES];
-//		}
-//	}else {
-//		
-//		if(indexPath.row == 1){
-//			
-////			UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
-////			FavoriteTableViewController *favorite = (FavoriteTableViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"myfavorite"];
-////			self.hidesBottomBarWhenPushed=YES;
-//			FavoriteTableViewController *favorite = [FavoriteTableViewController new];
-//			[self.navigationController pushViewController:favorite animated:YES];
-////			self.hidesBottomBarWhenPushed=NO;
-//			return;
-//		}
-//		
-//		else if (indexPath.row ==5){
-//			
-//		
-//			self.dk_manager.themeVersion = DKThemeVersionNight;
-//			
-//			[self cleanCache];
-//			return;
-//		}
-//		
-//		else if (indexPath.row ==6){
-//			SuggestViewController *suggestVC = [SuggestViewController new];
-//			[self.navigationController pushViewController:suggestVC animated:YES];
-//			return;
-//		}
-//		
-//		else if (indexPath.row ==7){
-//			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"关于我们" message:@"我们是geasscode团队，专注开发iOS应用\n团队成员：geass \n邮   箱：sai3300@163.com" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-//			[alert show];
-//			return;
-//
-//		}
-//		
-//		LoginViewController *loginVC = [LoginViewController new];
-//		[self.navigationController presentViewController:loginVC animated:YES completion:nil];
-////		[self performSegueWithIdentifier:@"isLogin" sender:self];
-//	}
 }
 
 
@@ -210,16 +162,34 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 	//			UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
 	//			FavoriteTableViewController *favorite = (FavoriteTableViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"myfavorite"];
 	//			self.hidesBottomBarWhenPushed=YES;
-	FavoriteTableViewController *favorite = [FavoriteTableViewController new];
-	[self.navigationController pushViewController:favorite animated:YES];
+	
+	
+
 	//			self.hidesBottomBarWhenPushed=NO;
+	
+	
+//	FavoriteTableViewController *favorite = [FavoriteTableViewController new];
+//	[self.navigationController pushViewController:favorite animated:YES];
+	[self goToSpecifiedPage:@"FavoriteTableViewController"];
 
 }
 
 -(void)themeConfig{
+	
+	[self night];
 	[JDStatusBarNotification showWithStatus:@"该功能正在开发中。。。" dismissAfter:2.0
 								  styleName:JDStatusBarStyleSuccess];
 }
+
+
+- (void)normal {
+	self.dk_manager.themeVersion = DKThemeVersionNormal;
+}
+
+- (void)night {
+	self.dk_manager.themeVersion = DKThemeVersionNight;
+}
+
 
 -(void)subscribeConfig{
 	//JDStatusBarStyleDark
@@ -229,11 +199,14 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 
 -(void)changePasswordConfig{
 
-	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
-	UpdatePasswordViewController *changePassword = (UpdatePasswordViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"passwordVC"];
-	
-	[self.navigationController presentViewController:changePassword animated:YES completion:nil];
+//	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
+//	UpdatePasswordViewController *changePassword = (UpdatePasswordViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"passwordVC"];
+//	
+//	[self.navigationController presentViewController:changePassword animated:YES completion:nil];
 //	[self.navigationController pushViewController:changePassword animated:YES];
+	
+	[self goToSpecifiedPage:@"UpdatePasswordViewController"];
+
 
 }
 
@@ -244,9 +217,19 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 }
 
 -(void)feedBackConfig{
-	SuggestViewController *suggestVC = [SuggestViewController new];
-	[self.navigationController pushViewController:suggestVC animated:YES];
+	
+//	__weak typeof(self)weakSelf = self;
+//	[self xw_registerToInteractiveTransitionWithDirection:XWInteractiveTransitionGestureDirectionRight  transitonBlock:^(CGPoint startPoint){
+//		[weakSelf goToSpecifiedPage:@"SuggestViewController"];
+//	} edgeSpacing:0];
+	
+		[self goToSpecifiedPage:@"SuggestViewController"];
+
+//	SuggestViewController *suggestVC = [SuggestViewController new];
+//	[self.navigationController pushViewController:suggestVC animated:YES];
 }
+
+
 
 -(void)aboutMeConfig{
 	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"关于我们" message:@"我们是geasscode团队，专注开发iOS应用\n团队成员：geass \n邮   箱：sai3300@163.com" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
@@ -263,8 +246,10 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 		[userDefaults setObject:nil forKey:@"nickname"];
 		[userDefaults setObject:nil forKey:@"userId"];
 		//同时跳转到登录界面；
-		LoginViewController *loginVC = [LoginViewController new];
-		[self.navigationController presentViewController:loginVC animated:YES completion:nil];
+		[self goToSpecifiedPage:@"LoginViewController"];
+
+//		LoginViewController *loginVC = [LoginViewController new];
+//		[self.navigationController presentViewController:loginVC animated:YES completion:nil];
 //		[AllUtils jumpToViewController:@"LoginViewController" contextViewController:self handler:nil];
 	} cancelButton:@"取消" cancelButtonAction:^(UIAlertAction *action) {
 		DESLog(@"取消");
@@ -280,12 +265,77 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 								  styleName:@"geass"];
 }
 
+- (void)addItem:(NSString *)title class:(NSString *)className image:(NSString *)imageName {
+	
+//	[self.titles addObject:title];
+//	[self.classNames addObject:className];
+//	[self.images addObject:[YYImage imageNamed:imageName]];
+}
+
+
+//- (void)selectedItemAtIndexPath:(NSIndexPath *)indexPath{
+
+//	0.1.3.6 Push
+//	4.8 present .4storyboard
+	
+- (void)goToSpecifiedPage:(NSString *)pageName{
+	
+	//
+	
+//	__weak typeof(self)weakSelf = self;
+//	[self xw_registerToInteractiveTransitionWithDirection:XWInteractiveTransitionGestureDirectionRight  transitonBlock:^(CGPoint startPoint){
+//		[weakSelf xw_transition];
+//	} edgeSpacing:0];
+	
+
+
+	XWCoolAnimator *animator = [XWCoolAnimator xw_animatorWithType:XWCoolTransitionAnimatorTypeFoldFromRight];
+	animator.toDuration = 1.0f;
+	animator.backDuration = 1.0f;
+
+		Class class = NSClassFromString(pageName);
+
+		if (class) {
+			UIViewController *ctrl = class.new;
+//			ctrl.title = _titles[_currentIndex];
+//			self.title = @" ";
+			
+			if([pageName isEqualToString:@"UpdatePasswordViewController"]){
+				
+				UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoadData" bundle:nil];
+				UpdatePasswordViewController *changePassword = (UpdatePasswordViewController*)[storyBoard instantiateViewControllerWithIdentifier:@"passwordVC"];
+				
+				[self xw_presentViewController:changePassword withAnimator:animator];
+
+//				[self.navigationController presentViewController:changePassword animated:YES completion:nil];
+				return;
+
+			}
+			
+			if([pageName isEqualToString:@"LoginViewController"]){
+				
+				[self xw_presentViewController:ctrl withAnimator:animator];
+//				[self.navigationController presentViewController:ctrl animated:YES completion:nil];
+				return;
+			}
+			
+			
+			[self.navigationController xw_pushViewController:ctrl withAnimator:animator];
+//			[self.navigationController pushViewController:ctrl animated:YES];
+		}
+}
 
 #pragma mark - life circle
 - (void)viewDidLoad{
 	[super viewDidLoad];
 	
 	
+//	self.titles = @[].mutableCopy;
+//	self.classNames = @[].mutableCopy;
+//	self.images = @[].mutableCopy;
+//
+//	[self addItem:@"Twitter" class:@"T1HomeTimelineItemsViewController" image:@"Twitter.jpg"];
+//	[self addItem:@"Weibo" class:@"WBStatusTimelineViewController" image:@"Weibo.jpg"];
 	[self notificationUI];
 	[self backToTopUI];
 	
@@ -295,6 +345,10 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 //	self.collectionView.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
 
 	}
+
+
+
+
 
 - (void)viewWillAppear:(BOOL)animated{
 	[super viewWillAppear:animated];

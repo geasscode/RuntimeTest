@@ -90,6 +90,11 @@
 	self.automaticallyAdjustsScrollViewInsets = NO ;
 	[self.view addSubview:self.contentCollectionView];
 	
+	
+	
+	self.contentCollectionView.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+//	self.contentCollectionView.dk_separatorColorPicker = DKColorPickerWithKey(SEP);
+	self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithKey(BAR);
 }
 
 #pragma mark - contentCollectionView的代理方法和数据源方法
@@ -107,7 +112,8 @@
 	
 	cell.urlstring = model.urlstring;
 	cell.title = model.title;
-	
+	cell.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
+
 	return cell;
 }
 

@@ -17,7 +17,8 @@
 - (void)viewDidLoad {
 	
 	[super viewDidLoad];
-	
+	self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithKey(BAR);
+
 }
 
 /**

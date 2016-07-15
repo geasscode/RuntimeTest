@@ -36,6 +36,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithKey(BAR);
+
 	UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 50, [UIScreen mainScreen].bounds.size.width, 50)];
 	[btn setTitle:@"JSPatch Test" forState:UIControlStateNormal];
 	[btn addTarget:self action:@selector(handleBtn:) forControlEvents:UIControlEventTouchUpInside];
