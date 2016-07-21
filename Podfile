@@ -29,6 +29,7 @@ pod "WeiboSDK", :git => "https://github.com/sinaweibosdk/weibo_ios_sdk.git"
 pod 'UMengAnalytics-NO-IDFA' #无IDFA版SDK（请根据需要选择其中一个）
 pod 'JSPatch'
 pod 'BmobSDK'
+pod 'KINWebBrowser'
 
 
 

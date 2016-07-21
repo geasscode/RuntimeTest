@@ -20,6 +20,8 @@
 #import "NetTool.h"
 #import "JPUSHService.h"
 #import "JDStatusBarNotification.h"
+#import "MJPhotoBrowser.h"
+#import "MJPhoto.h"
 
 
 #import <BmobSDK/Bmob.h>
@@ -37,6 +39,7 @@
 #import "UMMobClick/MobClick.h"
 #import "JPEngine.h"
 #import "DKNight.h"
+#import "YYFPSLabel.h"
 
 //微信SDK头文件
 #import "WXApi.h"

@@ -17,31 +17,30 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	self.title = @"我是广告";
-	self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-	self.webView.backgroundColor = [UIColor whiteColor];
-	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cocoachina.com/ios/20160621/16764.html"]]];
-	[self.view addSubview:self.webView];
+//	self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+//	self.webView.backgroundColor = [UIColor whiteColor];
+//	[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.cocoachina.com/ios/20160621/16764.html"]]];
+//	[self.view addSubview:self.webView];
 }
 @end
 
 
-@implementation UIViewController (DESPublic)
-- (UINavigationController*)des_navigationController
-{
-	UINavigationController* nav = nil;
-	if ([self isKindOfClass:[UINavigationController class]]) {
-		nav = (id)self;
-	}
-	else {
-		if ([self isKindOfClass:[UITabBarController class]]) {
-			nav = [((UITabBarController*)self).selectedViewController des_navigationController];
-		}
-		else {
-			nav = self.navigationController;
-		}
-	}
-	return nav;
-}
-@end
+//@implementation UIViewController (DESPublic)
+//- (UINavigationController*)des_navigationController
+//{
+//	UINavigationController* nav = nil;
+//	if ([self isKindOfClass:[UINavigationController class]]) {
+//		nav = (id)self;
+//	}
+//	else {
+//		if ([self isKindOfClass:[UITabBarController class]]) {
+//			nav = [((UITabBarController*)self).selectedViewController des_navigationController];
+//		}
+//		else {
+//			nav = self.navigationController;
+//		}
+//	}
+//	return nav;
+//}
+//@end
 

@@ -16,6 +16,7 @@
 
 @property (nonatomic ,assign) NSInteger currentIndex;
 
+@property (nonatomic, strong) YYFPSLabel *fpsLabel;
 
 @end
 @implementation BaseHomeViewController
@@ -70,6 +71,8 @@
 #pragma mark - 设置子控件
 -(void)setUI{
 	
+	[self setupFPSLabel];
+
 	//添加SegmentView
 //	SegmentView *seg = [[SegmentView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, 50) titles:self.titleModelArray selectedBtn:^(NSInteger selectedItem) {
 //		
@@ -129,6 +132,12 @@
 //手势导致的
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
 	
+	if (_fpsLabel.alpha != 0) {
+		[UIView animateWithDuration:1 delay:2 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+			_fpsLabel.alpha = 0;
+		} completion:NULL];
+	}
+	
 	[self scrollViewDidEndScrollingAnimation:scrollView];
 }
 
@@ -141,6 +150,48 @@
 	
 	self.currentIndex = self.contentCollectionView.contentOffset.x / kScreenWidth + 0.5;
 }
+
+-(void)setupFPSLabel{
+	_fpsLabel = [YYFPSLabel new];
+	[_fpsLabel sizeToFit];
+	
+	_fpsLabel.y = kScreenHeight - 60 - 64;
+
+	_fpsLabel.x = 15;
+	_fpsLabel.alpha = 1;
+	[self.view addSubview:_fpsLabel];
+}
+
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+	if (_fpsLabel.alpha == 0) {
+		[UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+			_fpsLabel.alpha = 1;
+		} completion:NULL];
+	}
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+	if (!decelerate) {
+		if (_fpsLabel.alpha != 0) {
+			[UIView animateWithDuration:1 delay:2 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+				_fpsLabel.alpha = 0;
+			} completion:NULL];
+		}
+	}
+}
+
+
+
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView {
+	if (_fpsLabel.alpha == 0) {
+		[UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
+			_fpsLabel.alpha = 1;
+		} completion:^(BOOL finished) {
+		}];
+	}
+}
+
 
 
 @end

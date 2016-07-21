@@ -20,6 +20,8 @@
 #import "DESTableViewActionSheetView.h"
 #import "TBActionSheet.h"
 #import "ConditionerView.h"
+#import "DESWebViewController.h"
+#import <SafariServices/SafariServices.h>
 
 #define kToolBarHeight 38
 
@@ -44,9 +46,10 @@
 	_fontSizeValue = 100;
 	_backgroundColor = @"#343434";
 	_isNightMode = NO;
-	self.title = @"正文";
+//	self.title = @"正文";
 	MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
 	hud.labelText = NSLocalizedString(@"正在加载请稍后...", @"HUD loading title");
+	[self configureNavgationItem];
 	[self creatWebview];
 	[self creatToolBar];
 }
@@ -55,6 +58,36 @@
 	NSLog(@"hello");
 }
 
+
+- (void)configureNavgationItem {
+	
+	self.tabBarController.tabBar.hidden=YES;
+	self.navigationController.navigationBarHidden = NO;
+	
+	self.view.backgroundColor = [UIColor whiteColor];
+	self.navigationItem.title = @"正文";
+	
+	
+	//系统自带的Barbutton 样式。
+	UIBarButtonItem *right =  [[UIBarButtonItem alloc]initWithTitle:@"查看原文" style:UIBarButtonItemStylePlain target:self action:@selector(inspectSourceAddress)];
+
+	self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
+
+//	[self.navigationItem.rightBarButtonItem setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:14],NSFontAttributeName, nil] forState:UIControlStateNormal];
+	self.navigationItem.rightBarButtonItem = right;
+	
+	
+
+	//设置透明背景。
+//	[self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+//	//去除 navigationBar 底部的细线
+//	self.navigationController.navigationBar.shadowImage = [UIImage new];
+	
+	self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithKey(BAR);
+	
+}
+
+
 -(void)setFontSizeValue:(NSInteger)fontSizeValue{
 	
 	_fontSizeValue = fontSizeValue;
@@ -62,6 +95,56 @@
 	//[_webView reload];
 }
 
+-(void)inspectSourceAddress{
+	
+	KINWebBrowserViewController *webBrowser = [KINWebBrowserViewController webBrowser];
+	[self.navigationController pushViewController:webBrowser animated:YES];
+	webBrowser.title = _webModel.title;
+
+	[webBrowser loadURLString:_webModel.url];
+	
+	webBrowser.tintColor = [UIColor blueColor];
+	//webBrowser.barTintColor = [UIColor blackColor];
+	//webBrowser.showsURLInNavigationBar = NO;
+	//webBrowser.showsPageTitleInNavigationBar = YES;
+
+}
+
+-(void)gotoSourcesArticlePage{
+	//创建JSContext对象
+	JSContext *context = [self.webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+	
+	//此方法调用javascript 方法 ，非常耗性能，调试会crash，寻找替代方案。
+	context[@"sourceArticle"] = ^() {
+		//不要让断点放在这里，如果你不想看到调试器无限菊花的话。
+		
+		NSLog(@"不能调试进入这里，但可以打印。");
+		
+		//下面方法只适用iOS 9 只适用于显示网页，没有定制功能的。
+		SFSafariViewController *sfViewControllr = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:_webModel.url]];
+		sfViewControllr.delegate = self;
+//		sfViewControllr.modalPresentationStyle = UIModalPresentationCurrentContext;
+//		sfViewControllr.view.alpha = 0.0;
+       [self presentViewController:sfViewControllr animated:YES completion:^{
+	  //...
+       }];
+		
+		
+		
+//		DESWebViewController *webViewController = DESWebViewController.new;
+//		[self.navigationController pushViewController:webViewController animated:YES];
+//		webViewController.title = _webModel.title;
+//		
+//		NSString *url = _webModel.url;
+//		NSLog(@"current url = %@", url);
+//		[webViewController loadURLString:url];
+	};
+}
+
+
+- (void)safariViewControllerDidFinish:(nonnull SFSafariViewController *)controller{
+	[controller dismissViewControllerAnimated:YES completion:nil];
+}
 
 -(void)loadDocument:(NSString *)documentName inView:(UIWebView *)webView
 {
@@ -75,9 +158,11 @@
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
 	[self injectJS:webView];
+	
 }
 
 -(void)injectJS:(UIWebView *)webView{
+	
 	//js方法遍历图片添加点击事件 返回图片个数
 	static  NSString * const jsGetImages =
 	@"function getImages(){\
@@ -112,11 +197,11 @@
 	[webView stringByEvaluatingJavaScriptFromString:backgroundColorString];
 
 	
-	// 禁用用户选择
-	[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
-	
-	// 禁用长按弹出框
-	[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
+//	// 禁用用户选择
+//	[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
+//	
+//	// 禁用长按弹出框
+//	[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
 }
 
 
@@ -154,20 +239,28 @@
 -(void)creatWebview{
 	
 	UIWebView *webview = [[UIWebView alloc]init];
+	
 	self.webView = webview;
 	self.webView.backgroundColor = [UIColor colorWithRed:248 / 255.0 green:248 / 255.0 blue:248 / 255.0 alpha:1];
 	
 	
-	UILongPressGestureRecognizer * longPressed = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressed:)];
-	longPressed.delegate = self;
+//	UILongPressGestureRecognizer * longPressed = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressed:)];
+//	longPressed.delegate = self;
+//	
+//	[self.webView addGestureRecognizer:longPressed];
 	
-	[self.webView addGestureRecognizer:longPressed];
+	
+	
+	UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapImageAction:)];
+	singleTap.delegate = self;
+	[self.webView addGestureRecognizer:singleTap];
+
 	
 	
 	//	[self loadDocument:@"现有的本地word文档.docx" inView:webview];
 	
 	
-	
+//	[self gotoSourcesArticlePage];
 	[self.view addSubview:webview];
 	
 	//	///自动适应大小
@@ -188,6 +281,78 @@
 	
 }
 
+
+-(void)tapImageAction:(UITapGestureRecognizer *)tap{
+	
+	
+	NSArray *urls = [self getImageURLs];
+	NSInteger count = urls.count;
+	// 1.封装图片数据
+	NSMutableArray <MJPhoto *> *photos = [NSMutableArray arrayWithCapacity:count];
+	for (int i = 0; i<count; i++) {
+		// 替换为大尺寸图片 中:bmiddle  大:large
+		MJPhoto *photo = [[MJPhoto alloc] init];
+		
+
+		photo.url = [NSURL URLWithString:urls[i]]; // 图片路径
+		
+		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"class == %@", [UIImageView class]];
+
+		NSArray *tempArray = [[NSArray alloc] init];
+		tempArray = [self.view.subviews filteredArrayUsingPredicate:predicate];
+
+		photo.srcImageView = tempArray[i]; // 来源于哪个UIImageView
+		[photos addObject:photo];
+	}
+
+	// 2.显示相册
+	MJPhotoBrowser *browser = [[MJPhotoBrowser alloc] init];
+	browser.currentPhotoIndex = 0;
+	browser.photos = photos;
+	[browser show];
+	
+	
+	
+	
+	
+	
+
+	
+	//UIImageView *tapView = (UIImageView *)tap.view;
+//
+//	SDPhotoBrowser *photoBrowser = [SDPhotoBrowser new];
+//	photoBrowser.delegate = self;
+//	photoBrowser.currentImageIndex = tapView.tag;
+//	photoBrowser.imageCount = 1;
+//	photoBrowser.sourceImagesContainerView = self.view;
+//	[photoBrowser show];
+	
+	
+//	if (self.tapBlock) {
+//		self.tapBlock(tapView.tag,self.dataSource,self.indexpath);
+//	}
+}
+
+
+
+-(NSMutableArray*)getImageURLs{
+	
+	NSMutableArray *tempArray = @[].mutableCopy;
+	
+	for (ImageModel *imageModel in _webModel.images) {
+		UIImageView *imageView = [[UIImageView alloc] init];
+		[self.view addSubview:imageView];
+		imageView.userInteractionEnabled = YES;
+		imageView.clipsToBounds = YES;
+		imageView.contentMode = UIViewContentModeScaleAspectFill;
+		imageView.frame = CGRectZero;
+		
+		[tempArray addObject:imageModel.src];
+	}
+	
+
+	return tempArray;
+}
 /**
  *  创建底部的toolBar
  */
@@ -236,8 +401,38 @@
 	
 	NSLog(@"获取到图片地址：%@",urlToSave);
 	_webImageURL = urlToSave;
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"您确定要保存吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-	[alert show];
+	
+	
+	[AllUtils showPromptDialog:@"提示" andMessage:@"您确定要保存吗？" OKButton:@"确定" OKButtonAction:^(UIAlertAction *action){
+		
+//		MJPhoto *photo = [[MJPhoto alloc] init];
+//		
+//		photo.url = [NSURL URLWithString:_webImageURL];
+//		
+//		MJPhotoBrowser *browser = [[MJPhotoBrowser alloc] init];
+//		browser.currentPhotoIndex = 0;
+//		browser.photos = [NSArray arrayWithObject:photo];
+//		[browser show];
+//		NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:_webImageURL]];
+//		UIImage* photo = [UIImage imageWithData:data];
+//		UIImageWriteToSavedPhotosAlbum(photo, nil, nil, nil);
+
+//		NSData* imageData =  UIImageJPEGRepresentation(photo, 0.1);
+//		NSData* imageData =  UIImagePNGRepresentation(photo);
+//		UIImage* newImage = [UIImage imageWithData:imageData];
+//	   UIImageWriteToSavedPhotosAlbum(photo, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+
+//		UIImageWriteToSavedPhotosAlbum(webURL, self, @selector(image:didFinishSavingWithErrors:contextInfo:), NULL);
+//			NSURLCache *cache =[NSURLCache sharedURLCache];
+//			NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:_webImageURL]];
+//			NSData *imgData = [cache cachedResponseForRequest:request].data;
+//			UIImage *image = [UIImage imageWithData:imgData];
+//			UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+		}
+	
+		cancelButton:@"取消" cancelButtonAction:nil contextViewController:self];
+//	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"您确定要保存吗？" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+//	[alert show];
 }
 
 //可以识别多个手势
@@ -256,7 +451,9 @@
 		NSString *webImageURL = @"http://img1.tuicool.com/FfqABjf.jpg";
 		NSData* data = [NSData dataWithContentsOfURL:[NSURL URLWithString:webImageURL]];
 		UIImage* webURL = [UIImage imageWithData:data];
-		UIImageWriteToSavedPhotosAlbum(webURL, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+		
+		UIImageWriteToSavedPhotosAlbum(webURL, self, @selector(image:didFinishSavingWithErrors:contextInfo:), NULL);
+
 		
 	}
 	
@@ -265,7 +462,7 @@
 //判断图片保存状态
 
 
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo;
 {
 	if(!error){
 		NSLog(@"Photo saved to library!");
@@ -290,13 +487,46 @@
 		item.selected = NO;
 		[item setImage:[UIImage imageNamed:@"article_detail_late"] forState:UIControlStateNormal];
 		
+		[DBHelper deleteData:_webModel.id];
+		
 	}else{
+		
+		item.selected = YES;
+		
+		
+		DetailModel *model = [DetailModel new];
+		model.title = _webModel.title;
+		model.url = _webModel.url;
+		model.detatilArticleId = _webModel.detatilArticleId;
+		model.feed_title = _webModel.feed_title;
+		model.hasRead = @"false";
+		
+		MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+		
+		if([DBHelper insertReaderList:model]){
+			hud.labelText = NSLocalizedString(@"成功添加到阅读列表", @"HUD loading title");
+			
+		}
+		else{
+			
+			hud.labelText =  [model.title isEqualToString:@""] || !model.title ? @"正在添加到阅读列表" : @"成功添加到阅读列表";
+		}
+		
+		hud.mode = MBProgressHUDModeText;
+		hud.dimBackground = YES;
+		
+		[hud showAnimated:YES whileExecutingBlock:^{
+			sleep(1);
+		} completionBlock:^{
+			[hud removeFromSuperViewOnHide];
+		}];
 		
 		item.selected = YES;
 		[item setImage:[UIImage imageNamed:@"article_detail_late_on"] forState:UIControlStateNormal];
 	}
 	
 }
+
 
 
 
@@ -932,20 +1162,35 @@
 //拦截跳转url，如果跳转过来的url包含了前缀"jscallbackoc://，就说明使我们自定义的方法，
 //我们需要做拦截处理，转换为oc方法，但是其他跳转url就不做任务处理。
 //每次网页在需要跳转之前，就会执行该方法。返回yes，表示可以跳转。返回no，表示不跳转。我们可以在这个方法里面拦截到跳转的url，然后做处理
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-{
-	//点击web页面的图片调用如下代码
-	NSString *url = [[request URL] absoluteString];
-	NSString *protocolName = @"jscallbackoc://";
-	
-	if ( [url hasPrefix:protocolName]) {
-		[self performJSMethodWithURL:url protocolName:protocolName performViewController:self ];
-		return NO;
-	}
-	return YES;
-	
+//- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+//{
+//	//点击web页面的图片调用如下代码
+//	NSString *url = [[request URL] absoluteString];
+//	NSString *protocolName = @"jscallbackoc://";
+//	
+//	if ( [url hasPrefix:protocolName]) {
+//		[self performJSMethodWithURL:url protocolName:protocolName performViewController:self ];
+//		return NO;
+//	}
+//	return YES;
+//	
+//}
+
+
+
+- (void)webBrowser:(KINWebBrowserViewController *)webBrowser didStartLoadingURL:(NSURL *)URL{
+	NSLog(@"didStartLoadingURL value is %@",URL);
 }
 
+- (void)webBrowser:(KINWebBrowserViewController *)webBrowser didFinishLoadingURL:(NSURL *)URL{
+	NSLog(@"didFinishLoadingURL value is %@",URL);
+
+}
+
+- (void)webBrowser:(KINWebBrowserViewController *)webBrowser didFailToLoadURL:(NSURL *)URL withError:(NSError *)error{
+	NSLog(@"didFailToLoadURL value is %@,error is %@",URL,error);
+
+}
 
 
 @end

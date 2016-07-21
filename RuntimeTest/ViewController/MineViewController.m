@@ -153,8 +153,11 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 
 
 - (void)unReadConfig{
-	[JDStatusBarNotification showWithStatus:@"该功能正在开发中。。。" dismissAfter:2.0
-								  styleName:JDStatusBarStyleSuccess];
+	
+	[self goToSpecifiedPage:@"ReaderListViewController"];
+
+//	[JDStatusBarNotification showWithStatus:@"该功能正在开发中。。。" dismissAfter:2.0
+//								  styleName:JDStatusBarStyleSuccess];
 }
 
 - (void)favoriteConfig{
@@ -320,6 +323,8 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 			}
 			
 			
+			[[NSNotificationCenter defaultCenter]postNotificationName:@"NavigationTitleNotification" object:nil userInfo:@{@"title":ctrl}];
+			
 			[self.navigationController xw_pushViewController:ctrl withAnimator:animator];
 //			[self.navigationController pushViewController:ctrl animated:YES];
 		}
@@ -342,6 +347,9 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 	[self.view addSubview:self.collectionView];
 	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserinfo:) name:@"WBAuthorSuccessfulNotification" object:nil];
+	
+
+
 //	self.collectionView.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
 
 	}
@@ -523,6 +531,8 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:@"WBAuthorSuccessfulNotification" object:nil];
 	
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:@"WXAuthorSuccessfulNotification" object:nil];
+	
+
 }
 
 

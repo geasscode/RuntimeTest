@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ARChromeActivity.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>BlocksKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -45,6 +50,11 @@
 			<false/>
 		</dict>
 		<key>JSPatch.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>KINWebBrowser.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -99,6 +109,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TUSafariActivity-TUSafariActivity.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>TUSafariActivity.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>WMPageController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -122,7 +142,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>12C791C4B0E8B1B5EFE0AACCE577EDC3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2E431163577389EA23905BA6F3468F39</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>31FF44B5E2FF8CF00090950A8B67AFF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BEB83E40A9F1A03104C73C025B77291</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +167,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>570441154F4B3221D0F4B6B66C5D18E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5813251FEA21E4AEE97385709F1912DE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>64CFB6048E6108504C1EF4E1CD36B025</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -152,6 +197,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9A5E1D33B62251D91002217B07B75387</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9EAB3E42EF957541E6C3C76D35FD008E</key>
 		<dict>
 			<key>primary</key>
@@ -162,32 +212,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ACED5E34ACBAFAD02993F8A240C49DED</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AFA3973FE142C55DFBC2D8255255B773</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>B1F9AD3EFFF8821894B3ABC3BB1AAB8F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C3D49CE0B649815561D2E111EDF117EE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C52D24DA8BDDBB719531E2F1589EC684</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C87AEA7AB2214DDFE2F6A3F2989D0C08</key>
+		<key>B498A9C818A533B89C781A45E6121576</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -213,6 +243,16 @@
 			<true/>
 		</dict>
 		<key>E96531D2698B334C4DEC89A22248E32D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7AF14DD2431C8DA79F45F4F1D22075E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9D2457441FD56E45579B42D5F4D8A20</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -252,15 +252,15 @@
 //判断图片保存状态
 
 
-- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
-{
-	if(!error){
-		NSLog(@"Photo saved to library!");
-	}
-	else{
-		NSLog(@"Saving failed :(");
-	}
-}
+//- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo
+//{
+//	if(!error){
+//		NSLog(@"Photo saved to library!");
+//	}
+//	else{
+//		NSLog(@"Saving failed :(");
+//	}
+//}
 
 -(void)saveImage:(NSString *)imageURL
 {
@@ -277,7 +277,39 @@
 		item.selected = NO;
 		[item setImage:[UIImage imageNamed:@"article_detail_late"] forState:UIControlStateNormal];
 		
+		[DBHelper deleteData:_webModel.id];
+		[item setImage:[UIImage imageNamed:@"star1"] forState:UIControlStateNormal];
+		
 	}else{
+		
+		item.selected = YES;
+		
+		
+		DetailModel *model = [DetailModel new];
+		model.title = _webModel.title;
+		model.url = _webModel.url;
+		model.detatilArticleId = _webModel.detatilArticleId;
+		model.feed_title = _webModel.feed_title;
+		
+		MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+		
+		if([DBHelper insertData:model]){
+			hud.labelText = NSLocalizedString(@"成功添加到阅读列表", @"HUD loading title");
+			
+		}
+		else{
+			
+			hud.labelText =  [model.title isEqualToString:@""] || !model.title ? @"正在添加到阅读列表？" : @"成功添加到阅读列表";
+		}
+		
+		hud.mode = MBProgressHUDModeText;
+		hud.dimBackground = YES;
+		
+		[hud showAnimated:YES whileExecutingBlock:^{
+			sleep(1);
+		} completionBlock:^{
+			[hud removeFromSuperViewOnHide];
+		}];
 		
 		item.selected = YES;
 		[item setImage:[UIImage imageNamed:@"article_detail_late_on"] forState:UIControlStateNormal];

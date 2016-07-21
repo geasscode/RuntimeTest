@@ -20,4 +20,9 @@
  */
 + (UIColor *)colorWithHexString:(NSString *)color alpha:(CGFloat)alpha;
 
+
++ (UIColor *)colorWithRGBHex:(UInt32)hex;
+
++ (UIColor *)colorWithHexString:(NSString *)stringToConvert;
+
 @end

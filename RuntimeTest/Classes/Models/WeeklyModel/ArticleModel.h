@@ -26,6 +26,9 @@ typedef void (^successBlock)(NSArray *modelArray);
 
 @property (nonatomic,copy) NSString *img;
 
+//@property (nonatomic,assign) BOOL hasRead;
+
+
 /**
  *  请求指定标题的数据
  */

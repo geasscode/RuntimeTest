@@ -12,5 +12,7 @@
 
 @property (nonatomic, copy) NSString *filterString;
 @property (readonly, copy) NSArray *visibleResults;
+@property (readonly, copy) NSString *navigationTitle;
+
 
 @end

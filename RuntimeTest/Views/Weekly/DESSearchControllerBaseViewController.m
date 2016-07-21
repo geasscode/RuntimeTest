@@ -29,9 +29,16 @@ NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+	
+	
 	//如果父类有的话优先调用父类的方法，由于父类有个forCellReuseIdentifier:@"favorite" 造成 favorite 与 searchCell不匹配。就会提示
 	//unable to dequeue a cell with identifier - must register a nib or a class for the identifier
 	//请仔细检查，仔细检查，仔细检查。复制带来的bug。
+	
+	
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showTitles:) name:@"NavigationTitleNotification" object:nil];
+	
 	[self configureTableViewUI];
 	[self configureNavgationItem];
 	self.allResults = [DBHelper getListData];
@@ -43,6 +50,16 @@ NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @
 	[self.tableView reloadData];
 }
 
+
+-(void)showTitles:(NSNotification *)notification{
+	
+	UIViewController * controller = notification.userInfo[@"title"];
+
+//	UIViewController * controller = notification.userInfo[@"navigationTitle"];
+	
+	DESLog(@"show ");
+	
+}
 - (void)readDataByDB {
 	self.visibleResults = [DBHelper getListData];
 }
@@ -271,7 +288,12 @@ NSString *const DESSearchControllerBaseViewControllerTableViewCellIdentifier = @
 }
 
 
-
+- (void)dealloc{
+	
+	
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:@"NavigationTitleNotification" object:nil];
+	
+}
 
 
 @end

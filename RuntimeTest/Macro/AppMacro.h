@@ -20,5 +20,6 @@
 #import "UINavigationController+XWTransition.h"
 #import "UIViewController+XWTransition.h"
 #import "XWCoolAnimator.h"
+#import "SDPhotoBrowser.h"
 
 #endif /* AppMacro_h */

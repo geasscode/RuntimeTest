@@ -14,9 +14,16 @@
 
 //插入收藏数据
 + (BOOL)insertData:(DetailModel *)model;
++ (BOOL)insertReaderList:(DetailModel *)model;
+
 //删除收藏数据
 + (void)deleteData:(NSInteger)fid;
+
+//删除未读数据
++ (void)deleteReaderList:(NSInteger)fid;
+
 //获取列表
 + (NSMutableArray *)getListData;
++ (NSMutableArray *)getReaderList;
 
 @end

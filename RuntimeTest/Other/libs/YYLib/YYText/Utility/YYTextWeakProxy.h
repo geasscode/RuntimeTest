@@ -1,6 +1,6 @@
 //
-//  YYWeakProxy.h
-//  YYKit <https://github.com/ibireme/YYKit>
+//  YYTextWeakProxy.h
+//  YYText <https://github.com/ibireme/YYText>
 //
 //  Created by ibireme on 14/10/18.
 //  Copyright (c) 2015 ibireme.
@@ -24,14 +24,14 @@ NS_ASSUME_NONNULL_BEGIN
      }
      
      - (void)initTimer {
-        YYWeakProxy *proxy = [YYWeakProxy proxyWithTarget:self];
+        YYTextWeakProxy *proxy = [YYTextWeakProxy proxyWithTarget:self];
         _timer = [NSTimer timerWithTimeInterval:0.1 target:proxy selector:@selector(tick:) userInfo:nil repeats:YES];
      }
      
      - (void)tick:(NSTimer *)timer {...}
      @end
  */
-@interface YYWeakProxy : NSProxy
+@interface YYTextWeakProxy : NSProxy
 
 /**
  The proxy target.

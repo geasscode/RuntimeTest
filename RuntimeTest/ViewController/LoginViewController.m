@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "ThirdLoginView.h"
+
 #define mainSize    [UIScreen mainScreen].bounds.size
 
 #define offsetLeftHand      60
@@ -43,6 +44,7 @@
     @property (nonatomic, strong) UIButton *dragMeButton;
 
 
+
 //NSUserDefaults 详细使用，读取写入，系统类，自定义类的用法，忘记了可以从下面网址回顾。
 //http://www.jianshu.com/p/f935659fc637
 
@@ -69,6 +71,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 
 - (ThirdLoginView *)thirdView

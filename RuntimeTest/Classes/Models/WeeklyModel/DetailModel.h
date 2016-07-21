@@ -44,6 +44,10 @@ typedef void (^successBlock) (DetailModel *);
  */
 @property (nonatomic,strong) NSArray *images;
 
+
+@property (nonatomic,copy) NSString *hasRead;
+
+
 //获得详情页面模型数据
 +(void)detileNewsModelGetWithdetailTextId:(NSString *)detailTextId success:(successBlock)successback;
 

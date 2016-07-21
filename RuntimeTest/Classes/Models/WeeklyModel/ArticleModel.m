@@ -22,8 +22,9 @@
 	[aCoder encodeObject:self.uts forKey:@"uts"];
 	[aCoder encodeObject:self.feed_title forKey:@"feed_title"];
 	[aCoder encodeObject:self.img forKey:@"img"];
-	
+//	[aCoder encodeObject: [NSNumber numberWithBool:_hasRead] forKey:@"hasRead"];
 }
+
 -(instancetype)initWithCoder:(NSCoder *)aDecoder{
 	
 	if (self = [super init]) {
@@ -34,6 +35,8 @@
 		self.uts = [aDecoder decodeObjectForKey:@"uts"];
 		self.feed_title = [aDecoder decodeObjectForKey:@"feed_title"];
 		self.img = [aDecoder decodeObjectForKey:@"img"];
+//		self.hasRead = [aDecoder decodeObjectForKey:@"hasRead"];
+
 		
 	}
 	return self;

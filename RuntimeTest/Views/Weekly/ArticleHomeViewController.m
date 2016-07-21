@@ -14,6 +14,7 @@
 
 @interface ArticleHomeViewController ()
 
+
 @end
 
 @implementation ArticleHomeViewController
@@ -41,6 +42,8 @@
 }
 
 
+
+
 #pragma mark - 设置导航栏
 /**
  *  设置导航栏
@@ -49,7 +52,10 @@
 	
 	UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(searchBtn)];
 	
-	UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"more1"] style:UIBarButtonItemStylePlain target:self action:@selector(moreBtn)];
+//	UIBarButtonItem *rightItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"more1"] style:UIBarButtonItemStylePlain target:self action:@selector(moreBtn)];
+	
+	
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:[[YYFPSLabel alloc]initWithFrame:CGRectMake(0, 5, 60, 30)]];
 	
 	//设置字体记得在plist增加 Font provided by application
 	
@@ -62,7 +68,7 @@
 //	titleLabel.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, 28);
 	
 	self.navigationItem.leftBarButtonItem = leftItem;
-	self.navigationItem.rightBarButtonItem = rightItem;
+//	self.navigationItem.rightBarButtonItem = rightItem;
 	
 }
 /**
@@ -95,6 +101,9 @@
 	
 	
 }
+
+
+
 
 
 @end
