@@ -8,11 +8,13 @@
 
 #import "MineViewController.h"
 #import "MyCollectionViewCell.h"
-#import "User.h"
+#import "UserSettings.h"
 #import "FavoriteTableViewController.h"
 #import "SuggestViewController.h"
 #import "LoginViewController.h"
 #import "UpdatePasswordViewController.h"
+#import <UIImageView+WebCache.h>
+
 #define CELL_WIDTH self.view.bounds.size.width / 3
 
 static NSString *const JDButtonName = @"JDButtonName";
@@ -35,7 +37,7 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 
 @implementation MineViewController{
 	
-	User *user;
+	UserSettings *user;
 	
 }
 
@@ -117,7 +119,7 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 			break;
 		case Theme:
 			[self themeConfig];
-//			break;
+			break;
 		case Subscribe:
 			[self subscribeConfig];
 			break;
@@ -179,8 +181,8 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 
 -(void)themeConfig{
 	
-	[self night];
-	[JDStatusBarNotification showWithStatus:@"该功能正在开发中。。。" dismissAfter:2.0
+//	[self night];
+	[JDStatusBarNotification showWithStatus:@"该功能是整个app的灵魂正在策划中。" dismissAfter:2.0
 								  styleName:JDStatusBarStyleSuccess];
 }
 
@@ -248,6 +250,9 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 		[userDefaults setObject:nil forKey:@"Password"];
 		[userDefaults setObject:nil forKey:@"nickname"];
 		[userDefaults setObject:nil forKey:@"userId"];
+		
+		[AccountTool deleteUserInfomation];
+
 		//同时跳转到登录界面；
 		[self goToSpecifiedPage:@"LoginViewController"];
 
@@ -365,19 +370,19 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 	[UIApplication sharedApplication].statusBarHidden = NO;
 	self.navigationController.navigationBarHidden = YES;
 	
-//	user = [AccountTool getUserInformation];
-//	
-//	if (user.name) {
-//		
-//		self.userNameLabel.text = user.name;
-//		
-//		[self.headImageView sd_setImageWithURL:[NSURL URLWithString:user.avatar_large]];
-//	}else {
-//		
-//		self.userNameLabel.text = @"未登录";
-//		
-//		self.headImageView.image = [UIImage imageNamed:@"bg_headinmage"];
-//	}
+	user = [AccountTool getUserInformation];
+	
+	if (user.name) {
+		
+		self.userNameLabel.text = user.name;
+		
+		[self.headImageView sd_setImageWithURL:[NSURL URLWithString:user.avatar_large]];
+	}else {
+		
+		self.userNameLabel.text = @"未登录";
+		
+		self.headImageView.image = [UIImage imageNamed:@"bg_headinmage"];
+	}
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -432,51 +437,51 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 	
 	if ([notification.name isEqualToString:@"WXAuthorSuccessfulNotification"]) {
 		
-//		User *user1 = [[User alloc] init];
-//		
-//		user1.id = [notification.userInfo[@"unionid"] integerValue];
-//		
-//		user1.name = notification.userInfo[@"nickname"];
-//		
-//		user1.gender = notification.userInfo[@"sex"];
-//		
-//		user1.avatar_large = notification.userInfo[@"headimgurl"];
-//		
-//		user1.userDescription = @"暂无个人介绍";
-//		
-//		[AccountTool saveUserInformation:user1];
-//		
-//		self.userNameLabel.text = user1.name;
-//		
-//		[self.headImageView sd_setImageWithURL:[NSURL URLWithString:user1.avatar_large]];
+		UserSettings *user1 = [[UserSettings alloc] init];
+
+		user1.id = [notification.userInfo[@"unionid"] integerValue];
+		
+		user1.name = notification.userInfo[@"nickname"];
+		
+		user1.gender = notification.userInfo[@"sex"];
+		
+		user1.avatar_large = notification.userInfo[@"headimgurl"];
+		
+		user1.userDescription = @"暂无个人介绍";
+		
+		[AccountTool saveUserInformation:user1];
+//
+		self.userNameLabel.text = user1.name;
+
+		[self.headImageView sd_setImageWithURL:[NSURL URLWithString:user1.avatar_large]];
 		
 	}else {
 		
 		//保存登录信息
-//		User *user1 = [[User alloc] init];
-//		
-//		user1.id = [notification.userInfo[@"id"] integerValue];
-//		
-//		user1.name = notification.userInfo[@"name"];
-//		
-//		user1.userDescription = notification.userInfo[@"description"];
-//		
-//		user1.gender = notification.userInfo[@"gender"];
-//		
-//		user1.avatar_large = notification.userInfo[@"avatar_large"];
-//		
-//		[AccountTool saveUserInformation:user1];
-//		
-//		self.userNameLabel.text = user1.name;
-//		
-//		[self.headImageView sd_setImageWithURL:[NSURL URLWithString:user1.avatar_large]];
+		UserSettings *user1 = [[UserSettings alloc] init];
+
+		user1.id = [notification.userInfo[@"id"] integerValue];
+		
+		user1.name = notification.userInfo[@"name"];
+		
+		user1.userDescription = notification.userInfo[@"description"];
+		
+		user1.gender = notification.userInfo[@"gender"];
+		
+		user1.avatar_large = notification.userInfo[@"avatar_large"];
+		
+		[AccountTool saveUserInformation:user1];
+//
+		self.userNameLabel.text = user1.name;
+
+		[self.headImageView sd_setImageWithURL:[NSURL URLWithString:user1.avatar_large]];
 	}
 }
 
 #pragma mark - 点击个人头像后相应的操作
 - (IBAction)loginButtonAction:(id)sender {
 	
-	if (user) {
+	if (user.name) {
 		//登录状态下查看个人信息
 //		UserInfoDetailViewController *userInfoDetailVC = [[UserInfoDetailViewController alloc] init];
 //		

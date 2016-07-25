@@ -21,5 +21,6 @@
 #import "UIViewController+XWTransition.h"
 #import "XWCoolAnimator.h"
 #import "SDPhotoBrowser.h"
+#import "AccountTool.h"
 
 #endif /* AppMacro_h */

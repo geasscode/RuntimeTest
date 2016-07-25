@@ -33,9 +33,18 @@
 				<string>tencent1103194207.content</string>
 				<string>QQ41C1685F</string>
 				<string>QQ06071A28</string>
-				<string>wb4003638958</string>
 				<string>renrenshare228525</string>
 				<string>fb776442542471056</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>weibo.cn</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wb4003638958</string>
 			</array>
 		</dict>
 	</array>

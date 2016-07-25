@@ -23,6 +23,8 @@
 #define weiboAppKey @"4003638958"
 #define appkey @"12f1847875e26"
 #define app_secrect @"69471e44e59a7d4bcf068d7b7329d9c8"
+#define kRedirectURL @"https://api.weibo.com/oauth2/default.html"
+#define weibo_app_secrect @"bd1df8265cc8ffd8db0d69a5501b174a"
 
 @interface AppDelegate ()<WXApiDelegate>
 
@@ -416,11 +418,13 @@ static AppDelegate *appdelegate;
 
 -(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
 	
+//	由于之前混合各种SDK，一直没有排查到使用SSO 登录不到的原因，现在凶手就在这里。
+// [WeiboSDK handleOpenURL:url delegate:self]; 没执行到是不会执行代理方法  didReceiveWeiboResponse的。
 	
 	
-	if ([OpenShare handleOpenURL:url]) {
-		return YES;
-	}
+//	if ([OpenShare handleOpenURL:url]) {
+//		return YES;
+//	}
 	
 	[WXApi handleOpenURL:url delegate:self];
 	return [WeiboSDK handleOpenURL:url delegate:self];
@@ -428,6 +432,9 @@ static AppDelegate *appdelegate;
 	//这里可以写上其他OpenShare不支持的客户端的回调，比如支付宝等。
 //	return YES;
 }
+
+
+
 
 
 - (void)application:(UIApplication *)application
@@ -518,6 +525,7 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
 			self.userID = userID;
 		}
 		NSLog(@"返回状态%ld  %@   %@",response.statusCode,response.userInfo,response.requestUserInfo);
+		
 	}else if([response isKindOfClass:[WBAuthorizeResponse class]]){
 		self.userID = [(WBAuthorizeResponse *)response userID];
 		self.access_token = [(WBAuthorizeResponse *)response accessToken];

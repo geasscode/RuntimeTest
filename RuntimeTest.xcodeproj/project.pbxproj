@@ -115,6 +115,8 @@
 		F754B7C81D24EF5C0003A340 /* ADHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = F754B7C71D24EF5C0003A340 /* ADHelper.m */; };
 		F754B7CA1D24F2050003A340 /* adimage.png in Resources */ = {isa = PBXBuildFile; fileRef = F754B7C91D24F2050003A340 /* adimage.png */; };
 		F75DA1071D3CC33A00822CB5 /* ReaderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F75DA1061D3CC33A00822CB5 /* ReaderListViewController.m */; };
+		F761F3AD1D45FD4500DB7DDB /* UserSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3AC1D45FD4500DB7DDB /* UserSettings.m */; };
+		F761F3B01D46066400DB7DDB /* AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3AF1D46066400DB7DDB /* AccountTool.m */; };
 		F762B8571CEC13DB00E5DDAD /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8561CEC13DB00E5DDAD /* UILabel+Utils.m */; };
 		F762B85A1CEC144400E5DDAD /* UITextView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8591CEC144400E5DDAD /* UITextView+Utils.m */; };
 		F7644F5C1CF5A0B000FD9DAF /* ActivityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7644F5B1CF5A0B000FD9DAF /* ActivityItem.m */; };
@@ -716,6 +718,10 @@
 		F754B7C91D24F2050003A340 /* adimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = adimage.png; sourceTree = "<group>"; };
 		F75DA1051D3CC33A00822CB5 /* ReaderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReaderListViewController.h; sourceTree = "<group>"; };
 		F75DA1061D3CC33A00822CB5 /* ReaderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReaderListViewController.m; sourceTree = "<group>"; };
+		F761F3AB1D45FD4500DB7DDB /* UserSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettings.h; sourceTree = "<group>"; };
+		F761F3AC1D45FD4500DB7DDB /* UserSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettings.m; sourceTree = "<group>"; };
+		F761F3AE1D46066400DB7DDB /* AccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTool.h; sourceTree = "<group>"; };
+		F761F3AF1D46066400DB7DDB /* AccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTool.m; sourceTree = "<group>"; };
 		F762B8551CEC13DB00E5DDAD /* UILabel+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Utils.h"; sourceTree = "<group>"; };
 		F762B8561CEC13DB00E5DDAD /* UILabel+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Utils.m"; sourceTree = "<group>"; };
 		F762B8581CEC144400E5DDAD /* UITextView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Utils.h"; sourceTree = "<group>"; };
@@ -1601,6 +1607,8 @@
 				F752F6CC1D2CAAAD00DB4647 /* DESSiteItemModel.m */,
 				F746C8561D3389AE0022836E /* MineModel.h */,
 				F746C8571D3389AE0022836E /* MineModel.m */,
+				F761F3AB1D45FD4500DB7DDB /* UserSettings.h */,
+				F761F3AC1D45FD4500DB7DDB /* UserSettings.m */,
 			);
 			path = WeeklyModel;
 			sourceTree = "<group>";
@@ -2013,6 +2021,8 @@
 				F76CB8021CE4857C00D8474F /* ArticleTool.m */,
 				F754B7C61D24EF5C0003A340 /* ADHelper.h */,
 				F754B7C71D24EF5C0003A340 /* ADHelper.m */,
+				F761F3AE1D46066400DB7DDB /* AccountTool.h */,
+				F761F3AF1D46066400DB7DDB /* AccountTool.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -3246,6 +3256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F768EF5C1D07FF08005747E3 /* HomeCategoryCell.m in Sources */,
+				F761F3AD1D45FD4500DB7DDB /* UserSettings.m in Sources */,
 				F782CA841D40B98800D9FEA7 /* YLImageView.m in Sources */,
 				F7754BE31CC753F600F989DA /* DynamicExchangeMethodViewController.m in Sources */,
 				F7275CF41CD094C8002F0F68 /* CustomerItem.m in Sources */,
@@ -3423,6 +3434,7 @@
 				F7B1EABC1CC633E000307F41 /* UIImage+Size.m in Sources */,
 				F762B8571CEC13DB00E5DDAD /* UILabel+Utils.m in Sources */,
 				F7BAC76A1CC8DCBF000D9795 /* ContactModel.m in Sources */,
+				F761F3B01D46066400DB7DDB /* AccountTool.m in Sources */,
 				F74676CB1CB63A320001D3A5 /* UIViewController+swizzling.m in Sources */,
 				F768EF621D07FF08005747E3 /* SecondViewModel.m in Sources */,
 				F7BCC6181CCF6F2A00704878 /* HomeDetailViewController.m in Sources */,
