@@ -268,9 +268,10 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 //					  @{JDButtonName:@"Show Activity Indicator", JDButtonInfo:@"UIActivityIndicatorViewStyleGray", JDNotificationText:@"Some Activity…"},
 //					  @{JDButtonName:@"Dismiss Notification", JDButtonInfo:@"Animated", JDNotificationText:@""}];
 	
-	[JDStatusBarNotification showWithStatus:@"系统繁忙，请稍后再试。"
-							   dismissAfter:2.0
-								  styleName:@"geass"];
+//	[JDStatusBarNotification showWithStatus:@"系统繁忙，请稍后再试。"
+//							   dismissAfter:2.0
+//								  styleName:@"geass"];
+	
 }
 
 - (void)addItem:(NSString *)title class:(NSString *)className image:(NSString *)imageName {
@@ -283,8 +284,9 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 
 //- (void)selectedItemAtIndexPath:(NSIndexPath *)indexPath{
 
-//	0.1.3.6 Push
-//	4.8 present .4storyboard
+- (void)gotoLoginPage:(NSNotification*)notification{
+	[self goToSpecifiedPage:@"LoginViewController"];
+}
 	
 - (void)goToSpecifiedPage:(NSString *)pageName{
 	
@@ -328,7 +330,7 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 			}
 			
 			
-			[[NSNotificationCenter defaultCenter]postNotificationName:@"NavigationTitleNotification" object:nil userInfo:@{@"title":ctrl}];
+//			[[NSNotificationCenter defaultCenter]postNotificationName:@"NavigationTitleNotification" object:nil userInfo:@{@"title":ctrl}];
 			
 			[self.navigationController xw_pushViewController:ctrl withAnimator:animator];
 //			[self.navigationController pushViewController:ctrl animated:YES];
@@ -351,7 +353,14 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 	
 	[self.view addSubview:self.collectionView];
 	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserNameAndAvatar:) name:@"QQAuthorSuccessfulNotification" object:nil];
+	
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserinfo:) name:@"WBAuthorSuccessfulNotification" object:nil];
+
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUserinfo:) name:@"WXAuthorSuccessfulNotification" object:nil];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotoLoginPage:) name:@"goToLoginPage" object:nil];
 	
 
 
@@ -377,6 +386,13 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 		self.userNameLabel.text = user.name;
 		
 		[self.headImageView sd_setImageWithURL:[NSURL URLWithString:user.avatar_large]];
+		
+		if(user.hasLocalUser){
+			//本地登录随便选个图片。暂时没有打算用户自己选择图片的功能。
+			self.headImageView.image = [UIImage imageNamed:@"bg_headinmage"];
+		}
+		
+		
 	}else {
 		
 		self.userNameLabel.text = @"未登录";
@@ -478,6 +494,54 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 	}
 }
 
+- (void)updateUserNameAndAvatar:(NSNotification*)notification{
+	//修改登录状态
+	isLogin = YES;
+	
+	//qq 登录其实是qq空间登录，以下是返回的用户信息。
+	//	"access_token" = 56D4EBBD6E20A7E4128EF054FCBDF59D;
+	//	city = "";
+	//	country = "\U9a6c\U5176\U987f";
+	//	encrytoken = fa03dda5b1db48fcb53b9e75fdf499ae;
+	//	"expires_in" = 7776000;
+	//	figureurl = "http://thirdapp3.qlogo.cn/qzopenapp/b025b6dd00a560fc873e07a7763aa6cfdb9c090ebe66c828b7e05d02fcf095f6/50";
+	//	gender = "\U7537";
+	//	"is_lost" = 0;
+	//	"is_yellow_high_vip" = 0;
+	//	"is_yellow_vip" = 0;
+	//	"is_yellow_year_vip" = 0;
+	//	msg = "";
+	//	nickname = Cloud;
+	//	openid = 3A0075632368105EDEA1156E1BB44B78;
+	//	"pay_token" = 53EA07B25A3249242BE08D441E0610B2;
+	//	pf = "openmobile_ios";
+	//	pfkey = 96163a92d1a0fdcd2843a14fcab6ddb5;
+	//	province = "";
+	//	ret = 0;
+	//	"user_cancelled" = NO;
+	//	"yellow_vip_level" = 0;
+	
+	//保存登录信息
+	UserSettings *user1 = [[UserSettings alloc] init];
+	
+	user1.id = [notification.userInfo[@"openid"] integerValue];
+	
+	user1.name = notification.userInfo[@"nickname"];
+	
+	user1.userDescription = notification.userInfo[@"msg"];
+	
+	user1.gender = notification.userInfo[@"gender"];
+	
+	user1.avatar_large = notification.userInfo[@"figureurl"];
+	
+	[AccountTool saveUserInformation:user1];
+	//
+	self.userNameLabel.text = user1.name;
+	
+	[self.headImageView sd_setImageWithURL:[NSURL URLWithString:user1.avatar_large]];
+	
+}
+
 #pragma mark - 点击个人头像后相应的操作
 - (IBAction)loginButtonAction:(id)sender {
 	
@@ -537,6 +601,7 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 	
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:@"WXAuthorSuccessfulNotification" object:nil];
 	
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:@"gotoLoginPage" object:nil];
 
 }
 

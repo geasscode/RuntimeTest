@@ -40,6 +40,8 @@
 #import "JPEngine.h"
 #import "DKNight.h"
 #import "YYFPSLabel.h"
+#import "OpenShareHeader.h"
+
 
 //微信SDK头文件
 #import "WXApi.h"

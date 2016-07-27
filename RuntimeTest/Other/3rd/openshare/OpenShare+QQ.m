@@ -19,9 +19,13 @@ enum
     kkQQAPICtrlFlagQQShareDataline = 0x10,  //数据线
 };
 
-+(void)connectQQWithAppId:(NSString *)appId{
++(void)connectQQWithAppId:(NSString *)appId secret:(NSString *)secret{
     [self set:schema Keys:@{@"appid":appId,@"callback_name":[NSString stringWithFormat:@"QQ%02llx",[appId longLongValue]]}];
+	[[NSUserDefaults standardUserDefaults] setObject:appId forKey:@"kSNSPlatformQQIdKey"];
+	[[NSUserDefaults standardUserDefaults] setObject:secret forKey:@"kSNSPlatformQQSecretKey"];
+	[[NSUserDefaults standardUserDefaults] synchronize];
 }
+
 +(BOOL)isQQInstalled{
     return [self canOpen:@"mqqapi://"];
 }

@@ -116,7 +116,9 @@
 	cell.urlstring = model.urlstring;
 	cell.title = model.title;
 	cell.dk_backgroundColorPicker = DKColorPickerWithRGB(0xffffff, 0x343434, 0xfafafa);
-
+	
+	
+	
 	return cell;
 }
 

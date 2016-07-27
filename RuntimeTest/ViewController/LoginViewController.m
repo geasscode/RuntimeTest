@@ -11,6 +11,11 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "ThirdLoginView.h"
+#import <TencentOpenAPI/QQApiInterface.h>
+#import <TencentOpenAPI/TencentOAuth.h>
+
+#import "TWOAuth.h"
+#import "NSString+SNSAddition.h"
 
 #define mainSize    [UIScreen mainScreen].bounds.size
 
@@ -87,7 +92,7 @@
 					[self WeiboLogin];
 					break;
 				case LoginTypeQQ:
-					//   [self QQLogin];
+					   [self qqLogin];
 					break;
 				case LoginTypeWechat:
 					[self WeChatLogin];
@@ -315,6 +320,16 @@
 					self.globalApp.GLOBAL_USERID = [obj objectForKey:@"objectId"];
 					self.globalApp.GLOBAL_PASSWORD = password;
 					
+					
+					
+					UserSettings *localUser = [[UserSettings alloc] init];
+					localUser.userID = [obj objectForKey:@"objectId"];
+					localUser.name = username;
+					localUser.password = password;
+					localUser.hasLocalUser = YES;
+					localUser.userDescription = @"暂无个人介绍";
+					[AccountTool saveUserInformation:localUser];
+					
 					[self.userDefaults setObject:[obj objectForKey:@"objectId"] forKey:@"userId"];
 					[self.userDefaults setObject:username forKey:@"username"];
 					[self.userDefaults setObject:password forKey:@"Password"];
@@ -343,14 +358,7 @@
 
 }
 
-- (void)qqButtonClicked{
-}
 
-- (void)sinaButtonClicked{
-}
-
-- (void)tecentButtonClicked{
-}
 
 -(void)registerButtonClicked{
 	
@@ -426,25 +434,53 @@
 	[self.view endEditing:YES];
 }
 
-#pragma mark - 第三方登录Action
-- (IBAction)thirdPlatformLoginAction:(UIButton *)sender {
-	switch (sender.tag) {
-		case 0:
-			[self WeChatLogin];
-			break;
-		case 1:
-			[self WeiboLogin];
-			break;
-		case 2:
-			//   [self QQLogin];
-			break;
-			
-		default:
-			break;
-	}
-	
-}
 
+
+//http://wiki.open.qq.com/wiki/移动应用接入wiki索引
+- (void)qqLogin{
+	
+//	微信的获取用户信息接口：http://mp.weixin.qq.com/wiki/17/c0f37d5704f0b64713d5d2c37b468d75.html
+//	
+//	微博的获取用户接口：http://open.weibo.com/wiki/2/users/show
+//	
+//	QQ的获取用户信息接口：http://wiki.open.qq.com/wiki/v3/user/get_info
+	
+	//http://wiki.connect.qq.com/api列表
+
+	[OpenShare QQAuth:@"get_user_info,get_simple_userinfo,get_info" Success:^(NSDictionary *message) {
+		DESLog(@"QQ登录成功\n%@",message);
+		[TWOAuth qqOAuthWithMessage:message completionHandle:^(NSDictionary *data, NSError *error)
+		 {
+			 NSLog(@"data:%@", data);
+			 
+			 [[NSNotificationCenter defaultCenter] postNotificationName:@"QQAuthorSuccessfulNotification" object:nil userInfo:data];
+			 
+			 [self dismissViewControllerAnimated:YES completion:nil];
+
+			 NSLog(@"error:%@", error);
+		 }];
+
+
+	} Fail:^(NSDictionary *message, NSError *error) {
+		DESLog(@"QQ登录失败\n%@\n%@",error,message);
+	}];
+	
+//	UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToQQ];
+//	
+//	snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+//		
+//		//          获取微博用户名、uid、token等
+//		
+//		if (response.responseCode == UMSResponseCodeSuccess) {
+//			
+//			NSDictionary *dict = [UMSocialAccountManager socialAccountDictionary];
+//			UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:snsPlatform.platformName];
+//			NSLog(@"\nusername = %@,\n usid = %@,\n token = %@ iconUrl = %@,\n unionId = %@,\n thirdPlatformUserProfile = %@,\n thirdPlatformResponse = %@ \n, message = %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL, snsAccount.unionId, response.thirdPlatformUserProfile, response.thirdPlatformResponse, response.message);
+//			
+//		}});
+//	
+//	//UMShareToQQ替换为UMShareToQzone即可
+}
 /**
  *  通过SSO方式和author 2.0 方式进行授权
  */
@@ -459,6 +495,9 @@
 /**
  *  微信登录
  */
+// 需要300 大洋，需要一大堆企业申请资料，个人开发者可以选择别人的账号，或者公司的。
+// http://www.jianshu.com/p/b9f4cb66a4e2
+//https://open.weixin.qq.com  去这个地方注册。
 - (void)WeChatLogin {
 	
 	[[AppDelegate sharedAppdelegate] getWXCodeStringWithController:self];

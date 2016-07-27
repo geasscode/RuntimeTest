@@ -22,5 +22,6 @@
 #import "XWCoolAnimator.h"
 #import "SDPhotoBrowser.h"
 #import "AccountTool.h"
-
+#import <CoreSpotlight/CoreSpotlight.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 #endif /* AppMacro_h */

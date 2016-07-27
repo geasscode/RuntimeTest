@@ -18,7 +18,9 @@
  *  <string>QQ41C1685F</string> 16进制表示的appid，可以通过new Number(1103194207).toString(16).toUpperCase()获取。
  *  @param appId 所申请的应用的APP ID
  */
-+(void)connectQQWithAppId:(NSString *)appId;
+
++(void)connectQQWithAppId:(NSString *)appId secret:(NSString *)secret;
+//+(void)connectQQWithAppId:(NSString *)appId;
 +(BOOL)isQQInstalled;
 
 +(void)shareToQQFriends:(OSMessage*)msg Success:(shareSuccess)success Fail:(shareFail)fail;

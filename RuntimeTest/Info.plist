@@ -25,16 +25,15 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>OpenShare</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>openshare</string>
-				<string>wx9ad490e6428d5a7f</string>
-				<string>tencent1103194207</string>
-				<string>tencent1103194207.content</string>
+				<string>tencent101128744</string>
+				<string>tencent101128744.content</string>
 				<string>QQ41C1685F</string>
-				<string>QQ06071A28</string>
-				<string>renrenshare228525</string>
-				<string>fb776442542471056</string>
+				<string>wb4003638958</string>
 			</array>
 		</dict>
 		<dict>
@@ -45,6 +44,16 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>wb4003638958</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>weixin</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>wx8011e108b672eee2</string>
 			</array>
 		</dict>
 	</array>

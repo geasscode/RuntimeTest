@@ -117,6 +117,23 @@
 		F75DA1071D3CC33A00822CB5 /* ReaderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F75DA1061D3CC33A00822CB5 /* ReaderListViewController.m */; };
 		F761F3AD1D45FD4500DB7DDB /* UserSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3AC1D45FD4500DB7DDB /* UserSettings.m */; };
 		F761F3B01D46066400DB7DDB /* AccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3AF1D46066400DB7DDB /* AccountTool.m */; };
+		F761F3B41D47392900DB7DDB /* UIDevice+VKKeychainIDFV.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3B31D47392900DB7DDB /* UIDevice+VKKeychainIDFV.m */; };
+		F761F3C01D473DD900DB7DDB /* UINavigationController+VKURLAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3B71D473DD900DB7DDB /* UINavigationController+VKURLAction.m */; };
+		F761F3C11D473DD900DB7DDB /* VKMediatorAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3B91D473DD900DB7DDB /* VKMediatorAction.m */; };
+		F761F3C21D473DD900DB7DDB /* VKMsgSend.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3BB1D473DD900DB7DDB /* VKMsgSend.m */; };
+		F761F3C31D473DD900DB7DDB /* VKURLAction.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3BD1D473DD900DB7DDB /* VKURLAction.m */; };
+		F761F3C41D473DD900DB7DDB /* VKURLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3BF1D473DD900DB7DDB /* VKURLParser.m */; };
+		F761F3D91D48506600DB7DDB /* NSString+SNSAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3C71D48506600DB7DDB /* NSString+SNSAddition.m */; };
+		F761F3DA1D48506600DB7DDB /* share-qq@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F761F3C91D48506600DB7DDB /* share-qq@3x.png */; };
+		F761F3DB1D48506600DB7DDB /* share-qqzone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F761F3CA1D48506600DB7DDB /* share-qqzone@3x.png */; };
+		F761F3DC1D48506600DB7DDB /* share-weibo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F761F3CB1D48506600DB7DDB /* share-weibo@3x.png */; };
+		F761F3DD1D48506600DB7DDB /* share-weixin-frends@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F761F3CC1D48506600DB7DDB /* share-weixin-frends@3x.png */; };
+		F761F3DE1D48506600DB7DDB /* share-weixin@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F761F3CD1D48506600DB7DDB /* share-weixin@3x.png */; };
+		F761F3DF1D48506600DB7DDB /* TWOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3CF1D48506600DB7DDB /* TWOAuth.m */; };
+		F761F3E01D48506600DB7DDB /* TWShare.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3D11D48506600DB7DDB /* TWShare.m */; };
+		F761F3E11D48506600DB7DDB /* TWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3D31D48506600DB7DDB /* TWShareView.m */; };
+		F761F3E21D48506600DB7DDB /* TWSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3D51D48506600DB7DDB /* TWSNS.m */; };
+		F761F3E31D48506600DB7DDB /* TWSNSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3D81D48506600DB7DDB /* TWSNSRequest.m */; };
 		F762B8571CEC13DB00E5DDAD /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8561CEC13DB00E5DDAD /* UILabel+Utils.m */; };
 		F762B85A1CEC144400E5DDAD /* UITextView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8591CEC144400E5DDAD /* UITextView+Utils.m */; };
 		F7644F5C1CF5A0B000FD9DAF /* ActivityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7644F5B1CF5A0B000FD9DAF /* ActivityItem.m */; };
@@ -722,6 +739,36 @@
 		F761F3AC1D45FD4500DB7DDB /* UserSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettings.m; sourceTree = "<group>"; };
 		F761F3AE1D46066400DB7DDB /* AccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTool.h; sourceTree = "<group>"; };
 		F761F3AF1D46066400DB7DDB /* AccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTool.m; sourceTree = "<group>"; };
+		F761F3B21D47392900DB7DDB /* UIDevice+VKKeychainIDFV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+VKKeychainIDFV.h"; sourceTree = "<group>"; };
+		F761F3B31D47392900DB7DDB /* UIDevice+VKKeychainIDFV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+VKKeychainIDFV.m"; sourceTree = "<group>"; };
+		F761F3B61D473DD900DB7DDB /* UINavigationController+VKURLAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+VKURLAction.h"; sourceTree = "<group>"; };
+		F761F3B71D473DD900DB7DDB /* UINavigationController+VKURLAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+VKURLAction.m"; sourceTree = "<group>"; };
+		F761F3B81D473DD900DB7DDB /* VKMediatorAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMediatorAction.h; sourceTree = "<group>"; };
+		F761F3B91D473DD900DB7DDB /* VKMediatorAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMediatorAction.m; sourceTree = "<group>"; };
+		F761F3BA1D473DD900DB7DDB /* VKMsgSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKMsgSend.h; sourceTree = "<group>"; };
+		F761F3BB1D473DD900DB7DDB /* VKMsgSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKMsgSend.m; sourceTree = "<group>"; };
+		F761F3BC1D473DD900DB7DDB /* VKURLAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKURLAction.h; sourceTree = "<group>"; };
+		F761F3BD1D473DD900DB7DDB /* VKURLAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKURLAction.m; sourceTree = "<group>"; };
+		F761F3BE1D473DD900DB7DDB /* VKURLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKURLParser.h; sourceTree = "<group>"; };
+		F761F3BF1D473DD900DB7DDB /* VKURLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKURLParser.m; sourceTree = "<group>"; };
+		F761F3C61D48506600DB7DDB /* NSString+SNSAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SNSAddition.h"; sourceTree = "<group>"; };
+		F761F3C71D48506600DB7DDB /* NSString+SNSAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SNSAddition.m"; sourceTree = "<group>"; };
+		F761F3C91D48506600DB7DDB /* share-qq@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-qq@3x.png"; sourceTree = "<group>"; };
+		F761F3CA1D48506600DB7DDB /* share-qqzone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-qqzone@3x.png"; sourceTree = "<group>"; };
+		F761F3CB1D48506600DB7DDB /* share-weibo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-weibo@3x.png"; sourceTree = "<group>"; };
+		F761F3CC1D48506600DB7DDB /* share-weixin-frends@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-weixin-frends@3x.png"; sourceTree = "<group>"; };
+		F761F3CD1D48506600DB7DDB /* share-weixin@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-weixin@3x.png"; sourceTree = "<group>"; };
+		F761F3CE1D48506600DB7DDB /* TWOAuth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOAuth.h; sourceTree = "<group>"; };
+		F761F3CF1D48506600DB7DDB /* TWOAuth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWOAuth.m; sourceTree = "<group>"; };
+		F761F3D01D48506600DB7DDB /* TWShare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWShare.h; sourceTree = "<group>"; };
+		F761F3D11D48506600DB7DDB /* TWShare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWShare.m; sourceTree = "<group>"; };
+		F761F3D21D48506600DB7DDB /* TWShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWShareView.h; sourceTree = "<group>"; };
+		F761F3D31D48506600DB7DDB /* TWShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWShareView.m; sourceTree = "<group>"; };
+		F761F3D41D48506600DB7DDB /* TWSNS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSNS.h; sourceTree = "<group>"; };
+		F761F3D51D48506600DB7DDB /* TWSNS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSNS.m; sourceTree = "<group>"; };
+		F761F3D61D48506600DB7DDB /* TWSNSDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSNSDefine.h; sourceTree = "<group>"; };
+		F761F3D71D48506600DB7DDB /* TWSNSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSNSRequest.h; sourceTree = "<group>"; };
+		F761F3D81D48506600DB7DDB /* TWSNSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSNSRequest.m; sourceTree = "<group>"; };
 		F762B8551CEC13DB00E5DDAD /* UILabel+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Utils.h"; sourceTree = "<group>"; };
 		F762B8561CEC13DB00E5DDAD /* UILabel+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Utils.m"; sourceTree = "<group>"; };
 		F762B8581CEC144400E5DDAD /* UITextView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Utils.h"; sourceTree = "<group>"; };
@@ -1848,6 +1895,56 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		F761F3B51D473DD900DB7DDB /* VKURLAction */ = {
+			isa = PBXGroup;
+			children = (
+				F761F3B61D473DD900DB7DDB /* UINavigationController+VKURLAction.h */,
+				F761F3B71D473DD900DB7DDB /* UINavigationController+VKURLAction.m */,
+				F761F3B81D473DD900DB7DDB /* VKMediatorAction.h */,
+				F761F3B91D473DD900DB7DDB /* VKMediatorAction.m */,
+				F761F3BA1D473DD900DB7DDB /* VKMsgSend.h */,
+				F761F3BB1D473DD900DB7DDB /* VKMsgSend.m */,
+				F761F3BC1D473DD900DB7DDB /* VKURLAction.h */,
+				F761F3BD1D473DD900DB7DDB /* VKURLAction.m */,
+				F761F3BE1D473DD900DB7DDB /* VKURLParser.h */,
+				F761F3BF1D473DD900DB7DDB /* VKURLParser.m */,
+			);
+			path = VKURLAction;
+			sourceTree = "<group>";
+		};
+		F761F3C51D48506600DB7DDB /* TWSNS */ = {
+			isa = PBXGroup;
+			children = (
+				F761F3C61D48506600DB7DDB /* NSString+SNSAddition.h */,
+				F761F3C71D48506600DB7DDB /* NSString+SNSAddition.m */,
+				F761F3C81D48506600DB7DDB /* Resources */,
+				F761F3CE1D48506600DB7DDB /* TWOAuth.h */,
+				F761F3CF1D48506600DB7DDB /* TWOAuth.m */,
+				F761F3D01D48506600DB7DDB /* TWShare.h */,
+				F761F3D11D48506600DB7DDB /* TWShare.m */,
+				F761F3D21D48506600DB7DDB /* TWShareView.h */,
+				F761F3D31D48506600DB7DDB /* TWShareView.m */,
+				F761F3D41D48506600DB7DDB /* TWSNS.h */,
+				F761F3D51D48506600DB7DDB /* TWSNS.m */,
+				F761F3D61D48506600DB7DDB /* TWSNSDefine.h */,
+				F761F3D71D48506600DB7DDB /* TWSNSRequest.h */,
+				F761F3D81D48506600DB7DDB /* TWSNSRequest.m */,
+			);
+			path = TWSNS;
+			sourceTree = "<group>";
+		};
+		F761F3C81D48506600DB7DDB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F761F3C91D48506600DB7DDB /* share-qq@3x.png */,
+				F761F3CA1D48506600DB7DDB /* share-qqzone@3x.png */,
+				F761F3CB1D48506600DB7DDB /* share-weibo@3x.png */,
+				F761F3CC1D48506600DB7DDB /* share-weixin-frends@3x.png */,
+				F761F3CD1D48506600DB7DDB /* share-weixin@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F768EF3B1D07FF08005747E3 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -2227,6 +2324,8 @@
 		F7B1EAB31CC633E000307F41 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				F761F3B21D47392900DB7DDB /* UIDevice+VKKeychainIDFV.h */,
+				F761F3B31D47392900DB7DDB /* UIDevice+VKKeychainIDFV.m */,
 				F7B1EAB41CC633E000307F41 /* UIBarButtonItem+WNXBarButtonItem.h */,
 				F7B1EAB51CC633E000307F41 /* UIBarButtonItem+WNXBarButtonItem.m */,
 				F7B1EAB61CC633E000307F41 /* UIColor+WNXColor.h */,
@@ -2393,6 +2492,7 @@
 		F7BAC7071CC8D40E000D9795 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				F761F3C51D48506600DB7DDB /* TWSNS */,
 				F746C8711D348FD40022836E /* JDStatusBarNotification */,
 				F7BB42B81CEEECE1006F5EE3 /* ShareSDK */,
 				F707FE9B1CE06C85008E4F7C /* openshare */,
@@ -2523,6 +2623,7 @@
 		F7BAC76B1CC8DD33000D9795 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				F761F3B51D473DD900DB7DDB /* VKURLAction */,
 				F782CA7E1D40B98800D9FEA7 /* YLGIFImage */,
 				F782CA601D40B68F00D9FEA7 /* MJPhotoBrowser */,
 				F782CA161D3F835100D9FEA7 /* SDPhotoBrowser */,
@@ -3078,8 +3179,10 @@
 				F768EFAD1D0805EE005747E3 /* goods6.jpg in Resources */,
 				F768EFB81D0805EE005747E3 /* reward.json in Resources */,
 				F7BCC5761CCDF0D500704878 /* PhotosViewController.xib in Resources */,
+				F761F3DB1D48506600DB7DDB /* share-qqzone@3x.png in Resources */,
 				F7BCC5831CCDF33200704878 /* PhotoCell.xib in Resources */,
 				F7DD37F31D3E332300956878 /* backbutton@3x.png in Resources */,
+				F761F3DD1D48506600DB7DDB /* share-weixin-frends@3x.png in Resources */,
 				F7CBB4511CFD757000662347 /* CoBtnCell.xib in Resources */,
 				F7BAC7511CC8D40F000D9795 /* 16.png in Resources */,
 				F768EFAF1D0805EE005747E3 /* goods8.jpg in Resources */,
@@ -3089,6 +3192,7 @@
 				F7BB42B41CEDAA0E006F5EE3 /* InfoPlist.strings in Resources */,
 				F7BB42EE1CEEECE2006F5EE3 /* README.txt in Resources */,
 				F7BCC5A31CCDFBF000704878 /* RatingCell.xib in Resources */,
+				F761F3DE1D48506600DB7DDB /* share-weixin@3x.png in Resources */,
 				F768EF941D0805EE005747E3 /* avatar1.jpg in Resources */,
 				F746C8651D33A2CE0022836E /* favorite.png in Resources */,
 				F7BCC5A81CCDFCB700704878 /* DetailsViewController.xib in Resources */,
@@ -3121,6 +3225,7 @@
 				F7526FFE1C9A940A0012FE76 /* LaunchScreen.storyboard in Resources */,
 				F7BCC5961CCDFA2D00704878 /* PhotoViewController.xib in Resources */,
 				F768EFA91D0805EE005747E3 /* goods2.png in Resources */,
+				F761F3DA1D48506600DB7DDB /* share-qq@3x.png in Resources */,
 				F7CBB4271CFBEEBB00662347 /* city.plist in Resources */,
 				F768EFB11D0805EE005747E3 /* image1.jpg in Resources */,
 				F768EF931D0805EE005747E3 /* activity4.jpg in Resources */,
@@ -3134,6 +3239,7 @@
 				F754B7C11D23A99C0003A340 /* normal.css in Resources */,
 				F768EF9A1D0805EE005747E3 /* banner2.png in Resources */,
 				F768EFA11D0805EE005747E3 /* category3.png in Resources */,
+				F761F3DC1D48506600DB7DDB /* share-weibo@3x.png in Resources */,
 				F746C8641D33A2CE0022836E /* clean.png in Resources */,
 				F7BAC74C1CC8D40F000D9795 /* 11.png in Resources */,
 				F752F6D51D2CAC4200DB4647 /* DESSiteItemTableViewCell.xib in Resources */,
@@ -3286,7 +3392,9 @@
 				F7962D271D1A6C2600CE3119 /* DESSearchControllerBaseViewController.m in Sources */,
 				F7CBB4301CFC254000662347 /* GifImage.m in Sources */,
 				F72516621D21366700A5BAC7 /* TBActionButton.m in Sources */,
+				F761F3E31D48506600DB7DDB /* TWSNSRequest.m in Sources */,
 				F7B4128F1C9BD96C00E45E22 /* User.m in Sources */,
+				F761F3C41D473DD900DB7DDB /* VKURLParser.m in Sources */,
 				F752F6B71D2B9C8700DB4647 /* LBCDownLoadModel.m in Sources */,
 				F7BAC73F1CC8D40F000D9795 /* NSArray+JSONModel.m in Sources */,
 				F768EFBB1D0E5251005747E3 /* SuggestViewController.m in Sources */,
@@ -3294,6 +3402,7 @@
 				F7526FF61C9A940A0012FE76 /* ViewController.m in Sources */,
 				F782C9FE1D3F7F2A00D9FEA7 /* YYTextParser.m in Sources */,
 				F7BAC7711CC8DD33000D9795 /* NSString+Utils.m in Sources */,
+				F761F3C11D473DD900DB7DDB /* VKMediatorAction.m in Sources */,
 				F768EF591D07FF08005747E3 /* FeedCell.m in Sources */,
 				F7F900B81D38F02400E7CA80 /* XWCoolAnimator.m in Sources */,
 				F7BCC5A21CCDFBF000704878 /* RatingCell.m in Sources */,
@@ -3417,10 +3526,12 @@
 				F782CA091D3F7F2A00D9FEA7 /* UIImage+YYWebImage.m in Sources */,
 				F7BAC73E1CC8D40F000D9795 /* JSONModelError.m in Sources */,
 				F707FEAA1CE06C85008E4F7C /* OpenShare+QQ.m in Sources */,
+				F761F3D91D48506600DB7DDB /* NSString+SNSAddition.m in Sources */,
 				F7BAC7401CC8D40F000D9795 /* JSONAPI.m in Sources */,
 				F7CA0D891CEAC0B9009D1C51 /* LBToAppStore.m in Sources */,
 				F7F9009D1D38E93400E7CA80 /* XWFilterAnimator+XWRipple.m in Sources */,
 				F762B85A1CEC144400E5DDAD /* UITextView+Utils.m in Sources */,
+				F761F3E21D48506600DB7DDB /* TWSNS.m in Sources */,
 				F768EF3A1D07FCD8005747E3 /* CBTableViewDataSource.m in Sources */,
 				F782CA031D3F7F2A00D9FEA7 /* NSBundle+YYAdd.m in Sources */,
 				F7B1EABA1CC633E000307F41 /* UIBarButtonItem+WNXBarButtonItem.m in Sources */,
@@ -3434,6 +3545,7 @@
 				F7B1EABC1CC633E000307F41 /* UIImage+Size.m in Sources */,
 				F762B8571CEC13DB00E5DDAD /* UILabel+Utils.m in Sources */,
 				F7BAC76A1CC8DCBF000D9795 /* ContactModel.m in Sources */,
+				F761F3B41D47392900DB7DDB /* UIDevice+VKKeychainIDFV.m in Sources */,
 				F761F3B01D46066400DB7DDB /* AccountTool.m in Sources */,
 				F74676CB1CB63A320001D3A5 /* UIViewController+swizzling.m in Sources */,
 				F768EF621D07FF08005747E3 /* SecondViewModel.m in Sources */,
@@ -3445,6 +3557,7 @@
 				F768EF5A1D07FF08005747E3 /* GoodsCell.m in Sources */,
 				F72516501D2124B400A5BAC7 /* LLEyesLayer.m in Sources */,
 				F782CA051D3F7F2A00D9FEA7 /* NSParagraphStyle+YYText.m in Sources */,
+				F761F3E01D48506600DB7DDB /* TWShare.m in Sources */,
 				F76CB7F11CE47A8C00D8474F /* TitleScrollView.m in Sources */,
 				F725166B1D21384C00A5BAC7 /* ConditionerView.m in Sources */,
 				F725166F1D21396000A5BAC7 /* UIImage+BoxBlur.m in Sources */,
@@ -3476,6 +3589,7 @@
 				F7CBB4331CFC461000662347 /* MineViewController.m in Sources */,
 				F782CA001D3F7F2A00D9FEA7 /* YYTextRunDelegate.m in Sources */,
 				F7275D051CD1A801002F0F68 /* WeeklyItemStageModel.m in Sources */,
+				F761F3C01D473DD900DB7DDB /* UINavigationController+VKURLAction.m in Sources */,
 				F7CBB4501CFD757000662347 /* CoBtnCell.m in Sources */,
 				F746C87D1D34C8E80022836E /* ReadFeedbackTableViewController.m in Sources */,
 				F7F900A31D38E9AC00E7CA80 /* XWFilterAnimator+XWMask.m in Sources */,
@@ -3499,6 +3613,7 @@
 				F782C9F21D3F7F2A00D9FEA7 /* YYClassInfo.m in Sources */,
 				F7BCC53B1CCDBCF400704878 /* TableViewSampleViewController.m in Sources */,
 				F782CA781D40B68F00D9FEA7 /* MJPhotoLoadingView.m in Sources */,
+				F761F3E11D48506600DB7DDB /* TWShareView.m in Sources */,
 				F7BCC5821CCDF33200704878 /* PhotoCell.m in Sources */,
 				F707FE8E1CDC725B008E4F7C /* DESShareView.m in Sources */,
 				F7CBB44E1CFD757000662347 /* BtnCell.m in Sources */,
@@ -3511,6 +3626,7 @@
 				F7B412971C9BDA3900E45E22 /* GlobalTimelineViewController.m in Sources */,
 				F707FE911CDC7425008E4F7C /* UIControl+Blocks.m in Sources */,
 				F7F772F21CD33BCD0060861B /* SigmaTableViewController.m in Sources */,
+				F761F3DF1D48506600DB7DDB /* TWOAuth.m in Sources */,
 				F707FEAE1CE06C85008E4F7C /* OpenShare.m in Sources */,
 				F768EF391D07FCD8005747E3 /* CBDataSourceMaker.m in Sources */,
 				F782CA061D3F7F2A00D9FEA7 /* NSString+YYAdd.m in Sources */,
@@ -3528,6 +3644,7 @@
 				F7754BD91CC72D8500F989DA /* RuntimeTableViewController.m in Sources */,
 				F7BAC7061CC88441000D9795 /* GWWPICLabel.m in Sources */,
 				F74676B41CABC7B50001D3A5 /* MJBox.m in Sources */,
+				F761F3C21D473DD900DB7DDB /* VKMsgSend.m in Sources */,
 				F75DA1071D3CC33A00822CB5 /* ReaderListViewController.m in Sources */,
 				F782CA0B1D3F7F2A00D9FEA7 /* UIView+YYAdd.m in Sources */,
 				F7F900A61D38E9F600E7CA80 /* XWFilterTransitionView.m in Sources */,
@@ -3561,6 +3678,7 @@
 				F77FDA541D1945A300562A3F /* RegularExpressionTest.m in Sources */,
 				F752F6BE1D2B9E6A00DB4647 /* ASProgressPopUpView.m in Sources */,
 				F7962D2A1D1A6CB900CE3119 /* DESSearchResultsViewController.m in Sources */,
+				F761F3C31D473DD900DB7DDB /* VKURLAction.m in Sources */,
 				F752F6B51D2B9C8700DB4647 /* LBCDownLoad.m in Sources */,
 				F7BCC5D21CCF66AE00704878 /* BaseModel.m in Sources */,
 				F782CA0D1D3F7F2A00D9FEA7 /* YYTextAsyncLayer.m in Sources */,

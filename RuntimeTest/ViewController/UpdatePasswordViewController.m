@@ -7,8 +7,7 @@
 //
 
 #import "UpdatePasswordViewController.h"
-#import "AppDelegate.h"
-
+#import "LoginViewController.h"
 @interface UpdatePasswordViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *oldPasswordTextField;
@@ -16,7 +15,10 @@
 
 @end
 
-@implementation UpdatePasswordViewController
+@implementation UpdatePasswordViewController{
+	UserSettings *user;
+
+}
 
 - (void)viewDidLoad {
     
@@ -31,17 +33,22 @@
 }
 
 - (IBAction)naviDoneButtonPressed:(id)sender {
-    
-    AppDelegate *app = [[UIApplication sharedApplication] delegate];
-    [self isOldPasswordRight:USER_TABLE userId:app.GLOBAL_USERID oldPassword:self.oldPasswordTextField.text];
+	
+	user = [AccountTool getUserInformation];
+
+//    AppDelegate *app = [[UIApplication sharedApplication] delegate];
+//    [self isOldPasswordRight:USER_TABLE userId:app.GLOBAL_USERID oldPassword:self.oldPasswordTextField.text];
+	
+	[self isOldPasswordRight:USER_TABLE userId:user.userID oldPassword:self.oldPasswordTextField.text];
+
 }
 
 #pragma mark - 判断原密码是否正确
 - (void)isOldPasswordRight:(NSString*)tableName userId:(NSString*)userId oldPassword:(NSString*)oldPassword{
     
-    AppDelegate *app = [[UIApplication sharedApplication] delegate];
+//    AppDelegate *app = [[UIApplication sharedApplication] delegate];
     BmobQuery *query = [BmobQuery queryWithClassName:USER_TABLE];
-    [query getObjectInBackgroundWithId:app.GLOBAL_USERID block:^(BmobObject *object, NSError *error) {
+    [query getObjectInBackgroundWithId:user.userID block:^(BmobObject *object, NSError *error) {
         
         if ([[object objectForKey:@"Password"] isEqualToString:oldPassword]) {
             //原密码正确，可以进行修改
@@ -51,7 +58,7 @@
             }else{
                 //正式修改；
                 [AllUtils showPromptDialog:@"提示" andMessage:@"修改密码后将重新登录，确认修改吗？" OKButton:@"确定" OKButtonAction:^(UIAlertAction *action) {
-                    [self updatePassword:USER_TABLE userId:app.GLOBAL_USERID nowPassword:self.nowPasswordTextField.text];
+                    [self updatePassword:USER_TABLE userId:user.userID nowPassword:self.nowPasswordTextField.text];
                 } cancelButton:@"取消" cancelButtonAction:nil contextViewController:self];
             }
         }else{
@@ -72,8 +79,12 @@
                 [object setObject:nowPassword forKey:@"Password"];
                 [object updateInBackgroundWithResultBlock:^(BOOL isSuccessful, NSError *error) {
                     if (isSuccessful) {
-                        //跳转到登录界面；
-                        [AllUtils jumpToViewController:@"LoginViewController" contextViewController:self handler:nil];
+						
+						[self dismissViewControllerAnimated:YES completion:nil];
+						
+						[[NSNotificationCenter defaultCenter] postNotificationName:@"gotoLoginPage" object:nil];
+
+						
                     } else {
                         
                         [AllUtils showPromptDialog:@"提示" andMessage:@"网络异常，修改密码失败！" OKButton:@"确定" OKButtonAction:nil cancelButton:@"" cancelButtonAction:nil contextViewController:self];

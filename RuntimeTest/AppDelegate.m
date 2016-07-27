@@ -20,6 +20,8 @@
 #import "CBIconfont.h"
 #import "LoginViewController.h"
 
+
+
 #define weiboAppKey @"4003638958"
 #define appkey @"12f1847875e26"
 #define app_secrect @"69471e44e59a7d4bcf068d7b7329d9c8"
@@ -88,7 +90,11 @@ static AppDelegate *appdelegate;
 	return [UIApplication sharedApplication].delegate;
 }
 
+//另一种获取uuid 方式 在VKKeychainIDFV里。
+//NSString * uuid = [UIDevice VKKeychainIDFV];
 
+//open url 形式打开网站，请参考 github的VKURLAction
+//demo://nativeOpenUrl/openWeb?title=webView&url=http%3A%2F%2Fawhisper.github.io&sign=029505c3be619a88fd0a4ea99932b5cb
 - (void)umengTrack {
 	
 	//设备识别信息
@@ -155,18 +161,24 @@ static AppDelegate *appdelegate;
 	//  友盟的方法本身是异步执行，所以不需要再异步调用
 	[self umengTrack];
 	//第一步：注册key
-//	[OpenShare connectWeixinWithAppId:@"wxd930ea5d5a258f4f"];
-//	[OpenShare connectQQWithAppId:@"101128744"];
-//	[OpenShare connectWeiboWithAppKey:@"402180334"];
 	
-	[OpenShare connectQQWithAppId:@"1103194207"];
+	[OpenShare connectWeixinWithAppId:@"wxd930ea5d5a258f4f"];
+	[OpenShare connectQQWithAppId:@"101128744" secret:@"cc893ef392e383df22142a474d4abea6"];
 	[OpenShare connectWeiboWithAppKey:@"4003638958"];
-	[OpenShare connectWeixinWithAppId:@"wx9ad490e6428d5a7f"];
+	
+//	[OpenShare connectQQWithAppId:@"1103194207"];
+//	[OpenShare connectWeiboWithAppKey:@"4003638958"];
+//	[OpenShare connectWeixinWithAppId:@"wx9ad490e6428d5a7f"];
 	
 	
 	
 	//weibo 登录
 	[WeiboSDK registerApp:weiboAppKey];
+	
+	[WXApi registerApp:@"wx8011e108b672eee2" withDescription:@"一念永恒"];
+
+	//QQ 登录
+//	[UMSocialQQHandler setQQWithAppId:@"100424468" appKey:@"c7394704798a158208a74ab60104f0ba" url:@"http://www.umeng.com/social"];
 
 	//Mob  记住这里有个大坑就是plist白名单一定要设置LSApplicationQueriesSchemes，直接从demo里面的source 复制。
 	//不然会出现qq或者微信icon显示不了。
@@ -421,16 +433,29 @@ static AppDelegate *appdelegate;
 //	由于之前混合各种SDK，一直没有排查到使用SSO 登录不到的原因，现在凶手就在这里。
 // [WeiboSDK handleOpenURL:url delegate:self]; 没执行到是不会执行代理方法  didReceiveWeiboResponse的。
 	
-	
-//	if ([OpenShare handleOpenURL:url]) {
-//		return YES;
-//	}
+	//使用OpenShare 的方式授权登录。
+	//新浪微博这个不用OpenShare的方式，直接用原生的SDK。
+	NSString * value = options[@"UIApplicationOpenURLOptionsSourceApplicationKey"];
+	//com.tencent.xin
 	
 	[WXApi handleOpenURL:url delegate:self];
+
+	if([value isEqualToString:@"com.sina.weibo"]){
+		
 	return [WeiboSDK handleOpenURL:url delegate:self];
+
+	}
+	
+	if ([OpenShare handleOpenURL:url]) {
+		return YES;
+	}
+	
+	//单纯使用WX，WB 授权登录取消下面两行注释。
+//	[WXApi handleOpenURL:url delegate:self];
+//	return [WeiboSDK handleOpenURL:url delegate:self];
 	
 	//这里可以写上其他OpenShare不支持的客户端的回调，比如支付宝等。
-//	return YES;
+	return YES;
 }
 
 
@@ -624,6 +649,8 @@ didReceiveLocalNotification:(UILocalNotification *)notification {
 
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+//	return [ShareSDK handleOpenURL:url wxDelegate:self];
+	
 	[WXApi handleOpenURL:url delegate:self];
 	return [WeiboSDK handleOpenURL:url delegate:self];
 	

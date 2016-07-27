@@ -30,9 +30,17 @@
  */
 @property (nonatomic, copy) NSString *name;
 
+@property (nonatomic, copy) NSString *password;
+
+
 /**
  *  性别  m / man
  */
 @property (nonatomic, copy) NSString *gender;
+
+
+@property (nonatomic, assign)BOOL hasLocalUser;
+
+@property (nonatomic, copy) NSString *userID;
 
 @end
