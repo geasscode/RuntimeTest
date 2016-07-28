@@ -134,6 +134,9 @@
 		F761F3E11D48506600DB7DDB /* TWShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3D31D48506600DB7DDB /* TWShareView.m */; };
 		F761F3E21D48506600DB7DDB /* TWSNS.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3D51D48506600DB7DDB /* TWSNS.m */; };
 		F761F3E31D48506600DB7DDB /* TWSNSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3D81D48506600DB7DDB /* TWSNSRequest.m */; };
+		F761F3E61D48AE2100DB7DDB /* CustomActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3E51D48AE2100DB7DDB /* CustomActivity.m */; };
+		F761F3E91D48AE7700DB7DDB /* WeiboActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3E81D48AE7700DB7DDB /* WeiboActivity.m */; };
+		F761F3EC1D48C13000DB7DDB /* QQZoneActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3EB1D48C13000DB7DDB /* QQZoneActivity.m */; };
 		F762B8571CEC13DB00E5DDAD /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8561CEC13DB00E5DDAD /* UILabel+Utils.m */; };
 		F762B85A1CEC144400E5DDAD /* UITextView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8591CEC144400E5DDAD /* UITextView+Utils.m */; };
 		F7644F5C1CF5A0B000FD9DAF /* ActivityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7644F5B1CF5A0B000FD9DAF /* ActivityItem.m */; };
@@ -769,6 +772,12 @@
 		F761F3D61D48506600DB7DDB /* TWSNSDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSNSDefine.h; sourceTree = "<group>"; };
 		F761F3D71D48506600DB7DDB /* TWSNSRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWSNSRequest.h; sourceTree = "<group>"; };
 		F761F3D81D48506600DB7DDB /* TWSNSRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWSNSRequest.m; sourceTree = "<group>"; };
+		F761F3E41D48AE2100DB7DDB /* CustomActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomActivity.h; sourceTree = "<group>"; };
+		F761F3E51D48AE2100DB7DDB /* CustomActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomActivity.m; sourceTree = "<group>"; };
+		F761F3E71D48AE7700DB7DDB /* WeiboActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboActivity.h; sourceTree = "<group>"; };
+		F761F3E81D48AE7700DB7DDB /* WeiboActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboActivity.m; sourceTree = "<group>"; };
+		F761F3EA1D48C13000DB7DDB /* QQZoneActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQZoneActivity.h; sourceTree = "<group>"; };
+		F761F3EB1D48C13000DB7DDB /* QQZoneActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQZoneActivity.m; sourceTree = "<group>"; };
 		F762B8551CEC13DB00E5DDAD /* UILabel+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Utils.h"; sourceTree = "<group>"; };
 		F762B8561CEC13DB00E5DDAD /* UILabel+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Utils.m"; sourceTree = "<group>"; };
 		F762B8581CEC144400E5DDAD /* UITextView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Utils.h"; sourceTree = "<group>"; };
@@ -1656,6 +1665,12 @@
 				F746C8571D3389AE0022836E /* MineModel.m */,
 				F761F3AB1D45FD4500DB7DDB /* UserSettings.h */,
 				F761F3AC1D45FD4500DB7DDB /* UserSettings.m */,
+				F761F3E41D48AE2100DB7DDB /* CustomActivity.h */,
+				F761F3E51D48AE2100DB7DDB /* CustomActivity.m */,
+				F761F3E71D48AE7700DB7DDB /* WeiboActivity.h */,
+				F761F3E81D48AE7700DB7DDB /* WeiboActivity.m */,
+				F761F3EA1D48C13000DB7DDB /* QQZoneActivity.h */,
+				F761F3EB1D48C13000DB7DDB /* QQZoneActivity.m */,
 			);
 			path = WeeklyModel;
 			sourceTree = "<group>";
@@ -3489,6 +3504,7 @@
 				F7F772EE1CD33B250060861B /* YZSTableViewModel.m in Sources */,
 				F768EF611D07FF08005747E3 /* FirstViewModel.m in Sources */,
 				F7F9009A1D38E88100E7CA80 /* UIViewController+XWTransition.m in Sources */,
+				F761F3EC1D48C13000DB7DDB /* QQZoneActivity.m in Sources */,
 				F76CB7FA1CE47FA700D8474F /* DESCollectionViewCell.m in Sources */,
 				F7BAC7431CC8D40F000D9795 /* JSONKeyMapper.m in Sources */,
 				F7BCC5CD1CCF649100704878 /* APIClient.m in Sources */,
@@ -3520,6 +3536,7 @@
 				F752F6C41D2BC34E00DB4647 /* CheckUtil.m in Sources */,
 				F782C9FD1D3F7F2A00D9FEA7 /* YYTextAttribute.m in Sources */,
 				F7BAC7411CC8D40F000D9795 /* JSONHTTPClient.m in Sources */,
+				F761F3E61D48AE2100DB7DDB /* CustomActivity.m in Sources */,
 				F7F7730A1CD3593F0060861B /* DetailModel.m in Sources */,
 				F7F772F81CD347BF0060861B /* WeeklyItemStageDetatilController.m in Sources */,
 				F782CA7D1D40B68F00D9FEA7 /* UIImageView+MJWebCache.m in Sources */,
@@ -3636,6 +3653,7 @@
 				F74676B81CABC7B50001D3A5 /* MJStudent.m in Sources */,
 				F7754BE01CC753BC00F989DA /* DynamicAddMethodViewController.m in Sources */,
 				F754B7C51D24EDF20003A340 /* DESWebViewController.m in Sources */,
+				F761F3E91D48AE7700DB7DDB /* WeiboActivity.m in Sources */,
 				F7754BE61CC7541A00F989DA /* ReplaceMethodViewController.m in Sources */,
 				F7CA0D8E1CEAF73A009D1C51 /* NSData+AES.m in Sources */,
 				F72516651D21366700A5BAC7 /* TBActionSheetController.m in Sources */,

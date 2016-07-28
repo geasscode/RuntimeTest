@@ -25,7 +25,9 @@ static NSMutableDictionary *keys;
 }
 
 +(void)openURL:(NSString*)url{
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+	
+	NSString * myurl = @"mqqapi://share/to_fri?thirdAppDisplayName=T3BlbiBTaGFyZQ==&version=1&cflag=1&callback_type=scheme&generalpastboard=1&callback_name=QQ41c1685f&src_type=app&shareType=0&file_type=news&title=SGVsbG8gT3BlblNoYXJlIChtc2cudGl0bGUpIDE0Njk2ODg4MTYuNzIyMzg4&url=aHR0cDovL3Nwb3J0cy5xcS5jb20vYS8yMDEyMDUxMC8wMDA2NTAuaHRt&description=6L+Z6YeM5YaZ55qE5pivbXNnLmRlc2NyaXB0aW9uIDE0Njk2ODg4MTYuNzIyNDg3&objectlocation=pasteboard";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:myurl]];
 }
 +(BOOL)canOpen:(NSString*)url{
     return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:url]];

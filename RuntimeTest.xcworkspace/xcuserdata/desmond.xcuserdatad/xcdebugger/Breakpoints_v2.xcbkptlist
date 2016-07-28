@@ -640,11 +640,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490788441.220188"
+            timestampString = "491307647.542264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "849"
-            endingLineNumber = "849"
+            startingLineNumber = "890"
+            endingLineNumber = "890"
             landmarkName = "-activityItems"
             landmarkType = "5">
             <Locations>
@@ -656,26 +656,26 @@
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/Controllers/DetailViewController.m"
-                  timestampString = "491295545.360702"
+                  timestampString = "491387949.680397"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "856"
-                  endingLineNumber = "856"
-                  offsetFromSymbolStart = "812">
+                  startingLineNumber = "897"
+                  endingLineNumber = "897"
+                  offsetFromSymbolStart = "1384">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__37-[DetailViewController activityItems]_block_invoke"
+                  symbolName = "__37-[DetailViewController activityItems]_block_invoke.572"
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/Controllers/DetailViewController.m"
-                  timestampString = "491295545.360823"
+                  timestampString = "491387949.680518"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "857"
-                  endingLineNumber = "857"
+                  startingLineNumber = "898"
+                  endingLineNumber = "898"
                   offsetFromSymbolStart = "124">
                </Location>
             </Locations>
@@ -704,7 +704,7 @@
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/Other/libs/segmentView/SegmentView.m"
-                  timestampString = "491295545.361677"
+                  timestampString = "491387949.681313"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "183"
@@ -719,7 +719,7 @@
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/Other/libs/segmentView/SegmentView.m"
-                  timestampString = "491295545.361809"
+                  timestampString = "491387949.681442"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "183"
@@ -768,7 +768,7 @@
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/TestFile/ViewController/FirstViewController.m"
-                  timestampString = "491295545.363058"
+                  timestampString = "491387949.682707"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "30"
@@ -783,7 +783,7 @@
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/TestFile/ViewController/FirstViewController.m"
-                  timestampString = "491295545.363176"
+                  timestampString = "491387949.682828"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "31"
@@ -1007,22 +1007,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490788441.220188"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "800"
-            endingLineNumber = "800"
-            landmarkName = "-activityItems"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Views/Weekly/DESTableViewActionSheetView.m"
             timestampString = "488714039.622875"
             startingColumnNumber = "9223372036854775807"
@@ -1040,11 +1024,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490788441.220188"
+            timestampString = "491307647.542264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "554"
-            endingLineNumber = "554"
+            startingLineNumber = "557"
+            endingLineNumber = "557"
             landmarkName = "-moreItemClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1056,11 +1040,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490788441.220188"
+            timestampString = "491307647.542264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1088"
-            endingLineNumber = "1088"
+            startingLineNumber = "1129"
+            endingLineNumber = "1129"
             landmarkName = "@implementation DetailViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -1168,7 +1152,7 @@
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/ViewController/DESBaseTableViewController.m"
-                  timestampString = "491295545.376585"
+                  timestampString = "491387949.694622"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "132"
@@ -1183,7 +1167,7 @@
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/ViewController/DESBaseTableViewController.m"
-                  timestampString = "491295545.376722"
+                  timestampString = "491387949.694753"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "134"
@@ -1264,7 +1248,7 @@
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/Other/Helpers/ADHelper.m"
-                  timestampString = "491295545.379371"
+                  timestampString = "491387949.697243"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "184"
@@ -1279,7 +1263,7 @@
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/Other/Helpers/ADHelper.m"
-                  timestampString = "491295545.379523"
+                  timestampString = "491387949.697368"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "186"
@@ -1616,7 +1600,7 @@
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/ViewController/MineViewController.m"
-                  timestampString = "491295545.391423"
+                  timestampString = "491387949.708464"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "264"
@@ -1631,7 +1615,7 @@
                   moduleName = "RuntimeTest"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/ViewController/MineViewController.m"
-                  timestampString = "491295545.391553"
+                  timestampString = "491387949.708582"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "264"
@@ -1760,11 +1744,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490788441.220188"
+            timestampString = "491307647.542264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "473"
-            endingLineNumber = "473"
+            startingLineNumber = "476"
+            endingLineNumber = "476"
             landmarkName = "-image:didFinishSavingWithError:contextInfo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1776,11 +1760,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490788441.220188"
+            timestampString = "491307647.542264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "483"
-            endingLineNumber = "483"
+            startingLineNumber = "486"
+            endingLineNumber = "486"
             landmarkName = "-waitreadItemClick:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1856,11 +1840,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490788441.220188"
+            timestampString = "491307647.542264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1102"
-            endingLineNumber = "1102"
+            startingLineNumber = "1143"
+            endingLineNumber = "1143"
             landmarkName = "-loadHtml:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1872,11 +1856,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490698136.378557"
+            timestampString = "491307647.542264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
             landmarkName = "-safariViewControllerDidFinish:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1888,11 +1872,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490694358.373592"
+            timestampString = "491307647.542264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "-gotoSourcesArticlePage"
             landmarkType = "5">
          </BreakpointContent>
@@ -1904,11 +1888,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490694358.373592"
+            timestampString = "491307647.542264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "-inspectSourceAddress"
             landmarkType = "5">
          </BreakpointContent>
@@ -1920,11 +1904,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490788441.220188"
+            timestampString = "491307647.542264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "467"
-            endingLineNumber = "467"
+            startingLineNumber = "470"
+            endingLineNumber = "470"
             landmarkName = "-image:didFinishSavingWithError:contextInfo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1936,11 +1920,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490788441.220188"
+            timestampString = "491307647.542264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "422"
-            endingLineNumber = "422"
+            startingLineNumber = "425"
+            endingLineNumber = "425"
             landmarkName = "-longPressed:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1952,11 +1936,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490787119.614393"
+            timestampString = "491307647.542264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "291"
-            endingLineNumber = "291"
+            startingLineNumber = "294"
+            endingLineNumber = "294"
             landmarkName = "-tapImageAction:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1968,11 +1952,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Controllers/DetailViewController.m"
-            timestampString = "490788478.758027"
+            timestampString = "491307647.542264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "311"
-            endingLineNumber = "311"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
             landmarkName = "-tapImageAction:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2112,11 +2096,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/Other/3rd/openshare/OpenShare.m"
-            timestampString = "491276759.606427"
+            timestampString = "491381783.962857"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "+openURL:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2160,11 +2144,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/ViewController/MineViewController.m"
-            timestampString = "491295544.145882"
+            timestampString = "491297752.825167"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "538"
-            endingLineNumber = "538"
+            startingLineNumber = "539"
+            endingLineNumber = "539"
             landmarkName = "-updateUserNameAndAvatar:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2176,11 +2160,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/ViewController/MineViewController.m"
-            timestampString = "491295544.145882"
+            timestampString = "491297752.825167"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "524"
-            endingLineNumber = "524"
+            startingLineNumber = "525"
+            endingLineNumber = "525"
             landmarkName = "-updateUserNameAndAvatar:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2256,11 +2240,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/ViewController/MineViewController.m"
-            timestampString = "491295544.145882"
+            timestampString = "491297752.825167"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "455"
-            endingLineNumber = "455"
+            startingLineNumber = "456"
+            endingLineNumber = "456"
             landmarkName = "-updateUserinfo:"
             landmarkType = "5">
          </BreakpointContent>
@@ -2288,12 +2272,204 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RuntimeTest/ViewController/MineViewController.m"
-            timestampString = "491295544.145882"
+            timestampString = "491297752.825167"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "476"
-            endingLineNumber = "476"
+            startingLineNumber = "477"
+            endingLineNumber = "477"
             landmarkName = "-updateUserinfo:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeTest/Controllers/DetailViewController.m"
+            timestampString = "491380877.423522"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1026"
+            endingLineNumber = "1026"
+            landmarkName = "-qzone"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DetailViewController qzone]"
+                  moduleName = "RuntimeTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/Controllers/DetailViewController.m"
+                  timestampString = "491387949.732263"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1026"
+                  endingLineNumber = "1026"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__29-[DetailViewController qzone]_block_invoke"
+                  moduleName = "RuntimeTest"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/z/Documents/desmondFile/iosGithub/RuntimeTest/RuntimeTest/Controllers/DetailViewController.m"
+                  timestampString = "491387949.732393"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "1027"
+                  endingLineNumber = "1027"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeTest/Controllers/DetailViewController.m"
+            timestampString = "491307826.668024"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1029"
+            endingLineNumber = "1029"
+            landmarkName = "-qzone"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeTest/Other/3rd/openshare/OpenShare.m"
+            timestampString = "491381783.962857"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "+canOpen:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeTest/Other/3rd/openshare/OpenShare.m"
+            timestampString = "491381783.962857"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "+handleOpenURL:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeTest/AppDelegate.m"
+            timestampString = "491380060.29839"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "450"
+            endingLineNumber = "450"
+            landmarkName = "-application:openURL:options:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeTest/AppDelegate.m"
+            timestampString = "491380074.416912"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "458"
+            endingLineNumber = "458"
+            landmarkName = "-application:openURL:options:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeTest/Controllers/DetailViewController.m"
+            timestampString = "491381067.479146"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "999"
+            endingLineNumber = "999"
+            landmarkName = "-shareMessage"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeTest/Other/3rd/openshare/OpenShare+QQ.m"
+            timestampString = "491381285.646758"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "+genShareUrl:to:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeTest/Other/3rd/openshare/OpenShare+QQ.m"
+            timestampString = "491381317.44163"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "+genShareUrl:to:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeTest/Other/3rd/openshare/OpenShare+QQ.m"
+            timestampString = "491381374.738681"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "+genShareUrl:to:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

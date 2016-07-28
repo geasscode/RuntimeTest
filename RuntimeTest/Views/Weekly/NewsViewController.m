@@ -545,8 +545,7 @@
 	
 	//	UIActivityViewController中的服务分为了两种，UIActivityCategoryAction和UIActivityCategoryShare,UIActivityCategoryAction表示在最下面一栏的操作型服务,比如Copy、Print;UIActivityCategoryShare表示在中间一栏的分享型服务，比如一些社交软件。
 	
-	
-	//用系统自带的方法增加qq收藏，微信收藏，分享到朋友圈。新浪微博。待实现。
+	//todo: 需要增加sina 微博， twitter， 腾讯微博分享。
 	//	NSArray* imageArray = @[[UIImage imageNamed:@"icon.jpg"]];
 	
 	NSString *title = _webModel.title;
@@ -568,7 +567,10 @@
 	activityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
 	
 	//排除不需要的功能如AirDrop
-	activityViewController.excludedActivityTypes = @[UIActivityTypeAirDrop,UIActivityTypePostToFacebook,UIActivityTypePostToTwitter,UIActivityTypeAssignToContact];
+	activityViewController.excludedActivityTypes = @[UIActivityTypeAirDrop,UIActivityTypeAssignToContact];
+	
+	
+//	activityViewController.excludedActivityTypes = @[UIActivityTypeAirDrop,UIActivityTypePostToFacebook,UIActivityTypePostToTwitter,UIActivityTypeAssignToContact];
 	
 	//	NSURL *URL = [NSURL URLWithString:@"http://nshipster.com/uiactivityviewcontroller"];
 	//	[[SSReadingList defaultReadingList] addReadingListItemWithURL:URL

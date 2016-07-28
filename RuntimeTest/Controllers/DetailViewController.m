@@ -22,6 +22,9 @@
 #import "ConditionerView.h"
 #import "DESWebViewController.h"
 #import <SafariServices/SafariServices.h>
+#import "WeiboActivity.h"
+#import "CustomActivity.h"
+#import "QQZoneActivity.h"
 
 #define kToolBarHeight 38
 
@@ -370,7 +373,7 @@
 	
 	UIBarButtonItem *save = [UIBarButtonItem barButtonItemByCustomButtonWithImage:@"star1" highlightedImage:@"star-on" target:self action:@selector(saveItemClick:)];
 	
-	UIBarButtonItem *share = [UIBarButtonItem barButtonItemByCustomButtonWithImage:@"upload" highlightedImage:@"upload" target:self action:@selector(shareItemClick:)];
+	UIBarButtonItem *share = [UIBarButtonItem barButtonItemByCustomButtonWithImage:@"share_gray" highlightedImage:@"share_gray" target:self action:@selector(shareItemClick:)];
 	
 	UIBarButtonItem *comment = [UIBarButtonItem barButtonItemByCustomButtonWithImage:@"bottom_bar_comment" highlightedImage:@"bottom_bar_comment" target:self action:@selector(moreItemClick:)];
 	
@@ -790,6 +793,20 @@
 	[JMActionSheet showActionSheetDescription:desc inViewController:self fromView:sender permittedArrowDirections:UIPopoverArrowDirectionAny];
 }
 
+
+//分享到微博
+- (void)shareToWeibo {
+	DESLog(@"成功分享到微博");
+	[self sinaWBClick];
+}
+
+
+-(void)shareToQQZone{
+	DESLog(@"成功分享到QQ空间");
+	[self qzone];
+
+}
+
 //最简单的方式。
 -(void)activityItems{
 	//Bookmark, Add To Reading List, and Add To Homescreen are only available in safari, unless you define them yourself. To add those buttons, you need to create an applicationActivities NSArray, populated with UIActivity objects for various services. You can pass this array into the initWithActivityItems:applicationActivities:
@@ -799,6 +816,29 @@
 	
 	//用系统自带的方法增加qq收藏，微信收藏，分享到朋友圈。新浪微博。待实现。
 	//	NSArray* imageArray = @[[UIImage imageNamed:@"icon.jpg"]];
+	
+	
+	//暂时先添加一个。以后持续增加功能。
+	
+	NSArray *selectors = @[@"shareToWeibo",@"shareToQQZone"];
+	NSUInteger customerActivityItemCount = selectors.count;
+	
+	//添加Share
+	Class classes[2] = {
+		[WeiboActivity class],
+		[QQZoneActivity class]
+	};
+	NSMutableArray *activitys = [NSMutableArray arrayWithCapacity:customerActivityItemCount];
+	for (int i = 0; i < customerActivityItemCount; i++) {
+		id activity = classes[i].new;
+		[activity setPerformActivityBlock:^{
+    #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+			[self performSelector:NSSelectorFromString(selectors[i]) withObject:nil];
+		}];
+		[activitys addObject:activity];
+	}
+	
+
 	
 	NSString *title = _webModel.title;
 	
@@ -812,14 +852,15 @@
 	
 	//	UISimpleTextPrintFormatter *printData = [[UISimpleTextPrintFormatter alloc] initWithText:self.title];
 	NSArray *activityItems = @[title, description,imageIcon,URL];
+	
 	UIActivityViewController *activityViewController = [[UIActivityViewController alloc]
-														initWithActivityItems:activityItems applicationActivities:nil];
+														initWithActivityItems:activityItems applicationActivities:activitys];
 	
 	
 	activityViewController.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
 	
 	//排除不需要的功能如AirDrop
-	activityViewController.excludedActivityTypes = @[UIActivityTypeAirDrop,UIActivityTypePostToFacebook,UIActivityTypePostToTwitter,UIActivityTypeAssignToContact];
+	activityViewController.excludedActivityTypes = @[UIActivityTypeMessage,UIActivityTypeOpenInIBooks,UIActivityTypeAirDrop,UIActivityTypePostToFacebook,UIActivityTypePostToTwitter,UIActivityTypeAssignToContact];
 	
 	//	NSURL *URL = [NSURL URLWithString:@"http://nshipster.com/uiactivityviewcontroller"];
 	//	[[SSReadingList defaultReadingList] addReadingListItemWithURL:URL
