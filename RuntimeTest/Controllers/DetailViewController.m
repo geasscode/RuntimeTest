@@ -929,8 +929,12 @@
  */
 -(void)shareItemClick:(id)sender{
 	
-	//	[self shareMethod:sender];
-	//	[self sdkShareMethod];
+	//三种方法分享。第一种是shareSDK的，分享的同时会泄露太多的隐私，收集用户相关信息。
+	//第二种是用OpenShare的方式，由于是开源的，所以比较安全。建议采用这种。
+	//第三种是原生SDK的方式。
+	
+//	[self sdkShareMethod];
+//	[self shareMethod:sender];
 	[self activityItems];
 }
 /**

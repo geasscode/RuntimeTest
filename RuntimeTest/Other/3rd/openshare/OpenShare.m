@@ -26,8 +26,13 @@ static NSMutableDictionary *keys;
 
 +(void)openURL:(NSString*)url{
 	
-	NSString * myurl = @"mqqapi://share/to_fri?thirdAppDisplayName=T3BlbiBTaGFyZQ==&version=1&cflag=1&callback_type=scheme&generalpastboard=1&callback_name=QQ41c1685f&src_type=app&shareType=0&file_type=news&title=SGVsbG8gT3BlblNoYXJlIChtc2cudGl0bGUpIDE0Njk2ODg4MTYuNzIyMzg4&url=aHR0cDovL3Nwb3J0cy5xcS5jb20vYS8yMDEyMDUxMC8wMDA2NTAuaHRt&description=6L+Z6YeM5YaZ55qE5pivbXNnLmRlc2NyaXB0aW9uIDE0Njk2ODg4MTYuNzIyNDg3&objectlocation=pasteboard";
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:myurl]];
+	//如果生成的callback_name 不正确会导致无法弹出回调信息界面。openShare 生成的callbackName 代码有问题。正确的应该是 QQ06071A28 前面有0，
+	//而生成的是QQ6071a28 前面没有补0.
+	//解决问题思路，一半靠的是运气，首先将有问题的app ID 复制到 demo里面执行。发现原先正常可以弹出分享页面的突然不行了，然后被qq开发者平台误导了，以为App 审核通过
+	//才有资格分享，由于审核太过繁琐，于是转而用ShareSDK，幸运的是提示缺少QQ06071A28的错误提示，结果一对比打印出来QQ6071a28，就知道错在哪里了。
+	
+//	NSString * myurl = @"mqqapi://share/to_fri?thirdAppDisplayName=T3BlbiBTaGFyZQ==&version=1&cflag=1&callback_type=scheme&generalpastboard=1&callback_name=QQ41c1685f&src_type=app&shareType=0&file_type=news&title=SGVsbG8gT3BlblNoYXJlIChtc2cudGl0bGUpIDE0Njk2ODg4MTYuNzIyMzg4&url=aHR0cDovL3Nwb3J0cy5xcS5jb20vYS8yMDEyMDUxMC8wMDA2NTAuaHRt&description=6L+Z6YeM5YaZ55qE5pivbXNnLmRlc2NyaXB0aW9uIDE0Njk2ODg4MTYuNzIyNDg3&objectlocation=pasteboard";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
 }
 +(BOOL)canOpen:(NSString*)url{
     return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:url]];
