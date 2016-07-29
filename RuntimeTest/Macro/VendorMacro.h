@@ -38,6 +38,8 @@
 #import <TencentOpenAPI/QQApiInterface.h>
 #import "UMMobClick/MobClick.h"
 #import "JPEngine.h"
+#import <JSPatch/JSPatch.h>
+
 #import "DKNight.h"
 #import "YYFPSLabel.h"
 #import "OpenShareHeader.h"

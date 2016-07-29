@@ -137,6 +137,16 @@
 		F761F3E61D48AE2100DB7DDB /* CustomActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3E51D48AE2100DB7DDB /* CustomActivity.m */; };
 		F761F3E91D48AE7700DB7DDB /* WeiboActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3E81D48AE7700DB7DDB /* WeiboActivity.m */; };
 		F761F3EC1D48C13000DB7DDB /* QQZoneActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3EB1D48C13000DB7DDB /* QQZoneActivity.m */; };
+		F761F4001D4B0A7900DB7DDB /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = F761F3EF1D4B0A7900DB7DDB /* .gitkeep */; };
+		F761F4011D4B0A7900DB7DDB /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = F761F3F11D4B0A7900DB7DDB /* .gitkeep */; };
+		F761F4021D4B0A7900DB7DDB /* NSObject+PLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3F31D4B0A7900DB7DDB /* NSObject+PLeak.m */; };
+		F761F4031D4B0A7900DB7DDB /* NSObject+PLeakTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3F51D4B0A7900DB7DDB /* NSObject+PLeakTrack.m */; };
+		F761F4041D4B0A7900DB7DDB /* PLeakSniffer.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3F71D4B0A7900DB7DDB /* PLeakSniffer.m */; };
+		F761F4051D4B0A7900DB7DDB /* PObjectProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3F91D4B0A7900DB7DDB /* PObjectProxy.m */; };
+		F761F4061D4B0A7900DB7DDB /* UINavigationController+PLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3FB1D4B0A7900DB7DDB /* UINavigationController+PLeak.m */; };
+		F761F4071D4B0A7900DB7DDB /* UIView+PLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3FD1D4B0A7900DB7DDB /* UIView+PLeak.m */; };
+		F761F4081D4B0A7900DB7DDB /* UIViewController+PLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3FF1D4B0A7900DB7DDB /* UIViewController+PLeak.m */; };
+		F761F40A1D4B562F00DB7DDB /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F761F4091D4B562F00DB7DDB /* JSPatch.framework */; };
 		F762B8571CEC13DB00E5DDAD /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8561CEC13DB00E5DDAD /* UILabel+Utils.m */; };
 		F762B85A1CEC144400E5DDAD /* UITextView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8591CEC144400E5DDAD /* UITextView+Utils.m */; };
 		F7644F5C1CF5A0B000FD9DAF /* ActivityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7644F5B1CF5A0B000FD9DAF /* ActivityItem.m */; };
@@ -778,6 +788,23 @@
 		F761F3E81D48AE7700DB7DDB /* WeiboActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboActivity.m; sourceTree = "<group>"; };
 		F761F3EA1D48C13000DB7DDB /* QQZoneActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQZoneActivity.h; sourceTree = "<group>"; };
 		F761F3EB1D48C13000DB7DDB /* QQZoneActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQZoneActivity.m; sourceTree = "<group>"; };
+		F761F3EF1D4B0A7900DB7DDB /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		F761F3F11D4B0A7900DB7DDB /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		F761F3F21D4B0A7900DB7DDB /* NSObject+PLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PLeak.h"; sourceTree = "<group>"; };
+		F761F3F31D4B0A7900DB7DDB /* NSObject+PLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PLeak.m"; sourceTree = "<group>"; };
+		F761F3F41D4B0A7900DB7DDB /* NSObject+PLeakTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PLeakTrack.h"; sourceTree = "<group>"; };
+		F761F3F51D4B0A7900DB7DDB /* NSObject+PLeakTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PLeakTrack.m"; sourceTree = "<group>"; };
+		F761F3F61D4B0A7900DB7DDB /* PLeakSniffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLeakSniffer.h; sourceTree = "<group>"; };
+		F761F3F71D4B0A7900DB7DDB /* PLeakSniffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLeakSniffer.m; sourceTree = "<group>"; };
+		F761F3F81D4B0A7900DB7DDB /* PObjectProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PObjectProxy.h; sourceTree = "<group>"; };
+		F761F3F91D4B0A7900DB7DDB /* PObjectProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PObjectProxy.m; sourceTree = "<group>"; };
+		F761F3FA1D4B0A7900DB7DDB /* UINavigationController+PLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+PLeak.h"; sourceTree = "<group>"; };
+		F761F3FB1D4B0A7900DB7DDB /* UINavigationController+PLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+PLeak.m"; sourceTree = "<group>"; };
+		F761F3FC1D4B0A7900DB7DDB /* UIView+PLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+PLeak.h"; sourceTree = "<group>"; };
+		F761F3FD1D4B0A7900DB7DDB /* UIView+PLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+PLeak.m"; sourceTree = "<group>"; };
+		F761F3FE1D4B0A7900DB7DDB /* UIViewController+PLeak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PLeak.h"; sourceTree = "<group>"; };
+		F761F3FF1D4B0A7900DB7DDB /* UIViewController+PLeak.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PLeak.m"; sourceTree = "<group>"; };
+		F761F4091D4B562F00DB7DDB /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
 		F762B8551CEC13DB00E5DDAD /* UILabel+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Utils.h"; sourceTree = "<group>"; };
 		F762B8561CEC13DB00E5DDAD /* UILabel+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Utils.m"; sourceTree = "<group>"; };
 		F762B8581CEC144400E5DDAD /* UITextView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Utils.h"; sourceTree = "<group>"; };
@@ -1430,6 +1457,7 @@
 				F7BB42481CED9BCC006F5EE3 /* libstdc++.tbd in Frameworks */,
 				F7BB42461CED9BBB006F5EE3 /* JavaScriptCore.framework in Frameworks */,
 				F7BB42441CED9BA8006F5EE3 /* libicucore.tbd in Frameworks */,
+				F761F40A1D4B562F00DB7DDB /* JSPatch.framework in Frameworks */,
 				F7BB42E51CEEECE2006F5EE3 /* ShareSDKUI.framework in Frameworks */,
 				F7BB42F11CEEECE2006F5EE3 /* ShareSDKConnector.framework in Frameworks */,
 				F7BB423C1CED67DA006F5EE3 /* AdSupport.framework in Frameworks */,
@@ -1958,6 +1986,45 @@
 				F761F3CD1D48506600DB7DDB /* share-weixin@3x.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		F761F3ED1D4B0A7900DB7DDB /* PLeakSniffer */ = {
+			isa = PBXGroup;
+			children = (
+				F761F3EE1D4B0A7900DB7DDB /* Assets */,
+				F761F3F01D4B0A7900DB7DDB /* Classes */,
+			);
+			path = PLeakSniffer;
+			sourceTree = "<group>";
+		};
+		F761F3EE1D4B0A7900DB7DDB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F761F3EF1D4B0A7900DB7DDB /* .gitkeep */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F761F3F01D4B0A7900DB7DDB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F761F3F11D4B0A7900DB7DDB /* .gitkeep */,
+				F761F3F21D4B0A7900DB7DDB /* NSObject+PLeak.h */,
+				F761F3F31D4B0A7900DB7DDB /* NSObject+PLeak.m */,
+				F761F3F41D4B0A7900DB7DDB /* NSObject+PLeakTrack.h */,
+				F761F3F51D4B0A7900DB7DDB /* NSObject+PLeakTrack.m */,
+				F761F3F61D4B0A7900DB7DDB /* PLeakSniffer.h */,
+				F761F3F71D4B0A7900DB7DDB /* PLeakSniffer.m */,
+				F761F3F81D4B0A7900DB7DDB /* PObjectProxy.h */,
+				F761F3F91D4B0A7900DB7DDB /* PObjectProxy.m */,
+				F761F3FA1D4B0A7900DB7DDB /* UINavigationController+PLeak.h */,
+				F761F3FB1D4B0A7900DB7DDB /* UINavigationController+PLeak.m */,
+				F761F3FC1D4B0A7900DB7DDB /* UIView+PLeak.h */,
+				F761F3FD1D4B0A7900DB7DDB /* UIView+PLeak.m */,
+				F761F3FE1D4B0A7900DB7DDB /* UIViewController+PLeak.h */,
+				F761F3FF1D4B0A7900DB7DDB /* UIViewController+PLeak.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		F768EF3B1D07FF08005747E3 /* Vendor */ = {
@@ -2507,6 +2574,7 @@
 		F7BAC7071CC8D40E000D9795 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				F761F3ED1D4B0A7900DB7DDB /* PLeakSniffer */,
 				F761F3C51D48506600DB7DDB /* TWSNS */,
 				F746C8711D348FD40022836E /* JDStatusBarNotification */,
 				F7BB42B81CEEECE1006F5EE3 /* ShareSDK */,
@@ -2638,6 +2706,7 @@
 		F7BAC76B1CC8DD33000D9795 /* libs */ = {
 			isa = PBXGroup;
 			children = (
+				F761F4091D4B562F00DB7DDB /* JSPatch.framework */,
 				F761F3B51D473DD900DB7DDB /* VKURLAction */,
 				F782CA7E1D40B98800D9FEA7 /* YLGIFImage */,
 				F782CA601D40B68F00D9FEA7 /* MJPhotoBrowser */,
@@ -3219,6 +3288,7 @@
 				F7BB42EC1CEEECE2006F5EE3 /* WeiboSDK.bundle in Resources */,
 				F7B1EA611CC5D5AF00307F41 /* LoadData.storyboard in Resources */,
 				F768EF951D0805EE005747E3 /* avatar2.jpg in Resources */,
+				F761F4001D4B0A7900DB7DDB /* .gitkeep in Resources */,
 				F707FEB21CE08555008E4F7C /* Assets.xcassets in Resources */,
 				F7CBB43B1CFD706000662347 /* 方正隶书繁体.ttf in Resources */,
 				F768EF921D0805EE005747E3 /* activity3.jpg in Resources */,
@@ -3240,6 +3310,7 @@
 				F7526FFE1C9A940A0012FE76 /* LaunchScreen.storyboard in Resources */,
 				F7BCC5961CCDFA2D00704878 /* PhotoViewController.xib in Resources */,
 				F768EFA91D0805EE005747E3 /* goods2.png in Resources */,
+				F761F4011D4B0A7900DB7DDB /* .gitkeep in Resources */,
 				F761F3DA1D48506600DB7DDB /* share-qq@3x.png in Resources */,
 				F7CBB4271CFBEEBB00662347 /* city.plist in Resources */,
 				F768EFB11D0805EE005747E3 /* image1.jpg in Resources */,
@@ -3470,12 +3541,14 @@
 				F707FE941CDC7F89008E4F7C /* JMCollectionItem.m in Sources */,
 				F75244271CF6E1B7001C88EE /* SettingTableViewController.m in Sources */,
 				F74676D21CB647490001D3A5 /* NSMutableArray+Extension.m in Sources */,
+				F761F4071D4B0A7900DB7DDB /* UIView+PLeak.m in Sources */,
 				F72516611D21366700A5BAC7 /* TBActionBackground.m in Sources */,
 				F7275CFB1CD0C42F002F0F68 /* WeeklyItemHeaderView.m in Sources */,
 				F7BCC5D51CCF672800704878 /* HomeModel.m in Sources */,
 				F782CA7C1D40B68F00D9FEA7 /* SDWebImageManager+MJ.m in Sources */,
 				F72516471D211BFD00A5BAC7 /* DESTableViewActionSheetView.m in Sources */,
 				F782CA0E1D3F7F2A00D9FEA7 /* YYTextTransaction.m in Sources */,
+				F761F4061D4B0A7900DB7DDB /* UINavigationController+PLeak.m in Sources */,
 				F768EF321D06D49B005747E3 /* FindPasswordViewController.m in Sources */,
 				F782CA7A1D40B68F00D9FEA7 /* MJPhotoToolbar.m in Sources */,
 				F7275CFF1CD0C6D4002F0F68 /* WeeklyItemModel.m in Sources */,
@@ -3513,6 +3586,7 @@
 				F76CB7F71CE47E7200D8474F /* DESCollectionView.m in Sources */,
 				F72516671D21366700A5BAC7 /* UIWindow+TBAdditions.m in Sources */,
 				F782CA111D3F7F2A00D9FEA7 /* YYFPSLabel.m in Sources */,
+				F761F4081D4B0A7900DB7DDB /* UIViewController+PLeak.m in Sources */,
 				F7B1EAA71CC610B800307F41 /* DESNavigationController.m in Sources */,
 				F7F772EF1CD33B250060861B /* YZSTableViewSectionModel.m in Sources */,
 				F7F773041CD34B5A0060861B /* WeeklyItemStageDetailModel.m in Sources */,
@@ -3559,6 +3633,7 @@
 				F7B1EAA41CC6104200307F41 /* MainViewController.m in Sources */,
 				F746C87A1D348FD40022836E /* JDStatusBarView.m in Sources */,
 				F768EF581D07FF08005747E3 /* CycleScrollViewCell.m in Sources */,
+				F761F4021D4B0A7900DB7DDB /* NSObject+PLeak.m in Sources */,
 				F7B1EABC1CC633E000307F41 /* UIImage+Size.m in Sources */,
 				F762B8571CEC13DB00E5DDAD /* UILabel+Utils.m in Sources */,
 				F7BAC76A1CC8DCBF000D9795 /* ContactModel.m in Sources */,
@@ -3660,6 +3735,7 @@
 				F7F900A91D38EA6500E7CA80 /* XWTransitionAnimator.m in Sources */,
 				F7BCC58A1CCDF50600704878 /* Photo.m in Sources */,
 				F7754BD91CC72D8500F989DA /* RuntimeTableViewController.m in Sources */,
+				F761F4041D4B0A7900DB7DDB /* PLeakSniffer.m in Sources */,
 				F7BAC7061CC88441000D9795 /* GWWPICLabel.m in Sources */,
 				F74676B41CABC7B50001D3A5 /* MJBox.m in Sources */,
 				F761F3C21D473DD900DB7DDB /* VKMsgSend.m in Sources */,
@@ -3668,6 +3744,7 @@
 				F7F900A61D38E9F600E7CA80 /* XWFilterTransitionView.m in Sources */,
 				F74676B31CABC7B50001D3A5 /* MJBook.m in Sources */,
 				F7BCC5CF1CCF649100704878 /* Response.m in Sources */,
+				F761F4031D4B0A7900DB7DDB /* NSObject+PLeakTrack.m in Sources */,
 				F746C8581D3389AE0022836E /* MineModel.m in Sources */,
 				F782C9F61D3F7F2A00D9FEA7 /* YYTextInput.m in Sources */,
 				F782CA151D3F7F2A00D9FEA7 /* YYWeakProxy.m in Sources */,
@@ -3699,6 +3776,7 @@
 				F761F3C31D473DD900DB7DDB /* VKURLAction.m in Sources */,
 				F752F6B51D2B9C8700DB4647 /* LBCDownLoad.m in Sources */,
 				F7BCC5D21CCF66AE00704878 /* BaseModel.m in Sources */,
+				F761F4051D4B0A7900DB7DDB /* PObjectProxy.m in Sources */,
 				F782CA0D1D3F7F2A00D9FEA7 /* YYTextAsyncLayer.m in Sources */,
 				F7B412981C9BDA3900E45E22 /* PostTableViewCell.m in Sources */,
 				F768EFC11D0E5451005747E3 /* SuggestView.m in Sources */,

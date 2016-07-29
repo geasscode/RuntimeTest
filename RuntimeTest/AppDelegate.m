@@ -20,6 +20,8 @@
 #import "CBIconfont.h"
 #import "LoginViewController.h"
 
+//检测内存泄露。
+#import "PLeakSniffer.h"
 
 
 #define weiboAppKey @"4003638958"
@@ -138,7 +140,9 @@ static AppDelegate *appdelegate;
 //基本完成程序准备开始运行
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	
-	
+	//检测内测泄露。
+	[[PLeakSniffer sharedInstance] installLeakSniffer];
+
 	//后台Bmob
 	[Bmob registerWithAppKey:@"a1605700080f9bfddf67f6ed29e42e12"];
 
@@ -146,6 +150,60 @@ static AppDelegate *appdelegate;
 	//JSPatch
 	
 	[JPEngine startEngine];
+	//	对于实时性要求高的 APP，可以在 -applicationDidBecomeActive: 处调用这个接口，这样会在每次用户唤醒 APP 时去同步一次后台，请求次数会增多
+	//	applicationDidBecomeActive
+	
+	//为了安全需要进行RSA Key 对脚本进行加密。
+	//	[JSPatch testScriptInBundle]; 不能与 startWithAppKey 一起使用。只用于本地测试，测试完毕后需要去除
+	
+	[JSPatch startWithAppKey:@"d690051f616bebb7"];
+	
+#ifdef DEBUG
+	[JSPatch setupDevelopment];
+#endif
+	[JSPatch sync];
+	
+	
+	[JSPatch setupLogger:^(NSString *msg) {
+		DESLog(@"当前内容为%@",msg);
+		
+	}];
+
+	
+//	NSDictionay *configs = [JSPatch getConfigParams];
+//	//configs == @{@"name": @"bang"}
+//	
+//	NSString *name = [JSPatch getConfigParam:@"name"];
+//	//name == bang
+	
+	
+//	接口请求时间间隔至少为30分钟，也就是30分钟内多次调用 +updateConfigWithAppKey: 只会请求一次。若想 APP 对在线参数响应更实时，可以通过 +setupConfigInterval: 接口修改这个间隔值。
+//	[JSPatch updateConfigWithAppKey:@"d690051f616bebb7"];
+//	
+//	[JSPatch setupUpdatedConfigCallback:^(NSDictionary *configs, NSError *error) {
+//		
+//	}];
+	[JSPatch setupCallback:^(JPCallbackType type, NSDictionary *data, NSError *error) {
+		switch (type) {
+			case JPCallbackTypeUpdate: {
+				NSLog(@"updated %@ %@", data, error);
+				break;
+			}
+			case JPCallbackTypeRunScript: {
+				NSLog(@"run script %@ %@", data, error);
+				break;
+			}
+			default:
+				break;
+		}
+	}];
+	//setupRSAPublicKey,setupDevelopment,
+//	testScriptInBundle 在上线之前需要对脚本进行本地测试，看看运行是否正常。
+	[JSPatch setupUserData:@{
+							 @"userId": @"100867",
+							 @"location": @"guangdong"
+							 }];
+	
 	NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"js"];
 	NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
 	[JPEngine evaluateScript:script];
