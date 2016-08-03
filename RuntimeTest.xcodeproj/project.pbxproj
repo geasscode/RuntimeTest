@@ -86,6 +86,8 @@
 		F746C8791D348FD40022836E /* JDStatusBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = F746C8751D348FD40022836E /* JDStatusBarStyle.m */; };
 		F746C87A1D348FD40022836E /* JDStatusBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F746C8771D348FD40022836E /* JDStatusBarView.m */; };
 		F746C87D1D34C8E80022836E /* ReadFeedbackTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F746C87C1D34C8E80022836E /* ReadFeedbackTableViewController.m */; };
+		F7493DE71D51D4CB00C64C57 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F761F4091D4B562F00DB7DDB /* JSPatch.framework */; };
+		F7493DE91D51EAA900C64C57 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = F7493DE81D51EAA900C64C57 /* main.js */; };
 		F75244211CF6D8F7001C88EE /* AppConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = F75244191CF6D8F7001C88EE /* AppConfigure.m */; };
 		F75244221CF6D8F7001C88EE /* BaseFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = F752441B1CF6D8F7001C88EE /* BaseFunction.m */; };
 		F75244241CF6D8F7001C88EE /* TopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F75244201CF6D8F7001C88EE /* TopWindow.m */; };
@@ -146,7 +148,6 @@
 		F761F4061D4B0A7900DB7DDB /* UINavigationController+PLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3FB1D4B0A7900DB7DDB /* UINavigationController+PLeak.m */; };
 		F761F4071D4B0A7900DB7DDB /* UIView+PLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3FD1D4B0A7900DB7DDB /* UIView+PLeak.m */; };
 		F761F4081D4B0A7900DB7DDB /* UIViewController+PLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = F761F3FF1D4B0A7900DB7DDB /* UIViewController+PLeak.m */; };
-		F761F40A1D4B562F00DB7DDB /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F761F4091D4B562F00DB7DDB /* JSPatch.framework */; };
 		F762B8571CEC13DB00E5DDAD /* UILabel+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8561CEC13DB00E5DDAD /* UILabel+Utils.m */; };
 		F762B85A1CEC144400E5DDAD /* UITextView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = F762B8591CEC144400E5DDAD /* UITextView+Utils.m */; };
 		F7644F5C1CF5A0B000FD9DAF /* ActivityItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F7644F5B1CF5A0B000FD9DAF /* ActivityItem.m */; };
@@ -692,6 +693,7 @@
 		F746C8771D348FD40022836E /* JDStatusBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDStatusBarView.m; sourceTree = "<group>"; };
 		F746C87B1D34C8E80022836E /* ReadFeedbackTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFeedbackTableViewController.h; sourceTree = "<group>"; };
 		F746C87C1D34C8E80022836E /* ReadFeedbackTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFeedbackTableViewController.m; sourceTree = "<group>"; };
+		F7493DE81D51EAA900C64C57 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		F75244181CF6D8F7001C88EE /* AppConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigure.h; sourceTree = "<group>"; };
 		F75244191CF6D8F7001C88EE /* AppConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfigure.m; sourceTree = "<group>"; };
 		F752441A1CF6D8F7001C88EE /* BaseFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseFunction.h; sourceTree = "<group>"; };
@@ -1451,13 +1453,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7BB42461CED9BBB006F5EE3 /* JavaScriptCore.framework in Frameworks */,
+				F7493DE71D51D4CB00C64C57 /* JSPatch.framework in Frameworks */,
 				F7BB42B61CEEBE64006F5EE3 /* libsqlite3.tbd in Frameworks */,
 				F7BB424C1CED9BE2006F5EE3 /* AddressBookUI.framework in Frameworks */,
 				F7BB424A1CED9BDA006F5EE3 /* AddressBook.framework in Frameworks */,
 				F7BB42481CED9BCC006F5EE3 /* libstdc++.tbd in Frameworks */,
-				F7BB42461CED9BBB006F5EE3 /* JavaScriptCore.framework in Frameworks */,
 				F7BB42441CED9BA8006F5EE3 /* libicucore.tbd in Frameworks */,
-				F761F40A1D4B562F00DB7DDB /* JSPatch.framework in Frameworks */,
 				F7BB42E51CEEECE2006F5EE3 /* ShareSDKUI.framework in Frameworks */,
 				F7BB42F11CEEECE2006F5EE3 /* ShareSDKConnector.framework in Frameworks */,
 				F7BB423C1CED67DA006F5EE3 /* AdSupport.framework in Frameworks */,
@@ -1797,6 +1799,7 @@
 		F7526FED1C9A940A0012FE76 /* RuntimeTest */ = {
 			isa = PBXGroup;
 			children = (
+				F7493DE81D51EAA900C64C57 /* main.js */,
 				F768EFD21D0E9445005747E3 /* Macro */,
 				F7CBB40A1CF6F97700662347 /* TestFile */,
 				F707FEB11CE08555008E4F7C /* Assets.xcassets */,
@@ -3254,6 +3257,7 @@
 				F7CBB41A1CF84BC000662347 /* iPhone-5-Crop.gif in Resources */,
 				F7BAC74D1CC8D40F000D9795 /* 12.png in Resources */,
 				F746C8671D33A2CE0022836E /* noReadNews.png in Resources */,
+				F7493DE91D51EAA900C64C57 /* main.js in Resources */,
 				F754B7C01D23A99C0003A340 /* night.css in Resources */,
 				F768EFB41D0805EE005747E3 /* image4.jpg in Resources */,
 				F768EFA01D0805EE005747E3 /* category2.png in Resources */,

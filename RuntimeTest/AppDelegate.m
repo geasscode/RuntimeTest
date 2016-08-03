@@ -149,25 +149,28 @@ static AppDelegate *appdelegate;
 	
 	//JSPatch
 	
-	[JPEngine startEngine];
+//	[JPEngine startEngine];
 	//	对于实时性要求高的 APP，可以在 -applicationDidBecomeActive: 处调用这个接口，这样会在每次用户唤醒 APP 时去同步一次后台，请求次数会增多
 	//	applicationDidBecomeActive
 	
 	//为了安全需要进行RSA Key 对脚本进行加密。
-	//	[JSPatch testScriptInBundle]; 不能与 startWithAppKey 一起使用。只用于本地测试，测试完毕后需要去除
+	//	[JSPatch testScriptInBundle]; 不能与 startWithAppKey 一起使用。只用于本地测试，测试完毕后需要去除 .文件里面不能加console.log.
+	
 	
 	[JSPatch startWithAppKey:@"d690051f616bebb7"];
 	
-#ifdef DEBUG
-	[JSPatch setupDevelopment];
-#endif
+//#ifdef DEBUG
+//	[JSPatch testScriptInBundle];
+//
+////	[JSPatch setupDevelopment];
+//#endif
 	[JSPatch sync];
 	
 	
-	[JSPatch setupLogger:^(NSString *msg) {
-		DESLog(@"当前内容为%@",msg);
-		
-	}];
+//	[JSPatch setupLogger:^(NSString *msg) {
+//		DESLog(@"当前内容为%@",msg);
+//		
+//	}];
 
 	
 //	NSDictionay *configs = [JSPatch getConfigParams];
@@ -183,30 +186,30 @@ static AppDelegate *appdelegate;
 //	[JSPatch setupUpdatedConfigCallback:^(NSDictionary *configs, NSError *error) {
 //		
 //	}];
-	[JSPatch setupCallback:^(JPCallbackType type, NSDictionary *data, NSError *error) {
-		switch (type) {
-			case JPCallbackTypeUpdate: {
-				NSLog(@"updated %@ %@", data, error);
-				break;
-			}
-			case JPCallbackTypeRunScript: {
-				NSLog(@"run script %@ %@", data, error);
-				break;
-			}
-			default:
-				break;
-		}
-	}];
+//	[JSPatch setupCallback:^(JPCallbackType type, NSDictionary *data, NSError *error) {
+//		switch (type) {
+//			case JPCallbackTypeUpdate: {
+//				NSLog(@"updated %@ %@", data, error);
+//				break;
+//			}
+//			case JPCallbackTypeRunScript: {
+//				NSLog(@"run script %@ %@", data, error);
+//				break;
+//			}
+//			default:
+//				break;
+//		}
+//	}];
 	//setupRSAPublicKey,setupDevelopment,
 //	testScriptInBundle 在上线之前需要对脚本进行本地测试，看看运行是否正常。
-	[JSPatch setupUserData:@{
-							 @"userId": @"100867",
-							 @"location": @"guangdong"
-							 }];
+//	[JSPatch setupUserData:@{
+//							 @"userId": @"100867",
+//							 @"location": @"guangdong"
+//							 }];
 	
-	NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"js"];
-	NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
-	[JPEngine evaluateScript:script];
+//	NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"demo" ofType:@"js"];
+//	NSString *script = [NSString stringWithContentsOfFile:sourcePath encoding:NSUTF8StringEncoding error:nil];
+//	[JPEngine evaluateScript:script];
 	
 	//如果开发者自己做了错误捕捉，可以调用下面方法关闭友盟的错误统计：
 	

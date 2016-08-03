@@ -37,7 +37,7 @@
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 #import "UMMobClick/MobClick.h"
-#import "JPEngine.h"
+//#import "JPEngine.h"
 #import <JSPatch/JSPatch.h>
 
 #import "DKNight.h"

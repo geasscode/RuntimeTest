@@ -49,11 +49,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JSPatch.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>KINWebBrowser.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -142,7 +137,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>12C791C4B0E8B1B5EFE0AACCE577EDC3</key>
+		<key>0C113AC584287CF51D5F1A917C5C4216</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1605E5091DEF879A67A5CE4364EEC986</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -157,7 +157,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3BEB83E40A9F1A03104C73C025B77291</key>
+		<key>4D6862EF4328A37DB1330EDCE1DF3EA5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -177,7 +177,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64CFB6048E6108504C1EF4E1CD36B025</key>
+		<key>5A3281E54620C1BC1B2089B7D11AD03B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -217,7 +217,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B498A9C818A533B89C781A45E6121576</key>
+		<key>C0B5FA451B21FF97259250392BCE65B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -248,16 +248,6 @@
 			<true/>
 		</dict>
 		<key>F7AF14DD2431C8DA79F45F4F1D22075E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F9D2457441FD56E45579B42D5F4D8A20</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FD1D53461DE538B7C8DFE0B76D857587</key>
 		<dict>
 			<key>primary</key>
 			<true/>

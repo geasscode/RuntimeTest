@@ -51,9 +51,6 @@ PODS:
   - FMDB/standard (2.6.2)
   - ionicons (2.0.3)
   - JMActionSheetDescription (0.4.8)
-  - JSPatch (1.0):
-    - JSPatch/Core (= 1.0)
-  - JSPatch/Core (1.0)
   - KINWebBrowser (1.3.2):
     - ARChromeActivity (= 1.0.5)
     - TUSafariActivity (= 1.0.4)
@@ -93,7 +90,6 @@ DEPENDENCIES:
   - FMDB
   - ionicons
   - JMActionSheetDescription
-  - JSPatch
   - KINWebBrowser
   - Masonry
   - MBProgressHUD
@@ -129,7 +125,6 @@ SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   ionicons: ec1e86e6c3316bd9942a7f024080dd75c70dd6a5
   JMActionSheetDescription: 3cc02ba1a5b8248b03ea9e125e5c7472c584205c
-  JSPatch: c689ea4dde17441f2f4a95d40dfedb8900c20099
   KINWebBrowser: 27aa857a2aa39063ed102cca781d130b679d205f
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1

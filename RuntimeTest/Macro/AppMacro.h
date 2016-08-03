@@ -24,4 +24,9 @@
 #import "AccountTool.h"
 #import <CoreSpotlight/CoreSpotlight.h>
 #import <MobileCoreServices/MobileCoreServices.h>
+
+#import <JavaScriptCore/JavaScript.h>
+#import <JavaScriptCore/JSManagedValue.h>
+#import <JavaScriptCore/JSContext.h>
+
 #endif /* AppMacro_h */

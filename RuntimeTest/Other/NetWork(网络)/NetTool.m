@@ -43,7 +43,6 @@
 		
 		[manager.requestSerializer setAuthorizationHeaderFieldWithUsername:@"0.0.0.0" password:@"tuicool"];
 
-
 	});
 	return manager;
 }
