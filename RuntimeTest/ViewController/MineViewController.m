@@ -13,6 +13,7 @@
 #import "SuggestViewController.h"
 #import "LoginViewController.h"
 #import "UpdatePasswordViewController.h"
+#import "DESDonateViewController.h"
 #import <UIImageView+WebCache.h>
 
 #define CELL_WIDTH self.view.bounds.size.width / 3
@@ -237,8 +238,12 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 
 
 -(void)aboutMeConfig{
-	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"关于我们" message:@"我们是geasscode团队，专注开发iOS应用\n团队成员：geass \n邮   箱：sai3300@163.com" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
-	[alert show];
+    
+    
+    [self goToSpecifiedPage:@"DESDonateViewController"];
+
+//	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"关于我们" message:@"我们是geasscode团队，专注开发iOS应用\n团队成员：geass \n邮   箱：sai3300@163.com" delegate:self cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+//	[alert show];
 }
 
 -(void)exitLoginConfig{

@@ -22,6 +22,7 @@
 #import "JDStatusBarNotification.h"
 #import "MJPhotoBrowser.h"
 #import "MJPhoto.h"
+#import "SVProgressHUD.h"
 
 
 #import <BmobSDK/Bmob.h>

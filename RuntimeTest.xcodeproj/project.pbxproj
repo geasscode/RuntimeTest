@@ -10,6 +10,11 @@
 		078D15482802E605E77C6D5C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1E452DD1BAF6AB92348AF8 /* libPods.a */; };
 		1931A8351D3379C20066CA0B /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1931A8341D3379C20066CA0B /* ForgetPasswordViewController.m */; };
 		1931A8381D337E150066CA0B /* UpdatePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1931A8371D337E150066CA0B /* UpdatePasswordViewController.m */; };
+		196B88471D5471F700EDF8AE /* DESDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196B88461D5471F700EDF8AE /* DESDonateViewController.m */; };
+		196B884A1D54880400EDF8AE /* DonateButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 196B88491D54880400EDF8AE /* DonateButtonView.m */; };
+		196B884D1D548B6800EDF8AE /* DESConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 196B884C1D548B6800EDF8AE /* DESConst.m */; };
+		196B88501D5495D100EDF8AE /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 196B884E1D5495D100EDF8AE /* Lato-Bold.ttf */; };
+		196B88511D5495D100EDF8AE /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 196B884F1D5495D100EDF8AE /* Lato-Regular.ttf */; };
 		F707FE851CD9F1B2008E4F7C /* HWPopTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE841CD9F1B2008E4F7C /* HWPopTool.m */; };
 		F707FE871CDA0113008E4F7C /* loveway.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F707FE861CDA0113008E4F7C /* loveway.ttf */; };
 		F707FE8A1CDA021C008E4F7C /* UILabel+FontChange.m in Sources */ = {isa = PBXBuildFile; fileRef = F707FE891CDA021C008E4F7C /* UILabel+FontChange.m */; };
@@ -558,6 +563,14 @@
 		1931A8341D3379C20066CA0B /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
 		1931A8361D337E150066CA0B /* UpdatePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePasswordViewController.h; sourceTree = "<group>"; };
 		1931A8371D337E150066CA0B /* UpdatePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePasswordViewController.m; sourceTree = "<group>"; };
+		196B88451D5471F700EDF8AE /* DESDonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESDonateViewController.h; sourceTree = "<group>"; };
+		196B88461D5471F700EDF8AE /* DESDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESDonateViewController.m; sourceTree = "<group>"; };
+		196B88481D54880400EDF8AE /* DonateButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateButtonView.h; sourceTree = "<group>"; };
+		196B88491D54880400EDF8AE /* DonateButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DonateButtonView.m; sourceTree = "<group>"; };
+		196B884B1D548B6800EDF8AE /* DESConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESConst.h; sourceTree = "<group>"; };
+		196B884C1D548B6800EDF8AE /* DESConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESConst.m; sourceTree = "<group>"; };
+		196B884E1D5495D100EDF8AE /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		196B884F1D5495D100EDF8AE /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		2CA5276C8B2F3D8FCC327D72 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6E1E452DD1BAF6AB92348AF8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F707FE831CD9F1B2008E4F7C /* HWPopTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWPopTool.h; sourceTree = "<group>"; };
@@ -1664,6 +1677,8 @@
 				F752F6D11D2CAC2800DB4647 /* DESSiteItemTableViewCell.h */,
 				F752F6D21D2CAC2800DB4647 /* DESSiteItemTableViewCell.m */,
 				F752F6D41D2CAC4200DB4647 /* DESSiteItemTableViewCell.xib */,
+				196B88481D54880400EDF8AE /* DonateButtonView.h */,
+				196B88491D54880400EDF8AE /* DonateButtonView.m */,
 			);
 			path = Weekly;
 			sourceTree = "<group>";
@@ -1853,6 +1868,8 @@
 		F7526FEE1C9A940A0012FE76 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				196B884E1D5495D100EDF8AE /* Lato-Bold.ttf */,
+				196B884F1D5495D100EDF8AE /* Lato-Regular.ttf */,
 				F754B7BE1D23A99C0003A340 /* night.css */,
 				F754B7BF1D23A99C0003A340 /* normal.css */,
 				F77FDA4D1D19275200562A3F /* demo.js */,
@@ -2205,6 +2222,8 @@
 				F754B7C71D24EF5C0003A340 /* ADHelper.m */,
 				F761F3AE1D46066400DB7DDB /* AccountTool.h */,
 				F761F3AF1D46066400DB7DDB /* AccountTool.m */,
+				196B884B1D548B6800EDF8AE /* DESConst.h */,
+				196B884C1D548B6800EDF8AE /* DESConst.m */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -2981,6 +3000,8 @@
 				F746C87C1D34C8E80022836E /* ReadFeedbackTableViewController.m */,
 				F75DA1051D3CC33A00822CB5 /* ReaderListViewController.h */,
 				F75DA1061D3CC33A00822CB5 /* ReaderListViewController.m */,
+				196B88451D5471F700EDF8AE /* DESDonateViewController.h */,
+				196B88461D5471F700EDF8AE /* DESDonateViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -3257,6 +3278,7 @@
 				F7CBB41A1CF84BC000662347 /* iPhone-5-Crop.gif in Resources */,
 				F7BAC74D1CC8D40F000D9795 /* 12.png in Resources */,
 				F746C8671D33A2CE0022836E /* noReadNews.png in Resources */,
+				196B88511D5495D100EDF8AE /* Lato-Regular.ttf in Resources */,
 				F7493DE91D51EAA900C64C57 /* main.js in Resources */,
 				F754B7C01D23A99C0003A340 /* night.css in Resources */,
 				F768EFB41D0805EE005747E3 /* image4.jpg in Resources */,
@@ -3289,6 +3311,7 @@
 				F768EFAA1D0805EE005747E3 /* goods3.jpg in Resources */,
 				F7BAC74B1CC8D40F000D9795 /* 10.png in Resources */,
 				F7CBB4381CFC470100662347 /* MyCollectionViewCell.xib in Resources */,
+				196B88501D5495D100EDF8AE /* Lato-Bold.ttf in Resources */,
 				F7BB42EC1CEEECE2006F5EE3 /* WeiboSDK.bundle in Resources */,
 				F7B1EA611CC5D5AF00307F41 /* LoadData.storyboard in Resources */,
 				F768EF951D0805EE005747E3 /* avatar2.jpg in Resources */,
@@ -3571,6 +3594,7 @@
 				F746C8541D2FA66A0022836E /* AllUtils.m in Sources */,
 				F782C9F71D3F7F2A00D9FEA7 /* YYTextKeyboardManager.m in Sources */,
 				F7CBB4221CFBE9DC00662347 /* ChooseCityTableViewController.m in Sources */,
+				196B884D1D548B6800EDF8AE /* DESConst.m in Sources */,
 				F76CB8031CE4857C00D8474F /* ArticleTool.m in Sources */,
 				F7BCC55C1CCDBD1000704878 /* TCSectionDataMetric.m in Sources */,
 				F7F773011CD34AB80060861B /* WeeklyItemStageCategoryDetail.m in Sources */,
@@ -3583,6 +3607,7 @@
 				F7F9009A1D38E88100E7CA80 /* UIViewController+XWTransition.m in Sources */,
 				F761F3EC1D48C13000DB7DDB /* QQZoneActivity.m in Sources */,
 				F76CB7FA1CE47FA700D8474F /* DESCollectionViewCell.m in Sources */,
+				196B88471D5471F700EDF8AE /* DESDonateViewController.m in Sources */,
 				F7BAC7431CC8D40F000D9795 /* JSONKeyMapper.m in Sources */,
 				F7BCC5CD1CCF649100704878 /* APIClient.m in Sources */,
 				F72516631D21366700A5BAC7 /* TBActionContainer.m in Sources */,
@@ -3616,6 +3641,7 @@
 				F7BAC7411CC8D40F000D9795 /* JSONHTTPClient.m in Sources */,
 				F761F3E61D48AE2100DB7DDB /* CustomActivity.m in Sources */,
 				F7F7730A1CD3593F0060861B /* DetailModel.m in Sources */,
+				196B884A1D54880400EDF8AE /* DonateButtonView.m in Sources */,
 				F7F772F81CD347BF0060861B /* WeeklyItemStageDetatilController.m in Sources */,
 				F782CA7D1D40B68F00D9FEA7 /* UIImageView+MJWebCache.m in Sources */,
 				F782CA091D3F7F2A00D9FEA7 /* UIImage+YYWebImage.m in Sources */,

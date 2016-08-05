@@ -42,4 +42,98 @@
 	return label.height;
 }
 
+
+
++ (UILabel *)primaryLabelWithColor:(UIColor *)color textAlignment:(NSTextAlignment )textAlignment{
+    UILabel *label = [[UILabel alloc] init];
+    label.font = kDefaultPrimaryFont;
+    label.textColor = color;
+    label.textAlignment = textAlignment;
+    label.numberOfLines = 0;
+    
+    return label;
+}
+
++ (UILabel *)secondaryBoldLabelWithColor:(UIColor *)color textAlignment:(NSTextAlignment )textAlignment{
+    UILabel *label = [[UILabel alloc] init];
+    label.font = kDefaultSecondaryBoldFont;
+    label.textColor = color;
+    label.textAlignment = textAlignment;
+    label.numberOfLines = 0;
+    
+    return label;
+}
+
++ (UILabel *)secondaryRegularLabelWithColor:(UIColor *)color textAlignment:(NSTextAlignment )textAlignment{
+    UILabel *label = [[UILabel alloc] init];
+    label.font = kDefaultSecondaryRegularFont;
+    label.textColor = color;
+    label.textAlignment = textAlignment;
+    label.numberOfLines = 0;
+    
+    return label;
+}
+
+
++ (UILabel *)tertiaryLabelWithColor:(UIColor *)color textAlignment:(NSTextAlignment )textAlignment{
+    UILabel *label = [[UILabel alloc] init];
+    label.font = kDefaultTertiaryFont;
+    label.textColor = color;
+    label.textAlignment = textAlignment;
+    label.numberOfLines = 0;
+    
+    return label;
+}
+
+
++ (UILabel *)labelWithDefaultBoldFontSize:(CGFloat)size Color:(UIColor *)color textAlignment:(NSTextAlignment )textAlignment{
+    UILabel *label = [[UILabel alloc] init];
+    label.font = kDefaultFontBoldWith(size);
+    label.textColor = color;
+    label.textAlignment = textAlignment;
+    label.numberOfLines = 0;
+    
+    return label;
+}
+
++ (UILabel *)labelWithDefaultRegularFontSize:(CGFloat)size Color:(UIColor *)color textAlignment:(NSTextAlignment )textAlignment{
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.font = kDefaultFontRegularWith(size);
+    label.textColor = color;
+    label.textAlignment = textAlignment;
+    label.numberOfLines = 0;
+    
+    return label;
+}
+
++ (UILabel *)longLabelWithRegularFontSize:(CGFloat)size Color:(UIColor *)color textAlignment:(NSTextAlignment )textAlignment  linespacing:(CGFloat)linespacing string:(NSString *)string{
+    
+    UILabel *label = [[UILabel alloc] init];
+    label.font = kDefaultFontRegularWith(size);
+    label.textColor = color;
+    label.textAlignment = textAlignment;
+    label.numberOfLines = 0;
+    
+    //根据String对象创建NSMutableAttributedString
+    NSMutableAttributedString * attributedString = [[NSMutableAttributedString alloc] initWithString:string];
+    
+    //设置段落间距的大小
+    NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    [paragraphStyle setLineSpacing:linespacing];
+    [paragraphStyle setAlignment:textAlignment];
+    //对attributedString对象设置间距属性
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [attributedString length])];
+    
+    //为label设置text
+    [label setAttributedText:attributedString];
+    
+    return label;
+}
+
+
+
+
+
+
 @end

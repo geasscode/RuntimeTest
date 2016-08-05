@@ -28,6 +28,8 @@
 
 #define kToolBarHeight 38
 
+
+
 @interface DetailViewController ()<UIGestureRecognizerDelegate,UIWebViewDelegate,UIAlertViewDelegate,TBActionSheetDelegate,LLSwitchDelegate>
 
 @property (nonatomic,weak) UIWebView *webView;

@@ -109,6 +109,88 @@ _Pragma("clang diagnostic pop")
 #define kTabBarNormalColor RGB(170, 170, 170)         // TabBar颜色
 #define navigationBarColor RGB(33, 192, 174)
 
+
+
+
+
+
+/**
+ *  颜色相关的宏定义
+ */
+//标准四原色
+//绿色
+#define kColorDefaultGreenColor [UIColor colorWithRed:0.204  green:0.659  blue:0.325 alpha:1]
+//红色
+#define kColorDefaultRedColor [UIColor colorWithRed:0.918  green:0.263  blue:0.208 alpha:1]
+//蓝色
+#define kColorDefaultBlueColor [UIColor colorWithRed:0.259  green:0.522  blue:0.957 alpha:1]
+//黄色
+#define kColorDefaultYellowColor [UIColor colorWithRed:0.984  green:0.737  blue:0.020 alpha:1]
+
+//辅助色
+//橙色
+#define kColorDefaultOrangeColor [UIColor colorWithRed:1  green:0.341  blue:0.133 alpha:1]
+//柠檬色
+#define kColorDefaultLimeColor [UIColor colorWithRed:0.804  green:0.863  blue:0.224 alpha:1]
+//灰色
+#define kColorDefaultGreyColor [UIColor colorWithRed:0.620  green:0.620  blue:0.620 alpha:1]
+//黑色
+#define kColorDefaultBlackColor [UIColor colorWithRed:0  green:0  blue:0 alpha:1]
+//白色
+#define kColorDefaultWhiteColor [UIColor colorWithRed:1  green:1  blue:1 alpha:1]
+//青色
+#define kColorDefaultTealColor [UIColor colorWithRed:0  green:0.588  blue:0.533 alpha:1]
+//金色
+#define kColorDefaultAmberColor [UIColor colorWithRed:1  green:0.757  blue:0.027 alpha:1]
+
+
+//背景相关
+//黑色系
+//NavigationBar的黑背景色
+#define kColorDefaultNaviBarColor [UIColor colorWithRed:0.129  green:0.129  blue:0.129 alpha:1]
+//Background的黑背景色
+#define kColorDefaultBackgroundBlackColor [UIColor colorWithRed:0.188  green:0.188  blue:0.188 alpha:1]
+//Popup的黑背景色
+#define kColorDefaultPopupBlackColor [UIColor colorWithRed:0.259  green:0.259  blue:0.259 alpha:1]
+//白色系
+//Background的白背景色
+#define kColorDefaultBackgroundWhiteColor [UIColor colorWithRed:0.980  green:0.980  blue:0.980 alpha:1]
+//Popup的白背景色
+#define kColorDefaultPopupWhiteColor [UIColor colorWithRed:1  green:1  blue:1 alpha:1]
+
+#define kColorAchieveViewBackgroundBlueColor [UIColor colorWithRed:0.064  green:0.223  blue:0.406 alpha:1]
+
+//字体颜色相关
+//一级字体黑色
+#define kColorDefaultPrimaryTextBlackColor [UIColor colorWithRed:0  green:0  blue:0 alpha:0.87]
+//二级字体黑色
+#define kColorDefaultSecondaryTextBlackColor [UIColor colorWithRed:0  green:0  blue:0 alpha:0.54]
+//三级黑色字体
+#define kColorDefaultTertiaryTextBlackColor [UIColor colorWithRed:0  green:0  blue:0 alpha:0.38]
+
+//一级字体白色
+#define kColorDefaultPrimaryTextWhiteColor [UIColor colorWithRed:1  green:1  blue:1 alpha:1]
+//二级字体白色
+#define kColorDefaultSecondaryTextWhiteColor [UIColor colorWithRed:1  green:1  blue:1 alpha:0.7]
+//三级字体白色
+#define kColorDefaultTertiaryTextWhiteColor [UIColor colorWithRed:1  green:1  blue:1 alpha:0.5]
+
+
+//字体相关
+//一级加粗字体
+#define kDefaultPrimaryFont [UIFont fontWithName:@"Lato-Bold" size:80]
+//二级加粗字体
+#define kDefaultSecondaryBoldFont [UIFont fontWithName:@"Lato-Bold" size:28]
+//二级不加粗字体
+#define kDefaultSecondaryRegularFont [UIFont fontWithName:@"Lato-Regular" size:28]
+//三级字体不加粗字体
+#define kDefaultTertiaryFont [UIFont fontWithName:@"Lato-Regular" size:14]
+
+//自定义大小的默认Bold字体
+#define kDefaultFontBoldWith(fontSize) [UIFont fontWithName:@"Lato-Bold" size:fontSize]
+//自定义大小的默认Regular字体
+#define kDefaultFontRegularWith(fontSize) [UIFont fontWithName:@"Lato-Regular" size:fontSize]
+
 //RGB色值
 #define UIColorFromRGB(rgbValue) [UIColor \
 colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
