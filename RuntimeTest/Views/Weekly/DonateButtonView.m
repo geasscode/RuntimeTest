@@ -59,7 +59,7 @@
 - (NSString *)productIdentifier{
     if (_productIdentifier == nil) {
         
-        _productIDArray = @[@"cola_rmb6",@"subway_rmb25",@"100000",@"999"];
+        _productIDArray = @[@"cola_6rmb",@"subway_25rmb"];
 
         NSString *string = _productIDArray[self.tag];
         _productIdentifier = string;

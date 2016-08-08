@@ -12,7 +12,6 @@
 #import "DonateButtonView.h"
 #import "DESConst.h"
 #import "UILabel+Utils.h"
-
 @interface DESDonateViewController ()<SKPaymentTransactionObserver, SKProductsRequestDelegate>
 
     @property (nonatomic, strong) NSString * productID;
@@ -33,6 +32,7 @@
     [super viewDidLoad];
     
     [self setupUI];
+    [self configureNavgationItem];
     self.view.backgroundColor = kColorDefaultBackgroundBlackColor;
     
 //    _donateLevel1Button
@@ -141,7 +141,7 @@
 
 - (DonateButtonView *)donateLevel1Button{
     if (_donateLevel1Button == nil) {
-        DonateButtonView *view = [[DonateButtonView alloc] initWithTitle:@"6 RMB" andImageName:@"donateLevel1"];
+        DonateButtonView *view = [[DonateButtonView alloc] initWithTitle:@"6 RMB" andImageName:@"donateLevel2"];
         [view returnProductIdentifier:^(NSString *tapClickBlock) {
             [self checkProductIDCanMakePayments:tapClickBlock];
         }];
@@ -153,7 +153,7 @@
 
 - (DonateButtonView *)donateLevel2Button{
     if (_donateLevel2Button == nil) {
-        DonateButtonView *view = [[DonateButtonView alloc] initWithTitle:@"18 RMB" andImageName:@"donateLevel2"];
+        DonateButtonView *view = [[DonateButtonView alloc] initWithTitle:@"25 RMB" andImageName:@"donateLevel3"];
         
         [view returnProductIdentifier:^(NSString *tapClickBlock) {
             [self checkProductIDCanMakePayments:tapClickBlock];
@@ -167,7 +167,7 @@
 
 - (DonateButtonView *)donateLevel3Button{
     if (_donateLevel3Button == nil) {
-        DonateButtonView *view = [[DonateButtonView alloc] initWithTitle:@"45 RMB" andImageName:@"donateLevel3"];
+        DonateButtonView *view = [[DonateButtonView alloc] initWithTitle:@"45 RMB" andImageName:@"donateLevel1"];
         view.tag = 2;
         
         [view returnProductIdentifier:^(NSString *tapClickBlock) {
@@ -194,6 +194,29 @@
 
 
 
+- (void)configureNavgationItem {
+    
+    self.tabBarController.tabBar.hidden=YES;
+    self.navigationController.navigationBarHidden = NO;
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title = @"关于我们";
+    
+    UIBarButtonItem *left = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backStretchBackgroundNormal"] style:UIBarButtonItemStylePlain target:self action:@selector(handleBack)];
+    
+    self.navigationItem.leftBarButtonItem = left;
+    
+    
+    self.navigationController.navigationBar.dk_barTintColorPicker = DKColorPickerWithKey(BAR);
+    
+}
+
+
+- (void)handleBack {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 -(void)checkProductIDCanMakePayments:(NSString *)productID{
     if([SKPaymentQueue canMakePayments]){
        [self requestProductData:productID];
@@ -210,6 +233,8 @@
     [SVProgressHUD showWithStatus:@"正在请求，请稍后。"];
     
     NSArray *product = [[NSArray alloc] initWithObjects:type, nil];
+    
+    _productID = type;
     
     NSSet *nsset = [NSSet setWithArray:product];
     

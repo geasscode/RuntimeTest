@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		078D15482802E605E77C6D5C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1E452DD1BAF6AB92348AF8 /* libPods.a */; };
+		19088FA51D58186900D1C245 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19088FA41D58186900D1C245 /* StoreKit.framework */; };
 		1931A8351D3379C20066CA0B /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1931A8341D3379C20066CA0B /* ForgetPasswordViewController.m */; };
 		1931A8381D337E150066CA0B /* UpdatePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1931A8371D337E150066CA0B /* UpdatePasswordViewController.m */; };
 		196B88471D5471F700EDF8AE /* DESDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196B88461D5471F700EDF8AE /* DESDonateViewController.m */; };
@@ -559,6 +560,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		19088FA41D58186900D1C245 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		1931A8331D3379C20066CA0B /* ForgetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgetPasswordViewController.h; sourceTree = "<group>"; };
 		1931A8341D3379C20066CA0B /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
 		1931A8361D337E150066CA0B /* UpdatePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePasswordViewController.h; sourceTree = "<group>"; };
@@ -1466,6 +1468,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19088FA51D58186900D1C245 /* StoreKit.framework in Frameworks */,
 				F7BB42461CED9BBB006F5EE3 /* JavaScriptCore.framework in Frameworks */,
 				F7493DE71D51D4CB00C64C57 /* JSPatch.framework in Frameworks */,
 				F7BB42B61CEEBE64006F5EE3 /* libsqlite3.tbd in Frameworks */,
@@ -1529,6 +1532,7 @@
 		E06492DA06779C2A54DCC373 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				19088FA41D58186900D1C245 /* StoreKit.framework */,
 				F77FDA4A1D18E2A200562A3F /* UMMobClick.framework */,
 				F7BB42B51CEEBE64006F5EE3 /* libsqlite3.tbd */,
 				F7BB424B1CED9BE1006F5EE3 /* AddressBookUI.framework */,
