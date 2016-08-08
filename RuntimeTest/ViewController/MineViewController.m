@@ -239,7 +239,7 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 
 -(void)aboutMeConfig{
     
-    //donate Page
+    //donate Page.
     
     [self goToSpecifiedPage:@"DESDonateViewController"];
 
