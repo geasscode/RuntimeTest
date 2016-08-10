@@ -15,6 +15,7 @@
 #import "UpdatePasswordViewController.h"
 #import "DESDonateViewController.h"
 #import <UIImageView+WebCache.h>
+#import "RKDropdownAlert.h"
 
 #define CELL_WIDTH self.view.bounds.size.width / 3
 
@@ -143,8 +144,14 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 			//当在switch使用枚举类型时，’default’是不需要的
 		default:{
 			//[self performSegueWithIdentifier:@"isLogin" sender:self];
-			[JDStatusBarNotification showWithStatus:@"该功能正在开发中。。。" dismissAfter:2.0
-										  styleName:JDStatusBarStyleDark];
+			
+			
+//			[RKDropdownAlert title:@"Hello World" message:@"tons better than UIAlertView" backgroundColor:[UIColor grayColor] textColor:[UIColor whiteColor] time:10];
+
+			[RKDropdownAlert title:nil message:@"该功能正在开发中。。。" backgroundColor:nil textColor:nil time:5];
+
+//			[JDStatusBarNotification showWithStatus:@"该功能正在开发中。。。" dismissAfter:2.0
+//										  styleName:JDStatusBarStyleDark];
 			LoginViewController *loginVC = [LoginViewController new];
 			[self.navigationController presentViewController:loginVC animated:YES completion:nil];
 		}
@@ -199,8 +206,12 @@ static NSString *const JDNotificationText = @"JDNotificationText";
 
 -(void)subscribeConfig{
 	//JDStatusBarStyleDark
-	[JDStatusBarNotification showWithStatus:@"该功能正在开发中。。。" dismissAfter:2.0
-								  styleName:JDStatusBarStyleMatrix];
+	[RKDropdownAlert title:@"该功能正在开发中" message:nil backgroundColor:[UIColor greenColor] textColor:[UIColor whiteColor] time:2];
+
+	[self goToSpecifiedPage:@"MySubscribeViewController"];
+
+//	[JDStatusBarNotification showWithStatus:@"该功能正在开发中。。。" dismissAfter:2.0
+//								  styleName:JDStatusBarStyleMatrix];
 }
 
 -(void)changePasswordConfig{

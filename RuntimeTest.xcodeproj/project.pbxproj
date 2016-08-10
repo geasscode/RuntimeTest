@@ -94,6 +94,19 @@
 		F746C87D1D34C8E80022836E /* ReadFeedbackTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F746C87C1D34C8E80022836E /* ReadFeedbackTableViewController.m */; };
 		F7493DE71D51D4CB00C64C57 /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F761F4091D4B562F00DB7DDB /* JSPatch.framework */; };
 		F7493DE91D51EAA900C64C57 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = F7493DE81D51EAA900C64C57 /* main.js */; };
+		F7493DEF1D598A2200C64C57 /* MySubscribeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F7493DEE1D598A2200C64C57 /* MySubscribeViewController.m */; };
+		F7493DF21D598A9300C64C57 /* MySubscribeTitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7493DF11D598A9300C64C57 /* MySubscribeTitleCell.m */; };
+		F7493DF41D598AC100C64C57 /* MySubscribeTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7493DF31D598AC100C64C57 /* MySubscribeTitleCell.xib */; };
+		F7493DF81D598AFE00C64C57 /* MySubscribeContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7493DF61D598AFE00C64C57 /* MySubscribeContentCell.m */; };
+		F7493DF91D598AFE00C64C57 /* MySubscribeContentCel.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7493DF71D598AFE00C64C57 /* MySubscribeContentCel.xib */; };
+		F7493DFD1D598C5B00C64C57 /* MySubscribeTitleAssociateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7493DFB1D598C5B00C64C57 /* MySubscribeTitleAssociateCell.m */; };
+		F7493DFE1D598C5B00C64C57 /* MySubscribeTitleAssociateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7493DFC1D598C5B00C64C57 /* MySubscribeTitleAssociateCell.xib */; };
+		F7493E021D598CAF00C64C57 /* MySubscribeDetailContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F7493E001D598CAF00C64C57 /* MySubscribeDetailContentCell.m */; };
+		F7493E031D598CAF00C64C57 /* MySubscribeDetailContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7493E011D598CAF00C64C57 /* MySubscribeDetailContentCell.xib */; };
+		F7493E051D59AC2900C64C57 /* MySubscribeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7493E041D59AC2900C64C57 /* MySubscribeViewController.xib */; };
+		F7493E081D59B20500C64C57 /* SubscribeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7493E071D59B20500C64C57 /* SubscribeModel.m */; };
+		F7493E0B1D59C2FA00C64C57 /* TopicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7493E0A1D59C2FA00C64C57 /* TopicModel.m */; };
+		F7493E121D5AD43700C64C57 /* RKDropdownAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = F7493E111D5AD43700C64C57 /* RKDropdownAlert.m */; };
 		F75244211CF6D8F7001C88EE /* AppConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = F75244191CF6D8F7001C88EE /* AppConfigure.m */; };
 		F75244221CF6D8F7001C88EE /* BaseFunction.m in Sources */ = {isa = PBXBuildFile; fileRef = F752441B1CF6D8F7001C88EE /* BaseFunction.m */; };
 		F75244241CF6D8F7001C88EE /* TopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F75244201CF6D8F7001C88EE /* TopWindow.m */; };
@@ -709,6 +722,27 @@
 		F746C87B1D34C8E80022836E /* ReadFeedbackTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadFeedbackTableViewController.h; sourceTree = "<group>"; };
 		F746C87C1D34C8E80022836E /* ReadFeedbackTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadFeedbackTableViewController.m; sourceTree = "<group>"; };
 		F7493DE81D51EAA900C64C57 /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+		F7493DED1D598A2200C64C57 /* MySubscribeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySubscribeViewController.h; sourceTree = "<group>"; };
+		F7493DEE1D598A2200C64C57 /* MySubscribeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySubscribeViewController.m; sourceTree = "<group>"; };
+		F7493DF01D598A9300C64C57 /* MySubscribeTitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySubscribeTitleCell.h; sourceTree = "<group>"; };
+		F7493DF11D598A9300C64C57 /* MySubscribeTitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySubscribeTitleCell.m; sourceTree = "<group>"; };
+		F7493DF31D598AC100C64C57 /* MySubscribeTitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySubscribeTitleCell.xib; sourceTree = "<group>"; };
+		F7493DF51D598AFE00C64C57 /* MySubscribeContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySubscribeContentCell.h; sourceTree = "<group>"; };
+		F7493DF61D598AFE00C64C57 /* MySubscribeContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySubscribeContentCell.m; sourceTree = "<group>"; };
+		F7493DF71D598AFE00C64C57 /* MySubscribeContentCel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySubscribeContentCel.xib; sourceTree = "<group>"; };
+		F7493DFA1D598C5B00C64C57 /* MySubscribeTitleAssociateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MySubscribeTitleAssociateCell.h; path = ../MySubscribeTitleAssociateCell.h; sourceTree = "<group>"; };
+		F7493DFB1D598C5B00C64C57 /* MySubscribeTitleAssociateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MySubscribeTitleAssociateCell.m; path = ../MySubscribeTitleAssociateCell.m; sourceTree = "<group>"; };
+		F7493DFC1D598C5B00C64C57 /* MySubscribeTitleAssociateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MySubscribeTitleAssociateCell.xib; path = ../MySubscribeTitleAssociateCell.xib; sourceTree = "<group>"; };
+		F7493DFF1D598CAF00C64C57 /* MySubscribeDetailContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySubscribeDetailContentCell.h; sourceTree = "<group>"; };
+		F7493E001D598CAF00C64C57 /* MySubscribeDetailContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySubscribeDetailContentCell.m; sourceTree = "<group>"; };
+		F7493E011D598CAF00C64C57 /* MySubscribeDetailContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySubscribeDetailContentCell.xib; sourceTree = "<group>"; };
+		F7493E041D59AC2900C64C57 /* MySubscribeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MySubscribeViewController.xib; sourceTree = "<group>"; };
+		F7493E061D59B20500C64C57 /* SubscribeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubscribeModel.h; sourceTree = "<group>"; };
+		F7493E071D59B20500C64C57 /* SubscribeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubscribeModel.m; sourceTree = "<group>"; };
+		F7493E091D59C2FA00C64C57 /* TopicModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicModel.h; sourceTree = "<group>"; };
+		F7493E0A1D59C2FA00C64C57 /* TopicModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicModel.m; sourceTree = "<group>"; };
+		F7493E101D5AD43700C64C57 /* RKDropdownAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RKDropdownAlert.h; sourceTree = "<group>"; };
+		F7493E111D5AD43700C64C57 /* RKDropdownAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKDropdownAlert.m; sourceTree = "<group>"; };
 		F75244181CF6D8F7001C88EE /* AppConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigure.h; sourceTree = "<group>"; };
 		F75244191CF6D8F7001C88EE /* AppConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfigure.m; sourceTree = "<group>"; };
 		F752441A1CF6D8F7001C88EE /* BaseFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseFunction.h; sourceTree = "<group>"; };
@@ -1683,6 +1717,18 @@
 				F752F6D41D2CAC4200DB4647 /* DESSiteItemTableViewCell.xib */,
 				196B88481D54880400EDF8AE /* DonateButtonView.h */,
 				196B88491D54880400EDF8AE /* DonateButtonView.m */,
+				F7493DF01D598A9300C64C57 /* MySubscribeTitleCell.h */,
+				F7493DF11D598A9300C64C57 /* MySubscribeTitleCell.m */,
+				F7493DF31D598AC100C64C57 /* MySubscribeTitleCell.xib */,
+				F7493DF51D598AFE00C64C57 /* MySubscribeContentCell.h */,
+				F7493DF61D598AFE00C64C57 /* MySubscribeContentCell.m */,
+				F7493DF71D598AFE00C64C57 /* MySubscribeContentCel.xib */,
+				F7493DFA1D598C5B00C64C57 /* MySubscribeTitleAssociateCell.h */,
+				F7493DFB1D598C5B00C64C57 /* MySubscribeTitleAssociateCell.m */,
+				F7493DFC1D598C5B00C64C57 /* MySubscribeTitleAssociateCell.xib */,
+				F7493DFF1D598CAF00C64C57 /* MySubscribeDetailContentCell.h */,
+				F7493E001D598CAF00C64C57 /* MySubscribeDetailContentCell.m */,
+				F7493E011D598CAF00C64C57 /* MySubscribeDetailContentCell.xib */,
 			);
 			path = Weekly;
 			sourceTree = "<group>";
@@ -1720,6 +1766,10 @@
 				F761F3E81D48AE7700DB7DDB /* WeiboActivity.m */,
 				F761F3EA1D48C13000DB7DDB /* QQZoneActivity.h */,
 				F761F3EB1D48C13000DB7DDB /* QQZoneActivity.m */,
+				F7493E061D59B20500C64C57 /* SubscribeModel.h */,
+				F7493E071D59B20500C64C57 /* SubscribeModel.m */,
+				F7493E091D59C2FA00C64C57 /* TopicModel.h */,
+				F7493E0A1D59C2FA00C64C57 /* TopicModel.m */,
 			);
 			path = WeeklyModel;
 			sourceTree = "<group>";
@@ -1768,6 +1818,15 @@
 				F746C8771D348FD40022836E /* JDStatusBarView.m */,
 			);
 			path = JDStatusBarNotification;
+			sourceTree = "<group>";
+		};
+		F7493E0F1D5AD43700C64C57 /* RKDropdownAlert */ = {
+			isa = PBXGroup;
+			children = (
+				F7493E101D5AD43700C64C57 /* RKDropdownAlert.h */,
+				F7493E111D5AD43700C64C57 /* RKDropdownAlert.m */,
+			);
+			path = RKDropdownAlert;
 			sourceTree = "<group>";
 		};
 		F75244171CF6D8F7001C88EE /* Utilities */ = {
@@ -2600,6 +2659,7 @@
 		F7BAC7071CC8D40E000D9795 /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				F7493E0F1D5AD43700C64C57 /* RKDropdownAlert */,
 				F761F3ED1D4B0A7900DB7DDB /* PLeakSniffer */,
 				F761F3C51D48506600DB7DDB /* TWSNS */,
 				F746C8711D348FD40022836E /* JDStatusBarNotification */,
@@ -3006,6 +3066,9 @@
 				F75DA1061D3CC33A00822CB5 /* ReaderListViewController.m */,
 				196B88451D5471F700EDF8AE /* DESDonateViewController.h */,
 				196B88461D5471F700EDF8AE /* DESDonateViewController.m */,
+				F7493DED1D598A2200C64C57 /* MySubscribeViewController.h */,
+				F7493DEE1D598A2200C64C57 /* MySubscribeViewController.m */,
+				F7493E041D59AC2900C64C57 /* MySubscribeViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -3289,6 +3352,7 @@
 				F768EFA01D0805EE005747E3 /* category2.png in Resources */,
 				F7DD37F41D3E332300956878 /* forwardbutton.png in Resources */,
 				F7F7730F1CD36B0D0060861B /* article_detail.html in Resources */,
+				F7493DFE1D598C5B00C64C57 /* MySubscribeTitleAssociateCell.xib in Resources */,
 				F746C8661D33A2CE0022836E /* feedback.png in Resources */,
 				F768EFAD1D0805EE005747E3 /* goods6.jpg in Resources */,
 				F768EFB81D0805EE005747E3 /* reward.json in Resources */,
@@ -3297,6 +3361,7 @@
 				F7BCC5831CCDF33200704878 /* PhotoCell.xib in Resources */,
 				F7DD37F31D3E332300956878 /* backbutton@3x.png in Resources */,
 				F761F3DD1D48506600DB7DDB /* share-weixin-frends@3x.png in Resources */,
+				F7493DF91D598AFE00C64C57 /* MySubscribeContentCel.xib in Resources */,
 				F7CBB4511CFD757000662347 /* CoBtnCell.xib in Resources */,
 				F7BAC7511CC8D40F000D9795 /* 16.png in Resources */,
 				F768EFAF1D0805EE005747E3 /* goods8.jpg in Resources */,
@@ -3310,6 +3375,7 @@
 				F768EF941D0805EE005747E3 /* avatar1.jpg in Resources */,
 				F746C8651D33A2CE0022836E /* favorite.png in Resources */,
 				F7BCC5A81CCDFCB700704878 /* DetailsViewController.xib in Resources */,
+				F7493E051D59AC2900C64C57 /* MySubscribeViewController.xib in Resources */,
 				F7275D071CD1AFE0002F0F68 /* WeeklyItemCell.xib in Resources */,
 				F768EF9B1D0805EE005747E3 /* banner3.png in Resources */,
 				F768EFAA1D0805EE005747E3 /* goods3.jpg in Resources */,
@@ -3321,6 +3387,7 @@
 				F768EF951D0805EE005747E3 /* avatar2.jpg in Resources */,
 				F761F4001D4B0A7900DB7DDB /* .gitkeep in Resources */,
 				F707FEB21CE08555008E4F7C /* Assets.xcassets in Resources */,
+				F7493E031D598CAF00C64C57 /* MySubscribeDetailContentCell.xib in Resources */,
 				F7CBB43B1CFD706000662347 /* 方正隶书繁体.ttf in Resources */,
 				F768EF921D0805EE005747E3 /* activity3.jpg in Resources */,
 				F7DD37F11D3E332300956878 /* backbutton.png in Resources */,
@@ -3390,6 +3457,7 @@
 				F7DB40741C9FEAF900E164C7 /* loadXIBFile.xib in Resources */,
 				F7BAC7471CC8D40F000D9795 /* footerImage.png in Resources */,
 				F754B7CA1D24F2050003A340 /* adimage.png in Resources */,
+				F7493DF41D598AC100C64C57 /* MySubscribeTitleCell.xib in Resources */,
 				F7BAC74A1CC8D40F000D9795 /* 1.png in Resources */,
 				F768EFB71D0805EE005747E3 /* index.json in Resources */,
 				F768EFA31D0805EE005747E3 /* category5.png in Resources */,
@@ -3550,6 +3618,7 @@
 				F782CA081D3F7F2A00D9FEA7 /* UIGestureRecognizer+YYAdd.m in Sources */,
 				F768EF2C1D06A39C005747E3 /* ADWebView.m in Sources */,
 				F707FEAD1CE06C85008E4F7C /* OpenShare+Weixin.m in Sources */,
+				F7493E081D59B20500C64C57 /* SubscribeModel.m in Sources */,
 				F7BCC5541CCDBD1000704878 /* NSObject+TCIdentifier.m in Sources */,
 				F7F773071CD356400060861B /* StageCategoryHeaderView.m in Sources */,
 				F782CA0F1D3F7F2A00D9FEA7 /* YYTextUtilities.m in Sources */,
@@ -3562,6 +3631,7 @@
 				F74676B11CABC7B50001D3A5 /* MJBag.m in Sources */,
 				F76CB8061CE488FB00D8474F /* NewsTableViewCell.m in Sources */,
 				F7CBB4101CF6FA2100662347 /* SuccViewController.m in Sources */,
+				F7493DFD1D598C5B00C64C57 /* MySubscribeTitleAssociateCell.m in Sources */,
 				F74676B21CABC7B50001D3A5 /* MJBaseObject.m in Sources */,
 				F752F6CA1D2CA9A200DB4647 /* DESBaseTableViewController.m in Sources */,
 				F782C9F81D3F7F2A00D9FEA7 /* YYTextLayout.m in Sources */,
@@ -3579,6 +3649,7 @@
 				F782CA7C1D40B68F00D9FEA7 /* SDWebImageManager+MJ.m in Sources */,
 				F72516471D211BFD00A5BAC7 /* DESTableViewActionSheetView.m in Sources */,
 				F782CA0E1D3F7F2A00D9FEA7 /* YYTextTransaction.m in Sources */,
+				F7493E021D598CAF00C64C57 /* MySubscribeDetailContentCell.m in Sources */,
 				F761F4061D4B0A7900DB7DDB /* UINavigationController+PLeak.m in Sources */,
 				F768EF321D06D49B005747E3 /* FindPasswordViewController.m in Sources */,
 				F782CA7A1D40B68F00D9FEA7 /* MJPhotoToolbar.m in Sources */,
@@ -3697,6 +3768,8 @@
 				F7CBB44F1CFD757000662347 /* BtnCollectionView.m in Sources */,
 				F7F772F51CD33ECE0060861B /* BaseTableViewController.m in Sources */,
 				F782CA771D40B68F00D9FEA7 /* MJPhotoBrowser.m in Sources */,
+				F7493E121D5AD43700C64C57 /* RKDropdownAlert.m in Sources */,
+				F7493DF21D598A9300C64C57 /* MySubscribeTitleCell.m in Sources */,
 				F768EF601D07FF08005747E3 /* SecondViewController.m in Sources */,
 				1931A8351D3379C20066CA0B /* ForgetPasswordViewController.m in Sources */,
 				F7F7730D1CD359F80060861B /* ImageModel.m in Sources */,
@@ -3710,6 +3783,7 @@
 				F768EF5D1D07FF08005747E3 /* SplitView.m in Sources */,
 				F72516641D21366700A5BAC7 /* TBActionSheet.m in Sources */,
 				F7BCC56B1CCDC54200704878 /* Text.m in Sources */,
+				F7493DEF1D598A2200C64C57 /* MySubscribeViewController.m in Sources */,
 				F746C8791D348FD40022836E /* JDStatusBarStyle.m in Sources */,
 				F782C9F11D3F7F2A00D9FEA7 /* NSObject+YYModel.m in Sources */,
 				F7CBB4331CFC461000662347 /* MineViewController.m in Sources */,
@@ -3768,6 +3842,7 @@
 				F72516651D21366700A5BAC7 /* TBActionSheetController.m in Sources */,
 				F7F900A91D38EA6500E7CA80 /* XWTransitionAnimator.m in Sources */,
 				F7BCC58A1CCDF50600704878 /* Photo.m in Sources */,
+				F7493E0B1D59C2FA00C64C57 /* TopicModel.m in Sources */,
 				F7754BD91CC72D8500F989DA /* RuntimeTableViewController.m in Sources */,
 				F761F4041D4B0A7900DB7DDB /* PLeakSniffer.m in Sources */,
 				F7BAC7061CC88441000D9795 /* GWWPICLabel.m in Sources */,
@@ -3780,6 +3855,7 @@
 				F7BCC5CF1CCF649100704878 /* Response.m in Sources */,
 				F761F4031D4B0A7900DB7DDB /* NSObject+PLeakTrack.m in Sources */,
 				F746C8581D3389AE0022836E /* MineModel.m in Sources */,
+				F7493DF81D598AFE00C64C57 /* MySubscribeContentCell.m in Sources */,
 				F782C9F61D3F7F2A00D9FEA7 /* YYTextInput.m in Sources */,
 				F782CA151D3F7F2A00D9FEA7 /* YYWeakProxy.m in Sources */,
 				F782CA7B1D40B68F00D9FEA7 /* MJPhotoView.m in Sources */,
