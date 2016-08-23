@@ -20,6 +20,7 @@
 @implementation MySubscribeTitleCell
 
 - (void)awakeFromNib {
+	NSLog(@"hello");
 	[super awakeFromNib];
 
 }

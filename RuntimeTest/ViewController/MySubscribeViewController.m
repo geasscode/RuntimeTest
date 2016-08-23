@@ -17,6 +17,11 @@
 //xib 记住File Owner 需要连线 View控件。不然出错会没任何提示。然后View 连线至 File Owner 绑定datasource 跟delegate。 最后将table控件 拉向对应代码区中tableView属性。
 //复制xib，更改名字时记得将xib中残留的连向旧的属性删掉。
 
+//cell中 xib 界面的identifier 一定要更注册时的identifier 一样，别忘记改。
+//cell中 xib 界面的identifier 一定要更注册时的identifier 一样，别忘记改。
+//cell中 xib 界面的identifier 一定要更注册时的identifier 一样，别忘记改。
+
+
 @interface MySubscribeViewController ()<UITableViewDataSource,UITableViewDelegate>
 /** 左边的类别数据 */
 
@@ -64,7 +69,7 @@ static NSString * const SubscribeTitleAssociateID = @"subscribeTitleAssociateID"
 
 	
 
-	[self.topicTableView registerNib:[MySubscribeTitleCell nib] forCellReuseIdentifier:@"subscribeTitleID"];
+	[self.topicTableView registerNib:[MySubscribeTitleCell nib] forCellReuseIdentifier:SubscribeTitleID];
 
 //	[self.topicTableView registerNib:[UINib nibWithNibName:NSStringFromClass([MySubscribeTitleCell class]) bundle:nil] forCellReuseIdentifier:@"subscribeTitleID"];
 	self.topicTableView.delegate = self;
@@ -129,10 +134,10 @@ static NSString * const SubscribeTitleAssociateID = @"subscribeTitleAssociateID"
 	if(tableView == self.topicTableView)
 	{
 	
-		MySubscribeTitleCell *cell = [tableView dequeueReusableCellWithIdentifier:@"subscribeTitleID" forIndexPath:indexPath];
+		MySubscribeTitleCell *cell = [tableView dequeueReusableCellWithIdentifier:SubscribeTitleID];
 		
 		NSString * array = self.topicList[indexPath.row];
-//		cell.topic = self.topicList[indexPath.row];
+		cell.topic = self.topicList[indexPath.row];
 		return cell;
 	}
 	else

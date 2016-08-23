@@ -302,6 +302,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 
 
+#define DESWeakSelf(type)  __weak typeof(type) weak##type = type;
+#define DESStrongSelf(type)  __strong typeof(type) type = weak##type;
+
 #pragma clang diagnostic ignored "-W#warnings"
 
 #ifndef weakifyObject
