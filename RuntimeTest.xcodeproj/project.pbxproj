@@ -11,6 +11,7 @@
 		19088FA51D58186900D1C245 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19088FA41D58186900D1C245 /* StoreKit.framework */; };
 		1931A8351D3379C20066CA0B /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1931A8341D3379C20066CA0B /* ForgetPasswordViewController.m */; };
 		1931A8381D337E150066CA0B /* UpdatePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1931A8371D337E150066CA0B /* UpdatePasswordViewController.m */; };
+		195FDF021D6C2747005E8080 /* package.sh in Resources */ = {isa = PBXBuildFile; fileRef = 195FDF011D6C2747005E8080 /* package.sh */; };
 		196B88471D5471F700EDF8AE /* DESDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196B88461D5471F700EDF8AE /* DESDonateViewController.m */; };
 		196B884A1D54880400EDF8AE /* DonateButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 196B88491D54880400EDF8AE /* DonateButtonView.m */; };
 		196B884D1D548B6800EDF8AE /* DESConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 196B884C1D548B6800EDF8AE /* DESConst.m */; };
@@ -578,6 +579,7 @@
 		1931A8341D3379C20066CA0B /* ForgetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetPasswordViewController.m; sourceTree = "<group>"; };
 		1931A8361D337E150066CA0B /* UpdatePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePasswordViewController.h; sourceTree = "<group>"; };
 		1931A8371D337E150066CA0B /* UpdatePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePasswordViewController.m; sourceTree = "<group>"; };
+		195FDF011D6C2747005E8080 /* package.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = package.sh; sourceTree = "<group>"; };
 		196B88451D5471F700EDF8AE /* DESDonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESDonateViewController.h; sourceTree = "<group>"; };
 		196B88461D5471F700EDF8AE /* DESDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESDonateViewController.m; sourceTree = "<group>"; };
 		196B88481D54880400EDF8AE /* DonateButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateButtonView.h; sourceTree = "<group>"; };
@@ -1852,6 +1854,7 @@
 		F7526FE21C9A940A0012FE76 = {
 			isa = PBXGroup;
 			children = (
+				195FDF011D6C2747005E8080 /* package.sh */,
 				F7B412991C9BFCE800E45E22 /* ImageSet.xcassets */,
 				F7526FED1C9A940A0012FE76 /* RuntimeTest */,
 				F75270071C9A940A0012FE76 /* RuntimeTestTests */,
@@ -3373,6 +3376,7 @@
 				F7BCC5A31CCDFBF000704878 /* RatingCell.xib in Resources */,
 				F761F3DE1D48506600DB7DDB /* share-weixin@3x.png in Resources */,
 				F768EF941D0805EE005747E3 /* avatar1.jpg in Resources */,
+				195FDF021D6C2747005E8080 /* package.sh in Resources */,
 				F746C8651D33A2CE0022836E /* favorite.png in Resources */,
 				F7BCC5A81CCDFCB700704878 /* DetailsViewController.xib in Resources */,
 				F7493E051D59AC2900C64C57 /* MySubscribeViewController.xib in Resources */,
