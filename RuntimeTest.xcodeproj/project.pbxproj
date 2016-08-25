@@ -12,6 +12,7 @@
 		1931A8351D3379C20066CA0B /* ForgetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1931A8341D3379C20066CA0B /* ForgetPasswordViewController.m */; };
 		1931A8381D337E150066CA0B /* UpdatePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1931A8371D337E150066CA0B /* UpdatePasswordViewController.m */; };
 		195FDF021D6C2747005E8080 /* package.sh in Resources */ = {isa = PBXBuildFile; fileRef = 195FDF011D6C2747005E8080 /* package.sh */; };
+		195FDF061D6EEE85005E8080 /* autoipa.py in Resources */ = {isa = PBXBuildFile; fileRef = 195FDF051D6EEE85005E8080 /* autoipa.py */; };
 		196B88471D5471F700EDF8AE /* DESDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196B88461D5471F700EDF8AE /* DESDonateViewController.m */; };
 		196B884A1D54880400EDF8AE /* DonateButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 196B88491D54880400EDF8AE /* DonateButtonView.m */; };
 		196B884D1D548B6800EDF8AE /* DESConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 196B884C1D548B6800EDF8AE /* DESConst.m */; };
@@ -580,6 +581,7 @@
 		1931A8361D337E150066CA0B /* UpdatePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdatePasswordViewController.h; sourceTree = "<group>"; };
 		1931A8371D337E150066CA0B /* UpdatePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdatePasswordViewController.m; sourceTree = "<group>"; };
 		195FDF011D6C2747005E8080 /* package.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = package.sh; sourceTree = "<group>"; };
+		195FDF051D6EEE85005E8080 /* autoipa.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = autoipa.py; sourceTree = "<group>"; };
 		196B88451D5471F700EDF8AE /* DESDonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DESDonateViewController.h; sourceTree = "<group>"; };
 		196B88461D5471F700EDF8AE /* DESDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DESDonateViewController.m; sourceTree = "<group>"; };
 		196B88481D54880400EDF8AE /* DonateButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DonateButtonView.h; sourceTree = "<group>"; };
@@ -1854,6 +1856,7 @@
 		F7526FE21C9A940A0012FE76 = {
 			isa = PBXGroup;
 			children = (
+				195FDF051D6EEE85005E8080 /* autoipa.py */,
 				195FDF011D6C2747005E8080 /* package.sh */,
 				F7B412991C9BFCE800E45E22 /* ImageSet.xcassets */,
 				F7526FED1C9A940A0012FE76 /* RuntimeTest */,
@@ -3407,6 +3410,7 @@
 				F7BAC7581CC8D40F000D9795 /* 6.png in Resources */,
 				F768EF961D0805EE005747E3 /* avatar3.jpg in Resources */,
 				F7BB42E41CEEECE2006F5EE3 /* ShareSDKUI.bundle in Resources */,
+				195FDF061D6EEE85005E8080 /* autoipa.py in Resources */,
 				F7BAC7521CC8D40F000D9795 /* 17.png in Resources */,
 				F7B4129A1C9BFCE800E45E22 /* ImageSet.xcassets in Resources */,
 				F7526FFE1C9A940A0012FE76 /* LaunchScreen.storyboard in Resources */,

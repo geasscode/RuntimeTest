@@ -31,10 +31,10 @@
 	return [UINib nibWithNibName:@"MySubscribeTitleCell" bundle:nil];
 }
 
-- (void)setTopic:(SubscribeModel*)topic
+- (void)setTopic:(NSString*)topic
 {
-	_topic = topic;
-	self.topicNameLabel.text = topic.subscribeName;
+//    self.topicNameLabel.text = topic.subscribeName;
+	self.topicNameLabel.text = topic;
 }
 
 - (void)layoutSubviews

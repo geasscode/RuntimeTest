@@ -13,6 +13,6 @@
 
 + (UINib *)nib;
 
-@property (nonatomic , strong) SubscribeModel *topic;
+@property (nonatomic , strong) NSString *topic;
 
 @end
